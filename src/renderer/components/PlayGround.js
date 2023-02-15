@@ -39,7 +39,8 @@ function PlayGround(props){
                 Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), primaryWorkspace.current);
             }
 
-            primaryWorkspace.current.addChangeListener(generateCode);
+            // 实时生成
+            // primaryWorkspace.current.addChangeListener(generateCode);
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
     
     // 加载项目
@@ -58,13 +59,13 @@ function PlayGround(props){
         // 全局codeMap输出代码
         const playcode=generatefinalCodes(areacode)
         // 运行生成的代码
-        // 这会给window注册一个makecodetxt函数并运行，然后存在window.txtcode
+        // 这会给window注册一个makecodetxt函数并运行，然后最终脚本会存在window.txtcode
         window.eval(playcode)
         setResultcode(window.txtcode)
     }
     // 下载脚本
     const downloadCode=()=>{
-        saveTxt(window.resultcode)
+        // saveTxt(window.resultcode)
     }
 
     return (
@@ -76,7 +77,13 @@ function PlayGround(props){
             </span>
             <span id="righttools">
                 <input value={filename} onChange={(e)=>setFilename(e.target.value)}></input>.txt
-                <button>导出脚本</button>
+                <button onClick={downloadCode}>导出脚本</button>
+                <button onClick={()=>{
+                    console.log(generatefinalCodes(javascriptGenerator.workspaceToCode(
+                        primaryWorkspace.current
+                      )))
+                      generateCode()
+                }}>输出生成代码</button>
             </span>
         </span>
         <span ref={blocklyDiv} id="blocklyDiv" />

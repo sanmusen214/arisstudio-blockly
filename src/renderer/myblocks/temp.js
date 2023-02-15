@@ -1,3 +1,4 @@
+// 模板文件
 import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
 

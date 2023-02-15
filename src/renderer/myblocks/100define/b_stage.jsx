@@ -7,42 +7,41 @@ import { javascriptGenerator } from 'blockly/javascript';
 
 // 定义JSON格式自定义模块
 const jsondesc = {
-    "type": "stages",
+    "type": "b_stage",
     "message0": "阶段 %1 %2",
     "args0": [
-        {
-            "type": "field_number",
-            "name": "val1",
-            "value": 1,
-            "min": 1,
-            "max": 100
-        },
-        {
-            "type": "input_statement",
-            "name": "steps",
-            "align": "RIGHT"
-        }
+      {
+        "type": "field_number",
+        "name": "num1",
+        "value": 1,
+        "min": 1,
+        "max": 100
+      },
+      {
+        "type": "input_statement",
+        "name": "sta1"
+      }
     ],
     "colour": 230,
-    "tooltip": "每个阶段代表一组动画效果",
+    "tooltip": "",
     "helpUrl": ""
-}
+  }
 
 // 注入自定义模块
-Blockly.Blocks['stage'] = {
+Blockly.Blocks['b_stage'] = {
     init: function () {
         this.jsonInit(jsondesc);
     }
 }
 
 // 为自定义块添加js语言生成器
-javascriptGenerator['stage'] = function (block) {
+javascriptGenerator['b_stage'] = function (block) {
     // 阶段数字
-    const number_val1 = block.getFieldValue('val1');
+    const number_val1 = block.getFieldValue('num1');
     // 阶段右侧代码忽略
     // var value_valeinput = javascriptGenerator.valueToCode(block, 'stageinput', javascriptGenerator.ORDER_ATOMIC);
     // 内部包裹的代码
-    const statements_steps = javascriptGenerator.statementToCode(block, 'steps');
+    const statements_steps = javascriptGenerator.statementToCode(block, 'sta1');
     return `
 // 阶段${number_val1}代码
 stagelist=[];

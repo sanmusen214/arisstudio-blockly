@@ -5,7 +5,7 @@ import PlayGround from './components/PlayGround';
 import Toolbox from './components/Toolbox';
 // 引入的同时让所有自定义模块注入
 import './myblocks'
-
+import './utils/dialog'
 
 function BlocklyArea() {
   return (
