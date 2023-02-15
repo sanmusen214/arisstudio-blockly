@@ -1,7 +1,7 @@
 import React from 'react'
 import PlayGround, { Block, Value, Field, Shadow, Category } from '../../PlayGround';
 
-function MyDefineSubMenu() {
+function MyDefineMenu() {
   return (
     <Category name="其他块">
         <Block type="b_stage" />
@@ -18,4 +18,4 @@ function MyDefineSubMenu() {
   )
 }
 
-export default MyDefineSubMenu
+export default MyDefineMenu

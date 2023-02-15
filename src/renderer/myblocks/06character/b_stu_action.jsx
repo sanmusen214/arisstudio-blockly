@@ -6,8 +6,8 @@ import { students_datamap } from '../../datamap';
 
 // 带有映射的学生名
 const jsondesc = {
-    "type": "b_student",
-    "message0": "学生昵称 %1 素材文件 %2 %3",
+    "type": "b_stu_action",
+    "message0": "学生昵称 %1 姿态 %2",
     "args0": [
       {
         "type": "input_value",
@@ -17,14 +17,10 @@ const jsondesc = {
       {
         "type": "field_dropdown",
         "name": "drop1",
-        "options": students_datamap
-      },
-      {
-        "type": "field_dropdown",
-        "name": "drop2",
         "options": [
-            ["普通状态","spr"],
-            ["通讯状态","sprC"]
+            ["倒地","down"],
+            ["升起","up"],
+            ["重置姿态","empty"],
         ]
       }
     ],
@@ -37,23 +33,17 @@ const jsondesc = {
   }
 
 // 注入自定义模块
-Blockly.Blocks['b_student'] = {
+Blockly.Blocks['b_stu_action'] = {
     init: function () {
         this.jsonInit(jsondesc);
     }
 }
 
 // 为自定义块添加js语言生成器
-javascriptGenerator['b_student'] = function (block) {
+javascriptGenerator['b_stu_action'] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
     const dropdown_drop1 = block.getFieldValue('drop1');
-    const dropdown_drop2 = block.getFieldValue('drop2');
-    return `
-if(importArea){
-  stagelist.push(\`load ${dropdown_drop2} \${${value_val1}} ${dropdown_drop1}\`);
-}
-`
 
-    
+    return `stagelist.push(\`\${${value_val1}} ${dropdown_drop1}\`);`
 }
 

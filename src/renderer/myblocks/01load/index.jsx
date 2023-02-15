@@ -5,4 +5,4 @@
 import "./b_load"
 import "./b_student"
 import "./b_def_student"
-import "./b_other"
+import "./b_load_other"

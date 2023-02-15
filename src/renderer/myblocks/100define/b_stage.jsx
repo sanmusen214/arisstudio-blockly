@@ -8,7 +8,7 @@ import { javascriptGenerator } from 'blockly/javascript';
 // 定义JSON格式自定义模块
 const jsondesc = {
     "type": "b_stage",
-    "message0": "阶段 %1 %2",
+    "message0": "主线块 %1 %2",
     "args0": [
       {
         "type": "field_number",

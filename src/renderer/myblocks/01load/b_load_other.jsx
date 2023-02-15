@@ -6,12 +6,12 @@ import { students_datamap } from '../../datamap';
 
 // 带有映射的学生名
 const jsondesc = {
-    "type": "b_other",
+    "type": "b_load_other",
     "message0": "类型 %1 素材昵称 %2 素材文件 %3",
     "args0": [
       {
         "type": "field_dropdown",
-        "name": "dro1",
+        "name": "drop1",
         "options": [
             ["背景","bg"],
             ["覆盖图片","cover"],
@@ -40,22 +40,22 @@ const jsondesc = {
   }
 
 // 注入自定义模块
-Blockly.Blocks['b_other'] = {
+Blockly.Blocks['b_load_other'] = {
     init: function () {
         this.jsonInit(jsondesc);
     }
 }
 
 // 为自定义块添加js语言生成器
-javascriptGenerator['b_other'] = function (block) {
-    const dropdown_dro1 = block.getFieldValue('dro1');
+javascriptGenerator['b_load_other'] = function (block) {
+    const dropdown_drop1 = block.getFieldValue('drop1');
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
     const value_val2 = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC);
 
 
     return `
 if(importArea){
-    stagelist.push(\`load ${dropdown_dro1} \${${value_val1}} \${${value_val2}}\`);
+    stagelist.push(\`load ${dropdown_drop1} \${${value_val1}} \${${value_val2}}\`);
 }
 `
 
