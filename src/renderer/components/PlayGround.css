@@ -1,0 +1,35 @@
+/* 顶部小工具栏 */
+#toolsbox{
+    position:absolute;
+    top:0;
+    z-index: 999;
+    text-align: center;
+    right:0;
+    height:22px;
+}
+#toolsbox button{
+    margin:0px 4px;
+}
+
+#lefttools{
+    margin-right: 50px;
+}
+
+/* Playground区域 */
+#blocklyDiv{
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
+
+/* 给用户看生成的结果 */
+#rescodebox{
+    position:absolute;
+    right:0;
+    top:22px;
+    width:30%;
+    height:60%;
+    z-index: 10;
+    border: 1px solid black;
+    opacity: 0.8;
+}

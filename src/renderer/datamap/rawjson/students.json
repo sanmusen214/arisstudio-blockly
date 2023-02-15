@@ -1,0 +1,915 @@
+{
+  "numbers": 130,
+  "students": [
+    {
+      "zhName": "阿露",
+      "enName": "Aru",
+      "krName": "아루",
+      "jpName": "アル",
+      "sprName": "Aru_spr"
+    },
+    {
+      "zhName": "艾米",
+      "enName": "Eimi",
+      "krName": "에이미",
+      "jpName": "エイミ",
+      "sprName": "Eimi_spr"
+    },
+    {
+      "zhName": "晴奈",
+      "enName": "Haruna",
+      "krName": "하루나",
+      "jpName": "ハルナ",
+      "sprName": "Haruna_spr"
+    },
+    {
+      "zhName": "日富美",
+      "enName": "Hifumi",
+      "krName": "히후미",
+      "jpName": "ヒフミ",
+      "sprName": "Hihumi_spr"
+    },
+    {
+      "zhName": "日奈",
+      "enName": "Hina",
+      "krName": "히나",
+      "jpName": "ヒナ",
+      "sprName": "Hina_spr"
+    },
+    {
+      "zhName": "星野",
+      "enName": "Hoshino",
+      "krName": "호시노",
+      "jpName": "ホシノ",
+      "sprName": "Hoshino_spr"
+    },
+    {
+      "zhName": "伊织",
+      "enName": "Iori",
+      "krName": "이오리",
+      "jpName": "イオリ",
+      "sprName": "Iori_spr"
+    },
+    {
+      "zhName": "真纪",
+      "enName": "Maki",
+      "krName": "마키",
+      "jpName": "マキ",
+      "sprName": "Maki_spr"
+    },
+    {
+      "zhName": "尼禄",
+      "enName": "Neru",
+      "krName": "네루",
+      "jpName": "ネル",
+      "sprName": "Neru_spr"
+    },
+    {
+      "zhName": "泉",
+      "enName": "Izumi",
+      "krName": "이즈미",
+      "jpName": "イズミ",
+      "sprName": "Izumi_spr"
+    },
+    {
+      "zhName": "白子",
+      "enName": "Shiroko",
+      "krName": "시로코",
+      "jpName": "シロコ",
+      "sprName": "Shiroko_spr"
+    },
+    {
+      "zhName": "瞬",
+      "enName": "Shun",
+      "krName": "슌",
+      "jpName": "シュン",
+      "sprName": "Shun_spr"
+    },
+    {
+      "zhName": "堇",
+      "enName": "Sumire",
+      "krName": "스미레",
+      "jpName": "スミレ",
+      "sprName": "Sumire_spr"
+    },
+    {
+      "zhName": "鹤城",
+      "enName": "Tsurugi",
+      "krName": "츠루기",
+      "jpName": "ツルギ",
+      "sprName": "Tsurugi_spr"
+    },
+    {
+      "zhName": "茜",
+      "enName": "Akane",
+      "krName": "아카네",
+      "jpName": "アカネ",
+      "sprName": "Akane_spr"
+    },
+    {
+      "zhName": "千世",
+      "enName": "Chise",
+      "krName": "치세",
+      "jpName": "チセ",
+      "sprName": "Chise_spr"
+    },
+    {
+      "zhName": "亚伽里",
+      "enName": "Akari",
+      "krName": "아카리",
+      "jpName": "アカリ",
+      "sprName": "Akari_spr"
+    },
+    {
+      "zhName": "莲见",
+      "enName": "Hasumi",
+      "krName": "하스미",
+      "jpName": "ハスミ",
+      "sprName": "Hasumi_spr"
+    },
+    {
+      "zhName": "野宫",
+      "enName": "Nonomi",
+      "krName": "노노미",
+      "jpName": "ノノミ",
+      "sprName": "Nonomi_spr"
+    },
+    {
+      "zhName": "佳代子",
+      "enName": "Kayoko",
+      "krName": "카요코",
+      "jpName": "カヨコ",
+      "sprName": "Kayoko_spr"
+    },
+    {
+      "zhName": "睦月",
+      "enName": "Mutsuki",
+      "krName": "무츠키",
+      "jpName": "ムツキ",
+      "sprName": "Mutsuki_spr"
+    },
+    {
+      "zhName": "淳子",
+      "enName": "Junko",
+      "krName": "준코",
+      "jpName": "ジュンコ",
+      "sprName": "Zunko_spr"
+    },
+    {
+      "zhName": "芹香",
+      "enName": "Serika",
+      "krName": "세리카",
+      "jpName": "セリカ",
+      "sprName": "Serika_spr"
+    },
+    {
+      "zhName": "椿",
+      "enName": "Tsubaki",
+      "krName": "츠바키",
+      "jpName": "ツバキ",
+      "sprName": "Tsubaki_spr"
+    },
+    {
+      "zhName": "优香",
+      "enName": "Yuuka",
+      "krName": "유우카",
+      "jpName": "ユウカ",
+      "sprName": "Yuuka_spr"
+    },
+    {
+      "zhName": "遥香",
+      "enName": "Haruka",
+      "krName": "하루카",
+      "jpName": "ハルカ",
+      "sprName": "Haruka_spr"
+    },
+    {
+      "zhName": "明日奈",
+      "enName": "Asuna",
+      "krName": "아스나",
+      "jpName": "アスナ",
+      "sprName": "Asuna_spr"
+    },
+    {
+      "zhName": "柯托莉",
+      "enName": "Kotori",
+      "krName": "코토리",
+      "jpName": "コトリ",
+      "sprName": "Kotori_spr"
+    },
+    {
+      "zhName": "铃美",
+      "enName": "Suzumi",
+      "krName": "스즈미",
+      "jpName": "スズミ",
+      "sprName": "Suzumi_spr"
+    },
+    {
+      "zhName": "菲娜",
+      "enName": "Pina",
+      "krName": "피나",
+      "jpName": "フィーナ",
+      "sprName": "Pina_spr"
+    },
+    {
+      "zhName": "响",
+      "enName": "Hibiki",
+      "krName": "히비키",
+      "jpName": "ヒビキ",
+      "sprName": "Hibiki_spr"
+    },
+    {
+      "zhName": "花凛",
+      "enName": "Karin",
+      "krName": "카린",
+      "jpName": "カリン",
+      "sprName": "karin_spr"
+    },
+    {
+      "zhName": "纱绫",
+      "enName": "Saya",
+      "krName": "사야",
+      "jpName": "サヤ",
+      "sprName": "Saya_spr"
+    },
+    {
+      "zhName": "爱莉",
+      "enName": "Airi",
+      "krName": "아이리",
+      "jpName": "アイリ",
+      "sprName": "Airi_spr"
+    },
+    {
+      "zhName": "枫香",
+      "enName": "Fuuka",
+      "krName": "후우카",
+      "jpName": "フウカ",
+      "sprName": "Fuuka_spr"
+    },
+    {
+      "zhName": "花江",
+      "enName": "Hanae",
+      "krName": "하나에",
+      "jpName": "ハナエ",
+      "sprName": "Hanae_spr"
+    },
+    {
+      "zhName": "晴",
+      "enName": "Hare",
+      "krName": "하레",
+      "jpName": "ハレ",
+      "sprName": "Hare_spr"
+    },
+    {
+      "zhName": "歌原",
+      "enName": "Utaha",
+      "krName": "우타하",
+      "jpName": "ウタハ",
+      "sprName": "Utaha_spr"
+    },
+    {
+      "zhName": "绫音",
+      "enName": "Ayane",
+      "krName": "아야네",
+      "jpName": "アヤネ",
+      "sprName": "Ayane_spr"
+    },
+    {
+      "zhName": "千夏",
+      "enName": "Chinatsu",
+      "krName": "치나츠",
+      "jpName": "チナツ",
+      "sprName": "Chinatsu_spr"
+    },
+    {
+      "zhName": "小玉",
+      "enName": "Kotama",
+      "krName": "코타마",
+      "jpName": "コタマ",
+      "sprName": "Kotama_spr"
+    },
+    {
+      "zhName": "茱莉",
+      "enName": "Juri",
+      "krName": "주리",
+      "jpName": "ジュリ",
+      "sprName": "Juri_spr"
+    },
+    {
+      "zhName": "芹娜",
+      "enName": "Serina",
+      "krName": "세리나",
+      "jpName": "セリナ",
+      "sprName": "Serina_spr"
+    },
+    {
+      "zhName": "志美子",
+      "enName": "Shimiko",
+      "krName": "시미코",
+      "jpName": "シミコ",
+      "sprName": "Shimiko_spr"
+    },
+    {
+      "zhName": "好美",
+      "enName": "Yoshimi",
+      "krName": "요시미",
+      "jpName": "ヨシミ",
+      "sprName": "Yoshimi_spr"
+    },
+    {
+      "zhName": "真白",
+      "enName": "Mashiro",
+      "krName": "마시로",
+      "jpName": "マシロ",
+      "sprName": "Mashiro_spr"
+    },
+    {
+      "zhName": "泉奈",
+      "enName": "Izuna",
+      "krName": "이즈나",
+      "jpName": "イズナ",
+      "sprName": "Izuna_spr"
+    },
+    {
+      "zhName": "静子",
+      "enName": "Shizuko",
+      "krName": "시즈코",
+      "jpName": "シズコ",
+      "sprName": "Shizuko_spr"
+    },
+    {
+      "zhName": "爱丽丝",
+      "enName": "Aris",
+      "krName": "아리스",
+      "jpName": "アリス",
+      "sprName": "Aris_spr"
+    },
+    {
+      "zhName": "绿",
+      "enName": "Midori",
+      "krName": "미도리",
+      "jpName": "ミドリ",
+      "sprName": "Midori_spr"
+    },
+    {
+      "zhName": "桃井",
+      "enName": "Momoi",
+      "krName": "모모이",
+      "jpName": "モモイ",
+      "sprName": "Momoi_spr"
+    },
+    {
+      "zhName": "切里诺",
+      "enName": "Cherino",
+      "krName": "체리노",
+      "jpName": "チェリノ",
+      "sprName": "Cherino_spr"
+    },
+    {
+      "zhName": "和香",
+      "enName": "Nodoka",
+      "krName": "노도카",
+      "jpName": "ノドカ",
+      "sprName": "Nodoka_spr"
+    },
+    {
+      "zhName": "柚子",
+      "enName": "Yuzu",
+      "krName": "유즈",
+      "jpName": "ユズ",
+      "sprName": "Yuzu_spr"
+    },
+    {
+      "zhName": "梓",
+      "enName": "Azusa",
+      "krName": "아즈사",
+      "jpName": "アズサ",
+      "sprName": "Azusa_spr"
+    },
+    {
+      "zhName": "花子",
+      "enName": "Hanako",
+      "krName": "하나코",
+      "jpName": "ハナコ",
+      "sprName": "Hanako_spr"
+    },
+    {
+      "zhName": "小春",
+      "enName": "Koharu",
+      "krName": "코하루",
+      "jpName": "コハル",
+      "sprName": "Koharu_spr"
+    },
+    {
+      "zhName": "梓(泳装)",
+      "enName": "Azusa (Swimsuit)",
+      "krName": "아즈사(수영복)",
+      "jpName": "アズサ（水着）",
+      "sprName": "Azusa_Swimsuit_spr"
+    },
+    {
+      "zhName": "真白(泳装)",
+      "enName": "Mashiro (Swimsuit)",
+      "krName": "마시로(수영복)",
+      "jpName": "マシロ（水着）",
+      "sprName": "Mashiro_Swimsuit_spr"
+    },
+    {
+      "zhName": "鹤城(泳装)",
+      "enName": "Tsurugi (Swimsuit)",
+      "krName": "츠루기(수영복)",
+      "jpName": "ツルギ（水着）",
+      "sprName": "Tsurugi_Swimsuit_spr"
+    },
+    {
+      "zhName": "日富美(泳装)",
+      "enName": "Hifumi (Swimsuit)",
+      "krName": "히후미(수영복)",
+      "jpName": "ヒフミ（水着）",
+      "sprName": "Hihumi_Swimsuit_spr"
+    },
+    {
+      "zhName": "日奈(泳装)",
+      "enName": "Hina (Swimsuit)",
+      "krName": "히나(수영복)",
+      "jpName": "ヒナ（水着）",
+      "sprName": "CH0063_spr"
+    },
+    {
+      "zhName": "伊织(泳装)",
+      "enName": "Iori (Swimsuit)",
+      "krName": "이오리(수영복)",
+      "jpName": "イオリ（水着）",
+      "sprName": "CH0064_spr"
+    },
+    {
+      "zhName": "泉(泳装)",
+      "enName": "Izumi (Swimsuit)",
+      "krName": "이즈미(수영복)",
+      "jpName": "イズミ（水着）",
+      "sprName": "Izumi_swimsuit_spr"
+    },
+    {
+      "zhName": "白子(单车)",
+      "enName": "Shiroko (Cycling)",
+      "krName": "시로코(라이딩)",
+      "jpName": "シロコ（ライディング）",
+      "sprName": "Shiroko_RidingSuit_spr"
+    },
+    {
+      "zhName": "瞬(幼女)",
+      "enName": "Shun (Small)",
+      "krName": "슌(어린이)",
+      "jpName": "シュン（幼女）",
+      "sprName": "CH0066_spr"
+    },
+    {
+      "zhName": "桐乃",
+      "enName": "Kirino",
+      "krName": "키리노",
+      "jpName": "キリノ",
+      "sprName": "Kirino_spr"
+    },
+    {
+      "zhName": "纱绫(私服)",
+      "enName": "Saya (Casual)",
+      "krName": "사야(사복)",
+      "jpName": "サヤ（私服）",
+      "sprName": "Saya_Casual_spr"
+    },
+    {
+      "zhName": "尼禄(兔女郎)",
+      "enName": "Neru (Bunny)",
+      "krName": "네루(바니걸)",
+      "jpName": "ネル（バニーガール）",
+      "sprName": "CH0101_spr"
+    },
+    {
+      "zhName": "花凛(兔女郎)",
+      "enName": "Karin (Bunny)",
+      "krName": "카린(바니걸)",
+      "jpName": "カリン（バニーガール）",
+      "sprName": "CH0100_spr"
+    },
+    {
+      "zhName": "明日奈(兔女郎)",
+      "enName": "Asuna (Bunny)",
+      "krName": "아스나(바니걸)",
+      "jpName": "アスナ（バニーガール）",
+      "sprName": "CH0098_spr"
+    },
+    {
+      "zhName": "夏",
+      "enName": "Natsu",
+      "krName": "나츠",
+      "jpName": "ナツ",
+      "sprName": "CH0155_spr"
+    },
+    {
+      "zhName": "玛丽",
+      "enName": "Mari",
+      "krName": "마리",
+      "jpName": "マリー",
+      "sprName": "Mari_spr"
+    },
+    {
+      "zhName": "初音未来",
+      "enName": "Hatsune Miku",
+      "krName": "하츠네 미쿠",
+      "jpName": "初音ミク",
+      "sprName": "CH9999_spr"
+    },
+    {
+      "zhName": "亚子",
+      "enName": "Ako",
+      "krName": "아코",
+      "jpName": "アコ",
+      "sprName": "Ako_spr"
+    },
+    {
+      "zhName": "切里诺(温泉)",
+      "enName": "Cherino (Hot Spring)",
+      "krName": "체리노(온천)",
+      "jpName": "チェリノ（温泉）",
+      "sprName": "CH0164_spr"
+    },
+    {
+      "zhName": "千夏(温泉)",
+      "enName": "Chinatsu (Hot Spring)",
+      "krName": "치나츠(온천)",
+      "jpName": "チナツ（温泉）",
+      "sprName": "CH0163_spr"
+    },
+    {
+      "zhName": "智惠",
+      "enName": "Tomoe",
+      "krName": "토모에",
+      "jpName": "トモエ",
+      "sprName": "Tomoe_spr"
+    },
+    {
+      "zhName": "和香(温泉)",
+      "enName": "Nodoka (Hot Spring)",
+      "krName": "노도카(온천)",
+      "jpName": "ノドカ（温泉）",
+      "sprName": "CH0165_spr"
+    },
+    {
+      "zhName": "阿露(正月)",
+      "enName": "Aru (New Year)",
+      "krName": "아루(새해)",
+      "jpName": "アル（正月）",
+      "sprName": "Aru_Newyear_spr"
+    },
+    {
+      "zhName": "睦月(正月)",
+      "enName": "Mutsuki (New Year)",
+      "krName": "무츠키(새해)",
+      "jpName": "ムツキ（正月）",
+      "sprName": "Mutsuki_Newyear_spr"
+    },
+    {
+      "zhName": "芹香(正月)",
+      "enName": "Serika (New Year)",
+      "krName": "세리카(새해)",
+      "jpName": "セリカ（正月）",
+      "sprName": "Serika_Newyear_spr"
+    },
+    {
+      "zhName": "若藻",
+      "enName": "Wakamo",
+      "krName": "와카모",
+      "jpName": "ワカモ",
+      "sprName": "Wakamo_spr"
+    },
+    {
+      "zhName": "吹雪",
+      "enName": "Fubuki",
+      "krName": "후부키",
+      "jpName": "フブキ",
+      "sprName": "CH0141_spr"
+    },
+    {
+      "zhName": "濑名",
+      "enName": "Sena",
+      "krName": "세나",
+      "jpName": "セナ",
+      "sprName": "CH0081_spr"
+    },
+    {
+      "zhName": "千寻",
+      "enName": "Chihiro",
+      "krName": "치히로",
+      "jpName": "チヒロ",
+      "sprName": "CH0160_spr"
+    },
+    {
+      "zhName": "三森",
+      "enName": "Mimori",
+      "krName": "미모리",
+      "jpName": "ミモリ",
+      "sprName": "Mimori_spr"
+    },
+    {
+      "zhName": "忧",
+      "enName": "Ui",
+      "krName": "우이",
+      "jpName": "ウイ",
+      "sprName": "CH0169_spr"
+    },
+    {
+      "zhName": "日向",
+      "enName": "Hinata",
+      "krName": "히나타",
+      "jpName": "ヒナタ",
+      "sprName": "Hinata_spr"
+    },
+    {
+      "zhName": "玛利娜",
+      "enName": "Marina",
+      "krName": "마리나",
+      "jpName": "マリナ",
+      "sprName": "Marina_spr"
+    },
+    {
+      "zhName": "宫子",
+      "enName": "Miyako",
+      "krName": "미야코",
+      "jpName": "ミヤコ",
+      "sprName": "miyako_spr"
+    },
+    {
+      "zhName": "咲",
+      "enName": "Saki",
+      "krName": "사키",
+      "jpName": "サキ",
+      "sprName": "CH0144_spr"
+    },
+    {
+      "zhName": "美游",
+      "enName": "Miyu",
+      "krName": "미유",
+      "jpName": "ミユ",
+      "sprName": "CH0145_spr"
+    },
+    {
+      "zhName": "枫",
+      "enName": "Kaede",
+      "krName": "카에데",
+      "jpName": "カエデ",
+      "sprName": "Kaede_spr"
+    },
+    {
+      "zhName": "伊吕波",
+      "enName": "Iroha",
+      "krName": "이로하",
+      "jpName": "イロハ",
+      "sprName": "CH0156_spr"
+    },
+    {
+      "zhName": "满",
+      "enName": "Michiru",
+      "krName": "미치루",
+      "jpName": "ミチル",
+      "sprName": "CH0113_spr"
+    },
+    {
+      "zhName": "月咏",
+      "enName": "Tsukuyo",
+      "krName": "츠쿠요",
+      "jpName": "ツクヨ",
+      "sprName": "CH0114_spr"
+    },
+    {
+      "zhName": "美咲",
+      "enName": "Misaki",
+      "krName": "미사키",
+      "jpName": "ミサキ",
+      "sprName": "Misaki_spr"
+    },
+    {
+      "zhName": "日和",
+      "enName": "Hiyori",
+      "krName": "히요리",
+      "jpName": "ヒヨリ",
+      "sprName": "Hiyori_spr"
+    },
+    {
+      "zhName": "亚津子",
+      "enName": "Atsuko",
+      "krName": "아츠코",
+      "jpName": "アツコ",
+      "sprName": "Atsuko_spr"
+    },
+    {
+      "zhName": "若藻(泳装)",
+      "enName": "Wakamo (Swimsuit)",
+      "krName": "와카모(수영복)",
+      "jpName": "ワカモ（水着）",
+      "sprName": "CH0175_spr"
+    },
+    {
+      "zhName": "野宫(泳装)",
+      "enName": "Nonomi (Swimsuit)",
+      "krName": "노노미(수영복)",
+      "jpName": "ノノミ（水着）",
+      "sprName": "CH0092_spr"
+    },
+    {
+      "zhName": "绫音(泳装)",
+      "enName": "Ayane (Swimsuit)",
+      "krName": "아야네(수영복)",
+      "jpName": "アヤネ（水着）",
+      "sprName": "CH0176_spr"
+    },
+    {
+      "zhName": "星野(泳装)",
+      "enName": "Hoshino (Swimsuit)",
+      "krName": "호시노(수영복)",
+      "jpName": "ホシノ（水着）",
+      "sprName": "Hoshino_Swimsuit_spr"
+    },
+    {
+      "zhName": "静子(泳装)",
+      "enName": "Shizuko (Swimsuit)",
+      "krName": "시즈코(수영복)",
+      "jpName": "シズコ（水着）",
+      "sprName": "CH0180_spr"
+    },
+    {
+      "zhName": "泉奈(泳装)",
+      "enName": "Izuna (Swimsuit)",
+      "krName": "이즈나(수영복)",
+      "jpName": "イズナ（水着）",
+      "sprName": "CH0179_spr"
+    },
+    {
+      "zhName": "千世(泳装)",
+      "enName": "Chise (Swimsuit)",
+      "krName": "치세(수영복)",
+      "jpName": "チセ（水着）",
+      "sprName": "CH0178_spr"
+    },
+    {
+      "zhName": "纱织",
+      "enName": "Saori",
+      "krName": "사오리",
+      "jpName": "サオリ",
+      "sprName": "Saori_spr"
+    },
+    {
+      "zhName": "萌绘",
+      "enName": "Moe",
+      "krName": "모에",
+      "jpName": "モエ",
+      "sprName": "Moe_spr"
+    },
+    {
+      "zhName": "和纱",
+      "enName": "Kazusa",
+      "krName": "카즈사",
+      "jpName": "カズサ",
+      "sprName": "Kazusa_spr"
+    },
+    {
+      "zhName": "心奈",
+      "enName": "Kokona",
+      "krName": "코코나",
+      "jpName": "ココナ",
+      "sprName": "CH0137_spr"
+    },
+    {
+      "zhName": "歌原(应援团)",
+      "enName": "Utaha (Cheerleader)",
+      "krName": "우타하(응원단)",
+      "jpName": "ウタハ（応援団）",
+      "sprName": "CH0182_spr"
+    },
+    {
+      "zhName": "诺亚",
+      "enName": "Noa",
+      "krName": "노아",
+      "jpName": "ノア",
+      "sprName": "CH0095_spr"
+    },
+    {
+      "zhName": "响(应援团)",
+      "enName": "Hibiki (Cheerleader)",
+      "krName": "히비키(응원단)",
+      "jpName": "ヒビキ（応援団）",
+      "sprName": "CH0181_spr"
+    },
+    {
+      "zhName": "茜(兔女郎)",
+      "enName": "Akane (Bunny)",
+      "krName": "아카네(바니걸)",
+      "jpName": "アカネ（バニーガール）",
+      "sprName": "CH0099_spr"
+    },
+    {
+      "zhName": "优香(体操服)",
+      "enName": "Yuuka (Tracksuit)",
+      "krName": "유우카(체육복)",
+      "jpName": "ユウカ（体操服）",
+      "sprName": "CH0184_spr"
+    },
+    {
+      "zhName": "玛丽(体操服)",
+      "enName": "Mari (Tracksuit)",
+      "krName": "마리(체육복)",
+      "jpName": "マリー（体操服）",
+      "sprName": "CH0186_spr"
+    },
+    {
+      "zhName": "莲见(体操服)",
+      "enName": "Hasumi (Tracksuit)",
+      "krName": "하스미(체육복)",
+      "jpName": "ハスミ（体操服）",
+      "sprName": "CH0190_spr"
+    },
+    {
+      "zhName": "日鞠",
+      "enName": "Himari",
+      "krName": "히마리",
+      "jpName": "ヒマリ",
+      "sprName": "CH0159_spr"
+    },
+    {
+      "zhName": "时雨",
+      "enName": "Shigure",
+      "krName": "시구레",
+      "jpName": "シグレ",
+      "sprName": "Shigure_spr"
+    },
+    {
+      "zhName": "芹娜(圣诞)",
+      "enName": "Serina (Christmas)",
+      "krName": "세리나(크리스마스)",
+      "jpName": "セリナ（クリスマス）",
+      "sprName": "CH0194_spr"
+    },
+    {
+      "zhName": "花江(圣诞)",
+      "enName": "Hanae (Christmas)",
+      "krName": "하나에(크리스마스)",
+      "jpName": "ハナエ（クリスマス）",
+      "sprName": "CH0195_spr"
+    },
+    {
+      "zhName": "晴奈(正月)",
+      "enName": "Haruna (New Year)",
+      "krName": "하루나(새해)",
+      "jpName": "ハルナ（正月）",
+      "sprName": "CH0191_spr"
+    },
+    {
+      "zhName": "枫香(正月)",
+      "enName": "Fuuka (New Year)",
+      "krName": "후우카(새해)",
+      "jpName": "フウカ（正月）",
+      "sprName": "CH0177_spr"
+    },
+    {
+      "zhName": "淳子(正月)",
+      "enName": "Junko (New Year)",
+      "krName": "준코(새해)",
+      "jpName": "ジュンコ（正月）",
+      "sprName": "CH0192_spr"
+    },
+    {
+      "zhName": "美弥",
+      "enName": "Mine",
+      "krName": "미네",
+      "jpName": "ミネ",
+      "sprName": "CH0152_spr"
+    },
+    {
+      "zhName": "未花",
+      "enName": "Mika",
+      "krName": "미카",
+      "jpName": "ミカ",
+      "sprName": "CH0069_spr"
+    },
+    {
+      "zhName": "惠",
+      "enName": "Megu",
+      "krName": "메구",
+      "jpName": "メグ",
+      "sprName": "CH0088_spr"
+    },
+    {
+      "zhName": "叶渚",
+      "enName": "Kanna",
+      "krName": "칸나",
+      "jpName": "カンナ",
+      "sprName": "CH0170_spr"
+    },
+    {
+      "zhName": "樱子",
+      "enName": "Sakurako",
+      "krName": "사쿠라코",
+      "jpName": "サクラコ",
+      "sprName": "Sakurako_spr"
+    }
+  ]
+}

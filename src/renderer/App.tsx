@@ -1,41 +1,30 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import icon from '../../assets/icon.svg';
 import './App.css';
+import PlayGround from './components/PlayGround';
+import Toolbox from './components/Toolbox';
+// 引入的同时让所有自定义模块注入
+import './myblocks'
 
-function Hello() {
+
+function BlocklyArea() {
   return (
-    <div>
-      <div className="Hello">
-        <img width="200" alt="icon" src={icon} />
-      </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
-          </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="folded hands">
-              🙏
-            </span>
-            Donate
-          </button>
-        </a>
-      </div>
-    </div>
+    <PlayGround
+            readOnly={false}
+            trashcan={true}
+            move={{
+                scrollbars: true,
+                drag: true,
+                wheel: true
+            }}
+            // <block type="stage" x="0" y="0"></block>
+            initialXml={`
+<xml xmlns="http://www.w3.org/1999/xhtml">
+</xml>
+      `}
+            >
+            <Toolbox />
+        </PlayGround>
   );
 }
 
@@ -43,7 +32,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Hello />} />
+        <Route path="/" element={<BlocklyArea />} />
       </Routes>
     </Router>
   );
