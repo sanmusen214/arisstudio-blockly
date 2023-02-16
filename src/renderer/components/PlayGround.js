@@ -21,7 +21,7 @@ function PlayGround(props){
     let primaryWorkspace = useRef();
     // 文件名
     let [filename,setFilename]=useState("blockly-test")
-    // 生成的代码框
+    // 生成的代码框，esultcode当前脚本
     let [resultcode,setResultcode]=useState("")
 
  
@@ -42,10 +42,13 @@ function PlayGround(props){
             // 实时生成
             // primaryWorkspace.current.addChangeListener(generateCode);
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
-    
     // 加载项目
     const loadProject=()=>{
-        const a=0
+
+    }
+    // 导出项目
+    const saveProject=()=>{
+
     }
     // 实时生成代码
     const generateCode = () => {
@@ -89,7 +92,7 @@ function PlayGround(props){
                         primaryWorkspace.current
                       )))
                       generateCode()
-                }}>输出生成代码</button>
+                }}>生成脚本</button>
             </span>
         </span>
         <span ref={blocklyDiv} id="blocklyDiv" />

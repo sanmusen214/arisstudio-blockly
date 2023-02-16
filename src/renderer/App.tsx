@@ -11,7 +11,17 @@ function BlocklyArea() {
   return (
     <PlayGround
             readOnly={false}
+            sounds={false}
             trashcan={true}
+            maxBlocks="Infinity"
+            zoom={{
+              controls : false, 
+              wheel : true, 
+              startScale : 1.1, 
+              maxScale : 1.5, 
+              minScale : 0.2, 
+              scaleSpeed : 1.2
+            }}
             move={{
                 scrollbars: true,
                 drag: true,
