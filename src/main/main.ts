@@ -14,6 +14,7 @@ import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
+import { saveTxtToSystem } from './systemIO';
 
 class AppUpdater {
   constructor() {
@@ -25,10 +26,9 @@ class AppUpdater {
 
 let mainWindow: BrowserWindow | null = null;
 
-ipcMain.on('ipc-example', async (event, arg) => {
-  const msgTemplate = (pingPong: string) => `IPC test: ${pingPong}`;
-  console.log(msgTemplate(arg));
-  event.reply('ipc-example', msgTemplate('pong'));
+ipcMain.on('ipc-example', async (event, [filename, content]) => {
+  saveTxtToSystem(filename,content)
+  event.reply('ipc-example', 'render send: '+filename+" con: "+content);
 });
 
 if (process.env.NODE_ENV === 'production') {

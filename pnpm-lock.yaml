@@ -46,6 +46,7 @@ specifiers:
   eslint-plugin-react: ^7.32.2
   eslint-plugin-react-hooks: ^4.6.0
   file-loader: ^6.2.0
+  fs: 0.0.1-security
   gh-pages: ^5.0.0
   html-webpack-plugin: ^5.5.0
   identity-obj-proxy: ^3.0.0
@@ -81,6 +82,7 @@ dependencies:
   electron-debug: registry.npmmirror.com/electron-debug/3.2.0
   electron-log: registry.npmmirror.com/electron-log/4.4.8
   electron-updater: registry.npmmirror.com/electron-updater/5.3.0
+  fs: registry.npmmirror.com/fs/0.0.1-security
   react: registry.npmmirror.com/react/18.2.0
   react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
   react-router-dom: registry.npmmirror.com/react-router-dom/6.8.1_biqbaboplfbrettd7655fr4n2y
@@ -7133,6 +7135,12 @@ packages:
     name: fs.realpath
     version: 1.0.0
     dev: true
+
+  registry.npmmirror.com/fs/0.0.1-security:
+    resolution: {integrity: sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fs/-/fs-0.0.1-security.tgz}
+    name: fs
+    version: 0.0.1-security
+    dev: false
 
   registry.npmmirror.com/fsevents/2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz}

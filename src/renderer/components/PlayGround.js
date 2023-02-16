@@ -15,6 +15,25 @@ import locale from 'blockly/msg/zh-hans';
 
 Blockly.setLocale(locale);
 
+// 直接改成保存文件
+// calling IPC exposed from preload script
+window.electron.ipcRenderer.on('ipc-example', (arg) => {
+    // eslint-disable-next-line no-console
+    // console.log(arg);
+    return
+});
+
+// 防抖
+function antiShake(fun, delay) {
+    window.genrun = null;
+    return function (e) {
+        clearTimeout(window.genrun);
+        window.genrun = setTimeout(() => {
+            fun.apply(this, arguments);
+        }, delay)
+    };
+}
+
 function PlayGround(props){
     const blocklyDiv = useRef();
     const toolbox = useRef();
@@ -39,12 +58,16 @@ function PlayGround(props){
                 Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), primaryWorkspace.current);
             }
             // 实时生成
-            primaryWorkspace.current.addChangeListener(()=>{
-                generateCode();
-                // 每次playground更新，设置window里numinbigfunc值为0，这样让utils/timestamp每次更新后都是从0开始计数，遇到一个if就自己加1，也不会不限加
-                // 但是if块的上下变了，if生成的id还是会变，无伤大雅嗷
-                window.numinbigfunc=0;
-            });
+            primaryWorkspace.current.addChangeListener(
+                antiShake(()=>{
+                    console.log("generate and run code")
+                    generateCode();
+                    // 每次playground更新，设置window里numinbigfunc值为0，这样让utils/timestamp每次更新后都是从0开始计数，遇到一个if就自己加1，也不会不限加
+                    // 但是if块的上下变了，if生成的id还是会变，无伤大雅嗷
+                    window.numinbigfunc=0;
+                    window.electron.ipcRenderer.sendMessage('ipc-example', ['./0Txt/'+filename+'.txt', window.txtcode]);
+                },700)
+            );
 
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
     // 加载项目
