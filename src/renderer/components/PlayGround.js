@@ -60,8 +60,14 @@ function PlayGround(props){
         const playcode=generatefinalCodes(areacode)
         // 运行生成的代码
         // 这会给window注册一个makecodetxt函数并运行，然后最终脚本会存在window.txtcode
-        window.eval(playcode)
-        setResultcode(window.txtcode)
+        try {
+            window.eval(playcode)
+            setResultcode(window.txtcode)
+        } catch (error) {
+            setResultcode(`构造生成码时出错啦，你可以反馈该问题：${error.message}`)
+        }
+        
+        
     }
     // 下载脚本
     const downloadCode=()=>{

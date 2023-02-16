@@ -32,7 +32,10 @@ Blockly.Blocks[blockname] = {
 // 为自定义块添加js语言生成器
 javascriptGenerator[blockname] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
-
+    if(value_val1.length==0){
+      // 如果该字符串参数空内没有任何变量，忽略掉本代码块
+      return ``
+    }
 
     return `stagelist.push(\`banner \${${value_val1}}\`);`
 }

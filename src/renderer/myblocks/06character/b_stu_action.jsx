@@ -42,6 +42,10 @@ Blockly.Blocks['b_stu_action'] = {
 // 为自定义块添加js语言生成器
 javascriptGenerator['b_stu_action'] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
+    if(value_val1.length==0){
+      // 如果该字符串参数空内没有任何变量，忽略掉本代码块
+      return ``
+    }
     const dropdown_drop1 = block.getFieldValue('drop1');
 
     return `stagelist.push(\`\${${value_val1}} ${dropdown_drop1}\`);`

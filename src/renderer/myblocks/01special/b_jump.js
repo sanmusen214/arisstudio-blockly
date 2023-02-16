@@ -6,7 +6,7 @@ let blockname="b_jump"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "文字 变量 %1 下拉框 %2 数字 %3",
+    "message0": "跳到标记点 %1",
     "args0": [
       {
         "type": "input_value",
@@ -32,6 +32,10 @@ Blockly.Blocks[blockname] = {
 // 为自定义块添加js语言生成器
 javascriptGenerator[blockname] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
+    if(value_val1.length==0){
+      // 如果该字符串参数空内没有任何变量，忽略掉本代码块
+      return ``
+    }
 
 
     return `stagelist.push(\`jump \${${value_val1}}\`);`

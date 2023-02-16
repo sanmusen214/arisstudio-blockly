@@ -9,8 +9,7 @@ import "./04end"
 import "./04screen"
 import "./05bgm"
 import "./06character"
-import "./09emo"
-import "./09state"
+
 import "./100define"
 
 

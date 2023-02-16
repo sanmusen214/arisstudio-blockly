@@ -44,7 +44,10 @@ javascriptGenerator[blockname] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
     const value_val2 = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC);
     const value_val3 = javascriptGenerator.valueToCode(block, 'val3', javascriptGenerator.ORDER_ATOMIC);
-
+    if(value_val1.length==0||value_val2.length==0||value_val3.length==0){
+      // 如果该字符串参数空内没有任何变量，忽略掉本代码块
+      return ``
+    }
 
     return `stagelist.push(\`t '\${${value_val1}}' '\${${value_val2}}' '\${${value_val3}}'\`);`
 }

@@ -24,7 +24,7 @@ try {
         }
         txtcode=makecodetxt()
 } catch (error) {
-    txtcode="出错啦！"+error.message
+    txtcode="运行生成码时出错啦！你可以反馈该问题："+error.message
 }
 
 `
