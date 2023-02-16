@@ -73,12 +73,13 @@ function PlayGround(props){
         } catch (error) {
             setResultcode(`构造生成码时出错啦，你可以反馈该问题：${error.message}`)
         }
-        
+        return window.txtcode
         
     }
     // 下载脚本
     const downloadCode=()=>{
-        saveTxt(`${filename}.txt`,window.resultcode)
+        generateCode()
+        saveTxt(`${filename}.txt`,window.txtcode)
     }
 
     return (

@@ -7,8 +7,17 @@ let blockname="b_two_button"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "第一个按钮，内容：[ %1 ] 执行 %2 第二个按钮，内容：[ %3 ] 执行 %4",
+    "message0": "%1 第一个按钮，内容：[ %2 ] 执行 %3 第二个按钮，内容：[ %4 ] 执行 %5",
     "args0": [
+        {
+            "type": "field_dropdown",
+            "name": "drop1",
+            "options": [
+                ["出现按钮","0"],
+                ["自动选择按钮1","1"],
+                ["自动选择按钮2","2"],
+            ]
+          },
         {
         "type": "input_value",
         "name": "val1",
@@ -26,7 +35,7 @@ const jsondesc = {
         {
         "type": "input_statement",
         "name": "sta2"
-        }
+        },
     ],
     "inputsInline": true,
     "previousStatement": null,
@@ -53,14 +62,15 @@ javascriptGenerator[blockname] = function (block) {
     }
     const statements_sta1=javascriptGenerator.statementToCode(block,'sta1');
     const statements_sta2=javascriptGenerator.statementToCode(block,'sta2');
-
-
+    const dropdown_drop1 = block.getFieldValue('drop1');
+    const wordS=dropdown_drop1!=="0"?'S':'';
+    const selnum=wordS?' '+dropdown_drop1:'';
 
 
     const timestamp=generateTime();
 
     return `
-stagelist.push(\`button '\${${value_val1}}' '${timestamp+"caseA"}' '\${${value_val2}}' '${timestamp+"caseB"}'\`);
+stagelist.push(\`button${wordS}${selnum} '\${${value_val1}}' '${timestamp+"caseA"}' '\${${value_val2}}' '${timestamp+"caseB"}'\`);
 
 stagelist.push(\`target ${timestamp+"caseA"}\`)
 ${statements_sta1.trim()}
