@@ -39,7 +39,8 @@ function PlayGround(props){
                 Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), primaryWorkspace.current);
             }
             // 实时生成
-            // primaryWorkspace.current.addChangeListener(generateCode);
+            primaryWorkspace.current.addChangeListener(generateCode);
+
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
     // 加载项目
     const loadProject=(e)=>{
@@ -94,12 +95,6 @@ function PlayGround(props){
             <span id="righttools">
                 <input value={filename} onChange={(e)=>setFilename(e.target.value)}></input>.txt
                 <button onClick={downloadCode}>导出脚本</button>
-                <button onClick={()=>{
-                    console.log(generatefinalCodes(javascriptGenerator.workspaceToCode(
-                        primaryWorkspace.current
-                      )))
-                      generateCode()
-                }}>生成脚本</button>
             </span>
         </span>
         <span ref={blocklyDiv} id="blocklyDiv" />
