@@ -8,8 +8,8 @@ import {javascriptGenerator} from 'blockly/javascript';
 import 'blockly/blocks';
 // 引入字符串处理
 import {generatefinalCodes} from '../utils/codetool'
-import {saveToLocalStorage,saveTxt} from '../utils/IOdata';
-
+import {saveTxt,uploadTxt} from '../utils/IOdata';
+import version from "../config/version"
 // 设置内嵌模块语言
 import locale from 'blockly/msg/zh-hans';
 
@@ -20,7 +20,7 @@ function PlayGround(props){
     const toolbox = useRef();
     let primaryWorkspace = useRef();
     // 文件名
-    let [filename,setFilename]=useState("blockly-test")
+    let [filename,setFilename]=useState("btest")
     // 生成的代码框，esultcode当前脚本
     let [resultcode,setResultcode]=useState("")
 
@@ -38,17 +38,24 @@ function PlayGround(props){
             if (initialXml) {
                 Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), primaryWorkspace.current);
             }
-
             // 实时生成
             // primaryWorkspace.current.addChangeListener(generateCode);
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
     // 加载项目
-    const loadProject=()=>{
-
+    const loadProject=(e)=>{
+        const file=e.target.files[0];
+        uploadTxt(file,function(str){
+            let workspaceObj=JSON.parse(str)
+            try{
+                Blockly.serialization.workspaces.load(workspaceObj, primaryWorkspace.current);
+            }catch(error){
+                setResultcode("读取错误，请检查项目文件的版本以及现在版本")
+            }
+        })
     }
     // 导出项目
     const saveProject=()=>{
-
+        saveTxt(`ArisStudio_blockly_${version}.txt`,JSON.stringify(Blockly.serialization.workspaces.save(primaryWorkspace.current)))
     }
     // 实时生成代码
     const generateCode = () => {
@@ -56,9 +63,6 @@ function PlayGround(props){
         let areacode = javascriptGenerator.workspaceToCode(
           primaryWorkspace.current
         );
-        // 保存当前playground项目字符串到localstorage
-        // const workspaceString=JSON.stringify(Blockly.serialization.workspaces.save(primaryWorkspace.current))
-        // saveToLocalStorage("workspace",workspaceString)
         // 全局codeMap输出代码
         const playcode=generatefinalCodes(areacode)
         // 运行生成的代码
@@ -74,15 +78,17 @@ function PlayGround(props){
     }
     // 下载脚本
     const downloadCode=()=>{
-        // saveTxt(window.resultcode)
+        saveTxt(`${filename}.txt`,window.resultcode)
     }
 
     return (
     <>
         <span id="toolsbox">
+            当前版本:{version}
             <span id="lefttools">
-                <button>导入blockly项目</button>
-                <button>导出blockly项目</button>
+                <button id="loadprojectbutton"><input type="file" name="file" accept='text/plain' id="projectfile" onChange={loadProject}></input>导入blockly项目</button>
+                
+                <button onClick={saveProject}>导出blockly项目</button>
             </span>
             <span id="righttools">
                 <input value={filename} onChange={(e)=>setFilename(e.target.value)}></input>.txt

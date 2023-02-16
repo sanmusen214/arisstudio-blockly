@@ -9,6 +9,7 @@
 }
 #toolsbox button{
     margin:0px 4px;
+    height:25px;
 }
 
 #lefttools{
@@ -26,10 +27,29 @@
 #rescodebox{
     position:absolute;
     right:0;
-    top:22px;
+    top:25px;
     width:30%;
     height:60%;
     z-index: 10;
     border: 1px solid black;
     opacity: 0.8;
+}
+
+/* 修改input样式 */
+#loadprojectbutton{
+    font-size:12px;
+    overflow:hidden;
+    width:98px;
+    height: 25px;
+    position: relative;
+}
+#projectfile{
+    width:98px;
+    height: 25px;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:100;
+    opacity:0;
+    filter:alpha(opacity=0);
 }
