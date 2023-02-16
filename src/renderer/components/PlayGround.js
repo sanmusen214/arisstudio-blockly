@@ -39,7 +39,7 @@ function PlayGround(props){
     const toolbox = useRef();
     let primaryWorkspace = useRef();
     // 文件名
-    let [filename,setFilename]=useState("btest")
+    let filepath=""
     // 生成的代码框，esultcode当前脚本
     let [resultcode,setResultcode]=useState("")
 
@@ -65,8 +65,11 @@ function PlayGround(props){
                     // 每次playground更新，设置window里numinbigfunc值为0，这样让utils/timestamp每次更新后都是从0开始计数，遇到一个if就自己加1，也不会不限加
                     // 但是if块的上下变了，if生成的id还是会变，无伤大雅嗷
                     window.numinbigfunc=0;
-                    window.electron.ipcRenderer.sendMessage('ipc-example', ['./0Txt/'+filename+'.txt', window.txtcode]);
-                },700)
+                    if(filepath.length>0){
+                        window.electron.ipcRenderer.sendMessage('ipc-example', [filepath, window.txtcode]);
+                    }
+
+                },500)
             );
 
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
@@ -105,10 +108,14 @@ function PlayGround(props){
         return window.txtcode
         
     }
+    // 从已有文件保存文件位置
+    const selectFilepath=(e)=>{
+        filepath=e.target.files[0].path;
+    }
     // 下载脚本
     const downloadCode=()=>{
         generateCode()
-        saveTxt(`${filename}.txt`,window.txtcode)
+        saveTxt(`demoas.txt`,window.txtcode)
     }
 
     return (
@@ -116,12 +123,11 @@ function PlayGround(props){
         <span id="toolsbox">
             当前版本:{version}
             <span id="lefttools">
-                <button id="loadprojectbutton"><input type="file" name="file" accept='text/plain' id="projectfile" onChange={loadProject}></input>导入blockly项目</button>
-                
+                <button className="loadprojectbutton"><input type="file" name="file" accept='text/plain' className="projectfile" onChange={loadProject}></input>导入blockly项目</button>
                 <button onClick={saveProject}>导出blockly项目</button>
             </span>
             <span id="righttools">
-                <input value={filename} onChange={(e)=>setFilename(e.target.value)}></input>.txt
+                <button className="loadprojectbutton"><input type="file" name="file" accept='text/plain' className="projectfile" onChange={selectFilepath}></input>设定自动导出位置</button>
                 <button onClick={downloadCode}>导出脚本</button>
             </span>
         </span>

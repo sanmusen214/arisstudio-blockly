@@ -36,14 +36,14 @@
 }
 
 /* 修改input样式 */
-#loadprojectbutton{
+.loadprojectbutton{
     font-size:12px;
     overflow:hidden;
     width:98px;
     height: 25px;
     position: relative;
 }
-#projectfile{
+.projectfile{
     width:98px;
     height: 25px;
     position:absolute;
