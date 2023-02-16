@@ -3,7 +3,7 @@ import PlayGround, { Block, Value, Field, Shadow, Category } from '../../PlayGro
 
 function CharacterMenu() {
   return (
-    <Category name="人物动作">
+    <Category name="人物">
         <Block type="b_stu_display"></Block>
         <Block type="b_stu_position"></Block>
         <Block type="b_stu_action"></Block>

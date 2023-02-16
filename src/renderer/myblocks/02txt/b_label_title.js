@@ -37,6 +37,6 @@ javascriptGenerator[blockname] = function (block) {
       return ``
     }
 
-    return `stagelist.push(\`label \${${value_val1}}\`);`
+    return `stagelist.push(\`label '\${${value_val1}}'\`);`
 }
 

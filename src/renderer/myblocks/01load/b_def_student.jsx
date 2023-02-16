@@ -33,7 +33,7 @@ const jsondesc = {
     "previousStatement": null,
     "nextStatement": null,
     "colour": 230,
-    "tooltip": "",
+    "tooltip": "人物素材不需要文件名后缀",
     "helpUrl": ""
   }
 

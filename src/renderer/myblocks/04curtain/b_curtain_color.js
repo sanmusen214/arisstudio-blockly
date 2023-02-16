@@ -2,16 +2,20 @@ import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
 
 // 定义JSON格式自定义模块
-let blockname="b_banner_main"
+let blockname="b_curtain_color"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "标题 大标题 %1",
+    "message0": "设置幕布颜色 %1",
     "args0": [
       {
-        "type": "input_value",
-        "name": "val1",
-        "check": "String"
+        "type": "field_dropdown",
+        "name": "drop1",
+        "options": [
+            ["黑","black"],
+            ["白","white"],
+            ["红","red"],
+        ]
       },
     ],
     "inputsInline": true,
@@ -31,12 +35,8 @@ Blockly.Blocks[blockname] = {
 
 // 为自定义块添加js语言生成器
 javascriptGenerator[blockname] = function (block) {
-    const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
-    if(value_val1.length==0){
-      // 如果该字符串参数空内没有任何变量，忽略掉本代码块
-      return ``
-    }
+    const dropdown_drop1 = block.getFieldValue('drop1');
 
-    return `stagelist.push(\`banner '\${${value_val1}}'\`);`
+    return `stagelist.push(\`curtain ${dropdown_drop1}\`);`
 }
 

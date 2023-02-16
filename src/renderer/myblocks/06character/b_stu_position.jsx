@@ -7,7 +7,7 @@ import { students_datamap } from '../../datamap';
 // 带有映射的学生名
 const jsondesc = {
     "type": "b_stu_position",
-    "message0": "学生昵称 %1 位置设定 %2 %3",
+    "message0": "学生昵称 %1 位置 横轴 %2 纵轴 %3 %4",
     "args0": [
       {
         "type": "input_value",
@@ -15,22 +15,28 @@ const jsondesc = {
         "check": "String"
       },
       {
-        "type": "field_dropdown",
-        "name": "drop1",
-        "options": [
-            ["横轴","x"],
-            ["纵轴","y"]
-        ]
+        "type": "field_number",
+        "name": "num1",
+        "min": -30,
+        "value": 0,
+        "max": 30,
+        "precision": 1,
+      },
+      {
+        "type": "field_number",
+        "name": "num2",
+        "min": -30,
+        "value": 0,
+        "max": 30,
+        "precision": 1,
       },
       {
         "type": "field_dropdown",
-        "name": "drop2",
+        "name": "drop1",
         "options": [
-            ["最左/最下","-10"],
-            ["左/下","-5"],
-            ["中","0"],
-            ["右/上","5"],
-            ["最右/最上","10"],
+            ["保持隐藏","hideD"],
+            ["逐渐出现","show"],
+            ["直接出现","showD"],
         ]
       }
     ],
@@ -56,11 +62,16 @@ javascriptGenerator['b_stu_position'] = function (block) {
       // 如果该字符串参数空内没有任何变量，忽略掉本代码块
       return ``
     }
+    const number_num1 = block.getFieldValue('num1');
+    const number_num2 = block.getFieldValue('num2');
     const dropdown_drop1 = block.getFieldValue('drop1');
-    const dropdown_drop2 = block.getFieldValue('drop2');
 
 
-    return `stagelist.push(\`\${${value_val1}} ${dropdown_drop1} ${dropdown_drop2}\`);`
+    return `
+stagelist.push(\`\${${value_val1}} x ${number_num1}\`);
+stagelist.push(\`\${${value_val1}} y ${number_num2}\`);
+stagelist.push(\`\${${value_val1}} ${dropdown_drop1}\`);
+`
 
     
 }
