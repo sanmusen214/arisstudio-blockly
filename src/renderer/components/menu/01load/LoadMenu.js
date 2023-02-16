@@ -7,23 +7,23 @@ function LoadMenu() {
         <Block type="b_load" />
         <Block type="b_student">
             <Value name="val1">
-                <Block type="text"></Block>
-            </Value>
+          <Shadow type="text"></Shadow>
+          </Value>
         </Block>
         <Block type="b_def_student">
             <Value name="val1">
-                <Block type="text"></Block>
+            <Shadow type="text"></Shadow>
             </Value>
             <Value name="val2">
-                <Block type="text"></Block>
+            <Shadow type="text"></Shadow>
             </Value>
         </Block>
         <Block type="b_load_other">
             <Value name="val1">
-                <Block type="text"></Block>
+            <Shadow type="text"></Shadow>
             </Value>
             <Value name="val2">
-                <Block type="text"></Block>
+            <Shadow type="text"></Shadow>
             </Value>
         </Block>
     </Category>

@@ -4,13 +4,28 @@ import PlayGround, { Block, Value, Field, Shadow, Category } from '../../PlayGro
 function CharacterMenu() {
   return (
     <Category name="人物">
-        <Block type="b_stu_display"></Block>
-        <Block type="b_stu_position"></Block>
-        <Block type="b_stu_action"></Block>
-        <Block type="b_stu_face"></Block>
-        <Block type="b_stu_emo"></Block>
-        <Block type="b_stu_light"></Block>
-        <Block type="b_stu_move"></Block>
+        <Block type="b_stu_display">
+        <Value name="val1"><Shadow type="text"></Shadow></Value>
+        </Block>
+        <Block type="b_stu_position">
+        <Value name="val1"><Shadow type="text"></Shadow></Value>
+        </Block>
+        <Block type="b_stu_action">
+        <Value name="val1"><Shadow type="text"></Shadow></Value>
+        </Block>
+        <Block type="b_stu_face">
+        <Value name="val1"><Shadow type="text"></Shadow></Value>
+        <Value name="val2"><Shadow type="text"></Shadow></Value>
+        </Block>
+        <Block type="b_stu_emo">
+        <Value name="val1"><Shadow type="text"></Shadow></Value>
+        </Block>
+        <Block type="b_stu_light">
+        <Value name="val1"><Shadow type="text"></Shadow></Value>
+        </Block>
+        <Block type="b_stu_move">
+        <Value name="val1"><Shadow type="text"></Shadow></Value>
+        </Block>
     </Category>
   )
 }

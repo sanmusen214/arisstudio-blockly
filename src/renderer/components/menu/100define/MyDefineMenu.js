@@ -5,14 +5,19 @@ function MyDefineMenu() {
   return (
     <Category name="其他块">
         <Block type="b_stage" />
-        <Block type="controls_repeat_ext">
+
+        <Block type="b_case" />
+        <Block type="b_case_jump" />
+        
+        <Block type="text" />
+        {/* <Block type="controls_repeat_ext">
             <Value name="TIMES">
                 <Shadow type="math_number">
                     <Field name="NUM">3</Field>
                 </Shadow>
             </Value>
-        </Block>
-        <Block type="text" />
+        </Block> */}
+
 
     </Category>
   )

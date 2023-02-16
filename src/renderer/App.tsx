@@ -20,7 +20,7 @@ function BlocklyArea() {
               startScale : 1.1, 
               maxScale : 1.5, 
               minScale : 0.2, 
-              scaleSpeed : 1.2
+              scaleSpeed : 1.1
             }}
             move={{
                 scrollbars: true,
