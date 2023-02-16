@@ -2,21 +2,20 @@ import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
 
 // 定义JSON格式自定义模块
-let blockname="b_text_size"
+let blockname="b_autotime"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "文字大小 %1",
+    "message0": "设置自动播放的间隔 %1 秒",
     "args0": [
       {
-        "type": "field_dropdown",
-        "name": "drop1",
-        "options": [
-            ["小","small"],
-            ["中","medium"],
-            ["大","big"],
-        ]
-      }
+        "type": "field_number",
+        "name": "num1",
+        "min": 1,
+        "value": 2.5,
+        "max": 10,
+        "precision": 0.1,
+      },
     ],
     "inputsInline": true,
     "previousStatement": null,
@@ -35,8 +34,9 @@ Blockly.Blocks[blockname] = {
 
 // 为自定义块添加js语言生成器
 javascriptGenerator[blockname] = function (block) {
-    const dropdown_drop1 = block.getFieldValue('drop1');
+    const number_num1 = block.getFieldValue('num1');
 
-    return `stagelist.push(\`text size ${dropdown_drop1}\`);`
+
+    return `stagelist.push(\`auto ${number_num1}\`);`
 }
 
