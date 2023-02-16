@@ -12,12 +12,14 @@ try {
         let rescode=""
         if(errorset.size!=0){
             rescode="以下阶段被重复定义: "+Array.from(errorset.values()).join(",")+", 阶段名不能重复";
+            return rescode;
         }else{
             const sortMap = new Map([...resmap].sort((a, b) => a[0] - b[0]));
             rescode="";
             for(let code of sortMap.values()){
                 rescode+=code;
             }
+            return rescode
         }
         
         return rescode;
