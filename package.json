@@ -176,8 +176,8 @@
     "webpack-merge": "^5.8.0"
   },
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.erb.ElectronReact",
+    "productName": "ArisStudio Blockly",
+    "appId": "org.erb.ArisStudioBlockly",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
     "files": [
@@ -216,7 +216,7 @@
     },
     "win": {
       "target": [
-        "nsis"
+        "portable"
       ]
     },
     "linux": {
