@@ -6,7 +6,7 @@ let blockname="b_one_button"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "单个按钮，内容： %1 执行 %2",
+    "message0": "单个按钮，内容：[ %1 ] 执行 %2",
     "args0": [
       {
         "type": "input_value",
@@ -18,9 +18,10 @@ const jsondesc = {
         "name": "sta1"
       }
     ],
+    "inputsInline": true,
     "previousStatement": null,
     "nextStatement": null,
-    "colour": 230,
+    "colour": 20,
     "tooltip": "",
     "helpUrl": ""
   }

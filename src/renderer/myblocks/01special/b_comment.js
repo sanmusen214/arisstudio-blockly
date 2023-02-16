@@ -6,7 +6,7 @@ let blockname="b_comment"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "注释 %1",
+    "message0": "注释 [ %1 ]",
     "args0": [
       {
         "type": "input_value",
@@ -17,7 +17,7 @@ const jsondesc = {
     "inputsInline": true,
     "previousStatement": null,
     "nextStatement": null,
-    "colour": 230,
+    "colour": 330,
     "tooltip": "",
     "helpUrl": ""
   }

@@ -23,7 +23,7 @@ const jsondesc = {
         "name": "sta1"
       }
     ],
-    "colour": 230,
+    "colour": 290,
     "tooltip": "",
     "helpUrl": ""
   }
