@@ -39,7 +39,12 @@ function PlayGround(props){
                 Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), primaryWorkspace.current);
             }
             // 实时生成
-            primaryWorkspace.current.addChangeListener(generateCode);
+            primaryWorkspace.current.addChangeListener(()=>{
+                generateCode();
+                // 每次playground更新，设置window里numinbigfunc值为0，这样让utils/timestamp每次更新后都是从0开始计数，遇到一个if就自己加1，也不会不限加
+                // 但是if块的上下变了，if生成的id还是会变，无伤大雅嗷
+                window.numinbigfunc=0;
+            });
 
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
     // 加载项目

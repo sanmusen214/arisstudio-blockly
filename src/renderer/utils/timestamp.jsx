@@ -1,14 +1,21 @@
 // 根据时间生成yyyymmddhhmmss，用来下载图片命名
-export const generateTime = function () {
-    const now = new Date();
-    const time =
-      now.getFullYear().toString() +
-      (now.getMonth() + 1) +
-      now.getDate() +
-      now.getHours() +
-      now.getMinutes() +
-      now.getSeconds() +
-      now.getMilliseconds() +
-      Math.floor(Math.random()*95)+1;
-    return time;
-  };
+// 最多2000个不同的数
+function bigfunc(){
+  if(!window.numinbigfunc){
+    window.numinbigfunc=0
+  }
+  function smallfunc(){
+    window.numinbigfunc+=1
+    return "tstamp"+window.numinbigfunc
+  }
+
+  return smallfunc
+}
+
+
+
+
+
+
+export const generateTime=bigfunc()
+
