@@ -25,13 +25,13 @@ try {
             for(let thiskey of sortMap.keys()){
                 if(thiskey>200 && !met200){
                     met200=true;
-                    rescode+="jump wholeProjectTail;\\n"
+                    rescode+="jump wholeProjectTail\\n"
                 }
                 let thisvaluecode=sortMap.get(thiskey);
                 rescode+=thisvaluecode;
             }
             if(met200){//如果有支线
-                rescode+="target wholeProjectTail;\\n"
+                rescode+="target wholeProjectTail\\n"
             }
 
             return rescode;
