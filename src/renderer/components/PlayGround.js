@@ -17,11 +17,18 @@ Blockly.setLocale(locale);
 
 // 直接改成保存文件
 // calling IPC exposed from preload script
-window.electron.ipcRenderer.on('ipc-example', (arg) => {
-    // eslint-disable-next-line no-console
-    // console.log(arg);
-    return
-});
+if(window.electron&&window.electron.ipcRenderer){
+    window.isinWebpageMode=false
+    window.electron.ipcRenderer.on('ipc-example', (arg) => {
+        // eslint-disable-next-line no-console
+        // console.log(arg);
+        return
+    });
+}else{
+    console.log("thisway")
+    window.isinWebpageMode=true
+}
+
 
 // 防抖
 function antiShake(fun, delay) {
@@ -127,7 +134,9 @@ function PlayGround(props){
         generateCode();
         if(window.wfilepath){
             if(window.wfilepath.length>0){
-                window.electron.ipcRenderer.sendMessage('ipc-example', [window.wfilepath, window.txtcode]);
+                if(window.electron&&window.electron.ipcRenderer){
+                    window.electron.ipcRenderer.sendMessage('ipc-example', [window.wfilepath, window.txtcode]);
+                }
             }
         }
 
@@ -148,7 +157,8 @@ function PlayGround(props){
                     <button onClick={saveProject}>导出blockly项目</button>
                 </div>
                 <div>
-                    <button className="loadprojectbutton" style={{width:"120px"}}><input type="file" name="file" accept='text/plain' className="projectfile" onChange={selectFilepath}></input>{window.wfilepath?"重新":"开始"}设定自动导出</button>
+                    {window.isinWebpageMode?<></>:<><button className="loadprojectbutton" style={{width:"120px"}}><input type="file" name="file" accept='text/plain' className="projectfile" onChange={selectFilepath}></input>{window.wfilepath?"重新":"开始"}设定自动导出</button></>}
+                    
                     <button onClick={downloadCode}>导出脚本</button>
                 </div>
                 <div>
