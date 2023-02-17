@@ -44,7 +44,7 @@ function PlayGround(props){
     // 实时导出的文件路径使用window.wfilepath
 
     // 生成的代码框，esultcode当前脚本
-    let [resultcode,setResultcode]=useState("实时导出关，请设定自动导出到txt目标")
+    let [resultcode,setResultcode]=useState("")
     // 是否显示脚本框
     let [showres,setShowres]=useState(true)
 
@@ -93,7 +93,9 @@ function PlayGround(props){
     const saveProject=()=>{
         saveTxt(`ArisStudio_blockly_${version}.bablockly`,JSON.stringify(Blockly.serialization.workspaces.save(primaryWorkspace.current)))
     }
-    // 生成脚本代码，并放入屏幕右侧文本框
+    /**
+     * 生成脚本代码，并放入屏幕右侧文本框
+     *  */ 
     const generateCode = () => {
         // 生成代码前时间戳归0
         // 每次playground更新，设置window里numinbigfunc值为0，这样让utils/timestamp每次更新后都是从0开始计数，遇到一个if就自己加1，也不会不限加
@@ -122,8 +124,8 @@ function PlayGround(props){
 
     // electron静默 每当playground更新时 下载脚本
     const antiSaveFile=()=>{
+        generateCode();
         if(window.wfilepath){
-            generateCode();
             if(window.wfilepath.length>0){
                 window.electron.ipcRenderer.sendMessage('ipc-example', [window.wfilepath, window.txtcode]);
             }
