@@ -11,9 +11,9 @@ const jsondesc = {
       {
         "type": "field_number",
         "name": "num1",
-        "min": 1,
-        "value": 2.5,
-        "max": 10,
+        "min": 0,
+        "value": 1,
+        "max": 1000,
         "precision": 0.1,
       },
     ],
