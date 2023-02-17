@@ -2,11 +2,11 @@ import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
 
 // 定义JSON格式自定义模块
-let blockname="b_text_set"
+let blockname="b_text_display"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "显示说话 [ 说话人姓名 %1 部门/社团 %2 说话内容 %3 ]并等待点击",
+    "message0": "显示说话 [ 说话人姓名 %1 部门/社团 %2 说话内容 %3 ]无等待",
     "args0": [
       {
         "type": "input_value",
@@ -49,6 +49,6 @@ javascriptGenerator[blockname] = function (block) {
       return ``
     }
 
-    return `stagelist.push(\`t '\${${value_val1}}' '\${${value_val2}}' '\${${value_val3}}'\`);`
+    return `stagelist.push(\`tc '\${${value_val1}}' '\${${value_val2}}' '\${${value_val3}}'\`);`
 }
 

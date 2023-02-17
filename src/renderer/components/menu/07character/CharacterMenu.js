@@ -20,10 +20,22 @@ function CharacterMenu() {
         <Block type="b_stu_emo">
         <Value name="val1"><Shadow type="text"></Shadow></Value>
         </Block>
+        <Block type="b_stu_emoinit">
+        <Value name="val1"><Shadow type="text"></Shadow></Value>
+        </Block>
         <Block type="b_stu_light">
         <Value name="val1"><Shadow type="text"></Shadow></Value>
         </Block>
         <Block type="b_stu_move">
+        <Value name="val1"><Shadow type="text"></Shadow></Value>
+        </Block>
+        <Block type="b_stu_cover">
+        <Value name="val1"><Shadow type="text"></Shadow></Value>
+        </Block>
+        <Block type="b_stu_shake">
+        <Value name="val1"><Shadow type="text"></Shadow></Value>
+        </Block>
+        <Block type="b_stu_stopshake">
         <Value name="val1"><Shadow type="text"></Shadow></Value>
         </Block>
     </Category>

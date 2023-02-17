@@ -18,6 +18,31 @@ function LoadMenu() {
             <Shadow type="text"></Shadow>
             </Value>
         </Block>
+        <Block type="b_load_custom">
+            <Value name="val1">
+            <Shadow type="text"></Shadow>
+            </Value>
+            <Value name="val2">
+            <Shadow type="text"></Shadow>
+            </Value>
+            <Value name="val3">
+            <Shadow type="text"></Shadow>
+            </Value>
+            <Value name="val4">
+            <Shadow type="text"></Shadow>
+            </Value>
+        </Block>
+        <Block type="b_load_char">
+            <Value name="val1">
+            <Shadow type="text"></Shadow>
+            </Value>
+            <Value name="val2">
+            <Shadow type="text"></Shadow>
+            </Value>
+            <Value name="val3">
+            <Shadow type="text"></Shadow>
+            </Value>
+        </Block>
         <Block type="b_load_other">
             <Value name="val1">
             <Shadow type="text"></Shadow>

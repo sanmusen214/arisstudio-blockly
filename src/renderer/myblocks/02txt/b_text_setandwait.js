@@ -2,11 +2,11 @@ import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
 
 // 定义JSON格式自定义模块
-let blockname="b_text_set"
+let blockname="b_text_setandwait"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "显示说话 [ 说话人姓名 %1 部门/社团 %2 说话内容 %3 ]并等待点击",
+    "message0": "显示说话 [ 说话人姓名 %1 部门/社团 %2 说话内容 %3 ]并等待 %4 秒",
     "args0": [
       {
         "type": "input_value",
@@ -22,6 +22,14 @@ const jsondesc = {
         "type": "input_value",
         "name": "val3",
         "check": "String"
+      },
+      {
+        "type": "field_number",
+        "name": "num1",
+        "min": 0.1,
+        "value": 1,
+        "max": 100,
+        "precision": 0.1,
       },
     ],
     "inputsInline": true,
@@ -48,7 +56,12 @@ javascriptGenerator[blockname] = function (block) {
       // 如果该字符串参数空内没有任何变量，忽略掉本代码块
       return ``
     }
+    const number_num1 = block.getFieldValue('num1');
 
-    return `stagelist.push(\`t '\${${value_val1}}' '\${${value_val2}}' '\${${value_val3}}'\`);`
+
+    return `
+stagelist.push(\`t '\${${value_val1}}' '\${${value_val2}}' '\${${value_val3}}'\`);
+stagelist.push(\`wait ${number_num1}\`);
+`
 }
 

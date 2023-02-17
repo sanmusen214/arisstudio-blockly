@@ -14,7 +14,17 @@ function TextMenu() {
       <Block type="b_label_title">
       <Value name="val1"><Shadow type="text"></Shadow></Value>
       </Block>
+      <Block type="b_text_display">
+      <Value name="val1"><Shadow type="text"></Shadow></Value>
+      <Value name="val2"><Shadow type="text"></Shadow></Value>
+      <Value name="val3"><Shadow type="text"></Shadow></Value>
+      </Block>
       <Block type="b_text_set">
+      <Value name="val1"><Shadow type="text"></Shadow></Value>
+      <Value name="val2"><Shadow type="text"></Shadow></Value>
+      <Value name="val3"><Shadow type="text"></Shadow></Value>
+      </Block>
+      <Block type="b_text_setandwait">
       <Value name="val1"><Shadow type="text"></Shadow></Value>
       <Value name="val2"><Shadow type="text"></Shadow></Value>
       <Value name="val3"><Shadow type="text"></Shadow></Value>

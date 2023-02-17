@@ -40,7 +40,8 @@ function PlayGround(props){
     const blocklyDiv = useRef();
     const toolbox = useRef();
     let primaryWorkspace = useRef();
-    // 文件名, 下载时使用window.wfilepath
+    
+    // 实时导出的文件路径使用window.wfilepath
 
     // 生成的代码框，esultcode当前脚本
     let [resultcode,setResultcode]=useState("实时导出关，请设定自动导出到txt目标")
@@ -80,11 +81,11 @@ function PlayGround(props){
                 try{
                     Blockly.serialization.workspaces.load(workspaceObj, primaryWorkspace.current);
                 }catch(error){
-                    setResultcode("读取错误，请检查项目文件的版本以及现在版本")
+                    setResultcode("读取错误，请检查项目文件的版本以及blockly程序版本，不同版本间可能会不兼容")
                 }
             })
         }else{
-            setResultcode("读取失败，项目文件名后缀应当是为bablockly")
+            setResultcode("读取失败，项目文件名后缀应当是bablockly")
         }
         
     }
@@ -133,7 +134,7 @@ function PlayGround(props){
     // web打开文件管理器 让用户下载脚本
     const downloadCode=()=>{
         generateCode()
-        saveTxt(`demoas.txt`,window.txtcode)
+        saveTxt(`demoASblockly.txt`,window.txtcode)
     }
 
     return (
@@ -145,7 +146,7 @@ function PlayGround(props){
                     <button onClick={saveProject}>导出blockly项目</button>
                 </div>
                 <div>
-                    <button className="loadprojectbutton"><input type="file" name="file" accept='text/plain' className="projectfile" onChange={selectFilepath}></input>设定自动导出到</button>
+                    <button className="loadprojectbutton" style={{width:"120px"}}><input type="file" name="file" accept='text/plain' className="projectfile" onChange={selectFilepath}></input>{window.wfilepath?"重新":"开始"}设定自动导出</button>
                     <button onClick={downloadCode}>导出脚本</button>
                 </div>
                 <div>
