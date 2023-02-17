@@ -28,7 +28,7 @@ let mainWindow: BrowserWindow | null = null;
 
 ipcMain.on('ipc-example', async (event, [filename, content]) => {
   saveTxtToSystem(filename,content)
-  event.reply('ipc-example', 'render send: '+filename+" con: "+content);
+  event.reply('ipc-example', 'saved: '+filename+" con: "+content);
 });
 
 if (process.env.NODE_ENV === 'production') {

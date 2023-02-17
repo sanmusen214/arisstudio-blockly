@@ -5,7 +5,7 @@
 
  export let saveTxtToSystem = async (curPath: string,data: string): Promise<string> => {
     // if (curPath) {
-    writeFile(curPath, data, "utf8", ()=>{})
+    await writeFile(curPath, data,(err)=>{console.log(err)})
     return curPath
     // }
     // else {

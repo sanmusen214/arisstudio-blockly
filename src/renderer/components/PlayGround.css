@@ -3,7 +3,7 @@
     position:absolute;
     top:0;
     z-index: 999;
-    text-align: center;
+    text-align: right;
     right:0;
     height:22px;
 }
@@ -27,7 +27,7 @@
 #rescodebox{
     position:absolute;
     right:0;
-    top:25px;
+    top:100px;
     width:30%;
     height:60%;
     z-index: 10;

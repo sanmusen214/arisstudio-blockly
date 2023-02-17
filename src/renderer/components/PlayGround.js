@@ -34,16 +34,20 @@ function antiShake(fun, delay) {
     };
 }
 
+
+
 function PlayGround(props){
     const blocklyDiv = useRef();
     const toolbox = useRef();
     let primaryWorkspace = useRef();
-    // 文件名
-    let filepath=""
-    // 生成的代码框，esultcode当前脚本
-    let [resultcode,setResultcode]=useState("")
+    // 文件名, 下载时使用window.wfilepath
 
- 
+    // 生成的代码框，esultcode当前脚本
+    let [resultcode,setResultcode]=useState("实时导出关，请设定自动导出到txt目标")
+    // 是否显示脚本框
+    let [showres,setShowres]=useState(true)
+
+    // Playground设定变更时重绘
     useEffect(() => {
         const { initialXml, children, ...rest } = props;
             primaryWorkspace.current = Blockly.inject(
@@ -60,15 +64,7 @@ function PlayGround(props){
             // 实时生成
             primaryWorkspace.current.addChangeListener(
                 antiShake(()=>{
-                    console.log("generate and run code")
-                    generateCode();
-                    // 每次playground更新，设置window里numinbigfunc值为0，这样让utils/timestamp每次更新后都是从0开始计数，遇到一个if就自己加1，也不会不限加
-                    // 但是if块的上下变了，if生成的id还是会变，无伤大雅嗷
-                    window.numinbigfunc=0;
-                    if(filepath.length>0){
-                        window.electron.ipcRenderer.sendMessage('ipc-example', [filepath, window.txtcode]);
-                    }
-
+                    antiSaveFile()
                 },500)
             );
 
@@ -76,26 +72,37 @@ function PlayGround(props){
     // 加载项目
     const loadProject=(e)=>{
         const file=e.target.files[0];
-        uploadTxt(file,function(str){
-            let workspaceObj=JSON.parse(str)
-            try{
-                Blockly.serialization.workspaces.load(workspaceObj, primaryWorkspace.current);
-            }catch(error){
-                setResultcode("读取错误，请检查项目文件的版本以及现在版本")
-            }
-        })
+        // 检查文件名后缀
+        const filenamesegs=file.name.split(".")
+        if(filenamesegs[filenamesegs.length-1]==="bablockly"){
+            uploadTxt(file,function(str){
+                let workspaceObj=JSON.parse(str)
+                try{
+                    Blockly.serialization.workspaces.load(workspaceObj, primaryWorkspace.current);
+                }catch(error){
+                    setResultcode("读取错误，请检查项目文件的版本以及现在版本")
+                }
+            })
+        }else{
+            setResultcode("读取失败，项目文件名后缀应当是为bablockly")
+        }
+        
     }
     // 导出项目
     const saveProject=()=>{
-        saveTxt(`ArisStudio_blockly_${version}.txt`,JSON.stringify(Blockly.serialization.workspaces.save(primaryWorkspace.current)))
+        saveTxt(`ArisStudio_blockly_${version}.bablockly`,JSON.stringify(Blockly.serialization.workspaces.save(primaryWorkspace.current)))
     }
-    // 实时生成代码
+    // 生成脚本代码，并放入屏幕右侧文本框
     const generateCode = () => {
-        // 点击后生成代码
+        // 生成代码前时间戳归0
+        // 每次playground更新，设置window里numinbigfunc值为0，这样让utils/timestamp每次更新后都是从0开始计数，遇到一个if就自己加1，也不会不限加
+        // 但是if块的上下变了，if生成的id还是会变，无伤大雅嗷
+        window.numinbigfunc=0;
+        // playground生成代码
         let areacode = javascriptGenerator.workspaceToCode(
           primaryWorkspace.current
         );
-        // 全局codeMap输出代码
+        // 组合代码
         const playcode=generatefinalCodes(areacode)
         // 运行生成的代码
         // 这会给window注册一个makecodetxt函数并运行，然后最终脚本会存在window.txtcode
@@ -105,14 +112,25 @@ function PlayGround(props){
         } catch (error) {
             setResultcode(`构造生成码时出错啦，你可以反馈该问题：${error.message}`)
         }
-        return window.txtcode
-        
     }
-    // 从已有文件保存文件位置
+    // 从已有文件保存一个文件位置
     const selectFilepath=(e)=>{
-        filepath=e.target.files[0].path;
+        window.wfilepath=e.target.files[0].path // 为了实际保存
+        setResultcode("开启实时导出到:"+window.wfilepath)
     }
-    // 下载脚本
+
+    // electron静默 每当playground更新时 下载脚本
+    const antiSaveFile=()=>{
+        if(window.wfilepath){
+            generateCode();
+            if(window.wfilepath.length>0){
+                window.electron.ipcRenderer.sendMessage('ipc-example', [window.wfilepath, window.txtcode]);
+            }
+        }
+
+    }
+
+    // web打开文件管理器 让用户下载脚本
     const downloadCode=()=>{
         generateCode()
         saveTxt(`demoas.txt`,window.txtcode)
@@ -122,22 +140,30 @@ function PlayGround(props){
     <>
         <span id="toolsbox">
             当前版本:{version}
-            <span id="lefttools">
-                <button className="loadprojectbutton"><input type="file" name="file" accept='text/plain' className="projectfile" onChange={loadProject}></input>导入blockly项目</button>
-                <button onClick={saveProject}>导出blockly项目</button>
-            </span>
-            <span id="righttools">
-                <button className="loadprojectbutton"><input type="file" name="file" accept='text/plain' className="projectfile" onChange={selectFilepath}></input>设定自动导出位置</button>
-                <button onClick={downloadCode}>导出脚本</button>
-            </span>
+                <div>
+                    <button className="loadprojectbutton"><input type="file" name="file" accept='*' className="projectfile" onChange={loadProject}></input>导入blockly项目</button>
+                    <button onClick={saveProject}>导出blockly项目</button>
+                </div>
+                <div>
+                    <button className="loadprojectbutton"><input type="file" name="file" accept='text/plain' className="projectfile" onChange={selectFilepath}></input>设定自动导出到</button>
+                    <button onClick={downloadCode}>导出脚本</button>
+                </div>
+                <div>
+                    <button onClick={()=>setShowres(!showres)}>{showres?"隐藏下方脚本框":"显示脚本框"}</button>
+                </div>
+                
+                
+                
+
         </span>
         <span ref={blocklyDiv} id="blocklyDiv" />
         <div style={{ display: 'none' }} ref={toolbox}>
             {props.children}
         </div>
         {/* 生成的代码 显示框 */}
-        <textarea spellCheck={false} id="rescodebox" value={resultcode}>
-        </textarea>
+        {showres?<textarea spellCheck={false} id="rescodebox" value={resultcode}></textarea>:<></>}
+
+
     </>);
 }
 
