@@ -8,15 +8,16 @@ try {
         const resmap=new Map();
 
         let met200=false;
-        const caseset=new Set();
-        const caseerrorset=new Set();
+
+        const case_jump_dict=new Map();
+
         // 所有阶段代码开始
         ${code}
         // 所有阶段代码结束
         let rescode=""
-        if(errorset.size!=0||caseerrorset.size!=0){
+        if(errorset.size!=0){
 
-            rescode="以下主线块或支线块的id重复: "+Array.from(errorset.values()).join(",")+"\\n以下运行支线块的id重复: "+Array.from(caseerrorset.values()).join(",");
+            rescode="以下主线块或定义支线块的id重复: "+Array.from(errorset.values()).join(",");
             return rescode;
         }else{
             // 排序
@@ -27,8 +28,20 @@ try {
                     met200=true;
                     rescode+="jump wholeProjectTail\\n"
                 }
-                let thisvaluecode=sortMap.get(thiskey);
-                rescode+=thisvaluecode;
+                if(thiskey>200){//key就是id
+                    // 支线块副本
+                    let thisvaluecode=sortMap.get(thiskey);
+                    for(let timestamp of case_jump_dict[thiskey]){
+                        rescode+="target "+thiskey+timestamp+"PathStart\\n"
+                        rescode+=thisvaluecode;
+                        rescode+="jump "+thiskey+timestamp+"PathBack\\n"
+                    }
+                }else{
+                    // 主线块
+                    let thisvaluecode=sortMap.get(thiskey);
+                    rescode+=thisvaluecode;
+                }
+
             }
             if(met200){//如果有支线
                 rescode+="target wholeProjectTail\\n"
@@ -41,7 +54,7 @@ try {
         }
         txtcode=makecodetxt()
 } catch (error) {
-    txtcode="运行生成码时出错啦！你可以反馈该问题："+error.message
+    txtcode="生成脚本时出错啦！你可以反馈该问题："+error.message
 }
 
 `

@@ -46,9 +46,7 @@ javascriptGenerator['b_case'] = function (block) {
     return `
 // 支线${number_val1}代码
 stagelist=[];
-stagelist.push('target ${number_val1}PathStart')
 ${statements_steps.trim()}
-stagelist.push('jump ${number_val1}PathBack')
 if(resmap.has(${number_val1})){
     errorset.add(${number_val1});
 }else{

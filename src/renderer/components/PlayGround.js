@@ -77,22 +77,24 @@ function PlayGround(props){
             );
 
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
-    // 加载项目
+    // 导入项目
     const loadProject=(e)=>{
-        const file=e.target.files[0];
-        // 检查文件名后缀
-        const filenamesegs=file.name.split(".")
-        if(filenamesegs[filenamesegs.length-1]==="bablockly"){
-            uploadTxt(file,function(str){
-                let workspaceObj=JSON.parse(str)
-                try{
-                    Blockly.serialization.workspaces.load(workspaceObj, primaryWorkspace.current);
-                }catch(error){
-                    setResultcode("读取错误，请检查项目文件的版本以及blockly程序版本，不同版本间可能会不兼容")
-                }
-            })
-        }else{
-            setResultcode("读取失败，项目文件名后缀应当是bablockly")
+        if(e.target && e.target.files){
+            const file=e.target.files[0];
+            // 检查文件名后缀
+            const filenamesegs=file.name.split(".")
+            if(filenamesegs[filenamesegs.length-1]==="bablockly"){
+                uploadTxt(file,function(str){
+                    let workspaceObj=JSON.parse(str)
+                    try{
+                        Blockly.serialization.workspaces.load(workspaceObj, primaryWorkspace.current);
+                    }catch(error){
+                        setResultcode("读取错误，请检查项目文件的版本以及blockly程序版本，不同版本间可能会不兼容")
+                    }
+                })
+            }else{
+                setResultcode("读取失败，项目文件名后缀应当是bablockly")
+            }
         }
         
     }
@@ -120,13 +122,17 @@ function PlayGround(props){
             window.eval(playcode)
             setResultcode(window.txtcode)
         } catch (error) {
-            setResultcode(`构造生成码时出错啦，你可以反馈该问题：${error.message}`)
+            setResultcode(`生成脚本时出错啦，你可以反馈该问题：${error.message}`)
         }
     }
     // 从已有文件保存一个文件位置
     const selectFilepath=(e)=>{
-        window.wfilepath=e.target.files[0].path // 为了实际保存
-        setResultcode("开启实时导出到:"+window.wfilepath)
+        if(e.target&&e.target.files){
+            window.wfilepath=e.target.files[0].path // 为了实际保存
+            setResultcode("开启实时导出到:"+window.wfilepath)
+        }else{
+            setResultcode("无法得到文件路径")
+        }
     }
 
     // electron静默 每当playground更新时 下载脚本
