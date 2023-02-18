@@ -46,7 +46,6 @@ javascriptGenerator[blockname] = function (block) {
 
 
     return `
-stagelist.push(\`wait 0.5\`);
 stagelist.push(\`\${${value_val1}} state \${${value_val2}}\`);
 `
 }

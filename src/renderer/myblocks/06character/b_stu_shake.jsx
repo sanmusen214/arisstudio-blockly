@@ -24,7 +24,7 @@ const jsondesc = {
       {
         "type": "field_number",
         "name": "num1",
-        "min": -1000,
+        "min": 0.1,
         "value": 10,
         "max": 1000,
         "precision": 0.1,
@@ -32,7 +32,7 @@ const jsondesc = {
       {
         "type": "field_number",
         "name": "num2",
-        "min": 0,
+        "min": -1000,
         "value": 0.1,
         "max": 1000,
         "precision": 0.1,
@@ -43,7 +43,7 @@ const jsondesc = {
         "min": 0,
         "value": 5,
         "max": 10000000,
-        "precision": 1,
+        "precision": 0.1,
       },
     ],
     "inputsInline": true,

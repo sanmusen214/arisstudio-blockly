@@ -6,7 +6,7 @@ let blockname="b_bgpic_shake"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "背景震动 %1 速度 %2 幅度 %3 周期 %4",
+    "message0": "背景按 %1 震动 速度 %2 幅度 %3 震动 %4 次",
     "args0": [
       {
         "type": "field_dropdown",
@@ -27,7 +27,7 @@ const jsondesc = {
       {
         "type": "field_number",
         "name": "num2",
-        "min": 0,
+        "min": -1000,
         "value": 1,
         "max": 1000,
         "precision": 0.1,

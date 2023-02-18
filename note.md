@@ -58,3 +58,12 @@ ifcase块的最后target 42IfFinal
 - 初始化met200=false, 当sortMap合并的时候遇到>200的id且还是false（说明来到支线部分），置为true，然后添加jump wholeProjectTail。整个sortMap合并完。target wholeProjectTail
 
 `定义支线`块，获得用户输入id（201到300），然后blockly代码块定义阶段内只有statement内容。在codetool代码后面resMap合并时，for循环里判断id>200，则对case_jump_dict[ id ]列表里的每个时间戳，往rescode里加 target id+时间戳+'PathStart'，然后是thisvaluecode，然后是 jump id+时间戳+'PathBack'
+
+
+## 版本兼容性
+
+目前blockly模块导入项目时，如果项目文件中某一个id的模块记录的**参数格式（每个位置对应的格式）**与现在playground里注册的同id模块不一样，则会报错。
+
+在参数形式能对应上参数下标的情况下，如果参数数量变少，会自动删去项目文件中未知的参数。如果参数空变多，则会留空。
+
+如果数字的允许区间变更，数字会自动修改到最靠近的合法值，不会error。
