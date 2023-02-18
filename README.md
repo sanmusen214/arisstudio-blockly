@@ -50,7 +50,7 @@
 
 ## 字太多了不想看？这里有demo
 
-demo项目在<a href="https://3sanmusen.lanzoum.com/iI5GX0nw1u1i">这里进行下载</a>
+demo文件在<a href="https://3sanmusen.lanzoum.com/iI5GX0nw1u1i">这里进行下载</a>
 
 ## Install
 
