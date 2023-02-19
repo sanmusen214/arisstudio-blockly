@@ -31,11 +31,15 @@ try {
                 if(thiskey>200){//key就是id
                     // 支线块副本
                     let thisvaluecode=sortMap.get(thiskey);
-                    for(let timestamp of case_jump_dict[thiskey]){
-                        rescode+="target "+thiskey+timestamp+"PathStart\\n"
-                        rescode+=thisvaluecode;
-                        rescode+="jump "+thiskey+timestamp+"PathBack\\n"
+                    // 如果有 跳转到该支线块 的跳转块
+                    if(case_jump_dict.has(thiskey)){
+                        for(let timestamp of case_jump_dict[thiskey]){
+                            rescode+="target "+thiskey+timestamp+"PathStart\\n"
+                            rescode+=thisvaluecode;
+                            rescode+="jump "+thiskey+timestamp+"PathBack\\n"
+                        }
                     }
+
                 }else{
                     // 主线块
                     let thisvaluecode=sortMap.get(thiskey);
