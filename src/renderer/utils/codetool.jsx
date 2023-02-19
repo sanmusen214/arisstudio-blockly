@@ -33,7 +33,7 @@ try {
                     let thisvaluecode=sortMap.get(thiskey);
                     // 如果有 跳转到该支线块 的跳转块
                     if(case_jump_dict.has(thiskey)){
-                        for(let timestamp of case_jump_dict[thiskey]){
+                        for(let timestamp of case_jump_dict.get(thiskey)){
                             rescode+="target "+thiskey+timestamp+"PathStart\\n"
                             rescode+=thisvaluecode;
                             rescode+="jump "+thiskey+timestamp+"PathBack\\n"
@@ -50,12 +50,16 @@ try {
             if(met200){//如果有支线
                 rescode+="target wholeProjectTail\\n"
             }
-
+            // 调试用
+            window.errorset=errorset;
+            window.resmap=resmap;
+            window.case_jump_dict=case_jump_dict;
             return rescode;
         }
         
         return rescode;
         }
+        // React里提取txtcode
         txtcode=makecodetxt()
 } catch (error) {
     txtcode="生成脚本时出错啦！你可以反馈该问题："+error.message
