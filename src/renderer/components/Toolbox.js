@@ -21,6 +21,7 @@ function Toolbox() {
             <MusicMenu />
             <CharacterMenu />
             <Category name="变量" custom="VARIABLE"></Category>
+            <Category name="函数" custom="PROCEDURE"></Category>
             <MyDefineMenu />
         </>
     )

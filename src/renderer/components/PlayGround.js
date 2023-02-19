@@ -116,6 +116,7 @@ function PlayGround(props){
         );
         // 组合代码
         const playcode=generatefinalCodes(areacode)
+        window.playcode=playcode
         // 运行生成的代码
         // 这会给window注册一个makecodetxt函数并运行，然后最终脚本会存在window.txtcode
         try {
