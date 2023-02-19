@@ -20,7 +20,9 @@
 
 </div>
 
-## 开始使用ArisStudio-Blockly可视化工具生成脚本
+<img src="https://github.com/sanmusen214/arisstudio-blockly/blob/main/src/renderer/media/document/cover.png"></img>
+
+# 开始使用ArisStudio-Blockly可视化工具生成脚本
 
 1. 首先需要在<a href="https://github.com/Tualin14/ArisStudio">爱丽丝工坊项目</a>下载Releases包并解压，同时需要按照文档说明下载数据资源并放入Data文件夹，请确保你能正常打开ArisStudio.exe。
 2. 下载本项目的Releases包并解压出exe文件或使用浏览器访问`https://sanmusen214.github.io/arisstudio-blockly/`，即可开始堆搭积木。如果你使用的是浏览器网页，则自动保存功能不可用，因此强烈建议下载Release来获得更好的操作体验。
@@ -30,7 +32,7 @@
 6. 右上角的导入与导出blockly项目可以从以前的可视化项目文件中恢复内容，或把当前积木状态保存为新的项目文件。
 
 
-## 如何构建
+# 如何构建
 
 简单地拖动左侧组件到主界面中即可构建用于ArisStudio的脚本，不过有以下几点需要注意：
 
@@ -48,7 +50,7 @@
 
 综上个人比较推荐的做法是使用`主线块1`赋值所有变量，然后使用`主线块2`放置`加载块`，然后在其内加载所有所需的资源。在之后的`主线块`中放置任何其他代码块
 
-## 字太多了不想看？这里有demo
+# 字太多了不想看？这里有demo
 
 demo文件在<a href="https://3sanmusen.lanzoum.com/iI5GX0nw1u1i">这里进行下载</a>
 
