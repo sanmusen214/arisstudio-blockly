@@ -7,7 +7,7 @@ let blockname="b_stu_emoinit"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "学生昵称 %1 重置心情位置",
+    "message0": "人物昵称 %1 重置心情位置",
     "args0": [
       {
         "type": "input_value",

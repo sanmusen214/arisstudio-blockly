@@ -13,6 +13,7 @@ function BlocklyArea() {
             readOnly={false}
             sounds={false}
             trashcan={true}
+            media={'./media/blockly'}
             maxBlocks="Infinity"
             zoom={{
               controls : false, 

@@ -6,7 +6,7 @@ let blockname="b_changetxt"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "切换脚本 %1",
+    "message0": "执行脚本文件 %1",
     "args0": [
       {
         "type": "input_value",

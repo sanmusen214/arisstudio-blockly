@@ -6,7 +6,7 @@ let blockname="b_text_set"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "显示说话 [ 说话人姓名 %1 部门/社团 %2 说话内容 %3 ]并等待点击",
+    "message0": "显示对话 [ 说话人姓名 %1 部门/社团 %2 说话内容 %3 ]并等待点击",
     "args0": [
       {
         "type": "input_value",

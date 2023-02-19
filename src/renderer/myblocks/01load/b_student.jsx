@@ -7,7 +7,7 @@ import { students_datamap } from '../../datamap';
 // 带有映射的学生名
 const jsondesc = {
     "type": "b_student",
-    "message0": "学生昵称 %1 素材文件 %2 %3",
+    "message0": "人物昵称 %1 素材文件 %2 %3",
     "args0": [
       {
         "type": "input_value",

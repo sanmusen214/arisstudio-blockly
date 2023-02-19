@@ -7,7 +7,7 @@ let blockname="b_case_jump"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "运行支线 %1",
+    "message0": "运行代码块 %1",
     "args0": [
       {
         "type": "field_number",

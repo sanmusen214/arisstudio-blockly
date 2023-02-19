@@ -7,7 +7,7 @@ let blockname="b_stu_light"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "学生昵称 %1 亮度 %2",
+    "message0": "人物昵称 %1 亮度 %2",
     "args0": [
       {
         "type": "input_value",

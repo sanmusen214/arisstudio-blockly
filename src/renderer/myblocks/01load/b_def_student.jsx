@@ -8,7 +8,7 @@ import {getValinEnv} from '../../utils/codetool'
 // 带有映射的学生名
 const jsondesc = {
     "type": "b_def_student",
-    "message0": "学生昵称 %1 素材文件 %2 %3",
+    "message0": "人物昵称 %1 素材文件 %2 %3",
     "args0": [
       {
         "type": "input_value",

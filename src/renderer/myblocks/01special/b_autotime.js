@@ -6,7 +6,7 @@ let blockname="b_autotime"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "设置自动播放的间隔 %1 秒",
+    "message0": "设置自动播放的间隔为 %1 秒",
     "args0": [
       {
         "type": "field_number",

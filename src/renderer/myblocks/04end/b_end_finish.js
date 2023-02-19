@@ -6,7 +6,7 @@ let blockname="b_end_finish"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "播放完成动画 内容 %1",
+    "message0": "播放结束动画 文字[ %1 ]",
     "args0": [
       {
         "type": "input_value",

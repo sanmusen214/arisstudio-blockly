@@ -6,7 +6,7 @@ let blockname="b_stu_cover"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "将学生昵称 %1 移动到图层 %2",
+    "message0": "人物昵称 %1 移动到图层 %2",
     "args0": [
       {
         "type": "input_value",

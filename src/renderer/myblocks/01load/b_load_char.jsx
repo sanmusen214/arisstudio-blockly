@@ -6,7 +6,7 @@ let blockname="b_load_char"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "学生昵称 %1 缩放比例 %2 文件夹 %3 图片名(含后缀) %4 %5",
+    "message0": "人物昵称 %1 缩放比例 %2 文件夹 %3 图片名(含后缀) %4 %5",
     "args0": [
       {
         "type": "input_value",

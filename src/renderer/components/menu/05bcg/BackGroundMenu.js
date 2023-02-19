@@ -20,11 +20,11 @@ function BackGroundMenu() {
         <Block type="b_bgpic_changesmoth">
         <Value name="val1"><Shadow type="text"></Shadow></Value>
         </Block>
+        <Block type="b_bgpic_shake"></Block>
       </Category>
 
 
       <Category name="覆盖图片">
-        <Block type="b_bgpic_shake"></Block>
         <Block type="b_ftpic_set"></Block>
         <Block type="b_ftpic_display">
         <Value name="val1"><Shadow type="text"></Shadow></Value>
@@ -37,8 +37,8 @@ function BackGroundMenu() {
         <Block type="b_curtain_alpha"></Block>
         <Block type="b_curtain_color"></Block>
         <Block type="b_curtain_def_color">
-        <Value name="val1">
-          <Shadow type="text"></Shadow>
+          <Value name="val1">
+            <Shadow type="text"></Shadow>
           </Value>
         </Block>
       </Category>

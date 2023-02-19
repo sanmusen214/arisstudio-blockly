@@ -6,7 +6,7 @@ let blockname="b_label_title"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "场景标题 [ %1 ]",
+    "message0": "左侧场景标题 [ %1 ]",
     "args0": [
       {
         "type": "input_value",
