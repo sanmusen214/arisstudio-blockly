@@ -20,6 +20,10 @@ function CharacterMenu() {
         <Block type="b_stu_emo">
         <Value name="val1"><Shadow type="text"></Shadow></Value>
         </Block>
+        <Block type="b_stu_def_emo">
+          <Value name="val1"><Shadow type="text"></Shadow></Value>
+          <Value name="val2"><Shadow type="text"></Shadow></Value>
+        </Block>
         <Block type="b_stu_emoinit">
         <Value name="val1"><Shadow type="text"></Shadow></Value>
         </Block>

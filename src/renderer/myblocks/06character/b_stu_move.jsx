@@ -7,7 +7,7 @@ let blockname="b_stu_move"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "人物昵称 %1 移动 %2 (位置%3 速度 %4)",
+    "message0": "人物昵称 %1 动作 %2 (位置%3 速度 %4)",
     "args0": [
       {
         "type": "input_value",
@@ -22,6 +22,10 @@ const jsondesc = {
             ["后退(忽略右侧参数)","back"],
             ["往x轴","moveX"],
             ["往y轴","moveY"],
+            ["点头(忽略参数)","nod"],
+            ["小跳(忽略参数)","jump"],
+            ["小颤抖(忽略参数)","sshake"],
+            ["大颤抖(忽略参数)","bshake"]
         ]
       },
       {
@@ -68,9 +72,29 @@ javascriptGenerator[blockname] = function (block) {
     const number_val2 = block.getFieldValue('num2');
 
     if(dropdown_drop1==="close"||dropdown_drop1==="back"){
-        return `stagelist.push(\`\${${value_val1}} ${dropdown_drop1}\`);`
-    }else{
-        return `stagelist.push(\`\${${value_val1}} ${dropdown_drop1} ${number_val1} ${number_val2}\`);`
+        return `
+stagelist.push(\`\${${value_val1}} ${dropdown_drop1}\`);
+`
+    }else if(dropdown_drop1==="moveX"||dropdown_drop1==="moveY"){
+        return `
+stagelist.push(\`\${${value_val1}} ${dropdown_drop1} ${number_val1} ${number_val2}\`);
+`
+    }else if(dropdown_drop1==="nod"){
+      return `
+stagelist.push(\`\${${value_val1}} shakeY 10 -5 1\`);
+`
+    }else if(dropdown_drop1==="jump"){
+      return `
+stagelist.push(\`\${${value_val1}} shakeY 10 4 1\`);
+`
+    }else if(dropdown_drop1==="sshake"){
+      return `
+stagelist.push(\`\${${value_val1}} shakeX 15 1 6\`);
+`
+    }else if(dropdown_drop1==="bshake"){
+      return `
+stagelist.push(\`\${${value_val1}} shakeX 20 2 6\`);
+`
     }
 
 }
