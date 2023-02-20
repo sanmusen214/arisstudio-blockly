@@ -50,7 +50,7 @@
 
 <a href="https://www.bilibili.com/video/BV1As4y1h79u/?spm_id_from=333.999.0.0">视频教程</a>
 
-demo文件在<a href="https://github.com/sanmusen214/arisstudio-blockly/blob/main/src/renderer/media/sampleproject">这里下载</a>，进入网页后点击某个文件，然后点击内容框右上角Blame按钮，然后鼠标右键另存为即可保存
+demo文件在<a href="https://github.com/sanmusen214/arisstudio-blockly/blob/main/src/renderer/media/sampleproject">这里下载</a>，进入网页后点击某个文件，然后点击内容框右上角Raw按钮，鼠标右键选择另存为，将文件名后缀的.txt去掉只保留.blockly
 
 ## Install
 
