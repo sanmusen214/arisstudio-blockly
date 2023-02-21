@@ -18,8 +18,8 @@ const jsondesc = {
         "type": "field_dropdown",
         "name": "drop1",
         "options": [
-            ["出现","show"],
-            ["隐藏","hide"],
+            ["逐渐出现","show"],
+            ["逐渐隐藏","hide"],
             ["直接出现","showD"],
             ["直接隐藏","hideD"],
         ]
