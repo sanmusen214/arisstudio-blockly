@@ -159,7 +159,7 @@ function PlayGround(props){
     }
 
     /**
-     * 正则获得文中每个nick对应的map（stuspeakMap），hash：{name:名字，content:话内容，line:哪一行},loadend：加载结束所在的行
+     * 正则获得文中每个nick对应的map（stuspeakMap），hash：{name:名字，content:话内容，lines:哪些行},loadend：加载结束所在的行
      */
     const getChatinfo=(resscript)=>{
         // 匹配说话人姓名
@@ -190,9 +190,14 @@ function PlayGround(props){
                 let eleval=matchres[1]+matchres[2]
                 let elekey='00'+gethash(eleval)
                 if(stuspeakMap.has(elekey)){
+                    // 可能会有冲突
                     errorstuspeakSet.add(matchres[2])
+                    // 脚本靠前的放列表前面
+                    stuspeakMap.get(elekey)['lines'].push(senidx)
+                }else{
+                    stuspeakMap.set(elekey,{'name':matchres[1],'content':matchres[2],'lines':[senidx]})
                 }
-                stuspeakMap.set(elekey,{'name':matchres[1],'content':matchres[2],'line':senidx})
+                
             }
         }
 
@@ -200,14 +205,13 @@ function PlayGround(props){
         return stuspeakMap
 
     }
-
     /**
      * 导出对话文本
      */
      const getChattxt=()=>{
-        const chatinfomap2=getChatinfo(resultcode)
+        const chatinfomapt=getChatinfo(resultcode)
         let outtxt=""
-        for(let ele of chatinfomap2){
+        for(let ele of chatinfomapt){
             if(ele[0]==="hasloadend"){
                 continue
             }
@@ -217,42 +221,57 @@ function PlayGround(props){
         }
         saveTxt("对话文本.txt",outtxt)
     }
-
     /**
-     * （手动/）生成脚本后的对脚本后续处理，
+     * 将stuspeakMap里面的lines展平成列表，从脚本上到下顺序放{hash,name:名字，content:话内容，line:哪行}
+     */
+     const flatmap=(amap)=>{
+        const reslist=[]
+        for(let ele of amap){
+            if(ele[0]==="hasloadend"){
+                continue
+            }
+            const hashcode=ele[0]
+            const name=ele[1].name
+            const content=ele[1].content
+            const lines=ele[1].lines
+            for(let line of lines){
+                reslist.push({  
+                            'hash':hashcode,
+                            'name':name,
+                            'content':content,
+                            'line':line
+                            })
+            }
+        }
+        reslist.sort((a,b)=>a.line-b.line)
+        return reslist
+    }
+    /**
+     * （手动/）生成语音脚本
      * 添加对话块的语音音效
      */
     const getChatscript=()=>{
         const txtcodelist=resultcode.split("\n")
-
         const chatinfomap=getChatinfo(resultcode)
-        const chatinfolist=[]
-        for(let ele of chatinfomap){
-            if(ele[0]==="hasloadend"){
-                continue
-            }
-            chatinfolist.push(ele)
-        }
-        chatinfolist.reverse()
-        // 先加后面的音效使用
-        for(let ele of chatinfolist){
-            const filename=`${ele[0]}.wav`
-            const content=`${ele[1].content}`
-            const lineind=ele[1].line
+        const flatlist=flatmap(chatinfomap)
+        flatlist.reverse()
+        // 先加后面的语音音效使用
+        for(let ele of flatlist){
+            const lineind=ele.line
             // 反着来
             txtcodelist.splice(lineind,0,`se play`)
-            txtcodelist.splice(lineind,0,`se set ${ele[0]}`)
+            txtcodelist.splice(lineind,0,`se set ${ele.hash}`)
+            txtcodelist.splice(lineind,0,`se unset`)
 
         }
         // 然后加load end
         if(!chatinfomap.has("hasloadend")){
             txtcodelist.splice(0,0,"load end")
         }
-        // 再加开头的音效导入
-        for(let ele of chatinfolist){
-            const filename=`${ele[0]}.wav`
-            const content=`${ele[1].content}`
-            txtcodelist.splice(0,0,`load se ${ele[0]} ${filename}`)
+        // 再加开头的语音音效导入
+        for(let ele of flatlist){
+            const filename=`${ele.hash}.wav`
+            txtcodelist.splice(0,0,`load se ${ele.hash} ${filename}`)
         }
 
         saveTxt("democ.txt",txtcodelist.join("\n"))
@@ -274,7 +293,7 @@ function PlayGround(props){
                     <button onClick={downloadCode}>导出脚本</button>
                 </div>
                 <div>
-                    <button onClick={getChattxt}>导出对话文本</button>
+                    <button onClick={getChattxt}>导出语音文本</button>
                     <button onClick={getChatscript}>导出含语音脚本</button>
                     
                 </div>
