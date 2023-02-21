@@ -24,6 +24,7 @@ const jsondesc = {
         "type": "field_dropdown",
         "name": "drop1",
         "options": [
+            ["无","none"],
             ["引起注意","Action"],
             ["生气","Aggro"],
             ["胡思乱想","Anxiety"],
@@ -91,7 +92,7 @@ javascriptGenerator[blockname] = function (block) {
         return ''
     }
     // 心情
-    if(emo!=="''"){
+    if(emo!=="none"){
         finalcode+=`
 stagelist.push(\`\${${stuname}} emo ${emo}\`);
 `
