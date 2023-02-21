@@ -8,7 +8,12 @@ function MyDefineMenu() {
 
         <Block type="b_case" />
         <Block type="b_case_jump" />
-        
+        <Block type="b_user_write">
+            <Value name="val1">
+                <Shadow type="text">
+                </Shadow>
+            </Value>
+        </Block>
         <Block type="text" />
         {/* <Block type="controls_repeat_ext">
             <Value name="TIMES">
