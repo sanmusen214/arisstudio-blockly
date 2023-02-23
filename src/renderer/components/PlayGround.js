@@ -319,7 +319,7 @@ function PlayGround(props){
             // 反着来
             txtcodelist.splice(lineind,0,`se play`)
             txtcodelist.splice(lineind,0,`se set ${ele.hash}`)
-            txtcodelist.splice(lineind,0,`se unset`)
+            txtcodelist.splice(lineind,0,`se set mutevoice`)
 
         }
         // 然后加load end
@@ -331,6 +331,7 @@ function PlayGround(props){
             const filename=`${ele.hash}.wav`
             txtcodelist.splice(0,0,`load se ${ele.hash} ${filename}`)
         }
+        txtcodelist.splice(0,0,`load se mutevoice Mute.wav`)
 
         saveTxt("democ.txt",txtcodelist.join("\n"))
     }
