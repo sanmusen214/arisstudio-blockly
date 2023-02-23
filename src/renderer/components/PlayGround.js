@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import  { useEffect,useRef } from 'react';
 import "./PlayGround.css"
+import {Modal} from 'antd'
 // 引入Blockly基本对象
 import Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -13,6 +14,8 @@ import { gethash } from 'renderer/utils/hashtool';
 import version from "../config/version"
 // 设置内嵌模块语言
 import locale from 'blockly/msg/zh-hans';
+import SourceGround from './SourceGround';
+import {Howler} from 'howler'
 
 Blockly.setLocale(locale);
 
@@ -57,7 +60,16 @@ function PlayGround(props){
     let [resultcode,setResultcode]=useState("")
     // 是否显示脚本框
     let [showres,setShowres]=useState(true)
-
+    // 是否显示资源页
+    let [sourcepageopen,setSourcepageopen]=useState(false)
+    // Data资源
+    let [sourcemap,setSourcemap]=useState(new Map([
+        ["bgm",[]],
+        ["bcg",[]],
+        ["cover",[]],
+        ["sound",[]],
+        ["spr",[]],
+    ]))
 
 
 
@@ -106,6 +118,52 @@ function PlayGround(props){
     const saveProject=()=>{
         saveTxt(`ArisStudio_blockly可视化_${version}.bablockly`,JSON.stringify(Blockly.serialization.workspaces.save(primaryWorkspace.current)))
     }
+    /**
+     * 加载Data文件夹
+     */
+    const loadData=(eve)=>{
+        new Promise((resolve,reject)=>{
+            try {
+                const mybgmlist=[] // Data/Bgm/
+                const mybcglist=[] // Data/Image/Background/
+                const mycoverlist=[] // Data/Image/Cover/
+                const mysoundlist=[] // Data/SoundEffect/
+                const mysprlist=[] // Data/Spr/
+                const mytypemap={
+                    "Data/Bgm/":mybgmlist,
+                    "Data/Image/Background/":mybcglist,
+                    "Data/Image/Cover/":mycoverlist,
+                    "Data/SoundEffect/":mysoundlist,
+                    "Data/Spr/":mysprlist
+                }
+                for (let file of eve.target.files){
+                    for(let type in mytypemap){
+                        if(file.webkitRelativePath.indexOf(type)===0){
+                            mytypemap[type].push(file)
+                        }
+                    }
+                }
+                const mynewsourcemap=new Map()
+                mynewsourcemap.set("bgm",mybgmlist)
+                mynewsourcemap.set("bcg",mybcglist)
+                mynewsourcemap.set("cover",mycoverlist)
+                mynewsourcemap.set("sound",mysoundlist)
+                mynewsourcemap.set("spr",mysprlist)
+                resolve(mynewsourcemap)
+                
+            } catch (error) {
+                reject("失败，请确保选择的是Data文件夹")
+            }
+        }).then((res)=>{setSourcemap(res)})
+    }
+    /**
+     * 打开资源浏览页
+     */
+    const openSourcePage=()=>{
+        console.log(sourcemap)
+        setSourcepageopen(true)
+    }
+
     /**
      * 生成脚本代码，并放入屏幕右侧文本框
      *  */ 
@@ -288,6 +346,10 @@ function PlayGround(props){
                     <button onClick={saveProject}>导出blockly项目</button>
                 </div>
                 <div>
+                    <button className="loadprojectbutton"><input type="file" multiple="" webkitdirectory="" name="file" accept='*' className="projectfile" onChange={loadData}></input>选择Data文件夹</button>
+                    <button onClick={openSourcePage}>打开资源浏览页</button>
+                </div>
+                <div>
                     {window.isinWebpageMode?<></>:<><button className="loadprojectbutton" style={{width:"120px"}}><input type="file" name="file" accept='text/plain' className="projectfile" onChange={selectFilepath}></input>{window.wfilepath?"重新":"开始"}设定自动导出</button></>}
                     
                     <button onClick={downloadCode}>导出脚本</button>
@@ -308,7 +370,17 @@ function PlayGround(props){
         </div>
         {/* 生成的代码 显示框 */}
         {showres?<textarea onChange={(e)=>setResultcode(e.target.value)} style={showtool?{}:{display:"none"}} spellCheck={false} id="rescodebox" value={resultcode}></textarea>:<></>}
-
+        {/* 资源页 */}
+        <Modal id="sourcemodal" width={"80%"} title="资源浏览" open={sourcepageopen} onOk={()=>{
+            setSourcepageopen(false)
+            Howler.stop()
+        }} 
+        onCancel={()=>{
+            setSourcepageopen(false)
+            Howler.stop()
+        }}>
+            <SourceGround sourcemap={sourcemap}/>
+        </Modal>
 
     </>);
 }

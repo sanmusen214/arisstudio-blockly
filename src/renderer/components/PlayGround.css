@@ -20,7 +20,7 @@
 #blocklyDiv{
     display:inline-block;
     width:100%;
-    height:100%;
+    height:99%;
 }
 
 /* 给用户看生成的结果 */
