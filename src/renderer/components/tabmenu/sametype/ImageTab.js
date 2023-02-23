@@ -22,14 +22,6 @@ export default function ImageTab(props) {
       const errornamearray=new Array(pagesize)
       errornamearray.fill("加载中")
       setNamelist(errornamearray)
-      // 异步一组加载
-      // Promise.all(props.inputlist.slice((page-1)*pagesize,page*pagesize).map((file,ind)=>{
-      //   return getBase64(file)
-      // })).then((picurls)=>{
-      //   setSrclist(picurls)
-      //   setNamelist(props.inputlist.slice((page-1)*pagesize,page*pagesize).map(file=>file.name))
-      // }).catch((reason)=>
-      //   console.log(reason))
   
       // 异步逐个加载
       props.inputlist.slice((page-1)*pagesize,page*pagesize).forEach((file,ind)=>{
