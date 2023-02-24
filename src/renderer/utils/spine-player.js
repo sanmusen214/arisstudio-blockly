@@ -1,3 +1,5 @@
+import { convertDataURIToBinary } from "./DataTool";
+
 var __extends =
   (this && this.__extends) ||
   (function () {
@@ -2816,38 +2818,48 @@ var spine;
       this.pathPrefix = pathPrefix;
     }
     AssetManager.prototype.downloadText = function (url, success, error) {
-      var request = new XMLHttpRequest();
-      request.overrideMimeType("text/html");
-      if (this.rawDataUris[url]) url = this.rawDataUris[url];
-      request.open("GET", url, true);
-      request.onload = function () {
-        if (request.status == 200) {
-          success(request.responseText);
-        } else {
+      if (this.rawDataUris[url]){
+        url = this.rawDataUris[url];
+        success(url)
+      }else{
+        var request = new XMLHttpRequest();
+        request.overrideMimeType("text/html");
+        request.open("GET", url, true);
+        request.onload = function () {
+          if (request.status == 200) {
+            success(request.responseText);
+          } else {
+            error(request.status, request.responseText);
+          }
+        };
+        request.onerror = function () {
           error(request.status, request.responseText);
-        }
-      };
-      request.onerror = function () {
-        error(request.status, request.responseText);
-      };
-      request.send();
+        };
+        request.send();
+      }
     };
     AssetManager.prototype.downloadBinary = function (url, success, error) {
-      var request = new XMLHttpRequest();
-      if (this.rawDataUris[url]) url = this.rawDataUris[url];
-      request.open("GET", url, true);
-      request.responseType = "arraybuffer";
-      request.onload = function () {
-        if (request.status == 200) {
-          success(new Uint8Array(request.response));
-        } else {
+      console.log("download binary: ",url)
+      console.log(this.rawDataUris)
+      if (this.rawDataUris[url]){
+        url = this.rawDataUris[url]
+        success(convertDataURIToBinary(url));
+      }else{
+        var request = new XMLHttpRequest();
+        request.open("GET", url, true);
+        request.responseType = "arraybuffer";
+        request.onload = function () {
+          if (request.status == 200) {
+            success(new Uint8Array(request.response));
+          } else {
+            error(request.status, request.responseText);
+          }
+        };
+        request.onerror = function () {
           error(request.status, request.responseText);
-        }
-      };
-      request.onerror = function () {
-        error(request.status, request.responseText);
-      };
-      request.send();
+        };
+        request.send();      
+      }
     };
     AssetManager.prototype.setRawDataURI = function (path, data) {
       this.rawDataUris[this.pathPrefix + path] = data;
