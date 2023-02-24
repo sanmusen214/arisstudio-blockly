@@ -17,6 +17,7 @@ export default function VoiceTab(props) {
   const playmusic=(file)=>{
     getBase64(file).then((url)=>{
       musicplayer?.stop()
+      Howler.stop()
       musicplayer=new Howl({src:url})
       musicplayer.play()
     })
@@ -27,6 +28,7 @@ export default function VoiceTab(props) {
   },[])
   
   const musicplay=()=>{
+    Howler.stop()
     musicplayer?.play()
   }
 
