@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import  { useEffect,useRef } from 'react';
 import "./PlayGround.css"
-import {Modal} from 'antd'
+import {Modal,message} from 'antd'
 // 引入Blockly基本对象
 import Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -160,8 +160,16 @@ function PlayGround(props){
      * 打开资源浏览页
      */
     const openSourcePage=()=>{
-        console.log(sourcemap)
-        setSourcepageopen(true)
+        let srctotal=0
+        for(let key of sourcemap.keys()){
+            srctotal+=sourcemap.get(key).length||0
+        }
+        if(srctotal===0){
+            message.error("请先选择Data文件夹")
+        }else{
+            setSourcepageopen(true)
+        }
+
     }
 
     /**
