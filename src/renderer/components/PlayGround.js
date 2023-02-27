@@ -54,6 +54,8 @@ function PlayGround(props){
     
     // 实时导出的文件路径使用window.wfilepath
 
+    // 是否自动转脚本
+    let [autoturn,setAutoturn]=useState(true)
     // 是否显示右侧工具框
     let [showtool,setShowtool]=useState(true)
     // 生成的代码框，esultcode当前脚本
@@ -89,7 +91,7 @@ function PlayGround(props){
             }
             // 实时生成
             primaryWorkspace.current.addChangeListener(
-                antiShake(antiSaveFile,500)
+                antiShake(antiSaveFile,750)
             );
 
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
@@ -369,6 +371,7 @@ function PlayGround(props){
                     
                 </div>
                 <div>
+                    {/* <button onClick={()=>setAutoturn(!autoturn)}>{autoturn?'关闭自动转脚本':'开启自动转脚本'}</button> */}
                     <button onClick={()=>setShowres(!showres)}>{showres?"隐藏下方脚本框":"显示脚本框"}</button>
                 </div>
         </span>
