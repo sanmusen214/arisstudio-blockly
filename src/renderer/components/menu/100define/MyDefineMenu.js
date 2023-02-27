@@ -15,6 +15,9 @@ function MyDefineMenu() {
             </Value>
         </Block>
         <Block type="text" />
+        <Block type="controls_if" />
+        <Block type="logic_compare" />
+
         {/* <Block type="controls_repeat_ext">
             <Value name="TIMES">
                 <Shadow type="math_number">
