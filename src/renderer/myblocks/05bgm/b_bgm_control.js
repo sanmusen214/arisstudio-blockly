@@ -64,14 +64,16 @@ javascriptGenerator[blockname] = function (block) {
     const dropdown_drop2 = block.getFieldValue('drop2');// 次数
     const dropdown_drop3 = block.getFieldValue('drop3');// 状态
 
+    let nowaction="" // 现在状态
+    if(dropdown_drop3==="pause"){
+      nowaction=`${dropdown_drop1} ${dropdown_drop3}`
+    }
 
 
     return `
 stagelist.push(\`${dropdown_drop1} set \${${value_val1}}\`);// 音乐类型
+stagelist.push(\`${nowaction}\`);// 立刻状态
 stagelist.push(\`${dropdown_drop1} ${dropdown_drop2}\`);// 播放次数
-stagelist.push(\`${dropdown_drop1} ${dropdown_drop3}\`);// 立刻状态
-stagelist.push(\`${dropdown_drop1} v 0.3\`);// 音乐音量
-
 `
 }
 

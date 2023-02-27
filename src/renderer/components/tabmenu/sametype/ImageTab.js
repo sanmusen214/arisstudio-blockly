@@ -3,7 +3,8 @@ import { Image,Pagination,Button } from 'antd'
 import { getBase64 } from 'renderer/utils/imagetool'
 
 /**
- * inputlist
+ * inputlist, 
+ * imgshape: 'square'
  */
 export default function ImageTab(props) {
 
@@ -13,6 +14,7 @@ export default function ImageTab(props) {
     let [srclist,setSrclist]=useState(new Array(pagesize))
     // 图片名字
     let [namelist,setNamelist]=useState(new Array(pagesize))
+    const imgshape=props.imgshape
   
     useEffect(()=>{
       // 先用error代替
@@ -47,7 +49,7 @@ export default function ImageTab(props) {
           <Image.PreviewGroup>
             {srclist.map((each,ind)=>{
               return <span style={{position:'relative',display:'inline-block',width:'140px',height:'100px',overflow:'hidden'}}>
-                <div><Image width={140} height={80} src={each}></Image></div>
+                <div>{imgshape==="square"?<Image width={80} height={80} src={each}></Image>:<Image width={140} height={80} src={each}></Image>}</div>
                 <input disabled value={namelist[ind]}></input>
                 </span>
             })}
