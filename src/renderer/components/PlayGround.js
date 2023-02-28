@@ -48,6 +48,7 @@ function antiShake(fun, delay) {
 
 
 function PlayGround(props){
+    // TODO: 生成脚本改为 Promise
     const blocklyDiv = useRef();
     const toolbox = useRef();
     let primaryWorkspace = useRef();
@@ -210,15 +211,18 @@ function PlayGround(props){
 
     // electron静默 每当playground更新时 下载脚本
     const antiSaveFile=()=>{
-        generateCode();
-        if(window.wfilepath){
-            if(window.wfilepath.length>0){
-                if(window.electron&&window.electron.ipcRenderer){
-                    window.electron.ipcRenderer.sendMessage('ipc-example', [window.wfilepath, window.txtcode]);
+        const genandsave=()=>{
+            return new Promise((resolve,reject)=>{
+                generateCode();
+                if(window.wfilepath){
+                    if(window.wfilepath.length>0){
+                        if(window.electron&&window.electron.ipcRenderer){
+                            window.electron.ipcRenderer.sendMessage('ipc-example', [window.wfilepath, window.txtcode]);
+                        }
+                    }
                 }
-            }
-        }
-
+        })}
+        genandsave()
     }
 
     // web打开文件管理器 让用户下载脚本
