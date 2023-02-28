@@ -387,7 +387,8 @@ function PlayGround(props){
         {/* 生成的代码 显示框 */}
         {showres?<textarea onChange={(e)=>setResultcode(e.target.value)} style={showtool?{}:{display:"none"}} spellCheck={false} id="rescodebox" value={resultcode}></textarea>:<></>}
         {/* 资源页 */}
-        <Modal id="sourcemodal" width={"80%"} title="资源浏览" open={sourcepageopen} onOk={()=>{
+        <div id="sourcemodal">
+        <Modal width={"80%"} style={{top:'25px'}} title="资源浏览" open={sourcepageopen} onOk={()=>{
             setSourcepageopen(false)
             Howler.stop()
         }} 
@@ -397,6 +398,7 @@ function PlayGround(props){
         }}>
             <SourceGround sourcemap={sourcemap}/>
         </Modal>
+        </div>
 
     </>);
 }

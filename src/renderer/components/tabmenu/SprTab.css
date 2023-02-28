@@ -1,0 +1,14 @@
+#basprbox{
+
+}
+#ba-player{
+
+}
+
+.stuname{
+    cursor: pointer;
+}
+
+.stuname:hover{
+    background-color: aliceblue;
+}

@@ -5,10 +5,11 @@ import { getBase64 } from 'renderer/utils/imagetool'
 /**
  * inputlist, 
  * imgshape: 'square'
+ * style
  */
 export default function ImageTab(props) {
 
-    const pagesize=45
+    const pagesize=Math.min(45,props.inputlist.length)
     const [page,setPage]=useState(1)
     // 图片data url
     let [srclist,setSrclist]=useState(new Array(pagesize))
@@ -40,11 +41,11 @@ export default function ImageTab(props) {
   
     return (
       // 在props.style后追加会覆盖掉props.style
-      <div>
+      <div style={props.style}>
         <Pagination simple current={page} onChange={(page)=>{setPage(page)}} pageSize={pagesize} total={Math.max(props.inputlist.length,1)} style={{textAlign:'center'}}/>
         <Button style={{visibility:'hidden'}}></Button>
   
-        <div style={props.style}>
+        <div>
           <div style={{textAlign:'center'}}>
           <Image.PreviewGroup>
             {srclist.map((each,ind)=>{
