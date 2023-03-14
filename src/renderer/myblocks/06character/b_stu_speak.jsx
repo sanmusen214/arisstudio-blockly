@@ -120,11 +120,11 @@ stagelist.push(\`\${${stuname}} back\`);
 `
     }else if(action==="nod"){
         finalcode+=`
-stagelist.push(\`\${${stuname}} shakeY 10 -5 1\`);
+stagelist.push(\`\${${stuname}} shakeY 5 -5 1\`);
 `
     }else if(action==="jump"){
         finalcode+=`
-stagelist.push(\`\${${stuname}} shakeY 10 4 1\`);
+stagelist.push(\`\${${stuname}} shakeY 7 4 1\`);
 `
     }else if(action==="sshake"){
         finalcode+=`
