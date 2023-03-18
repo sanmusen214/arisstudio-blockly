@@ -1,12 +1,12 @@
 {
   "name": "arisstudioblockly",
-  "version": "2.2.2e",
-  "description": "A foundation for scalable desktop apps",
+  "version": "2.2.2f",
+  "description": "`A Website app for Aris Studio to build ba story`",
   "license": "MIT",
   "author": {
-    "name": "Electron React Boilerplate Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://github.com/electron-react-boilerplate"
+    "name": "sanmusen",
+    "email": "sanmusen_wu@outlook.com",
+    "url": "https://www.sanmusen.top"
   },
   "main": "./dist/main/main.js",
   "scripts": {

@@ -5,6 +5,7 @@ import BcgTab from './tabmenu/BcgTab'
 import BgmTab from './tabmenu/BgmTab'
 import CoverTab from './tabmenu/CoverTab'
 import SoundTab from './tabmenu/SoundTab'
+import SETab from './tabmenu/SETab'
 import SprTab from './tabmenu/SprTab'
 import {Howler} from 'howler'
 
@@ -36,6 +37,11 @@ function SourceGround(props) {
       key: 'sound',
       label: `音效`,
       children: <SoundTab style={itemstyle} soundlist={props.sourcemap.get('sound')}/>,
+    },
+    {
+      key: 'sedesc',
+      label: `音效速查`,
+      children: <SETab />,
     },
     {
       key: 'spr',
@@ -84,6 +90,11 @@ function SourceGround(props) {
         key: 'sound',
         label: `音效`,
         children: <SoundTab style={itemstyle} soundlist={postlist[3]}/>,
+      },
+      {
+        key: 'sedesc',
+        label: `音效速查`,
+        children: <SETab />,
       },
       {
         key: 'spr',

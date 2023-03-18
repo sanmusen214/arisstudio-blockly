@@ -169,6 +169,7 @@ function PlayGround(props){
         }
         if(srctotal===0){
             message.error("请先选择Data文件夹")
+            setSourcepageopen(true)
         }else{
             setSourcepageopen(true)
         }

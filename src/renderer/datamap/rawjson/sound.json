@@ -1,0 +1,32 @@
+{
+    "sounds":
+    [
+        {
+            "desc":"推拉铁门等重型门音效",
+            "filenames":[
+                "FX_Level_EnvSound_City_02.wav",
+                "FX_Level_EnvSound_City_01.wav",
+                "SE_DoorOpen_03.wav"
+            ]
+        },
+        {
+            "desc":"卷帘门音效",
+            "filenames":[
+                "FX_Level_PropDestroy_City_01.wav","FX_Level_PropDestroy_City_02.wav"
+            ]
+        },
+        {
+            "desc":"砖石倒塌音效",
+            "filenames":[
+                "FX_Level_PropDestroy_City_03.wav"
+            ]
+        },
+        {
+            "desc":"",
+            "filenames":[
+                "",
+                ""
+            ]
+        }
+    ]
+}

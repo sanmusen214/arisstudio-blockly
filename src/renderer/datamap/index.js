@@ -1,5 +1,5 @@
 import studentsjson from "./rawjson/students.json";
-
+import soundsjson from "./rawjson/sound.json"
 
 
 
@@ -13,3 +13,6 @@ for(let stu of studentsjson.students){
         stu.zhName.replace(/ /g,"").toLowerCase(),
         stu.sprName.replace(/ /g,"").toLowerCase()])
 }
+
+// 音效
+export const sounds_datamap=soundsjson.sounds
