@@ -12,7 +12,7 @@ import {Howler} from 'howler'
 const {Search} = Input
 
 
-const itemstyle={height:document.body.clientHeight*0.71+"px",overflow:'auto'}
+const itemstyle={height:document.body.clientHeight*0.75+"px",overflow:'auto'}
 
 /**
  * 给定五文件类型，构建tab列表

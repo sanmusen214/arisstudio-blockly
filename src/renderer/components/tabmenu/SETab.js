@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { content } from 'renderer/datamap/se'
 import { sounds_datamap } from "../../datamap/index.js"
-import { Input,Table,Tag,Tooltip } from 'antd'
+import { Input,Table,Tag,Tooltip, message } from 'antd'
 import { QuestionCircleOutlined } from "@ant-design/icons"
 import { findneededFile } from 'renderer/utils/DataTool.jsx'
 import {Howl,Howler} from 'howler'
@@ -68,6 +68,8 @@ export default function SETab(props) {
                     const thatfile=findneededFile(soundlist,record.filename)
                     if(thatfile){
                         playmusic(thatfile)
+                    }else{
+                        message.error("未找到相关文件")
                     }
                 }}
                 >播放</Tag>
