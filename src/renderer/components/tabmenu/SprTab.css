@@ -12,3 +12,7 @@
 .stuname:hover{
     background-color: aliceblue;
 }
+
+.spine-player{
+    display: inline-block;
+}

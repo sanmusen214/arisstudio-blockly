@@ -1,5 +1,8 @@
 import { convertDataURIToBinary } from "./DataTool";
 
+export let hullpos=[]
+export let animationlist=[]
+
 var __extends =
   (this && this.__extends) ||
   (function () {
@@ -3274,6 +3277,7 @@ var spine;
       if (skeleton == null) throw new Error("skeleton cannot be null.");
       this.data = data;
       this.skeleton = skeleton;
+      animationlist=this.skeleton.data.animations
       this.parent = parent;
       this.setToSetupPose();
     }
@@ -12927,16 +12931,19 @@ var spine;
               }
             }
             if (this.drawMeshHull && hullLength > 0) {
+              hullpos=[]
               shapes.setColor(this.attachmentLineColor);
               hullLength = (hullLength >> 1) * 2;
               var lastX = vertices[hullLength - 2],
                 lastY = vertices[hullLength - 1];
+                hullpos.push([lastX,lastY])
               for (var ii = 0, nn = hullLength; ii < nn; ii += 2) {
                 var x = vertices[ii],
                   y = vertices[ii + 1];
                 shapes.line(x, y, lastX, lastY);
                 lastX = x;
                 lastY = y;
+                hullpos.push([lastX,lastY])
               }
             }
           }
@@ -13915,7 +13922,7 @@ var spine;
       var _this = this;
       var config = this.config;
       var dom = (this.dom = createElement(
-        '<div class="spine-player" id="ba-player">\n\t\t\t\t\t<canvas class="spine-player-canvas"></canvas>\n\t\t\t\t\t<div class="spine-player-error spine-player-hidden"></div>\n\t\t\t\t\t<div class="spine-player-controls spine-player-popup-parent spine-player-controls-hidden">\n\t\t\t\t\t\t<div class="spine-player-buttons">\n\t\t\t\t\t\t\t<button id="spine-player-button-play-pause" class="spine-player-button spine-player-button-icon-pause"></button>\n\t\t\t\t\t\t\t<div class="spine-player-button-spacer"></div>\n\t\t\t\t\t\t\t<button id="spine-player-button-speed" class="spine-player-button spine-player-button-icon-speed"></button>\n\t\t\t\t\t\t\t<button id="spine-player-button-animation" class="spine-player-button spine-player-button-icon-animations"></button>\n\t\t\t\t\t\t\t<button id="spine-player-button-skin" class="spine-player-button spine-player-button-icon-skins"></button>\n\t\t\t\t\t\t\t<button id="spine-player-button-settings" class="spine-player-button spine-player-button-icon-settings"></button>\n\t\t\t\t\t\t\t<button id="spine-player-button-fullscreen" class="spine-player-button spine-player-button-icon-fullscreen"></button>\n\t\t\t\t\t\t\t<img id="spine-player-button-logo" class="spine-player-button-icon-spine-logo" src=""/>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="spine-player-timeline">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t'
+        '<span class="spine-player" id="ba-player">\n\t\t\t\t\t<canvas class="spine-player-canvas"></canvas>\n\t\t\t\t\t<div class="spine-player-error spine-player-hidden"></div>\n\t\t\t\t\t<div class="spine-player-controls spine-player-popup-parent spine-player-controls-hidden">\n\t\t\t\t\t\t<div class="spine-player-buttons">\n\t\t\t\t\t\t\t<button id="spine-player-button-play-pause" class="spine-player-button spine-player-button-icon-pause"></button>\n\t\t\t\t\t\t\t<div class="spine-player-button-spacer"></div>\n\t\t\t\t\t\t\t<button id="spine-player-button-speed" class="spine-player-button spine-player-button-icon-speed"></button>\n\t\t\t\t\t\t\t<button id="spine-player-button-animation" class="spine-player-button spine-player-button-icon-animations"></button>\n\t\t\t\t\t\t\t<button id="spine-player-button-skin" class="spine-player-button spine-player-button-icon-skins"></button>\n\t\t\t\t\t\t\t<button id="spine-player-button-settings" class="spine-player-button spine-player-button-icon-settings"></button>\n\t\t\t\t\t\t\t<button id="spine-player-button-fullscreen" class="spine-player-button spine-player-button-icon-fullscreen"></button>\n\t\t\t\t\t\t\t<img id="spine-player-button-logo" class="spine-player-button-icon-spine-logo" src=""/>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="spine-player-timeline">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</span>\n\t\t\t'
       ));
       try {
         this.config = this.validateConfig(config);
