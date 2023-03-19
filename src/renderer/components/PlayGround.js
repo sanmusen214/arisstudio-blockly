@@ -389,16 +389,17 @@ function PlayGround(props){
         {showres?<textarea onChange={(e)=>setResultcode(e.target.value)} style={showtool?{}:{display:"none"}} spellCheck={false} id="rescodebox" value={resultcode}></textarea>:<></>}
         {/* 资源页 */}
         <div id="sourcemodal">
-        <Modal width={"80%"} style={{top:'25px'}} title="资源浏览" open={sourcepageopen} onOk={()=>{
-            setSourcepageopen(false)
-            Howler.stop()
+        {sourcepageopen?<Modal width={"80%"} style={{top:'25px'}} title="资源浏览" open onOk={()=>{
+        setSourcepageopen(false)
+        Howler.stop()
         }} 
         onCancel={()=>{
             setSourcepageopen(false)
             Howler.stop()
         }}>
             <SourceGround sourcemap={sourcemap}/>
-        </Modal>
+        </Modal>:<></>}
+        
         </div>
 
     </>);

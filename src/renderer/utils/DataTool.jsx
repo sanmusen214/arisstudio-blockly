@@ -13,3 +13,24 @@ export function convertDataURIToBinary(dataURI) {
     }
     return array;
 }
+
+
+
+/**
+ * 从已上传的文件中根据文件名找到所需要的那个文件
+ */
+export const findneededFile=(list,fname)=>{
+    try {
+        for(let fitem of list){
+            if(fitem.name===fname){
+                console.log(fitem)
+                return fitem
+            }
+        }
+    } catch (error) {
+        console.log(error)
+        return null
+    }
+
+    return null
+}
