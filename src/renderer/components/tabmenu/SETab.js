@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import { content } from 'renderer/datamap/se'
 import { sounds_datamap } from "../../datamap/index.js"
 import { Input,Table,Tag,Tooltip, message } from 'antd'
 import { QuestionCircleOutlined } from "@ant-design/icons"

@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{useEffect, useRef, useState} from 'react'
 import {Col,Pagination,Row,Switch } from 'antd'
 import { getBase64,getText } from 'renderer/utils/imagetool'
 import {spine,hullpos,animationlist} from "../../utils/spine-player"
@@ -33,6 +33,8 @@ export default function SprTab(props) {
   const [nowname,setNowname]=useState("暂无选择")
   const [nowind,setNowind]=useState(-1)
   const [chafen,setChafen]=useState(false)
+  const chafenRef=useRef(chafen)
+  chafenRef.current=chafen
 
   // 这一页的spr名
   const sprnamelist=[...sprnameset.values()]
@@ -71,7 +73,7 @@ export default function SprTab(props) {
           premultipliedAlpha: false,
           showControls: true,
           debug:{
-            hulls:chafen
+            hulls:chafenRef.current
           },
           backgroundColor: "#cccccc", // set the walk animation to play once
         })
@@ -79,7 +81,7 @@ export default function SprTab(props) {
       
       clearTimeout(myTout)
       // 如果开启差分
-      if(chafen){
+      if(chafenRef.current){
 
         myTout=setTimeout(()=>{
           console.log("定时器Sprtab")
@@ -91,7 +93,7 @@ export default function SprTab(props) {
           // console.log(Math.min(...ylist),Math.max(...ylist))
           console.log(animationlist)
 
-          const viewpad=200
+          const viewpad=50
           const baviewport={
             x:Math.min(...xlist)-viewpad,
             y:Math.min(...ylist)-viewpad,
@@ -117,6 +119,7 @@ export default function SprTab(props) {
               if(ind>=9*(mypage-1) && ind<9*mypage){
                 document.querySelector("#namechafen"+ind%9).innerHTML=each.name
                 new spine.SpinePlayer(elementid+"chafen"+ind%9,{
+                  paused:true,
                   skelUrl:skelname,
                   atlasUrl:atlasname,
                   rawDataURIs:rawobj,
@@ -137,10 +140,15 @@ export default function SprTab(props) {
 
   return (
     <>
-    <div style={props.style}>
+    <div>
     <Row justify={'center'}>
       <div style={{textAlign:'center',marginRight:'15px'}}>{nowname}</div>
-      面部差分：<Switch checked={chafen} onClick={(ck)=>{setChafen(ck)}}></Switch>
+      面部差分：<Switch checked={chafen} onClick={(ck)=>{
+        setChafen((ck)=>{
+          renderspr(nowname,"basprbox",nowind)
+          return !ck
+        })
+        }}></Switch>
     </Row>
     <Row justify={'center'}>
       <Pagination total={chafenlistlen} page={page} pageSize={9} onChange={(newpage)=>{
