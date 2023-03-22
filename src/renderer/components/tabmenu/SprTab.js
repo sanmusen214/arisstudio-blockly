@@ -113,6 +113,7 @@ export default function SprTab(props) {
           if(mypage===-1){
             mypage=1
           }
+          setPage(mypage)
           new Promise((resolve,reject)=>{
             setChafenlistlen(animationlist.length)
             animationlist.forEach((each,ind)=>{
@@ -151,8 +152,7 @@ export default function SprTab(props) {
         }}></Switch>
     </Row>
     <Row justify={'center'}>
-      <Pagination total={chafenlistlen} page={page} pageSize={9} onChange={(newpage)=>{
-        setPage(newpage)
+      <Pagination total={chafenlistlen} current={page} pageSize={9} onChange={(newpage)=>{
         renderspr(nowname,"basprbox",nowind,newpage)
         
         }}/>
@@ -161,7 +161,6 @@ export default function SprTab(props) {
 
       <Col span={6} style={props.style}>
         {sprnamelist.map((name,ind)=>{return <div className="stuname" style={{backgroundColor:ind===nowind?'lightblue':""}} onClick={()=>{
-          setPage(1)
           renderspr(name,"basprbox",ind,-1)
         }}>{name}</div>})}
       </Col>
