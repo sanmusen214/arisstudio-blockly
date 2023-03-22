@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Tabs, Input} from 'antd'
 
 import BcgTab from './tabmenu/BcgTab'
@@ -65,6 +65,15 @@ function SourceGround(props) {
     "spr":props.sourcemap.get("spr")
   }))
 
+  useEffect(()=>{
+    setItems(buildItems({
+      "bgm":props.sourcemap.get('bgm'),
+      "bcg":props.sourcemap.get("bcg"),
+      "cover":props.sourcemap.get("cover"),
+      "sound":props.sourcemap.get("sound"),
+      "spr":props.sourcemap.get("spr")
+    }))
+  },[props.sourcemap])
 
   const onSearch=(word)=>{
     const searchword=word.toLowerCase()
@@ -97,7 +106,9 @@ function SourceGround(props) {
   return (
     <div id="sourceground">
       <Search placeholder="搜索关键字(不区分大小写)" allowClear onSearch={onSearch} style={{ width: 300 }} />
-      <Tabs defaultActiveKey='bgm' animated={false} items={items} onChange={()=>{Howler.stop()}}/>
+      <Tabs defaultActiveKey='bgm' animated={false} 
+      destroyInactiveTabPane={true}
+      items={items} onChange={()=>{Howler.stop()}}/>
     </div>
   )
 }
