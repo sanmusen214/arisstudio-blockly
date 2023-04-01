@@ -54,6 +54,8 @@ try {
             window.errorset=errorset;
             window.resmap=resmap;
             window.case_jump_dict=case_jump_dict;
+            // 去除换行后多余空格
+            rescode=rescode.replace(/ *\\n */g,"\\n");
             return rescode;
         }
         
