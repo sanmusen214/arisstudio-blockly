@@ -75,25 +75,33 @@ function PlayGround(props){
     ]))
 
 
+    // 点击一个积木
+    const onClickBlock=(event)=>{
+        if(event.type==="click"&&event.blockId){
+            console.log(event)
+        }
+
+    }
 
     // Playground设定变更时重绘
     useEffect(() => {
         const { initialXml, children, ...rest } = props;
-            primaryWorkspace.current = Blockly.inject(
-                blocklyDiv.current,
-                {
-                    toolbox: toolbox.current,
-                    ...rest
-                },
-            );
+        primaryWorkspace.current = Blockly.inject(
+            blocklyDiv.current,
+            {
+                toolbox: toolbox.current,
+                ...rest
+            },
+        );
 
-            if (initialXml) {
-                Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), primaryWorkspace.current);
-            }
-            // 实时生成
-            primaryWorkspace.current.addChangeListener(
-                antiShake(antiSaveFile,750)
-            );
+        if (initialXml) {
+            Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), primaryWorkspace.current);
+        }
+        // 实时生成
+        primaryWorkspace.current.addChangeListener(
+            antiShake(antiSaveFile,750)
+        );
+        // primaryWorkspace.current.addChangeListener(onClickBlock)
 
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
     // 导入项目

@@ -112,6 +112,15 @@ const createWindow = async () => {
   new AppUpdater();
 };
 
+  // Open urls in the user's browser
+
+app.on('web-contents-created', (e, webContents) => {
+  webContents.setWindowOpenHandler(({ url, frameName }) => {
+      shell.openExternal(url);
+      return { action: 'deny' };
+  });
+});
+
 /**
  * Add event listeners...
  */

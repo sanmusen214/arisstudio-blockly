@@ -86,7 +86,7 @@ export default function SETab(props) {
         <div style={props.style}>
         <div style={{textAlign:'center'}}>
             <Search placeholder="搜索音效描述" allowClear onSearch={onSearch} style={{ width: 300,marginRight:"10px" }} />
-            <Tooltip title="此文本收集整合了ArisStudio目前的所有音效，以方便各位在使用AS创作时更快捷地寻找对应音效。 添加了中文注解以及分类，所有音效均为本人聆听后进行整合，可能会出现误差，各位如果在使用过程中发现问题请及时说明，此外所有音效均为音效文件夹初始代码，使用时直接复制粘贴即可。 整合人：传">
+            <Tooltip title={<div>此文本收集整合了ArisStudio目前的所有音效，以方便各位在使用AS创作时更快捷地寻找对应音效。 添加了中文注解以及分类，所有音效均为本人聆听后进行整合，可能会出现误差，各位如果在使用过程中发现问题请及时说明，此外所有音效均为音效文件夹初始代码，使用时直接复制粘贴即可。 整合人：<a href='https://b23.tv/wfXw8Wq' target="_blank">传猫猫</a></div>}>
                 <QuestionCircleOutlined style={{fontSize:20,opacity:0.5,verticalAlign:'middle'}}/>
             </Tooltip>
         </div>
