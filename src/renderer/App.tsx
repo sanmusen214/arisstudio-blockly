@@ -3,6 +3,7 @@ import icon from '../../assets/icon.svg';
 import './App.css';
 import PlayGround from './components/PlayGround';
 import Toolbox from './components/Toolbox';
+import { GlobalContext } from './config/globalContext';
 // 引入的同时让所有自定义模块注入
 import './myblocks'
 import './utils/dialog'
@@ -40,10 +41,14 @@ function BlocklyArea() {
 
 export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<BlocklyArea />} />
-      </Routes>
-    </Router>
+    <GlobalContext.Provider
+    value={{language:'cn'}}
+    >
+      <Router>
+        <Routes>
+          <Route path="/" element={<BlocklyArea />} />
+        </Routes>
+      </Router>
+    </GlobalContext.Provider>
   );
 }

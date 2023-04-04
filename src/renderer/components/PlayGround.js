@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import  { useEffect,useRef } from 'react';
 import "./PlayGround.css"
@@ -16,6 +16,8 @@ import version from "../config/version"
 import locale from 'blockly/msg/zh-hans';
 import SourceGround from './SourceGround';
 import {Howler} from 'howler'
+// 全局变量
+import { GlobalContext } from 'renderer/config/globalContext';
 
 Blockly.setLocale(locale);
 
@@ -52,6 +54,8 @@ function PlayGround(props){
     const blocklyDiv = useRef();
     const toolbox = useRef();
     let primaryWorkspace = useRef();
+    const {language}=useContext(GlobalContext)
+    console.log(language)
     
     // 实时导出的文件路径使用window.wfilepath
 
