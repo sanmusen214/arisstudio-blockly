@@ -51,7 +51,7 @@ export default function ImageTab(props) {
             {srclist.map((each,ind)=>{
               return <span style={{position:'relative',display:'inline-block',width:'140px',height:'100px',overflow:'hidden'}}>
                 <div>{imgshape==="square"?<Image width={80} height={80} src={each}></Image>:<Image width={140} height={80} src={each}></Image>}</div>
-                <input disabled value={namelist[ind]}></input>
+                <input value={namelist[ind]}></input>
                 </span>
             })}
           </Image.PreviewGroup>
