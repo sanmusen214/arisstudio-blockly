@@ -76,6 +76,14 @@ function SourceGround(props) {
   },[props.sourcemap])
 
   const onSearch=(word)=>{
+    setItems(buildItems({
+      "bgm":[],
+      "bcg":[],
+      "cover":[],
+      "sound":[],
+      "spr":[],
+    }))
+
     const searchword=word.toLowerCase()
     console.log(searchword)
     let postlist=[[],[],[],[],[]]// 搜索结果
@@ -93,14 +101,16 @@ function SourceGround(props) {
     }else{
       postlist=prelist
     }
+    setTimeout(()=>{
+      setItems(buildItems({
+        "bgm":postlist[0],
+        "bcg":postlist[1],
+        "cover":postlist[2],
+        "sound":postlist[3],
+        "spr":postlist[4],
+      }))
+    },500)
 
-    setItems(buildItems({
-      "bgm":postlist[0],
-      "bcg":postlist[1],
-      "cover":postlist[2],
-      "sound":postlist[3],
-      "spr":postlist[4],
-    }))
   }
 
   return (
