@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 
 import  { useEffect,useRef } from 'react';
+import {useLocalStorage} from '../hooks/useLocal'
 import "./PlayGround.css"
 import {Modal,message} from 'antd'
 // 引入Blockly基本对象
@@ -20,6 +21,8 @@ import {Howler} from 'howler'
 import { GlobalContext } from 'renderer/config/globalContext';
 
 Blockly.setLocale(locale);
+
+const defaultproject={"blocks":{"languageVersion":0,"blocks":[{"type":"b_stage","id":"DFv.H4^h)CD_*%9b?0[m","x":-5,"y":0,"fields":{"num1":1},"inputs":{"sta1":{"block":{"type":"b_load","id":"OwHIduLJQ10}zSNKgrhm","inputs":{"sta1":{"block":{"type":"b_student","id":"iK{ow+5JIf7z:.{A{U5w","fields":{"drop1":"aru_spr","drop2":"spr"},"inputs":{"val1":{"shadow":{"type":"text","id":"A$u+MGYu(pEcK@oGm|Cq","fields":{"TEXT":"aru"}}}}}}}}}}}]}}
 
 // 直接改成保存文件
 // calling IPC exposed from preload script
@@ -55,18 +58,20 @@ function PlayGround(props){
     const toolbox = useRef();
     let primaryWorkspace = useRef();
     const {language}=useContext(GlobalContext)
-    console.log(language)
+    // console.log(language)
     
     // 实时导出的文件路径使用window.wfilepath
 
     // 是否自动转脚本
     let [autoturn,setAutoturn]=useState(true)
+    // 上次项目文件序列化
+    let [projectobj,setProjectobj]=useLocalStorage("saveproject",defaultproject)
     // 是否显示右侧工具框
-    let [showtool,setShowtool]=useState(true)
+    let [showtool,setShowtool]=useLocalStorage("showtool",true)
     // 生成的代码框，esultcode当前脚本
     let [resultcode,setResultcode]=useState("")
     // 是否显示脚本框
-    let [showres,setShowres]=useState(true)
+    let [showres,setShowres]=useLocalStorage("showres",true)
     // 是否显示资源页
     let [sourcepageopen,setSourcepageopen]=useState(false)
     // Data资源
@@ -86,6 +91,20 @@ function PlayGround(props){
         }
 
     }
+
+    useEffect(()=>{
+        // 等一秒挂载了ref后，再从localStorage读取上次的项目内容
+        setTimeout(()=>{
+            if(projectobj){
+                try {
+                    Blockly.serialization.workspaces.load(projectobj, primaryWorkspace.current);
+                } catch (error) {
+                    
+                }
+            }
+        },500)
+
+    },[])
 
     // Playground设定变更时重绘
     useEffect(() => {
@@ -192,6 +211,8 @@ function PlayGround(props){
      * 生成脚本代码，并放入屏幕右侧文本框
      *  */ 
     const generateCode = () => {
+        // 将现在的playground内容存入localStorage
+        setProjectobj(Blockly.serialization.workspaces.save(primaryWorkspace.current))
         // 生成代码前时间戳归0
         // 每次playground更新，设置window里numinbigfunc值为0，这样让utils/timestamp每次更新后都是从0开始计数，遇到一个if就自己加1，也不会不限加
         // 但是if块的上下变了，if生成的id还是会变，无伤大雅嗷
@@ -204,7 +225,7 @@ function PlayGround(props){
         const playcode=generatefinalCodes(areacode)
         window.playcode=playcode
         // 运行生成的代码
-        // 这会给window注册一个makecodetxt函数并运行，然后最终脚本会存在window.txtcode,经过处理后window.rescode
+        // 这会给window注册一个makecodetxt函数并运行，然后最终js脚本会存在window.txtcode,经过处理后工坊脚本在window.rescode
         try {
             window.eval(playcode)
             setResultcode(window.txtcode)
@@ -222,7 +243,7 @@ function PlayGround(props){
         }
     }
 
-    // electron静默 每当playground更新时 下载脚本
+    // 当playground更新时 如果用户设置了下载位置，（electron）自动下载
     const antiSaveFile=()=>{
         const genandsave=()=>{
             return new Promise((resolve,reject)=>{
