@@ -19,6 +19,9 @@ import SourceGround from './SourceGround';
 import {Howler} from 'howler'
 // 全局变量
 import { GlobalContext } from 'renderer/config/globalContext';
+// 设置脚本解析
+import { identifytxt } from 'renderer/utils/stateparse';
+
 
 Blockly.setLocale(locale);
 
@@ -70,7 +73,7 @@ function PlayGround(props){
     let [showtool,setShowtool]=useLocalStorage("showtool",true)
     // 生成的代码框，esultcode当前脚本
     let [resultcode,setResultcode]=useState("")
-    // 是否显示脚本框
+    // true：显示文字脚本，false：显示人物状态
     let [showres,setShowres]=useLocalStorage("showres",true)
     // 是否显示资源页
     let [sourcepageopen,setSourcepageopen]=useState(false)
@@ -82,6 +85,8 @@ function PlayGround(props){
         ["sound",[]],
         ["spr",[]],
     ]))
+    // 人物状态字符串
+    let [charstate,setCharstate]=useState("")
 
 
     // 点击一个积木
@@ -229,6 +234,34 @@ function PlayGround(props){
         try {
             window.eval(playcode)
             setResultcode(window.txtcode)
+            const identires=identifytxt(window.txtcode)
+            console.log(identires)
+            if(identires.success){
+                let showstring=""
+                for(let eachcharname in identires.res){
+                    const eachchar=identires.res[eachcharname]
+                    if(eachchar.show){
+                        showstring+=eachchar.nickname+"（显示）\n"
+                        showstring+="  x轴："+eachchar.x+"  y轴："+eachchar.y+"\n"
+                        showstring+="  亮度："+eachchar.light+"  图层："+eachchar.level+"\n"
+                        showstring+="  心情："+(eachchar.emo?eachchar.emo:"无")+"  脸部："+(eachchar.facestate?eachchar.facestate:"默认Idle_01")+"\n"
+                        showstring+="  距离："+(eachchar.close?"靠近":"正常")+"  姿态："+(eachchar.down?"倒下":"站立")+"\n"
+                    }
+                }
+                for(let eachcharname in identires.res){
+                    const eachchar=identires.res[eachcharname]
+                    if(!eachchar.show){
+                        showstring+=eachchar.nickname+"（隐藏）\n"
+                        showstring+="  x轴："+eachchar.x+"  y轴："+eachchar.y+"\n"
+                        showstring+="  亮度："+eachchar.light+"  图层："+eachchar.level+"\n"
+                        showstring+="  心情："+(eachchar.emo?eachchar.emo:"无")+"  脸部："+(eachchar.facestate?eachchar.facestate:"默认Idle_01")+"\n"
+                        showstring+="  距离："+(eachchar.close?"靠近":"正常")+"  姿态："+(eachchar.down?"倒下":"站立")+"\n"
+                    }
+                }
+                setCharstate(showstring)
+            }else{
+                setCharstate(identires.res)
+            }
         } catch (error) {
             setResultcode(`生成脚本时出错啦，你可以反馈该问题：${error.message}`)
         }
@@ -410,7 +443,7 @@ function PlayGround(props){
                 </div>
                 <div>
                     {/* <button onClick={()=>setAutoturn(!autoturn)}>{autoturn?'关闭自动转脚本':'开启自动转脚本'}</button> */}
-                    <button onClick={()=>setShowres(!showres)}>{showres?"隐藏下方脚本框":"显示脚本框"}</button>
+                    <button onClick={()=>setShowres(!showres)}>{showres?"转人物状态":"转文本脚本"}</button>
                 </div>
         </span>
         </span>
@@ -419,7 +452,7 @@ function PlayGround(props){
             {props.children}
         </div>
         {/* 生成的代码 显示框 */}
-        {showres?<textarea onChange={(e)=>setResultcode(e.target.value)} style={showtool?{}:{display:"none"}} spellCheck={false} id="rescodebox" value={resultcode}></textarea>:<></>}
+        {showres?<textarea onChange={(e)=>setResultcode(e.target.value)} style={showtool?{}:{display:"none"}} spellCheck={false} id="rescodebox" value={resultcode}></textarea>:<textarea value={charstate} spellCheck={false} id="rescodebox"></textarea>}
         {/* 资源页 */}
         <div id="sourcemodal">
         <Modal width={"80%"} style={{top:'25px'}} title="资源浏览" open={sourcepageopen}

@@ -117,7 +117,7 @@ function SourceGround(props) {
     <div id="sourceground">
       <Search placeholder="搜索关键字(不区分大小写)" allowClear onSearch={onSearch} style={{ width: 300 }} />
       <Tabs defaultActiveKey='bgm' animated={false} 
-      destroyInactiveTabPane={true}
+      destroyInactiveTabPane={false}
       items={items} onChange={()=>{Howler.stop()}}/>
     </div>
   )
