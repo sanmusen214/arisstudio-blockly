@@ -46,6 +46,7 @@ Blockly.Blocks[blockname] = {
 
 // 为自定义块添加js语言生成器
 javascriptGenerator[blockname] = function (block) {
+  // console.log("hl block",block,window.lastClick===block.id)
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
     const value_val2 = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC);
     const value_val3 = javascriptGenerator.valueToCode(block, 'val3', javascriptGenerator.ORDER_ATOMIC);

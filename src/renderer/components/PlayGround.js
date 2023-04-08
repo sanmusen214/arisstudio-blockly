@@ -25,7 +25,7 @@ import { identifytxt } from 'renderer/utils/stateparse';
 
 Blockly.setLocale(locale);
 
-const defaultproject={"blocks":{"languageVersion":0,"blocks":[{"type":"b_stage","id":"DFv.H4^h)CD_*%9b?0[m","x":-5,"y":0,"fields":{"num1":1},"inputs":{"sta1":{"block":{"type":"b_load","id":"OwHIduLJQ10}zSNKgrhm","inputs":{"sta1":{"block":{"type":"b_student","id":"iK{ow+5JIf7z:.{A{U5w","fields":{"drop1":"aru_spr","drop2":"spr"},"inputs":{"val1":{"shadow":{"type":"text","id":"A$u+MGYu(pEcK@oGm|Cq","fields":{"TEXT":"aru"}}}}}}}}}}}]}}
+const defaultproject={"blocks":{"languageVersion":0,"blocks":[{"type":"b_stage","id":"DFv.H4^h)CD_*%9b?0[m","x":-5,"y":0,"fields":{"num1":1},"inputs":{"sta1":{"block":{"type":"b_load","id":"OwHIduLJQ10}zSNKgrhm","inputs":{"sta1":{"block":{"type":"b_student","id":"iK{ow+5JIf7z:.{A{U5w","fields":{"drop1":"aru_spr","drop2":"spr"},"inputs":{"val1":{"shadow":{"type":"text","id":"A$u+MGYu(pEcK@oGm|Cq","fields":{"TEXT":"aru"}}}}}}}}}}},{"type":"b_stage","id":"U4Kj.z[L[=qeDjKt?XLV","x":-6,"y":130,"fields":{"num1":2},"inputs":{"sta1":{"block":{"type":"b_stu_display","id":"phh;xnagEBu|FhV^.jl1","fields":{"drop1":"show"},"inputs":{"val1":{"shadow":{"type":"text","id":".cI?)UjB^5kS]lb!I7Mu","fields":{"TEXT":"aru"}}}}}}}}]}}
 
 // 直接改成保存文件
 // calling IPC exposed from preload script
@@ -91,8 +91,10 @@ function PlayGround(props){
 
     // 点击一个积木
     const onClickBlock=(event)=>{
+        window.lastClick=""
         if(event.type==="click"&&event.blockId){
             console.log(event)
+            window.lastClick=event.blockId
         }
 
     }
@@ -129,7 +131,7 @@ function PlayGround(props){
         primaryWorkspace.current.addChangeListener(
             antiShake(antiSaveFile,750)
         );
-        // primaryWorkspace.current.addChangeListener(onClickBlock)
+        primaryWorkspace.current.addChangeListener(onClickBlock)
 
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
     // 导入项目
