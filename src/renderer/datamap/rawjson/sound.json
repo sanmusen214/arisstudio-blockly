@@ -1,7 +1,7 @@
 {
     "sounds": [
         {
-            "desc": " 推拉铁门等重型门音效",
+            "desc": "推拉铁门等重型门音效",
             "filenames": [
                 "FX_Level_EnvSound_City_02.wav",
                 "FX_Level_EnvSound_City_01.wav",
@@ -141,9 +141,12 @@
         {
             "desc": "钟声或者铃声",
             "filenames": [
-                "SE_Bell_01.wav",
-                "SE_Bell_02.wav",
-                "SE_Bell_03.wav"
+                "UI_Chime_01.wav",
+                "UI_Chime_02.wav",
+                "UI_Chime_03.wav",
+                "UI_Chime_04.wav",
+                "UI_Chime_05.wav",
+                "UI_Chime_06.wav"
             ]
         },
         {
@@ -203,7 +206,8 @@
         {
             "desc": "合上书本",
             "filenames": [
-                "SE_Book_04.wav"
+                "SE_Book_04.wav",
+                "SFX_Spine_Book_Close.wav"
             ]
         },
         {
@@ -332,7 +336,8 @@
         {
             "desc": "铁链拖动声",
             "filenames": [
-                "SE_Chain_01.wav"
+                "SE_Chain_01.wav",
+                "SFX_Spine_Chain.wav"
             ]
         },
         {
@@ -1636,7 +1641,8 @@
                 "SE_Typing_04b.wav",
                 "SE_Typing_04c.wav",
                 "SE_Typing_04d.wav",
-                "SE_Typing_04e.wav"
+                "SE_Typing_04e.wav",
+                "SFX_Spine_ArcadeButton.wav"
             ]
         },
         {
@@ -1946,26 +1952,30 @@
             ]
         },
         {
-            "desc": "角色Aris(爱丽丝)所有技能音效整合",
+            "desc": "角色Aris(爱丽丝)所有音效整合",
             "filenames": [
                 "SFX_Aris_Hit.wav",
                 "SFX_Common_RG_aris_Attack.wav",
                 "SFX_Common_RG_aris_Delay.wav",
-                "SFX_Common_RG_aris_Reload.wav"
+                "SFX_Common_RG_aris_Reload.wav",
+                "SFX_Public_Aris.wav",
+                "SFX_Skill_Aris_Ex.wav",
+                "SFX_Skill_Aris_Ex_Cut_In.wav"
             ]
         },
         {
-            "desc": "角色Akari(亚伽里)EX技能所有音效",
+            "desc": "角色Akari(亚伽里)所有音效整合",
             "filenames": [
                 "SFX_Akari_Skill_EX_Explosion_01.wav",
                 "SFX_Akari_Skill_EX_Explosion_02.wav",
                 "SFX_Akari_Skill_EX_Start_1.wav",
                 "SFX_Akari_Skill_EX_Start_2.wav",
-                "SFX_Akari_Skill_EX_Start_3.wav"
+                "SFX_Akari_Skill_EX_Start_3.wav",
+                "SFX_Skill_Akari_Ex_Cut_in.wav"
             ]
         },
         {
-            "desc": "角色Ako(亚子)所有技能音效整合",
+            "desc": "角色Ako(亚子)所有音效整合",
             "filenames": [
                 "SFX_Ako_Cutin.wav",
                 "SFX_Ako_Ex_Rise.wav",
@@ -2024,7 +2034,7 @@
             ]
         },
         {
-            "desc": "角色AruNewyear(新春阿露)所有技能音效整合",
+            "desc": "角色AruNewyear(新春阿露)所有音效整合",
             "filenames": [
                 "SFX_Aru_Newyear_Cutin.wav",
                 "SFX_Aru_Newyear_Ex_Fall.wav",
@@ -2038,16 +2048,17 @@
             ]
         },
         {
-            "desc": "角色Aru(阿露)所有技能音效整合",
+            "desc": "角色Aru(阿露)所有音效整合",
             "filenames": [
                 "SFX_Aru_Skill_EX_1.wav",
                 "SFX_Aru_Skill_EX_2.wav",
                 "SFX_Aru_Skill_EX_3.wav",
-                "SFX_Aru_Skill_EX_4.wav"
+                "SFX_Aru_Skill_EX_4.wav",
+                "SFX_Skill_Aru_Ex_Cut_in.wav"
             ]
         },
         {
-            "desc": "角色Atsuko(敦子)所有技能音效整合",
+            "desc": "角色Atsuko(敦子)所有音效整合",
             "filenames": [
                 "SFX_Atsuko_Cutin.wav",
                 "SFX_Atsuko_Ex.wav",
@@ -2055,7 +2066,7 @@
             ]
         },
         {
-            "desc": "角色AzusaSwimsuit(泳装梓)所有技能音效整合",
+            "desc": "角色AzusaSwimsuit(泳装梓)所有音效整合",
             "filenames": [
                 "SFX_Azusa_Swimsuit_Cutin.wav",
                 "SFX_Azusa_Swimsuit_Ex.wav",
@@ -2067,10 +2078,35 @@
             ]
         },
         {
-            "desc": "角色Baal(颜艺)所有技能音效整合",
+            "desc": "角色Tsurugi(颜艺)所有音效整合",
             "filenames": [
                 "SFX_Baal_Skill_EX_Start_1.wav",
-                "SFX_Baal_Skill_EX_Start_2.wav"
+                "SFX_Baal_Skill_EX_Start_2.wav",
+                "SFX_Common_Tsurugi_Delay_01.wav",
+                "SFX_Common_Tsurugi_Delay_02.wav",
+                "SFX_Common_Tsurugi_Delay_03.wav",
+                "SFX_Common_Tsurugi_Delay_04.wav",
+                "SFX_Common_Tsurugi_Reload_01.wav",
+                "SFX_Common_Tsurugi_Reload_02.wav",
+                "SFX_Common_Tsurugi_Reload_03.wav",
+                "SFX_Common_Tsurugi_Shot_01.wav",
+                "SFX_Common_Tsurugi_Shot_02.wav",
+                "SFX_Common_Tsurugi_Shot_03.wav",
+                "SFX_Common_Tsurugi_Shot_04.wav",
+                "SFX_Common_Tsurugi02_Delay_01.wav",
+                "SFX_Common_Tsurugi02_Delay_02.wav",
+                "SFX_Common_Tsurugi02_Delay_03.wav",
+                "SFX_Common_Tsurugi02_Delay_04.wav",
+                "SFX_Common_Tsurugi02_Reload_01.wav",
+                "SFX_Common_Tsurugi02_Reload_02.wav",
+                "SFX_Common_Tsurugi02_Reload_03.wav",
+                "SFX_Common_Tsurugi02_Shot_01.wav",
+                "SFX_Common_Tsurugi02_Shot_02.wav",
+                "SFX_Common_Tsurugi02_Shot_03.wav",
+                "SFX_Common_Tsurugi02_Shot_04.wav",
+                "SFX_Public_Tsurugi.wav",
+                "SFX_Skill_Tsurugi_EX.wav",
+                "SFX_Skill_Tsurugi_EX_Cut_in.wav"
             ]
         },
         {
@@ -2090,33 +2126,30 @@
         {
             "desc": "EX技能一",
             "filenames": [
-                "SFX_Binah_EX1_01.wav",
-                "SFX_Binah_EX1_02.wav",
-                "SFX_Binah_EX1_03.wav",
-                "SFX_Binah_EX1_Vox.wav"
+                "SFX_Hieronymus_EX1_Hit_Explosion.wav",
+                "SFX_Hieronymus_EX1_Magiccircle.wav",
+                "SFX_Hieronymus_EX1_Weapon1.wav"
             ]
         },
         {
             "desc": "EX技能二",
             "filenames": [
-                "SFX_Binah_EX2_01.wav",
-                "SFX_Binah_EX2_02.wav",
-                "SFX_Binah_EX2_Vox_01.wav",
-                "SFX_Binah_EX2_Vox_02.wav"
+                "SFX_Shiro_EX_02_1.wav",
+                "SFX_Shiro_EX_02_2.wav",
+                "SFX_Shiro_EX_02_3.wav"
             ]
         },
         {
             "desc": "EX技能三",
             "filenames": [
-                "SFX_Binah_EX3_01.wav",
-                "SFX_Binah_EX3_02.wav",
-                "SFX_Binah_EX3_03.wav",
-                "SFX_Binah_EX3_Vox_01.wav",
-                "SFX_Binah_EX3_Vox_02.wav"
+                "SFX_Perorozilla_EX3.wav",
+                "SFX_Perorozilla_EX3_Hit_Open_01.wav",
+                "SFX_Perorozilla_EX3_Hit_Open_02.wav",
+                "SFX_Perorozilla_EX3_Hit_Open_03.wav"
             ]
         },
         {
-            "desc": "怪物 BoxCat 所有技能音效整合",
+            "desc": "怪物 BoxCat 所有音效整合",
             "filenames": [
                 "SFX_BoxCat_Appear.wav",
                 "SFX_BoxCat_Balloon.wav",
@@ -2125,14 +2158,14 @@
             ]
         },
         {
-            "desc": "角色HihumiSwimsuit(泳装日步美)(Spr：CH0058)所有技能音效整合",
+            "desc": "角色HihumiSwimsuit(泳装日步美)(Spr：CH0058)所有音效整合",
             "filenames": [
                 "SFX_CH0058_Cutin.wav",
                 "SFX_CH0058_Hatch_Close.wav"
             ]
         },
         {
-            "desc": "角色BaalSwimsuit(泳装颜艺)(Spr：CH0060)所有技能音效整合",
+            "desc": "角色TsurugiSwimsuit(泳装颜艺)(Spr：CH0060)所有音效整合",
             "filenames": [
                 "SFX_CH0060_Cutin.wav",
                 "SFX_CH0060_Ex.wav",
@@ -2159,14 +2192,14 @@
             ]
         },
         {
-            "desc": "角色未知(Spr：CH0061)所有技能音效整合 本人Spr文件中并没有该角色，所以标明未知",
+            "desc": "角色未知(Spr：CH0061)所有音效整合 本人Spr文件中并没有该角色，所以标明未知",
             "filenames": [
                 "SFX_CH0061_Cutin.wav",
                 "SFX_CH0061_Public.wav"
             ]
         },
         {
-            "desc": "角色HinaSwimsiut(泳装阳奈)(Spr：CH0063)所有技能音效整合",
+            "desc": "角色HinaSwimsiut(泳装阳奈)(Spr：CH0063)所有音效整合",
             "filenames": [
                 "SFX_CH0063_Cutin.wav",
                 "SFX_CH0063_Ex.wav",
@@ -2175,7 +2208,7 @@
             ]
         },
         {
-            "desc": "角色IoriSwimsiut(泳装伊织)(Spr：CH0064)所有技能音效整合",
+            "desc": "角色IoriSwimsiut(泳装伊织)(Spr：CH0064)所有音效整合",
             "filenames": [
                 "SFX_CH0064_Cutin.wav",
                 "SFX_CH0064_Ex.wav",
@@ -2186,7 +2219,7 @@
             ]
         },
         {
-            "desc": "角色ShunSmall(幼瞬)(Spr：CH0066)所有技能音效整合",
+            "desc": "角色ShunSmall(幼瞬)(Spr：CH0066)所有音效整合",
             "filenames": [
                 "SFX_CH0066_Cutin.wav",
                 "SFX_CH0066_Ex_Cast.wav",
@@ -2199,7 +2232,7 @@
             ]
         },
         {
-            "desc": "角色未知(Spr：CH0081)所有技能音效整合 本人Spr文件并没有该角色，所以标明未知",
+            "desc": "角色未知(Spr：CH0081)所有音效整合 本人Spr文件并没有该角色，所以标明未知",
             "filenames": [
                 "SFX_CH0081_Cutin.wav",
                 "SFX_CH0081_Passive_Buff_01.wav",
@@ -2207,7 +2240,7 @@
             ]
         },
         {
-            "desc": "角色NonomiSwimsuit(泳装野乃美)(Spr：CH0092)所有技能音效整合",
+            "desc": "角色NonomiSwimsuit(泳装野乃美)(Spr：CH0092)所有音效整合",
             "filenames": [
                 "SFX_CH0092_Beep_Count.wav",
                 "SFX_CH0092_Cutin.wav",
@@ -2216,7 +2249,7 @@
             ]
         },
         {
-            "desc": "角色Noa(诺亚)(Spr：CH0095)所有技能音效整合",
+            "desc": "角色Noa(诺亚)(Spr：CH0095)所有音效整合",
             "filenames": [
                 "SFX_CH0095_Cast_Aura.wav",
                 "SFX_CH0095_Cast_Disappear.wav",
@@ -2234,7 +2267,7 @@
             ]
         },
         {
-            "desc": "角色AsunaBunny(兔女郎明日奈)(Spr：CH0098)所有技能音效整合",
+            "desc": "角色AsunaBunny(兔女郎明日奈)(Spr：CH0098)所有音效整合",
             "filenames": [
                 "SFX_CH0098_Cutin.wav",
                 "SFX_CH0098_Ex.wav",
@@ -2243,7 +2276,7 @@
             ]
         },
         {
-            "desc": "角色AkaneBunny(兔女郎茜)(Spr：CH0099)所有技能音效整合",
+            "desc": "角色AkaneBunny(兔女郎茜)(Spr：CH0099)所有音效整合",
             "filenames": [
                 "SFX_CH0099_Cutin.wav",
                 "SFX_CH0099_Ex_Bomb_Drop.wav",
@@ -2255,7 +2288,7 @@
             ]
         },
         {
-            "desc": "角色KarinBunny(兔女郎花凛)(Spr：CH0100)所有技能音效整合",
+            "desc": "角色KarinBunny(兔女郎花凛)(Spr：CH0100)所有音效整合",
             "filenames": [
                 "SFX_CH0100_Cutin.wav",
                 "SFX_CH0100_Ex_Cast.wav",
@@ -2265,7 +2298,7 @@
             ]
         },
         {
-            "desc": "角色NeruBunny(兔女郎尼禄)(Spr：CH0101)所有技能音效整合",
+            "desc": "角色NeruBunny(兔女郎尼禄)(Spr：CH0101)所有音效整合",
             "filenames": [
                 "SFX_CH0101_Cutin.wav",
                 "SFX_CH0101_Ex.wav",
@@ -2280,7 +2313,7 @@
             ]
         },
         {
-            "desc": "角色Michiru(三千留)(Spr：CH0113)所有技能音效整合",
+            "desc": "角色Michiru(三千留)(Spr：CH0113)所有音效整合",
             "filenames": [
                 "SFX_CH0113_Cutin.wav",
                 "SFX_CH0113_Ex.wav",
@@ -2289,27 +2322,37 @@
             ]
         },
         {
-            "desc": "角色Tsukuyo(月夜)(Spr：CH0114)所有技能音效整合",
+            "desc": "角色Tsukuyo(月夜)(Spr：CH0114)所有音效整合",
             "filenames": [
                 "SFX_CH0114_Cutin.wav",
                 "SFX_CH0114_Ex.wav",
                 "SFX_CH0114_Public_Explosion.wav",
-                "SFX_CH0114_Public_Hit.wav"
+                "SFX_CH0114_Public_Hit.wav",
+                "SFX_Spine_CH0114_Breath_01.wav",
+                "SFX_Spine_CH0114_Breath_02.wav",
+                "SFX_Spine_CH0114_Breath_03.wav",
+                "SFX_Spine_CH0114_Breath_04.wav",
+                "SFX_Spine_CH0114_Breath_05.wav",
+                "SFX_Spine_CH0114_Breath_06.wav"
             ]
         },
         {
-            "desc": "角色HeartNai(心奈)(Spr：CH0137)所有技能音效整合【注：英文是机翻】",
+            "desc": "角色Kokona(心奈)(Spr：CH0137)所有音效整合",
             "filenames": [
                 "SFX_CH0137_Buff_Passive_Sticker.wav",
                 "SFX_CH0137_Cutin.wav",
                 "SFX_CH0137_LightBulb.wav",
                 "SFX_CH0137_Paper_Fold_Poof.wav",
                 "SFX_CH0137_Paper_Slide.wav",
-                "SFX_CH0137_Pop_Disappear.wav"
+                "SFX_CH0137_Pop_Disappear.wav",
+                "SFX_Spine_CH0137_Eat_Bite_01.wav",
+                "SFX_Spine_CH0137_Eat_Bite_02.wav",
+                "SFX_Spine_CH0137_Eat_Bite_03.wav",
+                "SFX_Spine_CH0137_Eat_Bite_04.wav"
             ]
         },
         {
-            "desc": "角色BlowsSnow(吹雪)(Spr：CH0141)所有技能音效整合【注：英文是机翻】",
+            "desc": "角色BlowsSnow(吹雪)(Spr：CH0141)所有音效整合【注：英文是机翻】",
             "filenames": [
                 "SFX_CH0141_Cutin.wav",
                 "SFX_CH0141_Ex_0.wav",
@@ -2318,7 +2361,7 @@
             ]
         },
         {
-            "desc": "角色Saki(咲希)(Spr：CH0144)所有技能音效整合",
+            "desc": "角色Saki(咲希)(Spr：CH0144)所有音效整合",
             "filenames": [
                 "SFX_CH0144_Cutin.wav",
                 "SFX_CH0144_Ex_Helicopter.wav",
@@ -2333,7 +2376,7 @@
             ]
         },
         {
-            "desc": "角色Miyu(美游)(Spr：CH0145)所有技能音效整合",
+            "desc": "角色Miyu(美游)(Spr：CH0145)所有音效整合",
             "filenames": [
                 "SFX_CH0145_Cutin.wav",
                 "SFX_CH0145_Ex_Drop.wav",
@@ -2346,7 +2389,7 @@
             ]
         },
         {
-            "desc": "角色Natsu(夏)(Spr：CH0155)所有技能音效整合",
+            "desc": "角色Natsu(夏)(Spr：CH0155)所有音效整合",
             "filenames": [
                 "SFX_CH0155_Cutin.wav",
                 "SFX_CH0155_Ex.wav",
@@ -2355,7 +2398,7 @@
             ]
         },
         {
-            "desc": "角色Iroha(伊吕波)(Spr：CH0156)所有技能音效整合",
+            "desc": "角色Iroha(伊吕波)(Spr：CH0156)所有音效整合",
             "filenames": [
                 "SFX_CH0156_Cutin.wav",
                 "SFX_CH0156_Public_Target.wav",
@@ -2365,7 +2408,7 @@
             ]
         },
         {
-            "desc": "角色Chihiro(千寻)(Spr：CH0160)所有技能音效整合",
+            "desc": "角色Chihiro(千寻)(Spr：CH0160)所有音效整合",
             "filenames": [
                 "SFX_CH0160_Cutin.wav",
                 "SFX_CH0160_Ex_Lock.wav",
@@ -2373,7 +2416,7 @@
             ]
         },
         {
-            "desc": "角色ChinatsuHotSpring(温泉千夏)(Spr：CH0163) 角色CherinoHotSpring(温泉斯大罗)(Spr：CH0164) 角色NodokaHotSpring(温泉和香)(Spr：CH0165)等3位学生所有技能音效整合",
+            "desc": "角色ChinatsuHotSpring(温泉千夏)(Spr：CH0163) 角色CherinoHotSpring(温泉斯大罗)(Spr：CH0164) 角色NodokaHotSpring(温泉和香)(Spr：CH0165)等3位学生所有音效整合",
             "filenames": [
                 "SFX_CH0163_Cutin.wav",
                 "SFX_CH0164_Cutin.wav",
@@ -2381,7 +2424,7 @@
             ]
         },
         {
-            "desc": "角色Ui(忧)(Spr：CH0169)所有技能音效整合",
+            "desc": "角色Ui(忧)(Spr：CH0169)所有音效整合",
             "filenames": [
                 "SFX_CH0169_Cutin.wav",
                 "SFX_CH0169_Ex_01.wav",
@@ -2392,7 +2435,7 @@
             ]
         },
         {
-            "desc": "角色WakamoSwimsuit(泳装若藻)(Spr：CH0175)所有技能音效整合",
+            "desc": "角色WakamoSwimsuit(泳装若藻)(Spr：CH0175)所有音效整合",
             "filenames": [
                 "SFX_CH0175_Cast.wav",
                 "SFX_CH0175_Cutin.wav",
@@ -2411,11 +2454,12 @@
                 "SFX_CH0175_Shot_01.wav",
                 "SFX_CH0175_Shot_02.wav",
                 "SFX_CH0175_Shot_Ready.wav",
-                "SFX_CH0175_Target.wav"
+                "SFX_CH0175_Target.wav",
+                "CH0175_Battle_In_1.wav"
             ]
         },
         {
-            "desc": "角色AyaneSwimsuit(泳装绫音)(Spr：CH0176)所有技能音效整合",
+            "desc": "角色AyaneSwimsuit(泳装绫音)(Spr：CH0176)所有音效整合",
             "filenames": [
                 "SFX_CH0176_Cutin.wav",
                 "SFX_CH0176_Heli_Appearance_Add.wav",
@@ -2432,7 +2476,7 @@
             ]
         },
         {
-            "desc": "角色ChiseSwimsuit(泳装知世)(Spr：CH0178)所有技能音效整合",
+            "desc": "角色ChiseSwimsuit(泳装知世)(Spr：CH0178)所有音效整合",
             "filenames": [
                 "SFX_CH0178_Cutin.wav",
                 "SFX_CH0178_EX_Reload_a_01.wav",
@@ -2455,7 +2499,7 @@
             ]
         },
         {
-            "desc": "角色IzunaSwimsuit(泳装伊树莱)(Spr：CH0179)所有技能音效整合",
+            "desc": "角色IzunaSwimsuit(泳装伊树莱)(Spr：CH0179)所有音效整合",
             "filenames": [
                 "SFX_CH0179_Bubble_Hit_01.wav",
                 "SFX_CH0179_Bubble_Hit_02.wav",
@@ -2472,7 +2516,7 @@
             ]
         },
         {
-            "desc": "角色ShizukoSwimsuit(泳装静子)(Spr：CH0180)所有技能音效整合",
+            "desc": "角色ShizukoSwimsuit(泳装静子)(Spr：CH0180)所有音效整合",
             "filenames": [
                 "SFX_CH0180_Cutin.wav",
                 "SFX_CH0180_EX_Appear.wav",
@@ -2489,7 +2533,7 @@
             ]
         },
         {
-            "desc": "角色HibikiGymsuit(体操服响)(Spr：CH0181)所有技能音效整合",
+            "desc": "角色HibikiGymsuit(体操服响)(Spr：CH0181)所有音效整合",
             "filenames": [
                 "SFX_CH0181_Cutin.wav",
                 "SFX_CH0181_Ex_Explosion.wav",
@@ -2510,14 +2554,15 @@
             ]
         },
         {
-            "desc": "角色Utaha(柳叶)(Spr：CH0182)所有技能音效整合",
+            "desc": "角色Utaha(柳叶)(Spr：CH0182)所有音效整合",
             "filenames": [
                 "SFX_CH0182_Cutin.wav",
-                "SFX_CH0182_Ex.wav"
+                "SFX_CH0182_Ex.wav",
+                "SFX_Skill_Utaha_Ex_Cut_in.wav"
             ]
         },
         {
-            "desc": "角色HatsuneMiku(初音未来)(Spr：CH9999)所有技能音效整合",
+            "desc": "角色HatsuneMiku(初音未来)(Spr：CH9999)所有音效整合",
             "filenames": [
                 "SFX_CH9999_Cutin.wav",
                 "SFX_CH9999_EX_0.wav",
@@ -2525,7 +2570,7 @@
             ]
         },
         {
-            "desc": "十字神名： Chesed (球) 所有技能音效整合",
+            "desc": "十字神名： Chesed (球) 所有音效整合",
             "filenames": [
                 "SFX_Chesed_Cutin.wav",
                 "SFX_Chesed_Skill_01.wav",
@@ -2764,8 +2809,9 @@
             ]
         },
         {
-            "desc": "角色Hina(阳奈)所有技能音效整合",
+            "desc": "角色Hina(阳奈)所有音效整合",
             "filenames": [
+                "SFX_LobbySpine_Hina.wav",
                 "SE_MGShot_01.wav",
                 "SE_MGShot_02.wav",
                 "SFX_Common_HMG_Reload_Hina_01.wav",
@@ -2773,22 +2819,35 @@
                 "SFX_Common_HMG_Reload_Hina_03.wav",
                 "SFX_Common_HMG_Start_Hina_01.wav",
                 "SFX_Common_HMG_Start_Hina_02.wav",
-                "SFX_Common_HMG_Start_Hina_03.wav"
+                "SFX_Common_HMG_Start_Hina_03.wav",
+                "SFX_Public_Hina.wav",
+                "SFX_Skill_Hina_Ex.wav",
+                "SFX_Skill_Hina_Ex_Cut_in.wav"
             ]
         },
         {
-            "desc": "角色Kotori(亚托莉)所有技能音效整合",
+            "desc": "角色Kotori(亚托莉)所有音效整合",
             "filenames": [
                 "SFX_Common_HMG_Reload_Kotori_01.wav",
-                "SFX_Common_HMG_Reload_Kotori_02.wav"
+                "SFX_Common_HMG_Reload_Kotori_02.wav",
+                "SFX_Kotori_Skill_EX_Start_1.wav",
+                "SFX_Kotori_Skill_EX_Start_2.wav",
+                "SFX_Skill_Kotori_Ex_Cut_in.wav",
+                "SFX_Skill_Kotori_Public_1.wav",
+                "SFX_Skill_Kotori_Public_2.wav",
+                "SFX_Skill_Kotori_Public_3.wav"
             ]
         },
         {
-            "desc": "角色Akane(朱音)所有技能音效整合",
+            "desc": "角色Akane(朱音)所有音效整合",
             "filenames": [
                 "SFX_Common_HG_Load_Akane_01.wav",
                 "SFX_Common_HG_Load_Akane_02.wav",
-                "SFX_Common_HG_Load_Akane_03.wav"
+                "SFX_Common_HG_Load_Akane_03.wav",
+                "SFX_Skill_Akane_Ex.wav",
+                "SFX_Skill_Akane_Ex_Cut_in.wav",
+                "SFX_Skill_Akane_Ex_Gun.wav",
+                "SFX_Skill_Akane_Ex_Hit.wav"
             ]
         },
         {
@@ -2810,7 +2869,10 @@
                 "SFX_Common_MG_Burst_02.wav",
                 "SFX_Common_MG_Burst_03.wav",
                 "SFX_Common_MG_Burst_04.wav",
-                "SFX_Common_MG_Burst_05.wav"
+                "SFX_Common_MG_Burst_05.wav",
+                "SFX_MG42_Public_01.wav",
+                "SFX_MG42_Public_02.wav",
+                "SFX_MG42_Public_03.wav"
             ]
         },
         {
@@ -2822,19 +2884,35 @@
             ]
         },
         {
-            "desc": "角色Izumi(泉)所有技能音效整合",
+            "desc": "弹壳掉落声 【MG】系列",
+            "filenames": [
+                "SFX_MG42_Bullet_Drop_01.wav",
+                "SFX_MG42_Bullet_Drop_02.wav",
+                "SFX_MG42_Bullet_Drop_03.wav"
+            ]
+        },
+        {
+            "desc": "角色Izumi(泉)所有音效整合",
             "filenames": [
                 "SFX_Common_MG_Reload_Izumi_01.wav",
                 "SFX_Common_MG_Reload_Izumi_02.wav",
                 "SFX_Common_MG_Reload_Izumi_Random_01.wav",
-                "SFX_Common_MG_Reload_Izumi_Random_02.wav"
+                "SFX_Common_MG_Reload_Izumi_Random_02.wav",
+                "SFX_Izumi_Ex_Hit_01.wav",
+                "SFX_Izumi_Ex_Hit_02.wav",
+                "SFX_Izumi_Ex_Hit_03.wav",
+                "SFX_Skill_Izumi_Ex.wav",
+                "SFX_Skill_Izumi_EX_1.wav",
+                "SFX_Skill_Izumi_EX_2.wav",
+                "SFX_Skill_Izumi_EX_Cut_in.wav"
             ]
         },
         {
-            "desc": "角色Mutsuki(睦月)所有技能音效整合",
+            "desc": "角色Mutsuki(睦月)所有音效整合",
             "filenames": [
                 "Mutsuki_Skill_Ex_1.wav",
                 "Mutsuki_Skill_Ex_2.wav",
+                "SFX_Mutsuki_Skill_Ex3.wav",
                 "SFX_Common_MG_Reload_Mutsuki_01.wav",
                 "SFX_Common_MG_Reload_Mutsuki_02.wav",
                 "SFX_Common_MG_Reload_Mutsuki_long_01.wav",
@@ -2842,7 +2920,8 @@
                 "SFX_Common_MG_Reload_Mutsuki_NY_01.wav",
                 "SFX_Common_MG_Reload_Mutsuki_NY_02.wav",
                 "SFX_Common_MG_Reload_Mutsuki_NY_03.wav",
-                "SFX_Common_MG_Reload_Mutsuki_NY_04.wav"
+                "SFX_Common_MG_Reload_Mutsuki_NY_04.wav",
+                "SFX_Skill_Mutsuki_Ex_Cut_in.wav"
             ]
         },
         {
@@ -2969,6 +3048,16 @@
             ]
         },
         {
+            "desc": "被击中【RL】系列",
+            "filenames": [
+                "SFX_Explosion_RL_Hit_01.wav",
+                "SFX_Explosion_RL_Hit_02.wav",
+                "SFX_Explosion_RL_Hit_03.wav",
+                "SFX_Explosion_RL_Hit_04.wav",
+                "SFX_Explosion_RL_Hit_05.wav"
+            ]
+        },
+        {
             "desc": "对一个目标射击声",
             "filenames": [
                 "SFX_Common_RShot_Single_01.wav",
@@ -2983,6 +3072,2380 @@
                 "SFX_Common_RShot_Triple_02.wav",
                 "SFX_Common_RShot_Triple_03.wav",
                 "SFX_Common_RShot_Triple_One_01.wav"
+            ]
+        },
+        {
+            "desc": "【Blue Archive】'SG'系列 音效整合",
+            "filenames": [
+                "SFX_Common_SG_01.wav",
+                "SFX_Common_SG_02.wav",
+                "SFX_Common_SG_03.wav",
+                "SFX_Common_SG_04.wav",
+                "SFX_Common_SG_05.wav",
+                "SFX_Common_SG_06.wav",
+                "SFX_Common_SG_07.wav",
+                "SFX_Common_SG_08.wav"
+            ]
+        },
+        {
+            "desc": "全自动开火【SG】系列",
+            "filenames": [
+                "SFX_Common_SG_Auto_01.wav",
+                "SFX_Common_SG_Auto_02.wav",
+                "SFX_Common_SG_Auto_03.wav",
+                "SFX_Common_SG_Auto_04.wav"
+            ]
+        },
+        {
+            "desc": "故障【SG】系列",
+            "filenames": [
+                "SFX_Common_SG_Delay_01.wav",
+                "SFX_Common_SG_Delay_02.wav",
+                "SFX_Common_SG_Delay_03.wav",
+                "SFX_Common_SG_Delay_04.wav",
+                "SFX_Common_SG_Delay_05.wav",
+                "SFX_Common_SG_Delay_06.wav",
+                "SFX_Common_SG_Delay_07.wav",
+                "SFX_Common_SG_Delay_08.wav"
+            ]
+        },
+        {
+            "desc": "重装弹药【SG】系列",
+            "filenames": [
+                "SFX_Common_SG_Reload_01.wav",
+                "SFX_Common_SG_Reload_02.wav",
+                "SFX_Common_SG_Reload_03.wav",
+                "SFX_Common_SG_Reload_04.wav",
+                "SFX_Common_SG_Reload_05.wav"
+            ]
+        },
+        {
+            "desc": "推动枪机【SG】系列",
+            "filenames": [
+                "SFX_Common_SG_Reload_Cart_01.wav",
+                "SFX_Common_SG_Reload_Cart_01a.wav",
+                "SFX_Common_SG_Reload_Cart_02.wav",
+                "SFX_Common_SG_Reload_Cart_02a.wav",
+                "SFX_Common_SG_Reload_Cart_03.wav",
+                "SFX_Common_SG_Reload_Cart_03a.wav",
+                "SFX_Common_SG_Reload_Cart_04.wav",
+                "SFX_Common_SG_Reload_Cart_04a.wav",
+                "SFX_Common_SG_Reload_Cart_05.wav",
+                "SFX_Common_SG_Reload_Cart_05a.wav"
+            ]
+        },
+        {
+            "desc": "其他音效【SG】系列",
+            "filenames": [
+                "SFX_SG_JSD_ADD_01.wav",
+                "SFX_SG_JSD_ADD_02.wav",
+                "SFX_SG_JSD_ADD_03.wav"
+            ]
+        },
+        {
+            "desc": "开启盾牌",
+            "filenames": [
+                "SFX_Common_Shield_Ing.wav",
+                "SFX_Common_Shield_Start.wav"
+            ]
+        },
+        {
+            "desc": "某个目标受击",
+            "filenames": [
+                "SFX_Common_Shot_Single_01.wav",
+                "SFX_Common_Shot_Single_02.wav",
+                "SFX_Common_Shot_Single_03.wav"
+            ]
+        },
+        {
+            "desc": "【Blue Archive】'SMG' 系列 音效整合",
+            "filenames": [
+                "SFX_Common_SMG_01.wav",
+                "SFX_Common_SMG_02.wav",
+                "SFX_Common_SMG_03.wav",
+                "SFX_Common_SMG_04.wav",
+                "SFX_Common_SMG_05.wav"
+            ]
+        },
+        {
+            "desc": "重装弹药【SMG】系列",
+            "filenames": [
+                "SFX_Common_SMG_Reload_01.wav",
+                "SFX_Common_SMG_Reload_02.wav",
+                "SFX_Common_SMG_Reload_03.wav",
+                "SFX_Common_SMG_Reload_04.wav",
+                "SFX_Common_SMG_Reload_05.wav"
+            ]
+        },
+        {
+            "desc": "卡壳【SMG】系列",
+            "filenames": [
+                "SFX_Common_SMG_Suppressed_01.wav",
+                "SFX_Common_SMG_Suppressed_02.wav",
+                "SFX_Common_SMG_Suppressed_03.wav"
+            ]
+        },
+        {
+            "desc": "三把枪械共同开火【SMG】系列",
+            "filenames": [
+                "SFX_Common_SMG_Triple_01.wav",
+                "SFX_Common_SMG_Triple_02.wav",
+                "SFX_Common_SMG_Triple_03.wav",
+                "SFX_Common_SMG_Triple_04.wav",
+                "SFX_Common_SMG_Triple_05.wav"
+            ]
+        },
+        {
+            "desc": "三把枪械共同开火，暂时火力压制【SMG】系列",
+            "filenames": [
+                "SFX_Common_SMG_Triple_Short_01.wav",
+                "SFX_Common_SMG_Triple_Short_02.wav",
+                "SFX_Common_SMG_Triple_Short_03.wav",
+                "SFX_Common_SMG_Triple_Short_04.wav"
+            ]
+        },
+        {
+            "desc": "角色Izuna(伊树莱)所有音效整合",
+            "filenames": [
+                "SFX_Common_SMG_Izuna_Kneel_Reload_01.wav",
+                "SFX_Common_SMG_Izuna_Kneel_Reload_02.wav",
+                "SFX_Common_SMG_Izuna_Normal_Reload_01.wav",
+                "SFX_Common_SMG_Izuna_Normal_Reload_02.wav",
+                "SFX_Common_SMG_Izuna_Stand_Reload_01.wav",
+                "SFX_Common_SMG_Izuna_Stand_Reload_02.wav",
+                "SFX_Skill_Izuna_Ex.wav",
+                "SFX_Skill_Izuna_Ex_Cut_in.wav",
+                "SFX_Skill_Izuna_Smoke.wav",
+                "SFX_Skill_Izuna_Foxdoll.wav",
+                "SFX_Skill_Izuna_Public.wav"
+            ]
+        },
+        {
+            "desc": "角色Marina(玛丽娜)所有音效整合",
+            "filenames": [
+                "SFX_Common_SMG_Marina_Reload_01.wav",
+                "SFX_Common_SMG_Marina_Reload_02.wav",
+                "SFX_Common_SMG_Marina_Reload_03.wav",
+                "SFX_Marina_Cutin.wav",
+                "SFX_Marina_Ex_Fire.wav",
+                "SFX_Marina_Ex_Soldier_End_1.wav",
+                "SFX_Marina_Ex_Soldier_End_2.wav",
+                "SFX_Marina_Ex_Soldier_Start_1.wav",
+                "SFX_Marina_Ex_Soldier_Start_2.wav",
+                "SFX_Marina_Public_Step_1.wav",
+                "SFX_Marina_Public_Step_2.wav"
+            ]
+        },
+        {
+            "desc": "【Blue Archive】'SR' 系列 音效整合",
+            "filenames": [
+                "SFX_Common_SR_01.wav",
+                "SFX_Common_SR_02.wav",
+                "SFX_Common_SR_03.wav",
+                "SFX_Common_SR_04.wav",
+                "SFX_Common_SR_05.wav"
+            ]
+        },
+        {
+            "desc": "重新拉动枪栓【SR】系列 【闪电分系】",
+            "filenames": [
+                "SFX_Common_SR_Bolt_Cart_Reload_01.wav",
+                "SFX_Common_SR_Bolt_Cart_Reload_02.wav",
+                "SFX_Common_SR_Bolt_Cart_Reload_03.wav"
+            ]
+        },
+        {
+            "desc": "重装弹药【SR】系列 【闪电分系】",
+            "filenames": [
+                "SFX_Common_SR_Reload_Bolt_01.wav",
+                "SFX_Common_SR_Reload_Bolt_02.wav",
+                "SFX_Common_SR_Reload_Bolt_03.wav",
+                "SFX_Common_SR_Reload_Bolt_04.wav",
+                "SFX_Common_SR_Reload_Bolt_05.wav",
+                "SFX_Common_SR_Reload_Bolt_06.wav"
+            ]
+        },
+        {
+            "desc": "装填完毕后 射击 【SR】系列 【闪电分系】",
+            "filenames": [
+                "SFX_Common_SR_Reload_Bolt_Action_01.wav",
+                "SFX_Common_SR_Reload_Bolt_Action_02.wav",
+                "SFX_Common_SR_Reload_Bolt_Action_03.wav",
+                "SFX_Common_SR_Reload_Bolt_Action_04.wav",
+                "SFX_Common_SR_Reload_Bolt_Action_05.wav"
+            ]
+        },
+        {
+            "desc": "拉动枪栓装填弹药【SR】系列 【常规】",
+            "filenames": [
+                "SFX_Common_SR_Cart_Reload_01.wav",
+                "SFX_Common_SR_Cart_Reload_02.wav",
+                "SFX_Common_SR_Cart_Reload_03.wav",
+                "SFX_Common_SR_Cart_Reload_04.wav"
+            ]
+        },
+        {
+            "desc": "装填弹药(换弹夹)【SR】系列 【常规】",
+            "filenames": [
+                "SFX_Common_SR_Reload_01.wav",
+                "SFX_Common_SR_Reload_02.wav",
+                "SFX_Common_SR_Reload_03.wav",
+                "SFX_Common_SR_Reload_04.wav",
+                "SFX_Common_SR_Reload_05.wav",
+                "SFX_Common_SR_Reload_06.wav"
+            ]
+        },
+        {
+            "desc": "上膛射击【SR】系列 【常规】",
+            "filenames": [
+                "SFX_Common_SR_Shot_Load_01.wav",
+                "SFX_Common_SR_Shot_Load_02.wav",
+                "SFX_Common_SR_Shot_Load_03.wav",
+                "SFX_Common_SR_Shot_Load_04.wav",
+                "SFX_Common_SR_Shot_Load_05.wav"
+            ]
+        },
+        {
+            "desc": "故障【SR】系列 【常规】",
+            "filenames": [
+                "SFX_Common_SR_Suppressed_01.wav",
+                "SFX_Common_SR_Suppressed_02.wav",
+                "SFX_Common_SR_Suppressed_03.wav",
+                "SFX_Common_SR_Suppressed_04.wav"
+            ]
+        },
+        {
+            "desc": "角色Wakamo(若藻)所有音效整合",
+            "filenames": [
+                "SFX_Common_SR_Wakamo_01.wav",
+                "SFX_Common_SR_Wakamo_02.wav",
+                "SFX_Common_SR_Wakamo_03.wav",
+                "SFX_Common_SR_Wakamo_04.wav",
+                "SFX_Common_SR_Wakamo_05.wav",
+                "SFX_Skill_Wakamo_Ex.wav",
+                "SFX_Skill_Wakamo_Ex_Cut_in.wav",
+                "SFX_Wakamo_Ex_01.wav",
+                "SFX_Wakamo_Ex_02.wav",
+                "SFX_Wakamo_Ex_03.wav",
+                "SFX_Wakamo_Ex_04.wav",
+                "SFX_Wakamo_Ex_05.wav"
+            ]
+        },
+        {
+            "desc": "洗头音",
+            "filenames": [
+                "SFX_Common_Sweephair.wav"
+            ]
+        },
+        {
+            "desc": "重炮炮台开炮声",
+            "filenames": [
+                "SFX_Common_Turret_Cannon_01.wav",
+                "SFX_Common_Turret_Cannon_02.wav",
+                "SFX_Common_Turret_Cannon_03.wav",
+                "SFX_Common_Turret_Cannon_04.wav",
+                "SFX_Common_Turret_Cannon_05.wav",
+                "SFX_Common_Turret_Cannon_06.wav",
+                "SFX_Common_Turret_Cannon_07.wav",
+                "SFX_Common_Turret_Cannon_08.wav"
+            ]
+        },
+        {
+            "desc": "电磁轨道炮开炮声",
+            "filenames": [
+                "SFX_Common_Turret_RailGun_01.wav",
+                "SFX_Common_Turret_RailGun_02.wav",
+                "SFX_Common_Turret_RailGun_03.wav",
+                "SFX_Common_Turret_RailGun_04.wav",
+                "SFX_Common_Turret_RailGun_05.wav",
+                "SFX_Common_Turret_RailGun_06.wav",
+                "SFX_Common_Turret_RailGun_07.wav",
+                "SFX_Common_Turret_RailGun_08.wav"
+            ]
+        },
+        {
+            "desc": "击打水面声",
+            "filenames": [
+                "SFX_Common_Water_Hit_01.wav",
+                "SFX_Common_Water_Hit_02.wav",
+                "SFX_Common_Water_Hit_03.wav",
+                "SFX_Common_Water_Hit_04.wav",
+                "SFX_Common_Water_Hit_05.wav",
+                "SFX_Common_Water_Hit_06.wav",
+                "SFX_Common_Water_Hit_07.wav",
+                "SFX_Common_Water_Hit_08.wav",
+                "SFX_Common_Water_Hit_09.wav",
+                "SFX_Common_Water_Hit_10.wav",
+                "SFX_Common_Water_Hit_11.wav",
+                "SFX_Common_Water_Hit_12.wav",
+                "SFX_Common_Water_Hit_13.wav"
+            ]
+        },
+        {
+            "desc": "开门声",
+            "filenames": [
+                "SFX_Door_Open.wav",
+                "SFX_Door2_Open.wav"
+            ]
+        },
+        {
+            "desc": "关门声",
+            "filenames": [
+                "SFX_Door_Close.wav",
+                "SFX_Door2_Close.wav"
+            ]
+        },
+        {
+            "desc": "倒地声",
+            "filenames": [
+                "SFX_Down_01.wav",
+                "SFX_Down_02.wav",
+                "SFX_Down_03.wav",
+                "SFX_Down_04.wav",
+                "SFX_Down_05.wav",
+                "SFX_Down_06.wav",
+                "SFX_Down_07.wav",
+                "SFX_Down_08.wav"
+            ]
+        },
+        {
+            "desc": "冒泡声",
+            "filenames": [
+                "SFX_Drip_JSD_Bubble_Water_01.wav",
+                "SFX_Drip_JSD_Bubble_Water_02.wav",
+                "SFX_Drip_JSD_Bubble_Water_03.wav",
+                "SFX_Drip_JSD_Bubble_Water_04.wav",
+                "SFX_Drip_JSD_Bubble_Water_05.wav",
+                "SFX_Drip_JSD_Bubble_Water_06.wav"
+            ]
+        },
+        {
+            "desc": "无人机技能音效整合",
+            "filenames": [
+                "SFX_Drone_Decagram_Ex_01.wav",
+                "SFX_Drone_Decagram_Ex_02.wav",
+                "SFX_Drone_Decagram_Ex_03.wav",
+                "SFX_Drone_Decagram_Ex_Count.wav",
+                "SFX_Drone_Decagram_Ex_Count_X5.wav",
+                "SFX_Drone_Decagram_Ex_Explosion_01.wav",
+                "SFX_Drone_Decagram_Ex_Explosion_02.wav",
+                "SFX_Drone_Decagram_Ex_Explosion_03.wav"
+            ]
+        },
+        {
+            "desc": "无人机准备对目标进行导弹攻击",
+            "filenames": [
+                "SFX_Drone_Missile_AttackStart_01.wav",
+                "SFX_Drone_Missile_AttackStart_02.wav",
+                "SFX_Drone_Missile_AttackStart_03.wav"
+            ]
+        },
+        {
+            "desc": "无人机正在对目标进行导弹攻击",
+            "filenames": [
+                "SFX_Drone_Missile_AttackIng_01.wav",
+                "SFX_Drone_Missile_AttackIng_02.wav",
+                "SFX_Drone_Missile_AttackIng_03.wav",
+                "SFX_Drone_Missile_AttackIng_04.wav"
+            ]
+        },
+        {
+            "desc": "无人机结束对目标的导弹攻击",
+            "filenames": [
+                "SFX_Drone_Missile_AttackEnd_01.wav",
+                "SFX_Drone_Missile_AttackEnd_02.wav",
+                "SFX_Drone_Missile_AttackEnd_03.wav"
+            ]
+        },
+        {
+            "desc": "无人机导弹被拦截，被摧毁",
+            "filenames": [
+                "SFX_Drone_Missile_Death_01.wav",
+                "SFX_Drone_Missile_Death_02.wav",
+                "SFX_Drone_Missile_Death_03.wav"
+            ]
+        },
+        {
+            "desc": "无人机使用激光攻击",
+            "filenames": [
+                "SFX_Drone_Spawn_01.wav",
+                "SFX_Drone_Spawn_02.wav",
+                "SFX_Drone_Spawn_03.wav"
+            ]
+        },
+        {
+            "desc": "无人机准备对目标进行火力压制",
+            "filenames": [
+                "SFX_Drone_Vulcan_AttackStart_01.wav",
+                "SFX_Drone_Vulcan_AttackStart_02.wav",
+                "SFX_Drone_Vulcan_AttackStart_03.wav"
+            ]
+        },
+        {
+            "desc": "无人机正在对目标进行火力压制",
+            "filenames": [
+                "SFX_Drone_Vulcan_AttackIng_01.wav",
+                "SFX_Drone_Vulcan_AttackIng_02.wav",
+                "SFX_Drone_Vulcan_AttackIng_03.wav",
+                "SFX_Drone_Vulcan_AttackIng_04.wav"
+            ]
+        },
+        {
+            "desc": "无人机结束对目标的火力压制",
+            "filenames": [
+                "SFX_Drone_Vulcan_AttackEnd_01.wav",
+                "SFX_Drone_Vulcan_AttackEnd_02.wav",
+                "SFX_Drone_Vulcan_AttackEnd_03.wav"
+            ]
+        },
+        {
+            "desc": "无人机被摧毁，被击落",
+            "filenames": [
+                "SFX_Drone_Vulcan_Death_01.wav",
+                "SFX_Drone_Vulcan_Death_02.wav",
+                "SFX_Drone_Vulcan_Death_03.wav"
+            ]
+        },
+        {
+            "desc": "玻璃掉落并且碎掉",
+            "filenames": [
+                "SFX_Drop_Glass_01.wav",
+                "SFX_Drop_Glass_02.wav",
+                "SFX_Drop_Glass_03.wav"
+            ]
+        },
+        {
+            "desc": "岩石掉落",
+            "filenames": [
+                "SFX_Drop_Rock_01.wav",
+                "SFX_Drop_Rock_02.wav",
+                "SFX_Drop_Rock_03.wav"
+            ]
+        },
+        {
+            "desc": "角色Eimi(英美)所有音效整合",
+            "filenames": [
+                "SFX_Eimi_Support_Ex.wav",
+                "SFX_Skill_Eimi_Ex_1.wav",
+                "SFX_Skill_Eimi_Ex_2.wav",
+                "SFX_Skill_Eimi_Ex_Cut_in.wav",
+                "SFX_Skill_Eimi_Public.wav"
+            ]
+        },
+        {
+            "desc": "触电，被电击",
+            "filenames": [
+                "SFX_Electric_JSD_Shock_01.wav",
+                "SFX_Electric_JSD_Shock_02.wav",
+                "SFX_Electric_JSD_Shock_03.wav"
+            ]
+        },
+        {
+            "desc": "【Blue Archive】【EMO】系列 所有音效整合",
+            "filenames": [
+                "SFX_Emoticon_Motion_Angry.wav",
+                "SFX_Emoticon_Motion_Chat.wav",
+                "SFX_Emoticon_Motion_Dot.wav",
+                "SFX_Emoticon_Motion_Exclaim.wav",
+                "SFX_Emoticon_Motion_Heart.wav",
+                "SFX_Emoticon_Motion_Music.wav",
+                "SFX_Emoticon_Motion_Question.wav",
+                "SFX_Emoticon_Motion_Respond.wav",
+                "SFX_Emoticon_Motion_Shy.wav",
+                "SFX_Emoticon_Motion_Surprise.wav",
+                "SFX_Emoticon_Motion_Sweat.wav",
+                "SFX_Emoticon_Motion_Think.wav",
+                "SFX_Emoticon_Motion_Twinkle.wav",
+                "SFX_Emoticon_Motion_Upset.wav"
+            ]
+        },
+        {
+            "desc": "爆破建筑",
+            "filenames": [
+                "SFX_Explosion_Blue_01.wav",
+                "SFX_Explosion_Blue_02.wav",
+                "SFX_Explosion_Blue_03.wav"
+            ]
+        },
+        {
+            "desc": "自行火炮开炮声",
+            "filenames": [
+                "SFX_Explosion_Blue_L_01.wav",
+                "SFX_Explosion_Blue_L_02.wav",
+                "SFX_Explosion_Blue_L_03.wav"
+            ]
+        },
+        {
+            "desc": "炸弹爆炸",
+            "filenames": [
+                "SFX_Explosion_Bomb_Hit.wav"
+            ]
+        },
+        {
+            "desc": "投掷手榴弹，发射榴弹，催泪弹音效 高抛，高射后落地爆炸",
+            "filenames": [
+                "SFX_Explosion_Grenade_01.wav",
+                "SFX_Explosion_Grenade_02.wav",
+                "SFX_Explosion_Grenade_03.wav",
+                "SFX_Explosion_Grenade_04.wav",
+                "SFX_Explosion_Grenade_05.wav"
+            ]
+        },
+        {
+            "desc": "低抛，低射后爆炸",
+            "filenames": [
+                "SFX_Explosion_Grenade_L_A_01.wav",
+                "SFX_Explosion_Grenade_L_A_02.wav",
+                "SFX_Explosion_Grenade_L_A_03.wav"
+            ]
+        },
+        {
+            "desc": "爆炸伴随尘土，掩体被炸声",
+            "filenames": [
+                "SFX_Explosion_Grenade_L_B_01.wav",
+                "SFX_Explosion_Grenade_L_B_02.wav",
+                "SFX_Explosion_Grenade_L_B_03.wav"
+            ]
+        },
+        {
+            "desc": "尘土落下声",
+            "filenames": [
+                "SFX_Explosion_Harsh_01.wav",
+                "SFX_Explosion_Harsh_02.wav",
+                "SFX_Explosion_Harsh_03.wav"
+            ]
+        },
+        {
+            "desc": "吹灭蜡烛声",
+            "filenames": [
+                "SFX_Explosion_Poof_S_01.wav",
+                "SFX_Explosion_Poof_S_02.wav",
+                "SFX_Explosion_Poof_S_03.wav",
+                "SFX_Explosion_Poof_S_04.wav",
+                "SFX_Explosion_Poof_S_05.wav",
+                "SFX_Explosion_Poof_S_06.wav"
+            ]
+        },
+        {
+            "desc": "爆燃",
+            "filenames": [
+                "SFX_Fire_Boom.wav"
+            ]
+        },
+        {
+            "desc": "轻轻敲击声",
+            "filenames": [
+                "SFX_Flip.wav"
+            ]
+        },
+        {
+            "desc": "拨动尺子",
+            "filenames": [
+                "SFX_Flip_Deal_Four.wav"
+            ]
+        },
+        {
+            "desc": "擦错字声",
+            "filenames": [
+                "SFX_Flip_Draw.wav"
+            ]
+        },
+        {
+            "desc": "电视台调频",
+            "filenames": [
+                "SFX_Flip_Long.wav",
+                "SFX_Flip_Long_SS.wav"
+            ]
+        },
+        {
+            "desc": "跳秒声",
+            "filenames": [
+                "SFX_Gear_0.wav"
+            ]
+        },
+        {
+            "desc": "未知角色Goliath所有音效整合 倒地声",
+            "filenames": [
+                "SFX_Goliath_Drop_01.wav",
+                "SFX_Goliath_Drop_02.wav",
+                "SFX_Goliath_Drop_03.wav"
+            ]
+        },
+        {
+            "desc": "EX技能",
+            "filenames": [
+                "SFX_Goliath_Ex.wav",
+                "SFX_Goliath_Ex_Explosion.wav"
+            ]
+        },
+        {
+            "desc": "普通技能",
+            "filenames": [
+                "SFX_Goliath_Attacking_01.wav",
+                "SFX_Goliath_Attacking_02.wav",
+                "SFX_Goliath_Attacking_03.wav"
+            ]
+        },
+        {
+            "desc": "技能一冷却",
+            "filenames": [
+                "SFX_Goliath_Reload_a_01.wav",
+                "SFX_Goliath_Reload_a_02.wav",
+                "SFX_Goliath_Reload_a_03.wav",
+                "SFX_Goliath_Reload_a_04.wav",
+                "SFX_Goliath_Reload_a_05.wav",
+                "SFX_Goliath_Reload_a_06.wav"
+            ]
+        },
+        {
+            "desc": "技能二冷却",
+            "filenames": [
+                "SFX_Goliath_Reload_b_01.wav",
+                "SFX_Goliath_Reload_b_02.wav",
+                "SFX_Goliath_Reload_b_03.wav",
+                "SFX_Goliath_Reload_b_04.wav",
+                "SFX_Goliath_Reload_b_05.wav",
+                "SFX_Goliath_Reload_b_06.wav"
+            ]
+        },
+        {
+            "desc": "技能三冷却",
+            "filenames": [
+                "SFX_Goliath_Reload_c_01.wav",
+                "SFX_Goliath_Reload_c_02.wav",
+                "SFX_Goliath_Reload_c_03.wav",
+                "SFX_Goliath_Reload_c_04.wav",
+                "SFX_Goliath_Reload_c_05.wav",
+                "SFX_Goliath_Reload_c_06.wav"
+            ]
+        },
+        {
+            "desc": "被击败，死亡",
+            "filenames": [
+                "SFX_Goliath_Death_01.wav",
+                "SFX_Goliath_Death_02.wav",
+                "SFX_Goliath_Death_03.wav",
+                "SFX_Goliath_Death_04.wav",
+                "SFX_Goliath_Death_05.wav",
+                "SFX_Goliath_Death_06.wav"
+            ]
+        },
+        {
+            "desc": "拦截手榴弹",
+            "filenames": [
+                "SFX_Grenade_Catch.wav"
+            ]
+        },
+        {
+            "desc": "拔出手榴弹金属探针保险",
+            "filenames": [
+                "SFX_Grenade_Pin_Pull.wav"
+            ]
+        },
+        {
+            "desc": "手榴弹引信燃烧",
+            "filenames": [
+                "SFX_Grenade_Smoke.wav"
+            ]
+        },
+        {
+            "desc": "手榴弹在空中旋转",
+            "filenames": [
+                "SFX_Grenade_Spin_Add.wav"
+            ]
+        },
+        {
+            "desc": "往高处抛手榴弹或者高射榴弹",
+            "filenames": [
+                "SFX_Grenade_Throw_Up.wav"
+            ]
+        },
+        {
+            "desc": "朝某指定方位扔手榴弹或者发射榴弹",
+            "filenames": [
+                "SFX_Grenade_Throw_Away.wav"
+            ]
+        },
+        {
+            "desc": "警戒塔，防御塔音效整合 发现防御塔，警戒塔",
+            "filenames": [
+                "SFX_GuardTower_Appear_01.wav",
+                "SFX_GuardTower_Appear_02.wav",
+                "SFX_GuardTower_Appear_03.wav"
+            ]
+        },
+        {
+            "desc": "警戒塔，防御塔攻击",
+            "filenames": [
+                "SFX_GuardTower_Attacking_01.wav",
+                "SFX_GuardTower_Attacking_02.wav",
+                "SFX_GuardTower_Attacking_03.wav",
+                "SFX_GuardTower_Attacking_04.wav"
+            ]
+        },
+        {
+            "desc": "警戒塔，防御塔被摧毁",
+            "filenames": [
+                "SFX_GuardTower_Death_01.wav",
+                "SFX_GuardTower_Death_02.wav",
+                "SFX_GuardTower_Death_03.wav"
+            ]
+        },
+        {
+            "desc": "角色Hanako(花子)所有音效整合",
+            "filenames": [
+                "SFX_Hanako_Support_Ex.wav",
+                "SFX_Skill_Hanako_Ex.wav",
+                "SFX_Skill_Hanako_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Haruna(羽留奈)所有音效整合",
+            "filenames": [
+                "SFX_Haruna_Skill_EX_0a.wav",
+                "SFX_Haruna_Skill_EX_0b.wav",
+                "SFX_Haruna_Skill_EX_0c.wav",
+                "SFX_Haruna_Skill_EX_1.wav",
+                "SFX_Haruna_Skill_EX_2.wav",
+                "SFX_Haruna_Skill_EX_3.wav",
+                "SFX_LobbySpine_Haruna.wav",
+                "SFX_Skill_Haruna_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Hasumi(莲见)所有音效整合",
+            "filenames": [
+                "SFX_Hasumi_Skill_EX_1.wav",
+                "SFX_Hasumi_Skill_EX_2.wav",
+                "SFX_LobbySpine_Hasumi.wav",
+                "SFX_Skill_Hasumi_Ex_01.wav",
+                "SFX_Skill_Hasumi_Ex_02.wav",
+                "SFX_Skill_Hasumi_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "武装载具： 重型坦克 所有音效整合 EX技能一",
+            "filenames": [
+                "SFX_HeavyTank_Cannon_Ex_a_01.wav",
+                "SFX_HeavyTank_Cannon_Ex_a_02.wav",
+                "SFX_HeavyTank_Cannon_Ex_a_03.wav"
+            ]
+        },
+        {
+            "desc": "以上三EX技能的爆炸声",
+            "filenames": [
+                "SFX_HeavyTank_Cannon_Explosion_01.wav",
+                "SFX_HeavyTank_Cannon_Explosion_02.wav",
+                "SFX_HeavyTank_Cannon_Explosion_03.wav"
+            ]
+        },
+        {
+            "desc": "普通炮击",
+            "filenames": [
+                "SFX_HeavyTank_Cannon_NomalAttack_01.wav",
+                "SFX_HeavyTank_Cannon_NomalAttack_02.wav",
+                "SFX_HeavyTank_Cannon_NomalAttack_03.wav"
+            ]
+        },
+        {
+            "desc": "重型坦克被击毁",
+            "filenames": [
+                "SFX_HeavyTank_Common_Death_01.wav",
+                "SFX_HeavyTank_Common_Death_02.wav",
+                "SFX_HeavyTank_Common_Death_03.wav"
+            ]
+        },
+        {
+            "desc": "重型坦克履带声",
+            "filenames": [
+                "SFX_HeavyTank_Common_Loop.wav"
+            ]
+        },
+        {
+            "desc": "武装载具：重型光棱坦克 所有音效整合 EX技能一",
+            "filenames": [
+                "SFX_HeavyTank_Railgun_Ex_a_01.wav",
+                "SFX_HeavyTank_Railgun_Ex_a_02.wav",
+                "SFX_HeavyTank_Railgun_Ex_a_03.wav"
+            ]
+        },
+        {
+            "desc": "光棱坦克常规攻击",
+            "filenames": [
+                "SFX_HeavyTank_RailGun_NomalAttack_01.wav",
+                "SFX_HeavyTank_RailGun_NomalAttack_02.wav",
+                "SFX_HeavyTank_RailGun_NomalAttack_03.wav"
+            ]
+        },
+        {
+            "desc": "其他重坦音效整合",
+            "filenames": [
+                "SFX_HeavyTank01_Explosion_01.wav",
+                "SFX_HeavyTank01_Explosion_02.wav",
+                "SFX_HeavyTank01_Explosion_03.wav"
+            ]
+        },
+        {
+            "desc": "运输直升机音效",
+            "filenames": [
+                "SFX_Heli_Apache_01.wav"
+            ]
+        },
+        {
+            "desc": "十字神明：Hieronymus (主教) 所有音效整合",
+            "filenames": [
+                "SFX_Hieronymus_Aura_Hit.wav"
+            ]
+        },
+        {
+            "desc": "EX技能四",
+            "filenames": [
+                "SFX_KaitenFX_MK0_Ex_04_Blading.wav",
+                "SFX_KaitenFX_MK0_EX04.wav",
+                "SFX_KaitenFX_MK0_EX04_Hit.wav",
+                "SFX_KaitenFX_MK0_EX04_Hit_1.wav",
+                "SFX_KaitenFX_MK0_EX04_Hit_2.wav",
+                "SFX_KaitenFX_MK0_EX04_Hit_3.wav",
+                "SFX_KaitenFX_MK0_EX04_Projectile.wav"
+            ]
+        },
+        {
+            "desc": "主教形态切换",
+            "filenames": [
+                "SFX_Hieronymus_Groggy.wav"
+            ]
+        },
+        {
+            "desc": "主教绿灯所有音效整合",
+            "filenames": [
+                "SFX_Hieronymus_HolyRelic_Green.wav",
+                "SFX_Hieronymus_HolyRelic_Green_Hit.wav",
+                "SFX_Hieronymus_HolyRelic_Green_Impact.wav",
+                "SFX_Hieronymus_HolyRelic_Green_On.wav",
+                "SFX_Hieronymus_HolyRelic_Green_Projectile.wav"
+            ]
+        },
+        {
+            "desc": "主教红灯所有音效整合",
+            "filenames": [
+                "SFX_Hieronymus_HolyRelic_Red.wav",
+                "SFX_Hieronymus_HolyRelic_Red_Hit.wav",
+                "SFX_Hieronymus_HolyRelic_Red_Impact.wav",
+                "SFX_Hieronymus_HolyRelic_Red_On.wav",
+                "SFX_Hieronymus_HolyRelic_Red_Projectile.wav"
+            ]
+        },
+        {
+            "desc": "主教普通攻击音效整合",
+            "filenames": [
+                "SFX_Hieronymus_Normal_Attack_1.wav",
+                "SFX_Hieronymus_NormalAttack_Hit_Start.wav"
+            ]
+        },
+        {
+            "desc": "主教其他音效整合",
+            "filenames": [
+                "SFX_Hieronymus_Op.wav",
+                "SFX_Hieronymus_Phase.wav",
+                "SFX_Hieronymus_Weapon_Hit.wav"
+            ]
+        },
+        {
+            "desc": "角色Hinata(日向)所有音效整合",
+            "filenames": [
+                "SFX_Hinata_Cutin.wav",
+                "SFX_Hinata_Public.wav",
+                "SFX_Hinata_Ex_01.wav",
+                "SFX_Hinata_Ex_Shot_01.wav",
+                "SFX_Hinata_Ex_02.wav",
+                "SFX_Hinata_Ex_Shot_02.wav",
+                "SFX_Hinata_Ex_Shot_03.wav",
+                "SFX_Hinata_Explosion_Hit_01.wav",
+                "SFX_Hinata_Explosion_Hit_02.wav",
+                "SFX_Hinata_Explosion_Hit_03.wav",
+                "SFX_Hinata_Explosion_Hit_04.wav",
+                "SFX_Hinata_Explosion_Hit_05.wav"
+            ]
+        },
+        {
+            "desc": "角色Hiyori(日和)所有音效整合",
+            "filenames": [
+                "SFX_Hiyori_Cutin.wav",
+                "SFX_Hiyori_Ex_Foley_01.wav",
+                "SFX_Hiyori_Ex_Foley_02.wav",
+                "SFX_Hiyori_Ex_Shot.wav",
+                "SFX_Hiyori_Hit_01.wav",
+                "SFX_Hiyori_Hit_02.wav",
+                "SFX_Hiyori_Hit_03.wav",
+                "SFX_Hiyori_Poof.wav",
+                "SFX_Hiyori_Public_Hit_01.wav",
+                "SFX_Hiyori_Public_Hit_02.wav",
+                "SFX_Hiyori_Public_Shot.wav",
+                "SFX_Spine_Hiyori_VOX_Cry_01.wav",
+                "SFX_Spine_Hiyori_VOX_Cry_02.wav",
+                "SFX_Spine_Hiyori_VOX_Cry_03.wav"
+            ]
+        },
+        {
+            "desc": "十字神名： HOD (霍德) 所有音效整合 EX技能一",
+            "filenames": [
+                "SFX_HOD_Ani_EX1_01.wav",
+                "SFX_HOD_Ani_EX1_02.wav",
+                "SFX_HOD_Ani_EX1_03.wav",
+                "SFX_HOD_EX1.wav",
+                "SFX_HOD_EX1_Hit.wav"
+            ]
+        },
+        {
+            "desc": "EX技能五",
+            "filenames": [
+                "SFX_HOD_Ani_EX5_01.wav",
+                "SFX_HOD_Ani_EX5_02.wav",
+                "SFX_HOD_Ani_EX5_03.wav",
+                "SFX_HOD_EX5_a.wav",
+                "SFX_HOD_EX5_B.wav",
+                "SFX_HOD_EX5_b_add.wav",
+                "SFX_HOD_EX5_Capacitor_01.wav",
+                "SFX_HOD_EX5_Capacitor_02.wav",
+                "SFX_HOD_EX5_Capacitor_03.wav",
+                "SFX_HOD_EX5_Capacitor_04.wav"
+            ]
+        },
+        {
+            "desc": "EX技能六",
+            "filenames": [
+                "SFX_HOD_EX6_a.wav",
+                "SFX_HOD_EX6_B.wav"
+            ]
+        },
+        {
+            "desc": "普通 攻击/技能 音效",
+            "filenames": [
+                "SFX_KaitenFX_MK0_Normal.wav",
+                "SFX_KaitenFX_MK0_Normal_Hit.wav"
+            ]
+        },
+        {
+            "desc": "HOD (霍德) 其他音效",
+            "filenames": [
+                "SFX_HOD_OP.wav",
+                "SFX_HOD_Phase.wav"
+            ]
+        },
+        {
+            "desc": "HOD (霍德) 炮台所有音效",
+            "filenames": [
+                "SFX_HOD_TemporaryTower_Appear.wav",
+                "SFX_HOD_TemporaryTower_Attack_Ing.wav",
+                "SFX_HOD_TemporaryTower_Death.wav",
+                "SFX_HOD_TemporaryTower_EX_01.wav"
+            ]
+        },
+        {
+            "desc": "开关 开启/关闭 声音",
+            "filenames": [
+                "SFX_Holo_JSD_ON.wav",
+                "SFX_Holo_JSD_OFF.wav"
+            ]
+        },
+        {
+            "desc": "角色HoshinoSwimsuit(泳装星野)所有音效整合",
+            "filenames": [
+                "SFX_HoshinoSwimsuit_EX.wav",
+                "SFX_HoshinoSwimsuit_Cutin.wav",
+                "SFX_Hoshino_Swimsuit_Public_Hit.wav"
+            ]
+        },
+        {
+            "desc": "激烈的战斗场面",
+            "filenames": [
+                "SFX_HoverCraft_Intro.wav"
+            ]
+        },
+        {
+            "desc": "角色IzumiSwimsuit(泳装泉)所有音效整合",
+            "filenames": [
+                "SFX_Izumi_Swimsuit_Ex.wav",
+                "SFX_Izumi_Swimsuit_Cutin.wav"
+            ]
+        },
+        {
+            "desc": "【JSD】系列 音效 整合",
+            "filenames": [
+                "SFX_JSD_Jump.wav",
+                "SFX_JSD_Laser_01.wav",
+                "SFX_JSD_Laser_02.wav",
+                "SFX_JSD_Laser_03.wav",
+                "SFX_JSD_Roll_Breakfall.wav",
+                "UI_On_JSD_Appear.wav",
+                "SFX_JSD_Slide_01.wav",
+                "SFX_JSD_Slide_02.wav",
+                "SFX_JSD_Slide_03.wav",
+                "SFX_JSD_Slide_04.wav",
+                "SFX_JSD_Slide_05.wav",
+                "SFX_JSD_Slide_06.wav",
+                "SFX_JSD_Trigger_Add_01.wav",
+                "SFX_JSD_Trigger_Add_02.wav",
+                "SFX_JSD_Trigger_Add_03.wav",
+                "SFX_Ping_JSD_Simple.wav"
+            ]
+        },
+        {
+            "desc": "角色Kaede(枫)所有音效整合",
+            "filenames": [
+                "SFX_Kaede_Buff_01.wav",
+                "SFX_Kaede_Buff_02.wav",
+                "SFX_Kaede_Buff_03.wav",
+                "SFX_Kaede_Cutin.wav",
+                "SFX_Kaede_Ex_01.wav",
+                "SFX_Kaede_Ex_02.wav",
+                "SFX_Kaede_Firework_Add_01.wav"
+            ]
+        },
+        {
+            "desc": "总力战 Kaiten (寿司人合体) 所有音效整合 EX技能一",
+            "filenames": [
+                "SFX_KaitenFX_MK0_Ex_01.wav",
+                "SFX_KaitenFX_MK0_Ex_01_Muzzle.wav"
+            ]
+        },
+        {
+            "desc": "其他音效",
+            "filenames": [
+                "SFX_Shiro_Op.wav",
+                "SFX_Shiro_Rolling_00.wav",
+                "SFX_Shiro_Rolling_00_Small.wav"
+            ]
+        },
+        {
+            "desc": "总力战 Kaitenger (寿司人) 所有音效整合",
+            "filenames": [
+                "SFX_Kaitenger_Intro.wav",
+                "SFX_Kaitenger_Phase.wav"
+            ]
+        },
+        {
+            "desc": "角色Kazusa(和纱)所有音效整合",
+            "filenames": [
+                "SFX_Kazusa_Cutin.wav",
+                "SFX_Kazusa_Eat_Bite.wav",
+                "SFX_Kazusa_Ex_Charge.wav",
+                "SFX_Kazusa_Public_Kewt_Add.wav"
+            ]
+        },
+        {
+            "desc": "角色Koharu(小春)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Koharu_Ex.wav",
+                "SFX_Skill_Koharu_Ex_Cut_in.wav",
+                "SFX_Koharu_Grenade_Explode.wav"
+            ]
+        },
+        {
+            "desc": "角色Kotama(小玉)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Kotama_Ex.wav",
+                "SFX_Kotama_Skill_EX.wav",
+                "SFX_Skill_Kotama_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "总力战 黑＆白【Kuro】(黑) 所有音效整合",
+            "filenames": [
+                "SFX_Kuro_Ex_01.wav",
+                "SFX_Kuro_Ex_02.wav",
+                "SFX_Kuro_Ex_02_Hit.wav",
+                "SFX_Kuro_Feather_00.wav",
+                "SFX_Kuro_Grind.wav",
+                "SFX_Kuro_Op.wav",
+                "SFX_Kuro_Projectile_00.wav",
+                "SFX_Kuro_Prop_Drop_01.wav",
+                "SFX_Kuro_Prop_Drop_02.wav",
+                "SFX_Kuro_Prop_Drop_03.wav",
+                "SFX_Kuro_Prop_Move_01.wav",
+                "SFX_Kuro_Prop_Move_02.wav",
+                "SFX_Kuro_Prop_Move_03.wav"
+            ]
+        },
+        {
+            "desc": "【Laser】系列 所有音效整合",
+            "filenames": [
+                "SFX_Ray_Laser_Ex.wav",
+                "SFX_Laser_Aura.wav",
+                "SFX_Laser_Short_01.wav",
+                "SFX_Laser_Long_01.wav"
+            ]
+        },
+        {
+            "desc": "角色Shiroko(砂狼白子)所有音效整合",
+            "filenames": [
+                "SFX_Lobby_Shiroko.wav",
+                "SFX_Skill_Shiroko_Ex.wav",
+                "SFX_Skill_Shiroko_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Haruka(遥香)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Haruka_Ex.wav",
+                "SFX_Skill_Haruka_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Hihumi(日步美)所有音效整合",
+            "filenames": [
+                "SFX_LobbySpine_Hihumi.wav",
+                "SFX_Skill_Hihumi_Ex_01.wav",
+                "SFX_Skill_Hihumi_Ex_Cut_in.wav",
+                "SFX_Skill_Hihumi_EX_Decoy.wav",
+                "SFX_Skill_Hihumi_EX_Decoy_End.wav",
+                "SFX_Skill_Hihumi_EX_Decoy_Loop.wav",
+                "SFX_Skill_Hihumi_EX_Decoy_Start.wav"
+            ]
+        },
+        {
+            "desc": "角色Hoshino(星野)所有音效整合",
+            "filenames": [
+                "SFX_LobbySpine_Hoshino.wav",
+                "SFX_Skill_Hoshino_Ex_Activate.wav",
+                "SFX_Skill_Hoshino_Ex_Cut_in.wav",
+                "SFX_Skill_Hoshino_Ex_Reload.wav",
+                "SFX_Skill_Hoshino_Ex_Shield_Drop.wav"
+            ]
+        },
+        {
+            "desc": "角色Neru(尼禄)所有音效整合",
+            "filenames": [
+                "SFX_LobbySpine_Neru.wav",
+                "SFX_Public_Neru.wav",
+                "SFX_Skill_Neru_Ex.wav",
+                "SFX_Skill_Neru_Ex_01.wav",
+                "SFX_Skill_Neru_Ex_02.wav",
+                "SFX_Skill_Neru_Ex_03.wav",
+                "SFX_Skill_Neru_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "其他音效整合",
+            "filenames": [
+                "SFX_LobbySpine_W.wav",
+                "SFX_LobbySpine_A.wav"
+            ]
+        },
+        {
+            "desc": "角色Misaki(美咲)所有音效整合",
+            "filenames": [
+                "SFX_Misaki_Cutin.wav",
+                "SFX_Misaki_Ex.wav",
+                "SFX_Misaki_Public.wav"
+            ]
+        },
+        {
+            "desc": "角色Miyako(宫子)所有音效整合",
+            "filenames": [
+                "SFX_Miyako_Cutin.wav",
+                "SFX_Miyako_Ex_Go.wav",
+                "SFX_Miyako_Ex_Hit_01.wav",
+                "SFX_Miyako_Ex_Hit_02.wav",
+                "SFX_Miyako_Ex_Hit_03.wav",
+                "SFX_Miyako_Public_Set.wav",
+                "SFX_Miyako_Public_Shot_01.wav",
+                "SFX_Miyako_Public_Shot_02.wav",
+                "SFX_Miyako_Public_Shot_03.wav",
+                "SFX_Miyako_Public_Shot_Ready.wav"
+            ]
+        },
+        {
+            "desc": "角色Moe(萌)所有音效整合",
+            "filenames": [
+                "SFX_Moe_Cutin.wav",
+                "SFX_Moe_Ex_Heli_Flyin.wav",
+                "SFX_Moe_Ex_Heli_Multi_Hit_Explosion.wav",
+                "SFX_Moe_Ex_Heli_Shot.wav",
+                "SFX_Moe_Ex_Holo_Scan.wav",
+                "SFX_Moe_Public_Heli_Explosion_Hit_01.wav",
+                "SFX_Moe_Public_Heli_Explosion_Hit_02.wav",
+                "SFX_Moe_Public_Heli_Explosion_Hit_03.wav",
+                "SFX_Moe_Public_Heli_Explosion_Hit_04.wav",
+                "SFX_Moe_Public_Target_01.wav",
+                "SFX_Moe_Public_Target_02.wav",
+                "SFX_Moe_Public_Target_03.wav"
+            ]
+        },
+        {
+            "desc": "角色MutsukiNewyear(新春睦月)所有音效整合",
+            "filenames": [
+                "SFX_Mutsuki_Newyear_Cutin.wav",
+                "SFX_Mutsuki_Newyear_Ex_Launch.wav",
+                "SFX_Mutsuki_Newyear_Hit_Add_01.wav",
+                "SFX_Mutsuki_Newyear_Hit_Add_02.wav",
+                "SFX_Mutsuki_Newyear_Hit_Add_03.wav",
+                "SFX_Mutsuki_Newyear_Hit_Add_04.wav",
+                "SFX_Mutsuki_Newyear_Hit_Add_05.wav",
+                "SFX_Mutsuki_Newyear_Hit_Add_06.wav",
+                "SFX_Mutsuki_Newyear_Public_Add.wav",
+                "SFX_MutsukiNewyear_Cutin.wav"
+            ]
+        },
+        {
+            "desc": "空间穿梭",
+            "filenames": [
+                "SFX_NitroBomb_Explosion_01.wav",
+                "SFX_NitroBomb_Explosion_02.wav"
+            ]
+        },
+        {
+            "desc": "角色Nonomi(野乃美)所有音效整合",
+            "filenames": [
+                "SFX_Nonomi_Skill_EX_Start_1.wav",
+                "SFX_Nonomi_Skill_EX_Start_2.wav",
+                "SFX_Skill_Nonomi_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "击破，摧毁大型障碍物",
+            "filenames": [
+                "SFX_Obstacles_Explosion_L_01.wav",
+                "SFX_Obstacles_Explosion_L_02.wav",
+                "SFX_Obstacles_Explosion_L_03.wav",
+                "SFX_Obstacles_Explosion_L_04b.wav"
+            ]
+        },
+        {
+            "desc": "摧毁中型障碍物",
+            "filenames": [
+                "SFX_Obstacles_Explosion_M_01.wav",
+                "SFX_Obstacles_Explosion_M_02.wav",
+                "SFX_Obstacles_Explosion_M_03.wav",
+                "SFX_Obstacles_Explosion_M_04b.wav"
+            ]
+        },
+        {
+            "desc": "摧毁小型障碍物",
+            "filenames": [
+                "SFX_Obstacles_Explosion_S_01.wav",
+                "SFX_Obstacles_Explosion_S_02.wav",
+                "SFX_Obstacles_Explosion_S_03.wav",
+                "SFX_Obstacles_Explosion_S_04b.wav"
+            ]
+        },
+        {
+            "desc": "城市建筑倒塌",
+            "filenames": [
+                "SFX_Obstacles_prop_city_baricade_cover_B.wav",
+                "SFX_Obstacles_prop_city_baricade_metal_cover_B.wav",
+                "SFX_Obstacles_prop_city_bigbox_B.wav",
+                "SFX_Obstacles_prop_city_bongdari_01_B.wav",
+                "SFX_Obstacles_prop_city_bongdari_02_B.wav",
+                "SFX_Obstacles_prop_city_carsuv_B.wav",
+                "SFX_Obstacles_prop_city_containal_B.wav",
+                "SFX_Obstacles_prop_city_jump_baricade_cover_B.wav",
+                "SFX_Obstacles_prop_city_pocha_01_B.wav",
+                "SFX_Obstacles_prop_city_pocha_02_B.wav",
+                "SFX_Obstacles_prop_city_signboard_01_B.wav",
+                "SFX_Obstacles_prop_city_Signboard02.wav",
+                "SFX_Obstacles_prop_city_Signboard03.wav",
+                "SFX_Obstacles_prop_city_storesign_cover_B.wav",
+                "SFX_Obstacles_prop_city_taco_Pre.wav",
+                "SFX_Obstacles_prop_city_tire_01_B.wav",
+                "SFX_Obstacles_prop_city_tire_02_B.wav",
+                "SFX_Obstacles_prop_city_trafficsign_cover_B.wav",
+                "SFX_Obstacles_prop_city_van_B.wav",
+                "SFX_Obstacles_prop_Common_Standsignboard.wav"
+            ]
+        },
+        {
+            "desc": "沙漠等荒凉区发出的声音",
+            "filenames": [
+                "SFX_Obstacles_prop_desert_01_B.wav",
+                "SFX_Obstacles_prop_desert_02_B.wav",
+                "SFX_Obstacles_prop_desert_02_B_lying.wav",
+                "SFX_Obstacles_prop_desert_12_A.wav",
+                "SFX_Obstacles_prop_desert_12_B.wav",
+                "SFX_Obstacles_prop_desert_box_C.wav",
+                "SFX_Obstacles_prop_desert_car_B.wav",
+                "SFX_Obstacles_prop_desert_car_B_Loop.wav",
+                "SFX_Obstacles_prop_desert_fan_B.wav",
+                "SFX_Obstacles_prop_desert_fan_B_Loop.wav",
+                "SFX_Obstacles_prop_Desert_Outdoorfan02Low.wav",
+                "SFX_Obstacles_prop_Desert_Rock1.wav",
+                "SFX_Obstacles_prop_Desert_Rock2.wav",
+                "SFX_Obstacles_prop_Desert_Rock3.wav",
+                "SFX_Obstacles_prop_Desert_Rock4.wav",
+                "SFX_Obstacles_Prop_desert_truck_B.wav"
+            ]
+        },
+        {
+            "desc": "电线发出的滋滋声",
+            "filenames": [
+                "SFX_Obstacles_prop_Electronic_Explosion_01.wav",
+                "SFX_Obstacles_prop_Electronic_Explosion_02.wav",
+                "SFX_Obstacles_prop_Electronic_Explosion_03.wav"
+            ]
+        },
+        {
+            "desc": "激光武器音效整合",
+            "filenames": [
+                "SFX_Old_E_Skill_EX.wav",
+                "SFX_Old_Skill_A_Ex_Cutin.wav",
+                "SFX_Old_Skill_A_Ex_Pew.wav",
+                "SFX_Old_Skill_E_Ex.wav",
+                "SFX_Old_Skill_E_Ex_Add_Wav.wav",
+                "SFX_Old_Skill_E_Ex_Cut_in.wav",
+                "SFX_Old_Skill_H_Ex_01_Fire.wav",
+                "SFX_Old_Skill_H_Ex_02_Hit.wav",
+                "SFX_Old_Skill_H_Ex_Cut_in.wav",
+                "SFX_Old_Skill_K_Ex_01_Grenade_Throw.wav",
+                "SFX_Old_Skill_K_Ex_02_Smoke_Grenade.wav",
+                "SFX_Old_Skill_K_Ex_Cut_in.wav",
+                "SFX_Old_Skill_M_Ex_Cut_in.wav",
+                "SFX_Old_Skill_M_Ex_Light.wav"
+            ]
+        },
+        {
+            "desc": "锯木板声",
+            "filenames": [
+                "SFX_Omikuji_01.wav",
+                "SFX_Omikuji_02.wav",
+                "SFX_Omikuji_03.wav"
+            ]
+        },
+        {
+            "desc": "总力战 Perorozilla (只因斯拉) 所有音效整合 EX技能一",
+            "filenames": [
+                "SFX_Perorozilla_EX1_Beam_01.wav",
+                "SFX_Perorozilla_EX1_Beam_02.wav",
+                "SFX_Perorozilla_EX1_Hit.wav"
+            ]
+        },
+        {
+            "desc": "飞溅液体",
+            "filenames": [
+                "SFX_Perorozilla_Explosion_Splash_01.wav",
+                "SFX_Perorozilla_Explosion_Splash_02.wav",
+                "SFX_Perorozilla_Explosion_Splash_03.wav"
+            ]
+        },
+        {
+            "desc": "对目标使用激光器",
+            "filenames": [
+                "SFX_Perorozilla_Laser.wav",
+                "SFX_Perorozilla_LaserBeam.wav"
+            ]
+        },
+        {
+            "desc": "桃绿组合技触发音效",
+            "filenames": [
+                "SFX_PowerUP.wav"
+            ]
+        },
+        {
+            "desc": "羽毛旋转音效",
+            "filenames": [
+                "SFX_Public_Feather_Swirl.wav"
+            ]
+        },
+        {
+            "desc": "大水滴快速低落声",
+            "filenames": [
+                "SFX_Public_Paint_Fall_01.wav",
+                "SFX_Public_Paint_Fall_02.wav"
+            ]
+        },
+        {
+            "desc": "能量武器蓄力",
+            "filenames": [
+                "SFX_Public_Ray_Glow.wav"
+            ]
+        },
+        {
+            "desc": "小型电磁炮开火",
+            "filenames": [
+                "SFX_Ricochet_Short.wav",
+                "SFX_Ricochet_Shorter.wav",
+                "SFX_Ricochet_Long.wav"
+            ]
+        },
+        {
+            "desc": "角色Saori(沙织)所有音效整合",
+            "filenames": [
+                "SFX_Saori_Cutin.wav",
+                "SFX_Saori_Ex_Add_01.wav",
+                "SFX_Saori_Ex_Add_02.wav"
+            ]
+        },
+        {
+            "desc": "角色Saya(沙耶)所有音效整合",
+            "filenames": [
+                "SFX_Saya_Casual_Cutin.wav",
+                "SFX_Saya_Casual_Ex.wav",
+                "SFX_Skill_Saya_Ex.wav",
+                "SFX_Skill_Saya_Ex_Cut_in.wav",
+                "SFX_Spine_Saya_Cough_01.wav",
+                "SFX_Spine_Saya_Cough_02.wav"
+            ]
+        },
+        {
+            "desc": "角色SerikaNewyear(新春芹香)所有音效整合 SFX_Serika",
+            "filenames": [
+                "Newyear_Ex_Blue.wav"
+            ]
+        },
+        {
+            "desc": "SFX_Serika",
+            "filenames": [
+                "Newyear_Ex_Burst.wav",
+                "SFX_Serika_Newyear_Cutin.wav"
+            ]
+        },
+        {
+            "desc": "角色Serina(芹奈)所有音效整合",
+            "filenames": [
+                "SFX_Serina_Support_Ex.wav",
+                "SFX_Skill_Serina_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "总力战 黑＆白【Shiro】 (白) 所有音效整合 EX技能一",
+            "filenames": [
+                "SFX_Shiro_Ex_01_1.wav",
+                "SFX_Shiro_Ex_01_2.wav",
+                "SFX_Shiro_Ex_01_3.wav"
+            ]
+        },
+        {
+            "desc": "角色ShirokoRidingSuit(骑行服砂狼白子)所有音效整合",
+            "filenames": [
+                "SFX_ShirokoRidingSuit_Cutin.wav",
+                "SFX_ShirokoRidingSuit_Ex.wav",
+                "SFX_ShirokoRidingSuit_Public.wav"
+            ]
+        },
+        {
+            "desc": "受到 致命攻击/要害被攻击 音效",
+            "filenames": [
+                "SFX_Shot_Impact_Hit_01.wav",
+                "SFX_Shot_Impact_Hit_02.wav",
+                "SFX_Shot_Impact_Hit_03.wav"
+            ]
+        },
+        {
+            "desc": "枪械被攻击掉落",
+            "filenames": [
+                "SFX_Shot_Laser_Gun_01.wav",
+                "SFX_Shot_Laser_Gun_02.wav",
+                "SFX_Shot_Laser_Gun_03.wav",
+                "SFX_Shot_Laser_Gun_04.wav",
+                "SFX_Shot_Laser_Gun_05.wav"
+            ]
+        },
+        {
+            "desc": "角色Airi(爱莉)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Airi_Ex.wav",
+                "SFX_Skill_Airi_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Asuna(明日奈)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Asuna_Ex_01.wav",
+                "SFX_Skill_Asuna_Ex_02.wav",
+                "SFX_Skill_Asuna_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Ayane(绫音)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Ayane_Ex.wav",
+                "SFX_Skill_Ayane_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Azusa(白洲梓)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Azusa_Ex_1.wav",
+                "SFX_Skill_Azusa_Ex_2.wav",
+                "SFX_Skill_Azusa_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Cherino(斯大罗)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Cherino_Ex.wav",
+                "SFX_Skill_Cherino_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Chinatsu(千夏)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Chinatsu_Ex.wav",
+                "SFX_Skill_Chinatsu_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Chise(知世)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Chise_Ex.wav",
+                "SFX_Skill_Chise_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Fuuka(枫香)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Fuuka_Cut_in.wav",
+                "SFX_Skill_Fuuka_Ex.wav"
+            ]
+        },
+        {
+            "desc": "角色Hanae(花绘)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Hanae_Ex.wav",
+                "SFX_Skill_Hanae_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Hare(小勾晴)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Hare_Ex.wav",
+                "SFX_Skill_Hare_Ex_01.wav",
+                "SFX_Skill_Hare_Ex_02.wav",
+                "SFX_Skill_Hare_Ex_03.wav",
+                "SFX_Skill_Hare_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Hibiki(响)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Hibiki_Ex_Cut_in.wav",
+                "SFX_Skill_Hibiki_Ex_Guide_01.wav",
+                "SFX_Skill_Hibiki_Ex_Guide_02.wav",
+                "SFX_Skill_Hibiki_Ex_Guide_03.wav",
+                "SFX_Skill_Hibiki_EX_Projectile_01.wav",
+                "SFX_Skill_Hibiki_EX_Projectile_02.wav",
+                "SFX_Skill_Hibiki_EX_Projectile_03.wav"
+            ]
+        },
+        {
+            "desc": "角色Iori(伊织)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Iori_Ex_Cut_in.wav",
+                "SFX_Skill_Iori_Hit_01.wav",
+                "SFX_Skill_Iori_Hit_02.wav",
+                "SFX_Skill_Iori_Hit_03.wav"
+            ]
+        },
+        {
+            "desc": "角色Juri(茱莉)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Juri_Ex_01.wav",
+                "SFX_Skill_Juri_Ex_02.wav",
+                "SFX_Skill_Juri_Ex_03.wav",
+                "SFX_Skill_Juri_Ex_04.wav",
+                "SFX_Skill_Juri_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Karin(花凛)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Karin_Ex_01.wav",
+                "SFX_Skill_Karin_Ex_02.wav",
+                "SFX_Skill_Karin_Ex_03.wav",
+                "SFX_Skill_Karin_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Kayoko(佳代子)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Kayoko_Ex_01.wav",
+                "SFX_Skill_Kayoko_Ex_02.wav",
+                "SFX_Skill_Kayoko_Ex_03.wav",
+                "SFX_Skill_Kayoko_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Maki(真纪)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Maki_EX.wav",
+                "SFX_Skill_Maki_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Mashiro(麻白)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Mashiro_Ex_1.wav",
+                "SFX_Skill_Mashiro_Ex_2.wav",
+                "SFX_Skill_Mashiro_Ex_3.wav",
+                "SFX_Skill_Mashiro_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Midori(才羽绿)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Midori_Ex.wav",
+                "SFX_Skill_Midori_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Mimori(三森)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Mimori_Ex.wav",
+                "SFX_Skill_Mimori_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Mimoi(才羽桃井)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Momoi_Ex.wav",
+                "SFX_Skill_Momoi_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Nodoka(和香)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Nodoka_Ex_Buff.wav",
+                "SFX_Skill_Nodoka_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Pina(菲娜)所有音效整合 、",
+            "filenames": [
+                "SFX_Skill_Pina_Ex.wav",
+                "SFX_Skill_Pina_Ex_Cut_In.wav"
+            ]
+        },
+        {
+            "desc": "角色Serika(黑见芹香)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Serika_EX.wav",
+                "SFX_Skill_Serika_EX_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Shimiko(志美子)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Shimiko_Ex_Cut_in.wav",
+                "SFX_Skill_Shimiko_Support_Ex.wav"
+            ]
+        },
+        {
+            "desc": "角色Shizuko(静子)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Shizuko_Ex.wav",
+                "SFX_Skill_Shizuko_Ex_Cut_in.wav",
+                "SFX_Skill_Shizuko_Public.wav"
+            ]
+        },
+        {
+            "desc": "角色Shun(瞬)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Shun_Ex.wav",
+                "SFX_Skill_Shun_EX_Cut_in.wav",
+                "SFX_Skill_Shun_Public.wav"
+            ]
+        },
+        {
+            "desc": "角色Sumire(堇)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Sumire_Ex_Cut_in.wav",
+                "SFX_Skill_Sumire_Public.wav"
+            ]
+        },
+        {
+            "desc": "角色Suzumi(铃美)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Suzumi_Ex_Cut_in.wav",
+                "SFX_Suzumi_Skill_EX_Explosion.wav",
+                "SFX_Suzumi_Skill_EX_Start.wav"
+            ]
+        },
+        {
+            "desc": "角色Tsubaki(椿)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Tsubaki_Ex.wav",
+                "SFX_Skill_Tsubaki_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Yoshimi(喜美)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Yoshimi_Ex_Cutin.wav",
+                "SFX_Skill_Yoshimi_Ex_Focusing.wav",
+                "SFX_Skill_Yoshimi_Ex_Landing.wav",
+                "SFX_Yoshimi_Support_Ex.wav"
+            ]
+        },
+        {
+            "desc": "角色Yuuka(早濑优香)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Yuuka_Ex.wav",
+                "SFX_Skill_Yuuka_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "角色Yuzu(柚子)所有音效整合",
+            "filenames": [
+                "SFX_Skill_Yuzu_Aura.wav",
+                "SFX_Skill_Yuzu_Ex_Button_01.wav",
+                "SFX_Skill_Yuzu_Ex_Button_02.wav",
+                "SFX_Skill_Yuzu_Ex_Button_03.wav",
+                "SFX_Skill_Yuzu_Ex_Cut_in.wav",
+                "SFX_Skill_Yuzu_Ex_Hit.wav",
+                "SFX_Skill_Yuzu_Ex_Shot.wav",
+                "SFX_Skill_Yuzu_Joystick_Hadouken.wav",
+                "SFX_Skill_Yuzu_Public_Hit.wav",
+                "SFX_Skill_Yuzu_Public_Shot.wav"
+            ]
+        },
+        {
+            "desc": "未知角色Zunko所有音效整合",
+            "filenames": [
+                "SFX_Skill_Zunko_Ex.wav",
+                "SFX_Skill_Zunko_Ex_Cut_in.wav"
+            ]
+        },
+        {
+            "desc": "长距离移动",
+            "filenames": [
+                "SFX_SM008101_Moving_L.wav"
+            ]
+        },
+        {
+            "desc": "落雪声",
+            "filenames": [
+                "SFX_Snow_Hit_01.wav",
+                "SFX_Snow_Hit_02.wav",
+                "SFX_Snow_Hit_03.wav",
+                "SFX_Snow_Hit_04.wav",
+                "SFX_Snow_Hit_05.wav",
+                "SFX_Snow_Hit_06.wav"
+            ]
+        },
+        {
+            "desc": "在大气中心",
+            "filenames": [
+                "SFX_Spine_Air.wav"
+            ]
+        },
+        {
+            "desc": "放背包声",
+            "filenames": [
+                "SFX_Spine_Bagpack.wav"
+            ]
+        },
+        {
+            "desc": "布料类物品在地上摩擦声",
+            "filenames": [
+                "SFX_Spine_Cloth_01.wav",
+                "SFX_Spine_Cloth_02.wav",
+                "SFX_Spine_Cloth_03.wav"
+            ]
+        },
+        {
+            "desc": "拖动声较重的",
+            "filenames": [
+                "SFX_Spine_Cloth_Hanger_01.wav",
+                "SFX_Spine_Cloth_Hanger_02.wav"
+            ]
+        },
+        {
+            "desc": "硬币掉落在下水道声",
+            "filenames": [
+                "SFX_Spine_CoinInsert.wav"
+            ]
+        },
+        {
+            "desc": "彗星坠落",
+            "filenames": [
+                "SFX_Spine_Comet.wav"
+            ]
+        },
+        {
+            "desc": "快速移动",
+            "filenames": [
+                "SFX_Spine_Fidget_00.wav",
+                "SFX_Spine_Fidget_01.wav",
+                "SFX_Spine_Fidget_02.wav"
+            ]
+        },
+        {
+            "desc": "襟翼展开声",
+            "filenames": [
+                "SFX_Spine_Flaps.wav"
+            ]
+        },
+        {
+            "desc": "手铐声",
+            "filenames": [
+                "SFX_Spine_HandCuff_01.wav",
+                "SFX_Spine_HandCuff_02.wav"
+            ]
+        },
+        {
+            "desc": "操控飞机控制杆或者机器操控杆",
+            "filenames": [
+                "SFX_Spine_JoyStick.wav"
+            ]
+        },
+        {
+            "desc": "倾盆大雨",
+            "filenames": [
+                "SFX_Spine_JSD_Water_Hose_Spray.wav",
+                "SFX_Spine_JSD_Water_Hose_Spray_FX.wav"
+            ]
+        },
+        {
+            "desc": "角色Key所有音效整合",
+            "filenames": [
+                "SFX_Spine_Key_Ping.wav",
+                "SFX_Spine_Key_Water_Drop.wav"
+            ]
+        },
+        {
+            "desc": "皮革制品发出的声音",
+            "filenames": [
+                "SFX_Spine_Leather_01.wav",
+                "SFX_Spine_Leather_02.wav",
+                "SFX_Spine_Leather_03.wav"
+            ]
+        },
+        {
+            "desc": "物体被撞到铁质物品时的声音",
+            "filenames": [
+                "SFX_Spine_Metal_Hit.wav"
+            ]
+        },
+        {
+            "desc": "金属制品敲打另一金属制品的声音",
+            "filenames": [
+                "SFX_Spine_Muzzle_01.wav",
+                "SFX_Spine_Muzzle_02.wav",
+                "SFX_Spine_Muzzle_03.wav",
+                "SFX_Spine_Muzzle_Smoke_Poof.wav"
+            ]
+        },
+        {
+            "desc": "悄无声息地触摸",
+            "filenames": [
+                "SFX_Spine_Slide_Touch.wav"
+            ]
+        },
+        {
+            "desc": "塑料制品掉在地上的声音",
+            "filenames": [
+                "SFX_Spine_Spraycan.wav"
+            ]
+        },
+        {
+            "desc": "机器鸟叫声",
+            "filenames": [
+                "SFX_Spine_Stun_Bird.wav"
+            ]
+        },
+        {
+            "desc": "水沫飞溅声(空旷地带)",
+            "filenames": [
+                "SFX_Spine_Water_Droplets_A_01.wav",
+                "SFX_Spine_Water_Droplets_A_02.wav",
+                "SFX_Spine_Water_Droplets_A_03.wav",
+                "SFX_Spine_Water_Droplets_A_04.wav",
+                "SFX_Spine_Water_Droplets_A_05.wav",
+                "SFX_Spine_Water_Droplets_A_06.wav"
+            ]
+        },
+        {
+            "desc": "水滴声(山洞等寂静阴暗封闭环境适用)",
+            "filenames": [
+                "SFX_Spine_Water_Droplets_B_01.wav",
+                "SFX_Spine_Water_Droplets_B_02.wav",
+                "SFX_Spine_Water_Droplets_B_03.wav",
+                "SFX_Spine_Water_Droplets_B_04.wav"
+            ]
+        },
+        {
+            "desc": "在封闭等阴森的环境传出的声音",
+            "filenames": [
+                "SFX_Spine_Whale.wav"
+            ]
+        },
+        {
+            "desc": "【Whoosh】 系列音效整合",
+            "filenames": [
+                "SFX_Spine_Whoosh_Chime.wav",
+                "SFX_Spine_Whoosh_Low.wav",
+                "SFX_Spine_Whoosh_LowMid.wav",
+                "SFX_Spine_Whoosh_Roughly_Soft.wav",
+                "SFX_Spine_Whoosh_Soft_Very_01.wav",
+                "SFX_Spine_Whoosh_Soft_Very_02.wav"
+            ]
+        },
+        {
+            "desc": "扔物品在空中发出的呼啸声",
+            "filenames": [
+                "SFX_Swing_01.wav",
+                "SFX_Swing_02.wav",
+                "SFX_Swing_03.wav"
+            ]
+        },
+        {
+            "desc": "对讲被中断，被干扰",
+            "filenames": [
+                "SFX_Talk_Beep.wav"
+            ]
+        },
+        {
+            "desc": "检测到坦克出现",
+            "filenames": [
+                "SFX_Tank_Appear_01.wav",
+                "SFX_Tank_Appear_02.wav",
+                "SFX_Tank_Appear_03.wav"
+            ]
+        },
+        {
+            "desc": "坦克移动声",
+            "filenames": [
+                "SFX_Tank_Move.wav"
+            ]
+        },
+        {
+            "desc": "单兵哨塔，狙击塔 所有音效整合",
+            "filenames": [
+                "SFX_TemporaryTower_EX_01.wav",
+                "SFX_TemporaryTower_EX_02.wav",
+                "SFX_TemporaryTower_EX_03.wav",
+                "SFX_TemporaryTower_EX_04.wav",
+                "SFX_TemporaryTower_Shot.wav",
+                "SFX_TemporaryTower_Shot_v2.wav"
+            ]
+        },
+        {
+            "desc": "定时炸弹所有音效整合",
+            "filenames": [
+                "SFX_TimeBomb_01.wav",
+                "SFX_TimeBomb_02.wav",
+                "SFX_TimeBomb_03.wav"
+            ]
+        },
+        {
+            "desc": "未知角色Tomoe所有音效整合",
+            "filenames": [
+                "SFX_Tomoe_Cutin.wav",
+                "SFX_Tomoe_Ex_01.wav",
+                "SFX_Tomoe_Ex_02.wav",
+                "SFX_Tomoe_Ex_03.wav"
+            ]
+        },
+        {
+            "desc": "升级音效",
+            "filenames": [
+                "UI_CharacterGrowth_LvUp.wav"
+            ]
+        },
+        {
+            "desc": "联合作战 Rocket (火箭) 所有音效整合【注：中文为机翻】",
+            "filenames": [
+                "SFX_WorldRaid_Rocket_Launch_01.wav",
+                "SFX_WorldRaid_Rocket_Launch_02.wav",
+                "SFX_WorldRaid_Rocket_Launch_03.wav"
+            ]
+        },
+        {
+            "desc": "联合作战 Wakamo (若藻) 所有音效整合",
+            "filenames": [
+                "SFX_WorldRaid_Wakamo_Intro.wav",
+                "SFX_WorldRaid_Wakamo_Rocket_Appear.wav",
+                "SFX_WorldRaid_Wakamo_Rocket_Charge.wav",
+                "SFX_WorldRaid_Wakamo_Rocket_Drop.wav",
+                "SFX_WorldRaid_Wakamo_Rocket_Hit_Explosion.wav",
+                "SFX_WorldRaid_Wakamo_Shogun_Hit_Explosion_01.wav",
+                "SFX_WorldRaid_Wakamo_Shogun_Hit_Explosion_02.wav",
+                "SFX_WorldRaid_Wakamo_Shogun_Hit_Explosion_03.wav",
+                "SFX_WorldRaid_Wakamo_Shogun_Ready.wav",
+                "SFX_WorldRaid_Wakamo_Shotgun_Charge.wav",
+                "SFX_WorldRaid_Wakamo_Shotgun_Drop.wav",
+                "SFX_WorldRaid_Wakamo_Shotgun_Shot.wav",
+                "SFX_WorldRaid_Wakamo_Weapon_Vanish.wav"
+            ]
+        },
+        {
+            "desc": "海浪翻涌声",
+            "filenames": [
+                "SFX_WorldRaid_Water_Waves.wav"
+            ]
+        },
+        {
+            "desc": "警报",
+            "filenames": [
+                "UI_Alarm.wav"
+            ]
+        },
+        {
+            "desc": "任务完成",
+            "filenames": [
+                "UI_BattleComplete.wav"
+            ]
+        },
+        {
+            "desc": "气泡声",
+            "filenames": [
+                "UI_Bubble.wav"
+            ]
+        },
+        {
+            "desc": "按按钮声",
+            "filenames": [
+                "UI_Button_Back.wav",
+                "UI_Button_Touch.wav"
+            ]
+        },
+        {
+            "desc": "运动赛声",
+            "filenames": [
+                "UI_Campaign_Battle.wav"
+            ]
+        },
+        {
+            "desc": "非EX技能升级音效",
+            "filenames": [
+                "UI_CharacterGrowth_LimitBreak_New_1.wav",
+                "UI_CharacterGrowth_LimitBreak_New_2.wav"
+            ]
+        },
+        {
+            "desc": "升星音效",
+            "filenames": [
+                "UI_Star.wav"
+            ]
+        },
+        {
+            "desc": "升星时的烟花声",
+            "filenames": [
+                "UI_CharacterGrowth_ThreeShin.wav"
+            ]
+        },
+        {
+            "desc": "排列星星时音效",
+            "filenames": [
+                "UI_CharacterGrowth_ThreeShin_Star_Basic.wav",
+                "UI_CharacterGrowth_ThreeShin_Star_Critical.wav"
+            ]
+        },
+        {
+            "desc": "能量盾被破坏",
+            "filenames": [
+                "UI_Conquest_Boss_Shield_Broken.wav"
+            ]
+        },
+        {
+            "desc": "被彻底破坏",
+            "filenames": [
+                "UI_Conquest_CompleteEffect.wav"
+            ]
+        },
+        {
+            "desc": "迷雾散开音",
+            "filenames": [
+                "UI_Conquest_Fog_Area_Open.wav",
+                "UI_Conquest_Fog_Open_Challenge.wav"
+            ]
+        },
+        {
+            "desc": "一些狼狈撤退或者慌张音",
+            "filenames": [
+                "UI_Conquest_Occupy_Complete.wav",
+                "UI_Conquest_Occupy_Upgrade.wav",
+                "UI_Conquest_Occupy_Upgrade_Lv2.wav",
+                "UI_Conquest_Occupy_Upgrade_Lv3.wav"
+            ]
+        },
+        {
+            "desc": "开锁声",
+            "filenames": [
+                "UI_Conquest_Reward.wav"
+            ]
+        },
+        {
+            "desc": "金属物品发出的声音",
+            "filenames": [
+                "UI_Conquest_Schedule_Complete.wav"
+            ]
+        },
+        {
+            "desc": "打牌声",
+            "filenames": [
+                "UI_Conquest_Tile_Boss_Appear.wav",
+                "UI_Conquest_Tile_Common.wav",
+                "UI_Conquest_Tile_Special.wav"
+            ]
+        },
+        {
+            "desc": "警车出警音",
+            "filenames": [
+                "UI_Event_Capture_ST.wav"
+            ]
+        },
+        {
+            "desc": "载具爆炸声",
+            "filenames": [
+                "UI_Event_Run_ST.wav"
+            ]
+        },
+        {
+            "desc": "转瞬即逝",
+            "filenames": [
+                "UI_Fade.wav"
+            ]
+        },
+        {
+            "desc": "喷火器喷火",
+            "filenames": [
+                "UI_Fever_Loop_Fire.wav"
+            ]
+        },
+        {
+            "desc": "发现火情",
+            "filenames": [
+                "UI_Fire_Appear.wav"
+            ]
+        },
+        {
+            "desc": "背景音效",
+            "filenames": [
+                "UI_FX_BG_Aquarium_L.wav",
+                "UI_FX_BG_Beach_L.wav",
+                "UI_FX_BG_Boat_L.wav",
+                "UI_FX_BG_Computer_L.wav",
+                "UI_FX_BG_Dust_L.wav",
+                "UI_FX_BG_Fireplace_L.wav",
+                "UI_FX_BG_Fireworks_L.wav",
+                "UI_FX_BG_FocusLine.wav",
+                "UI_FX_BG_High_Wind_L.wav",
+                "UI_FX_BG_Kitchen_L.wav",
+                "UI_FX_BG_Love_L.wav",
+                "UI_FX_BG_Machinery_L.wav",
+                "UI_FX_BG_Mist_L.wav",
+                "UI_FX_BG_Onsen_L.wav",
+                "UI_FX_BG_Rain_L.wav",
+                "UI_FX_BG_Rattle.wav",
+                "UI_FX_BG_Restaurant_L.wav",
+                "UI_FX_BG_SandStorm_L.wav",
+                "UI_FX_BG_Shining_L.wav",
+                "UI_FX_BG_Snow_L.wav",
+                "UI_FX_BG_Town_L.wav",
+                "UI_FX_BG_Tunnel_PlayGround_L.wav",
+                "UI_FX_BG_UnderFire.wav",
+                "UI_FX_BG_Urban_Busy_L.wav",
+                "UI_FX_BG_Urban_Busy_Window_L.wav",
+                "UI_FX_BG_Urban_L.wav",
+                "UI_FX_BG_WaterFountain_L.wav",
+                "UI_FX_BG_Wind_Chime_L.wav",
+                "UI_FX_BG_Window_Bird_L.wav",
+                "UI_FX_BG_Window_Rain_Fade_Edit.wav",
+                "UI_FX_BG_Window_Rain_L.wav",
+                "UI_Gacha_Result_BG_01.wav",
+                "UI_Gacha_Result_BG_02.wav"
+            ]
+        },
+        {
+            "desc": "【Blue Archive】学生招募界面所有音效整合 招募时的阿罗娜音效",
+            "filenames": [
+                "UI_Gacha_Normal_01.wav",
+                "UI_Gacha_Normal_01_Add.wav",
+                "UI_Gacha_Normal_02.wav",
+                "UI_Gacha_Normal_02b.wav",
+                "UI_Gacha_Normal_04.wav",
+                "UI_Gacha_Normal_05.wav"
+            ]
+        },
+        {
+            "desc": "学生品质出现的音效【蓝，金，彩】",
+            "filenames": [
+                "UI_Gacha_Result_R.wav",
+                "UI_Gacha_Result_SR.wav",
+                "UI_Gacha_Result_SSR.wav"
+            ]
+        },
+        {
+            "desc": "快速点击的音效",
+            "filenames": [
+                "UI_Gacha_Result1_01.wav",
+                "UI_Gacha_Result10_01.wav"
+            ]
+        },
+        {
+            "desc": "学生品质音效【蓝，金，彩】",
+            "filenames": [
+                "UI_Gacha_Sqr_R.wav",
+                "UI_Gacha_Sqr_SR.wav",
+                "UI_Gacha_Sqr_SSR.wav"
+            ]
+        },
+        {
+            "desc": "抽卡音效",
+            "filenames": [
+                "UI_Gacha_SSR_02.wav",
+                "UI_Gacha_SSR_02_Add.wav",
+                "UI_Gacha_SSR_02_Add_H1.wav",
+                "UI_Gacha_SSR_02_Add_H2.wav"
+            ]
+        },
+        {
+            "desc": "升级过程中的音效",
+            "filenames": [
+                "UI_Gacha_Transition_ST_01.wav",
+                "UI_Gacha_Transition_ST_02.wav"
+            ]
+        },
+        {
+            "desc": "送礼物时的点击声",
+            "filenames": [
+                "UI_Item_Draw_ST_01.wav"
+            ]
+        },
+        {
+            "desc": "sensei等级提升音效",
+            "filenames": [
+                "UI_LevelUp.wav"
+            ]
+        },
+        {
+            "desc": "快速加载音效",
+            "filenames": [
+                "UI_Loading.wav"
+            ]
+        },
+        {
+            "desc": "点开任务界面的音效",
+            "filenames": [
+                "UI_LobbyAnimation_ST_01.wav"
+            ]
+        },
+        {
+            "desc": "点击屏幕的音效",
+            "filenames": [
+                "UI_Login.wav"
+            ]
+        },
+        {
+            "desc": "制造里物资填满制造条的音效",
+            "filenames": [
+                "UI_Node_Atom.wav"
+            ]
+        },
+        {
+            "desc": "节点被激活的音效",
+            "filenames": [
+                "UI_Node_Burst_01.wav",
+                "UI_Node_Burst_02.wav"
+            ]
+        },
+        {
+            "desc": "飞行器音效",
+            "filenames": [
+                "UI_Node_Craft2.wav",
+                "UI_Node_Craft2_Complete.wav"
+            ]
+        },
+        {
+            "desc": "制造节点打开的音效",
+            "filenames": [
+                "UI_Node_Line_Open.wav"
+            ]
+        },
+        {
+            "desc": "在制造里扔物资的声音",
+            "filenames": [
+                "UI_Node_On.wav"
+            ]
+        },
+        {
+            "desc": "实验仪器发出异常声",
+            "filenames": [
+                "UI_Node_Rotate.wav"
+            ]
+        },
+        {
+            "desc": "星体爆破声",
+            "filenames": [
+                "UI_Node_Stellar_Nurseries.wav"
+            ]
+        },
+        {
+            "desc": "【Now Loading...】音效",
+            "filenames": [
+                "UI_Notice.wav"
+            ]
+        },
+        {
+            "desc": "平板音效整合",
+            "filenames": [
+                "UI_Pad_Open.wav",
+                "UI_Pad_Loading.wav",
+                "UI_Pad_Close.wav",
+                "UI_Pad_All_ST.wav"
+            ]
+        },
+        {
+            "desc": "任务终止音效",
+            "filenames": [
+                "UI_Pause.wav"
+            ]
+        },
+        {
+            "desc": "任务结束获得评级的音效",
+            "filenames": [
+                "UI_Rank.wav",
+                "UI_Rank_ST_01.wav"
+            ]
+        },
+        {
+            "desc": "队伍准备完成的音效",
+            "filenames": [
+                "UI_Ready.wav"
+            ]
+        },
+        {
+            "desc": "报酬获得音效",
+            "filenames": [
+                "UI_Reward_ST_01.wav"
+            ]
+        },
+        {
+            "desc": "跺脚声",
+            "filenames": [
+                "UI_Stamp_ST_01.wav"
+            ]
+        },
+        {
+            "desc": "任务开始音效",
+            "filenames": [
+                "UI_START_01.wav"
+            ]
+        },
+        {
+            "desc": "装备升级声",
+            "filenames": [
+                "UI_Timeline_ExsCutin.wav",
+                "转弯声向上：UI_Turn_Up.wav",
+                "转弯声向下：UI_Turn_Down.wav"
+            ]
+        },
+        {
+            "desc": "锁定关卡或活动开锁声",
+            "filenames": [
+                "UI_Unlock.wav"
+            ]
+        },
+        {
+            "desc": "任务胜利时音效",
+            "filenames": [
+                "UI_Victory_ST_01.wav"
+            ]
+        },
+        {
+            "desc": "EX技能升级音效",
+            "filenames": [
+                "UI_WeaponGet.wav"
             ]
         }
     ]
