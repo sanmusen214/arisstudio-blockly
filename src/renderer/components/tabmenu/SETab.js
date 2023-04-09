@@ -68,6 +68,7 @@ export default function SETab(props) {
                     if(thatfile){
                         playmusic(thatfile)
                     }else{
+                        message.destroy()
                         message.error("未找到相关文件")
                     }
                 }}

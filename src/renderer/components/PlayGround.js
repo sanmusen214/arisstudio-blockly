@@ -1,13 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect,useRef } from 'react';
 
-import  { useEffect,useRef } from 'react';
 import {useLocalStorage} from '../hooks/useLocal'
 import "./PlayGround.css"
-import {Modal,message} from 'antd'
+import {Modal,message,ConfigProvider,theme} from 'antd'
 // 引入Blockly基本对象
 import Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 import 'blockly/blocks';
+import DarkTheme from '@blockly/theme-dark'
 // 引入字符串处理
 import {generatefinalCodes} from '../utils/codetool'
 import {saveTxt,uploadTxt} from '../utils/IOdata';
@@ -61,6 +61,7 @@ function PlayGround(props){
     const toolbox = useRef();
     let primaryWorkspace = useRef();
     const {language}=useContext(GlobalContext)
+    const [darktheme,setDarktheme]=useLocalStorage("darktheme",false)
     // console.log(language)
     
     // 实时导出的文件路径使用window.wfilepath
@@ -116,21 +117,31 @@ function PlayGround(props){
     // Playground设定变更时重绘
     useEffect(() => {
         const { initialXml, children, ...rest } = props;
-        primaryWorkspace.current = Blockly.inject(
-            blocklyDiv.current,
-            {
-                toolbox: toolbox.current,
-                ...rest
-            },
-        );
+        if(darktheme){
+            primaryWorkspace.current = Blockly.inject(
+                blocklyDiv.current,
+                {
+                    toolbox: toolbox.current,
+                    theme:DarkTheme,
+                    ...rest
+                },
+            );
+        }else{
+            primaryWorkspace.current = Blockly.inject(
+                blocklyDiv.current,
+                {
+                    toolbox: toolbox.current,
+                    ...rest
+                },
+            );
+        }
+
 
         if (initialXml) {
             Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), primaryWorkspace.current);
         }
         // 实时生成
-        primaryWorkspace.current.addChangeListener(
-            antiShake(antiSaveFile,750)
-        );
+        primaryWorkspace.current.addChangeListener(antiShake(antiSaveFile,750));
         primaryWorkspace.current.addChangeListener(onClickBlock)
 
     }, [primaryWorkspace, toolbox, blocklyDiv, props]);
@@ -206,6 +217,7 @@ function PlayGround(props){
             srctotal+=sourcemap.get(key).length||0
         }
         if(srctotal===0){
+            message.destroy()
             message.error("请先选择Data文件夹")
             setSourcepageopen(true)
         }else{
@@ -218,6 +230,7 @@ function PlayGround(props){
      * 生成脚本代码，并放入屏幕右侧文本框
      *  */ 
     const generateCode = () => {
+        console.log("生成脚本")
         // 将现在的playground内容存入localStorage
         setProjectobj(Blockly.serialization.workspaces.save(primaryWorkspace.current))
         // 生成代码前时间戳归0
@@ -279,7 +292,7 @@ function PlayGround(props){
     }
 
     // 当playground更新时 如果用户设置了下载位置，（electron）自动下载
-    const antiSaveFile=()=>{
+    const antiSaveFile=(event)=>{
         const genandsave=()=>{
             return new Promise((resolve,reject)=>{
                 generateCode();
@@ -291,7 +304,9 @@ function PlayGround(props){
                     }
                 }
         })}
-        genandsave()
+        if(event.type!="viewport_change"){
+            genandsave()
+        }
     }
 
     // web打开文件管理器 让用户下载脚本
@@ -444,6 +459,11 @@ function PlayGround(props){
                     
                 </div>
                 <div>
+                    <button onClick={()=>{
+                        setDarktheme((darktheme)=>{return !darktheme})
+                        message.destroy()
+                        message.success("切换模式成功, 下次打开应用生效",6)
+                    }}>{darktheme?"转普通模式":"转暗黑模式"}</button>
                     {/* <button onClick={()=>setAutoturn(!autoturn)}>{autoturn?'关闭自动转脚本':'开启自动转脚本'}</button> */}
                     <button onClick={()=>setShowres(!showres)}>{showres?"转人物状态":"转文本脚本"}</button>
                 </div>

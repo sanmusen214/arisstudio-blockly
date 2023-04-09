@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@ant-design/icons': ^5.0.1
+  '@blockly/theme-dark': ^4.0.7
   '@electron/notarize': ^1.2.3
   '@electron/rebuild': ^3.2.10
   '@pmmmwh/react-refresh-webpack-plugin': ^0.5.10
@@ -82,6 +83,7 @@ specifiers:
 
 dependencies:
   '@ant-design/icons': registry.npmmirror.com/@ant-design/icons/5.0.1_biqbaboplfbrettd7655fr4n2y
+  '@blockly/theme-dark': registry.npmmirror.com/@blockly/theme-dark/4.0.7_blockly@9.2.1
   antd: registry.npmmirror.com/antd/5.2.2_biqbaboplfbrettd7655fr4n2y
   blockly: registry.npmmirror.com/blockly/9.2.1
   electron-debug: registry.npmmirror.com/electron-debug/3.2.0
@@ -1851,6 +1853,18 @@ packages:
     name: '@bcoe/v8-coverage'
     version: 0.2.3
     dev: true
+
+  registry.npmmirror.com/@blockly/theme-dark/4.0.7_blockly@9.2.1:
+    resolution: {integrity: sha512-NegmW6DxvDISxonJ8gtp/CGxYZmtNYyjR2t7V5GzwnZhU1QV1aZVJk49f3CbFftQm3W93wHZ9HQn80oTbOCbiQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@blockly/theme-dark/-/theme-dark-4.0.7.tgz}
+    id: registry.npmmirror.com/@blockly/theme-dark/4.0.7
+    name: '@blockly/theme-dark'
+    version: 4.0.7
+    engines: {node: '>=8.17.0'}
+    peerDependencies:
+      blockly: ^9.0.0
+    dependencies:
+      blockly: registry.npmmirror.com/blockly/9.2.1
+    dev: false
 
   registry.npmmirror.com/@cspotcode/source-map-support/0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz}
