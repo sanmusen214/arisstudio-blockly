@@ -84,22 +84,28 @@ javascriptGenerator[blockname] = function (block) {
     const timestamp=generateTime();
 
     return `
-stagelist.push(\`button${wordS}${selnum} '\${${value_val1}}' '${timestamp+"caseA"}' '\${${value_val2}}' '${timestamp+"caseB"}' '\${${value_val3}}' '${timestamp+"caseC"}'\`);
+function buttonfunc${timestamp}(){
+const funcincnum=incnum;
+incnum+=1;
 
-stagelist.push(\`target ${timestamp+"caseA"}\`)
+stagelist.push(\`button${wordS}${selnum} '\${${value_val1}}' '\${'${timestamp+"caseA"}'+funcincnum}' '\${${value_val2}}' '\${'${timestamp+"caseB"}'+funcincnum}' '\${${value_val3}}' '${timestamp+"caseC"}'\`);
+
+stagelist.push(\`target \${'${timestamp+"caseA"}'+funcincnum}\`)
 ${statements_sta1.trim()}
-stagelist.push(\`jump ${timestamp+"IfFinal"}\`)
+stagelist.push(\`jump \${'${timestamp+"IfFinal"}'+funcincnum}\`)
 
-stagelist.push(\`target ${timestamp+"caseB"}\`)
+stagelist.push(\`target \${'${timestamp+"caseB"}'+funcincnum}\`)
 ${statements_sta2.trim()}
-stagelist.push(\`jump ${timestamp+"IfFinal"}\`)
+stagelist.push(\`jump \${'${timestamp+"IfFinal"}'+funcincnum}\`)
 
 stagelist.push(\`target ${timestamp+"caseC"}\`)
 ${statements_sta3.trim()}
-stagelist.push(\`jump ${timestamp+"IfFinal"}\`)
+stagelist.push(\`jump \${'${timestamp+"IfFinal"}'+funcincnum}\`)
 
-stagelist.push(\`target ${timestamp+"IfFinal"}\`)
+stagelist.push(\`target \${'${timestamp+"IfFinal"}'+funcincnum}\`)
+}
 
+buttonfunc${timestamp}()
 `
 }
 

@@ -59,11 +59,16 @@ javascriptGenerator[blockname] = function (block) {
 
 
     return `
-stagelist.push(\`button${wordS}${selnum} '\${${value_val1}}' '${timestamp+"caseA"}'\`);
+function buttonfunc${timestamp}(){
+const funcincnum=incnum;
+incnum+=1;
 
-stagelist.push(\`target ${timestamp+"caseA"}\`)
+stagelist.push(\`button${wordS}${selnum} '\${${value_val1}}' '\${'${timestamp+"caseA"}'+funcincnum}'\`);
+stagelist.push(\`target \${'${timestamp+"caseA"}'+funcincnum}\`)
 ${statements_sta1.trim()}
+}
 
+buttonfunc${timestamp}()
 `
 }
 

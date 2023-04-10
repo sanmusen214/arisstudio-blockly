@@ -6,6 +6,7 @@ try {
         let stagelist=[];
         const errorset=new Set();
         const resmap=new Map();
+        let incnum=0;
 
         let met200=false;
 

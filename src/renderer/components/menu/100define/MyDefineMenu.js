@@ -6,8 +6,8 @@ function MyDefineMenu() {
     <Category name="其他块">
         <Block type="b_stage" />
 
-        <Block type="b_case" />
-        <Block type="b_case_jump" />
+        {/* <Block type="b_case" /> */}
+        {/* <Block type="b_case_jump" /> */}
         <Block type="b_user_write">
             <Value name="val1">
                 <Shadow type="text">
