@@ -45,12 +45,13 @@ javascriptGenerator['b_case'] = function (block) {
     const statements_steps = javascriptGenerator.statementToCode(block, 'sta1');
     return `
 // 支线${number_val1}代码
-stagelist=[];
+function bcasefunc${number_val1}(){
 ${statements_steps.trim()}
+}
 if(resmap.has(${number_val1})){
     errorset.add(${number_val1});
 }else{
-    resmap.set(${number_val1},stagelist.join("\\n")+"\\n");
+    resmap.set(${number_val1},"\\n");
 }
 // 支线${number_val1}代码结束
 `

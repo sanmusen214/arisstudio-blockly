@@ -40,13 +40,7 @@ javascriptGenerator[blockname] = function (block) {
 
     return `
 // 把 支线块被哪个时间戳的跳转使用 push到case_jump_dict的该id的value（一个列表）里
-if(case_jump_dict.has(${number_num1})){
-  case_jump_dict.get(${number_num1}).push('${timestamp}');
-}else{
-  case_jump_dict.set(${number_num1},['${timestamp}']);
-}
-stagelist.push(\`jump ${number_num1}${timestamp}PathStart\`);
-stagelist.push(\`target ${number_num1}${timestamp}PathBack\`);
+bcasefunc${number_num1}();
 `
 }
 

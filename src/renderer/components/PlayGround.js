@@ -197,10 +197,17 @@ function PlayGround(props){
                 }
                 const mynewsourcemap=new Map()
                 mynewsourcemap.set("bgm",mybgmlist)
+                message.success("背景音乐素材"+mybgmlist.length+"个",3)
                 mynewsourcemap.set("bcg",mybcglist)
+                message.success("背景图片素材"+mybcglist.length+"个",3)
                 mynewsourcemap.set("cover",mycoverlist)
+                message.success("覆盖图素材"+mycoverlist.length+"个",3)
                 mynewsourcemap.set("sound",mysoundlist)
+                message.success("音效素材"+mysoundlist.length+"个",3)
                 mynewsourcemap.set("spr",mysprlist)
+                message.success("人物素材"+mysprlist.length+"个",3)
+
+                setSourcepageopen(true)
                 resolve(mynewsourcemap)
                 
             } catch (error) {
@@ -285,9 +292,10 @@ function PlayGround(props){
     const selectFilepath=(e)=>{
         if(e.target&&e.target.files){
             window.wfilepath=e.target.files[0].path // 为了实际保存
-            setResultcode("开启实时导出到:"+window.wfilepath)
+            message.success("开启实时导出到:"+window.wfilepath,6)
+            antiSaveFile({type:"manualdoit"})
         }else{
-            setResultcode("无法得到文件路径")
+            message.error("无法得到文件路径",3)
         }
     }
 
@@ -304,7 +312,7 @@ function PlayGround(props){
                     }
                 }
         })}
-        if(event.type!="viewport_change"){
+        if(event && event.type!="viewport_change"){
             genandsave()
         }
     }
