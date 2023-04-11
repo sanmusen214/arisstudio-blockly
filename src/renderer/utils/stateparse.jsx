@@ -169,7 +169,7 @@ function parseChar(rawtext,endpoint=-1){
                 }
             }else if(["down"].includes(linetxt[1])){
                 thischar.setdown()
-            }else if(["up"].includes(linetxt[1])){
+            }else if(["up","empty"].includes(linetxt[1])){
                 thischar.setup()
             }else if(["x","moveX","move"].includes(linetxt[1])){
                 thischar.setx(linetxt[2]-0)
@@ -184,7 +184,7 @@ function parseChar(rawtext,endpoint=-1){
             }
         }
         // 高亮某个人物
-        if(linetxt.length>=2 && Object.keys(res).includes(linetxt[1])){
+        if(linetxt.length>=2 && linetxt[0]==="th" && Object.keys(res).includes(linetxt[1])){
             darkAll(res)
             res[linetxt[1]].setlight(1)
         }
