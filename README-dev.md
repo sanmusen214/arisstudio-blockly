@@ -19,13 +19,15 @@ return `stagelist.push(\`load \${${blocklyparamVal1}}\`);`
 
 ## 时间戳
 
-每次触发重新构造代码块前都会`window.numinbigfunc=0`
+每次触发重新构造代码块前都会重置外部时间戳`window.numinbigfunc=0`
 
 `utils/timestamp`里的generateTime函数每次被调用时，都会读取这个window.numinbigfunc，然后使其自增1。定义积木块的生成字符串时，调用generateTime，即可获得一个独一无二的字符串，便于设置各种按钮跳转结构或分支块结构。
 
+在codetool内部，也就是blockly组装起来的js代码中，也有一个内部时间戳incnum，每次使用按钮时，都会定义一个函数，其内拼接incnum来得到每个按钮内的跳转target，这样当使用blockly函数功能复用按钮时，就不会有每次按钮结束都跳到第一次按钮结束的地方的问题了。
+
 ## 生成js码
 
-主线:stagelist每段stage代码【1-100】，resmap存每个stage序号和结果串，errorset存冲突的序号
+主线:stagelist每段stage代码【1-200】，resmap存每个stage序号和结果串，errorset存冲突的序号
 
 按钮if块：使用时间戳作id，不会重复
 
@@ -35,15 +37,17 @@ return `stagelist.push(\`load \${${blocklyparamVal1}}\`);`
 
 ### 按钮的设计
 
-按钮if（id=42）
+按钮被包装成一个时间戳为名字的函数（假设外部时间戳id=42，内部时间戳incnum=5）
 
-A分支，target 42caseA。A分支结束时，jump 42IfFinal。
+函数内部先赋值内部时间戳副本incnum，然后给全局的这incnum+1，用时间戳命名按钮跳转。最后直接调用这个函数，将文本写入该主线的stagelist。
 
-B分支，target 42caseB。B分支结束时，jump 42IfFinal。
+A分支，target 42caseA5。A分支结束时，jump 42IfFinal5。
 
-ifcase块的最后target 42IfFinal
+B分支，target 42caseB5。B分支结束时，jump 42IfFinal5。
 
-### 支线的设计
+ifcase块的最后target 42IfFinal5
+
+### 支线的设计（弃用）
 
 通过创建resmap里字符串的副本的方式，模拟实现多次调用，实际是核心内容复制粘贴，开头结尾不同。使得`跳转到支线n`块可以多次使用
 
@@ -59,6 +63,7 @@ ifcase块的最后target 42IfFinal
 
 `定义支线`块，获得用户输入id（201到300），然后blockly代码块定义阶段内只有statement内容。在codetool代码后面resMap合并时，for循环里判断id>200，则对case_jump_dict[ id ]列表里的每个时间戳，往rescode里加 target id+时间戳+'PathStart'，然后是thisvaluecode，然后是 jump id+时间戳+'PathBack'
 
+支线块在2.2.2h版本弃用（一是解决按钮复用问题，一是与函数块冲突，内部实现改写为id命名的一个函数的形式），但仍然加载进blockly，只是在工具箱里隐藏
 
 ## 版本兼容性
 
