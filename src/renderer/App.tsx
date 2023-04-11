@@ -8,7 +8,7 @@ import { GlobalContext } from './config/globalContext';
 import './myblocks'
 import './utils/dialog'
 import { ConfigProvider, theme } from 'antd';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocalStorage } from './hooks/useLocal';
 
 function BlocklyArea() {
@@ -47,6 +47,23 @@ export default function App() {
   const [language,setLanguage]=useState("cn")
   const [darktheme,setDarktheme]=useLocalStorage("darktheme",false)
   
+  const [mytheme,setMytheme]=useLocalStorage("mytheme",{
+    algorithm:theme.defaultAlgorithm,
+  })
+  
+  useEffect(()=>{
+    if(!darktheme){
+      setMytheme({
+        algorithm:theme.defaultAlgorithm,
+      })
+    }else{
+      setMytheme({
+        algorithm:theme.darkAlgorithm,
+      })
+    }
+
+  },[darktheme])
+
   return (
     <GlobalContext.Provider
     value={{
@@ -56,9 +73,7 @@ export default function App() {
     }}
     >
       <ConfigProvider
-        theme={{
-          algorithm:theme.darkAlgorithm,
-        }}
+        theme={mytheme}
       >
         <Router>
           <Routes>

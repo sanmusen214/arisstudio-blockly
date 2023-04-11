@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect,useRef } from 'react';
 
 import {useLocalStorage} from '../hooks/useLocal'
 import "./PlayGround.css"
-import {Modal,message,ConfigProvider,theme} from 'antd'
+import {Modal,message,Button} from 'antd'
 // 引入Blockly基本对象
 import Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -210,7 +210,7 @@ function PlayGround(props){
                 mynewsourcemap.set("spr",mysprlist)
                 message.success("人物素材"+mysprlist.length+"个",3)
 
-                setSourcepageopen(true)
+                // setSourcepageopen(true)
                 resolve(mynewsourcemap)
                 
             } catch (error) {
@@ -467,30 +467,30 @@ function PlayGround(props){
     return (
     <>
             <span id="toolsbox">
-            <span style={darktheme?{color:'gray'}:{color:'black'}}>当前版本:{version}</span><button onClick={()=>{setShowtool(!showtool)}}>{showtool?"隐藏工具栏":"显示工具栏"}</button>
+            <span style={darktheme?{color:'gray'}:{color:'black'}}>当前版本:{version}</span><Button onClick={()=>{setShowtool(!showtool)}}>{showtool?"隐藏工具栏":"显示工具栏"}</Button>
             <span style={showtool?{}:{display:"none"}}>
                 <div>
-                    <button className="loadprojectbutton"><input type="file" name="file" accept='*' className="projectfile" onChange={loadProject}></input>导入blockly项目</button>
-                    <button onClick={saveProject}>导出blockly项目</button>
+                    <Button className="loadprojectButton"><input type="file" name="file" accept='*' className="projectfile" onChange={loadProject}></input>导入blockly项目</Button>
+                    <Button onClick={saveProject}>导出blockly项目</Button>
                 </div>
                 <div>
-                    <button className="loadprojectbutton"><input type="file" multiple="" webkitdirectory="" name="file" accept='*' className="projectfile" onChange={loadData}></input>选择Data文件夹</button>
-                    <button onClick={openSourcePage}>打开资源浏览页</button>
+                    <Button className="loadprojectButton"><input type="file" multiple="" webkitdirectory="" name="file" accept='*' className="projectfile" onChange={loadData}></input>选择Data文件夹</Button>
+                    <Button onClick={openSourcePage}>打开资源浏览页</Button>
                 </div>
                 <div>
-                    {window.isinWebpageMode?<></>:<><button className="loadprojectbutton" style={{width:"120px"}}><input type="file" name="file" accept='text/plain' className="projectfile" onChange={selectFilepath}></input>{window.wfilepath?"重新":"开始"}设定自动导出</button></>}
+                    {window.isinWebpageMode?<></>:<><Button className="loadprojectButton" style={{width:"120px"}}><input type="file" name="file" accept='text/plain' className="projectfile" onChange={selectFilepath}></input>{window.wfilepath?"重设":"设定"}自动导出</Button></>}
                     
-                    <button onClick={downloadCode}>导出脚本</button>
+                    <Button onClick={downloadCode}>导出脚本</Button>
                 </div>
                 <div>
-                    <button onClick={getChattxt}>导出语音文本</button>
-                    <button onClick={getChatscript}>导出含语音脚本</button>
+                    <Button onClick={getChattxt}>导出语音文本</Button>
+                    <Button onClick={getChatscript}>导出含语音脚本</Button>
                     
                 </div>
                 <div>
-                    <button onClick={changeTheme}>{darktheme?"转普通模式":"转暗黑模式"}</button>
-                    {/* <button onClick={()=>setAutoturn(!autoturn)}>{autoturn?'关闭自动转脚本':'开启自动转脚本'}</button> */}
-                    <button onClick={()=>setShowres(!showres)}>{showres?"转人物状态":"转文本脚本"}</button>
+                    <Button onClick={changeTheme}>{darktheme?"转普通模式":"转暗黑模式"}</Button>
+                    {/* <Button onClick={()=>setAutoturn(!autoturn)}>{autoturn?'关闭自动转脚本':'开启自动转脚本'}</Button> */}
+                    <Button onClick={()=>setShowres(!showres)}>{showres?"转人物状态":"转文本脚本"}</Button>
                 </div>
         </span>
         </span>
@@ -511,7 +511,7 @@ function PlayGround(props){
             setSourcepageopen(false)
             Howler.stop()
         }}>
-            <SourceGround sourcemap={sourcemap}/>
+            <SourceGround loadData={loadData} sourcemap={sourcemap}/>
         </Modal>
         
         </div>

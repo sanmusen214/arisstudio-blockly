@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {Tabs, Input} from 'antd'
+import {Tabs, Input,Button, Upload} from 'antd'
 
 import BcgTab from './tabmenu/BcgTab'
 import BgmTab from './tabmenu/BgmTab'
@@ -56,6 +56,7 @@ const buildItems=(itemlistmap)=>{
 function SourceGround(props) {
 
   // console.log(props.sourcemap)
+  const loadData=props.loadData
 
   const [items,setItems] = useState(buildItems({
     "bgm":props.sourcemap.get('bgm'),
@@ -116,6 +117,7 @@ function SourceGround(props) {
   return (
     <div id="sourceground">
       <Search placeholder="搜索关键字(不区分大小写)" allowClear onSearch={onSearch} style={{ width: 300 }} />
+      <Button className="loadprojectbutton"><input type="file" multiple="" webkitdirectory="" name="file" accept='*' className="projectfile" onChange={loadData}></input>选择Data文件夹</Button>
       <Tabs defaultActiveKey='bgm' animated={false} 
       destroyInactiveTabPane={false}
       items={items} onChange={()=>{Howler.stop()}}/>
