@@ -7,6 +7,9 @@ import { GlobalContext } from './config/globalContext';
 // 引入的同时让所有自定义模块注入
 import './myblocks'
 import './utils/dialog'
+import { ConfigProvider, theme } from 'antd';
+import { useState } from 'react';
+import { useLocalStorage } from './hooks/useLocal';
 
 function BlocklyArea() {
   return (
@@ -40,15 +43,29 @@ function BlocklyArea() {
 }
 
 export default function App() {
+
+  const [language,setLanguage]=useState("cn")
+  const [darktheme,setDarktheme]=useLocalStorage("darktheme",false)
+  
   return (
     <GlobalContext.Provider
-    value={{language:'cn'}}
+    value={{
+      language:language,
+      darktheme:darktheme,
+      setDarktheme:setDarktheme
+    }}
     >
-      <Router>
-        <Routes>
-          <Route path="/" element={<BlocklyArea />} />
-        </Routes>
-      </Router>
+      <ConfigProvider
+        theme={{
+          algorithm:theme.darkAlgorithm,
+        }}
+      >
+        <Router>
+          <Routes>
+            <Route path="/" element={<BlocklyArea />} />
+          </Routes>
+        </Router>
+      </ConfigProvider>
     </GlobalContext.Provider>
   );
 }

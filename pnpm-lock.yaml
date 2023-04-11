@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@ant-design/icons': ^5.0.1
   '@blockly/theme-dark': ^4.0.7
+  '@blockly/theme-modern': ^3.0.7
   '@electron/notarize': ^1.2.3
   '@electron/rebuild': ^3.2.10
   '@pmmmwh/react-refresh-webpack-plugin': ^0.5.10
@@ -24,6 +25,7 @@ specifiers:
   browserslist-config-erb: ^0.0.3
   chalk: ^4.1.2
   concurrently: ^7.6.0
+  copy-to-clipboard: ^3.3.3
   core-js: ^3.27.2
   cross-env: ^7.0.3
   css-loader: ^6.7.3
@@ -84,8 +86,10 @@ specifiers:
 dependencies:
   '@ant-design/icons': registry.npmmirror.com/@ant-design/icons/5.0.1_biqbaboplfbrettd7655fr4n2y
   '@blockly/theme-dark': registry.npmmirror.com/@blockly/theme-dark/4.0.7_blockly@9.2.1
+  '@blockly/theme-modern': registry.npmmirror.com/@blockly/theme-modern/3.0.7_blockly@9.2.1
   antd: registry.npmmirror.com/antd/5.2.2_biqbaboplfbrettd7655fr4n2y
   blockly: registry.npmmirror.com/blockly/9.2.1
+  copy-to-clipboard: registry.npmmirror.com/copy-to-clipboard/3.3.3
   electron-debug: registry.npmmirror.com/electron-debug/3.2.0
   electron-log: registry.npmmirror.com/electron-log/4.4.8
   electron-updater: registry.npmmirror.com/electron-updater/5.3.0
@@ -1859,6 +1863,18 @@ packages:
     id: registry.npmmirror.com/@blockly/theme-dark/4.0.7
     name: '@blockly/theme-dark'
     version: 4.0.7
+    engines: {node: '>=8.17.0'}
+    peerDependencies:
+      blockly: ^9.0.0
+    dependencies:
+      blockly: registry.npmmirror.com/blockly/9.2.1
+    dev: false
+
+  registry.npmmirror.com/@blockly/theme-modern/3.0.7_blockly@9.2.1:
+    resolution: {integrity: sha512-dJhHCX667XkrKOivrl/CxN/TtacxU8Ve4kQ2/n1kfeo3mwxW6oDjyXA3TgrlFb7ynLyPmIarWsd4YH94YaSPEw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@blockly/theme-modern/-/theme-modern-3.0.7.tgz}
+    id: registry.npmmirror.com/@blockly/theme-modern/3.0.7
+    name: '@blockly/theme-modern'
+    version: 3.0.7
     engines: {node: '>=8.17.0'}
     peerDependencies:
       blockly: ^9.0.0

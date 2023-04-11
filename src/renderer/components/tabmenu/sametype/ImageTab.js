@@ -1,6 +1,9 @@
 import React,{useEffect, useState} from 'react'
-import { Image,Pagination,Button } from 'antd'
+import { Image,Pagination,Button,Typography, message } from 'antd'
 import { getBase64 } from 'renderer/utils/imagetool'
+import copy from "copy-to-clipboard"
+
+const {Text}=Typography
 
 /**
  * inputlist, 
@@ -51,7 +54,11 @@ export default function ImageTab(props) {
             {srclist.map((each,ind)=>{
               return <span style={{position:'relative',display:'inline-block',width:'140px',height:'100px',overflow:'hidden'}}>
                 <div>{imgshape==="square"?<Image width={80} height={80} src={each}></Image>:<Image width={140} height={80} src={each}></Image>}</div>
-                <input value={namelist[ind]}></input>
+                <Text keyboard onClick={()=>{
+                  copy(namelist[ind])
+                  message.destroy()
+                  message.success("复制成功")
+                }}>{namelist[ind]}</Text>
                 </span>
             })}
           </Image.PreviewGroup>

@@ -25,5 +25,9 @@ const electronHandler = {
 };
 
 contextBridge.exposeInMainWorld('electron', electronHandler);
+contextBridge.exposeInMainWorld("darkMode",{
+  toggle:(dark:boolean)=>ipcRenderer.invoke("dark-mode:toggle",dark)
+})
+
 
 export type ElectronHandler = typeof electronHandler;

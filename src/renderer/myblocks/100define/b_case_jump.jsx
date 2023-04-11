@@ -40,7 +40,11 @@ javascriptGenerator[blockname] = function (block) {
 
     return `
 // 把 支线块被哪个时间戳的跳转使用 push到case_jump_dict的该id的value（一个列表）里
-bcasefunc${number_num1}();
+if(typeof bcasefunc${number_num1}==="undefined"){
+  throw new Error("代码块${number_num1}未定义")
+}else{
+  bcasefunc${number_num1}();
+}
 `
 }
 

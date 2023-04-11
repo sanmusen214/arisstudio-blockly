@@ -8,6 +8,7 @@ import Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 import 'blockly/blocks';
 import DarkTheme from '@blockly/theme-dark'
+import NormalTheme from '@blockly/theme-modern';
 // 引入字符串处理
 import {generatefinalCodes} from '../utils/codetool'
 import {saveTxt,uploadTxt} from '../utils/IOdata';
@@ -60,8 +61,9 @@ function PlayGround(props){
     const blocklyDiv = useRef();
     const toolbox = useRef();
     let primaryWorkspace = useRef();
-    const {language}=useContext(GlobalContext)
-    const [darktheme,setDarktheme]=useLocalStorage("darktheme",false)
+    const {language,
+        darktheme,
+        setDarktheme}=useContext(GlobalContext)
     // console.log(language)
     
     // 实时导出的文件路径使用window.wfilepath
@@ -144,7 +146,7 @@ function PlayGround(props){
         primaryWorkspace.current.addChangeListener(antiShake(antiSaveFile,750));
         primaryWorkspace.current.addChangeListener(onClickBlock)
 
-    }, [primaryWorkspace, toolbox, blocklyDiv, props]);
+    }, [primaryWorkspace, toolbox, blocklyDiv]);
     // 导入项目
     const loadProject=(e)=>{
         if(e.target && e.target.files){
@@ -174,6 +176,7 @@ function PlayGround(props){
      * 加载Data文件夹
      */
     const loadData=(eve)=>{
+        console.log(eve)
         new Promise((resolve,reject)=>{
             try {
                 const mybgmlist=[] // Data/Bgm/
@@ -442,11 +445,29 @@ function PlayGround(props){
         saveTxt("democ.txt",txtcodelist.join("\n"))
     }
 
+    const changeTheme=()=>{
+        setDarktheme((darktheme)=>{
+            if(darktheme){
+                primaryWorkspace.current.setTheme(NormalTheme)
+                if(window.darkMode){
+                    window.darkMode.toggle(false)
+                }
+            }else{
+                primaryWorkspace.current.setTheme(DarkTheme)
+                if(window.darkMode){
+                    window.darkMode.toggle(true)
+                }
+            }
+            return !darktheme
+        })
+        message.destroy()
+        message.success("切换界面样式",3)
+    }
 
     return (
     <>
             <span id="toolsbox">
-            当前版本:{version}<button onClick={()=>{setShowtool(!showtool)}}>{showtool?"隐藏工具栏":"显示工具栏"}</button>
+            <span style={darktheme?{color:'gray'}:{color:'black'}}>当前版本:{version}</span><button onClick={()=>{setShowtool(!showtool)}}>{showtool?"隐藏工具栏":"显示工具栏"}</button>
             <span style={showtool?{}:{display:"none"}}>
                 <div>
                     <button className="loadprojectbutton"><input type="file" name="file" accept='*' className="projectfile" onChange={loadProject}></input>导入blockly项目</button>
@@ -467,11 +488,7 @@ function PlayGround(props){
                     
                 </div>
                 <div>
-                    <button onClick={()=>{
-                        setDarktheme((darktheme)=>{return !darktheme})
-                        message.destroy()
-                        message.success("切换模式成功, 下次打开应用生效",6)
-                    }}>{darktheme?"转普通模式":"转暗黑模式"}</button>
+                    <button onClick={changeTheme}>{darktheme?"转普通模式":"转暗黑模式"}</button>
                     {/* <button onClick={()=>setAutoturn(!autoturn)}>{autoturn?'关闭自动转脚本':'开启自动转脚本'}</button> */}
                     <button onClick={()=>setShowres(!showres)}>{showres?"转人物状态":"转文本脚本"}</button>
                 </div>

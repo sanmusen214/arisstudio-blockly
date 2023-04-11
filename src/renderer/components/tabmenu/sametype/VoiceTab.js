@@ -1,10 +1,15 @@
 import React,{useEffect, useRef, useState} from 'react'
-import { Pagination, Button } from 'antd'
+import { Pagination, Button,Typography,message } from 'antd'
 import {
   CustomerServiceOutlined
 } from '@ant-design/icons';
 import { getBase64 } from 'renderer/utils/imagetool'
 import {Howl,Howler} from 'howler'
+import copy from "copy-to-clipboard"
+
+
+const {Text}=Typography
+
 
 /**
  * props.inputlist
@@ -34,6 +39,7 @@ export default function VoiceTab(props) {
   }
 
   const musicpause=()=>{
+    Howler.stop()
     musicplayer?.pause()
   }
 
@@ -58,7 +64,19 @@ export default function VoiceTab(props) {
       <div>
         <div style={{textAlign:'center'}}>
           {props.inputlist.slice((page-1)*pagesize,page*pagesize).map((eachfile)=>{
-            return <span onClick={()=>{playmusic(eachfile)}} style={{display:'inline-block',width:'140px',height:'60px',cursor:'pointer',border:'1px solid gray',overflow:'hidden'}}><input value={eachfile.name}></input><CustomerServiceOutlined style={{fontSize:'30px'}}/></span>
+            return <span style={{display:'inline-block',width:'140px',height:'60px',border:'1px solid gray',overflow:'hidden'}}>
+              <div>
+                <Text keyboard 
+              ellipsis={{'rows':1}}
+              onClick={()=>{
+                  copy(eachfile.name)
+                  message.destroy()
+                  message.success("复制成功")
+                }}>{eachfile.name}</Text>
+              </div>
+              <CustomerServiceOutlined style={{cursor:'pointer',fontSize:'30px'}}  onClick={()=>{playmusic(eachfile)}}/>
+              
+              </span>
           })}
         </div>
       </div>
