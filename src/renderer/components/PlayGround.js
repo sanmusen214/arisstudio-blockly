@@ -474,7 +474,7 @@ function PlayGround(props){
                     <Button onClick={saveProject}>导出blockly项目</Button>
                 </div>
                 <div>
-                    <Button className="loadprojectButton"><input type="file" multiple="" webkitdirectory="" name="file" accept='*' className="projectfile" onChange={loadData}></input>选择Data文件夹</Button>
+                    {/* <Button className="loadprojectButton"><input type="file" multiple="" webkitdirectory="" name="file" accept='*' className="projectfile" onChange={loadData}></input>选择Data文件夹</Button> */}
                     <Button onClick={openSourcePage}>打开资源浏览页</Button>
                 </div>
                 <div>

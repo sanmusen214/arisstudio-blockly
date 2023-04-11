@@ -1,3 +1,3 @@
-const version="2.2.2h-test";
+const version="2.2.2h";
 
 export default version
