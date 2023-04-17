@@ -494,7 +494,7 @@ function PlayGround(props){
                 </div>
         </span>
         </span>
-        <span ref={blocklyDiv} id="blocklyDiv" />
+        <span ref={blocklyDiv} id="blocklyDiv" onKeyUp={e=>console.log(e.keyCode===83 && e.ctrlKey)}/>
         <div style={{ display: 'none' }} ref={toolbox}>
             {props.children}
         </div>

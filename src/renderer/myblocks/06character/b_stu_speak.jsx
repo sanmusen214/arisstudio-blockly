@@ -57,6 +57,7 @@ const jsondesc = {
             ["后退","back"],
             ["点头","nod"],
             ["小跳","jump"],
+            ["跳两下","jump2"],
             ["小颤抖","sshake"],
             ["大颤抖","bshake"]
         ]
@@ -120,13 +121,19 @@ stagelist.push(\`\${${stuname}} back\`);
 `
     }else if(action==="nod"){
         finalcode+=`
-stagelist.push(\`\${${stuname}} shakeY 5 -5 1\`);
+stagelist.push(\`\${${stuname}} shakeY 3 -8 1\`);
 `
     }else if(action==="jump"){
         finalcode+=`
 stagelist.push(\`\${${stuname}} shakeY 7 4 1\`);
 `
-    }else if(action==="sshake"){
+    }else if(action==="jump2"){
+        finalcode+=`
+stagelist.push(\`\${${stuname}} shakeY 4 5 1\`);
+stagelist.push(\`wait 0.3\`);
+stagelist.push(\`\${${stuname}} shakeY 4 5 1\`);
+`
+      }else if(action==="sshake"){
         finalcode+=`
 stagelist.push(\`\${${stuname}} shakeX 15 1 6\`);
 `

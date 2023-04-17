@@ -24,6 +24,7 @@ const jsondesc = {
             ["往y轴","moveY"],
             ["点头(忽略参数)","nod"],
             ["小跳(忽略参数)","jump"],
+            ["跳两下(忽略参数)","jump2"],
             ["小颤抖(忽略参数)","sshake"],
             ["大颤抖(忽略参数)","bshake"]
         ]
@@ -81,12 +82,18 @@ stagelist.push(\`\${${value_val1}} ${dropdown_drop1} ${number_val1} ${number_val
 `
     }else if(dropdown_drop1==="nod"){
       return `
-stagelist.push(\`\${${value_val1}} shakeY 5 -5 1\`);
+stagelist.push(\`\${${value_val1}} shakeY 3 -8 1\`);
 `
     }else if(dropdown_drop1==="jump"){
       return `
 stagelist.push(\`\${${value_val1}} shakeY 7 4 1\`);
 `
+    }else if(dropdown_drop1==="jump2"){
+      return `
+stagelist.push(\`\${${value_val1}} shakeY 4 5 1\`);
+stagelist.push(\`wait 0.3\`);
+stagelist.push(\`\${${value_val1}} shakeY 4 5 1\`);
+      `
     }else if(dropdown_drop1==="sshake"){
       return `
 stagelist.push(\`\${${value_val1}} shakeX 15 1 6\`);

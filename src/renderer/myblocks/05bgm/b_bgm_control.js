@@ -69,6 +69,12 @@ javascriptGenerator[blockname] = function (block) {
       nowaction=`${dropdown_drop1} ${dropdown_drop3}`
     }
 
+    if(dropdown_drop3==="play"){
+      return `
+stagelist.push(\`${dropdown_drop1} set \${${value_val1}}\`);// 音乐类型
+stagelist.push(\`${dropdown_drop1} ${dropdown_drop2}\`);// 播放次数
+`
+    }
 
     return `
 stagelist.push(\`${dropdown_drop1} set \${${value_val1}}\`);// 音乐类型
