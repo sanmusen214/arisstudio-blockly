@@ -11,7 +11,7 @@ for(let stu of studentsjson.students){
     // 中文名，素材名
     students_datamap.push([
         stu.zhName.replace(/ /g,"").toLowerCase(),
-        stu.sprName.replace(/ /g,"").toLowerCase()])
+        stu.sprName.replace(/ /g,"")])
 }
 
 // 音效
