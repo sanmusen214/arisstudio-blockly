@@ -9,7 +9,7 @@
 }
 #toolsbox button{
     margin:0px 4px;
-    height:25px;
+    /* height:25px; */
 }
 
 #lefttools{
@@ -55,4 +55,18 @@
     z-index:100;
     opacity:0;
     filter:alpha(opacity=0);
+}
+
+/* 主界面右上角俩按钮 */
+#toolsbox .settingbut{
+    color:rgb(67, 98, 153);
+    margin:2px;
+    font-size: 25px;
+    height:50px;
+    width: 60px;
+}
+#toolsbox .settingbut:hover{
+    cursor: pointer;
+    font-size: 27px;
+    border-color: gray;
 }

@@ -2,7 +2,11 @@ import React, { useContext, useState, useEffect,useRef } from 'react';
 
 import {useLocalStorage} from '../hooks/useLocal'
 import "./PlayGround.css"
-import {Modal,message,Button} from 'antd'
+import {Modal,message,Button, Row, Col} from 'antd'
+import {
+    BlockOutlined,
+    SettingFilled
+  } from '@ant-design/icons';
 // 引入Blockly基本对象
 import Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -22,6 +26,7 @@ import {Howler} from 'howler'
 import { GlobalContext } from 'renderer/config/globalContext';
 // 设置脚本解析
 import { identifytxt } from 'renderer/utils/stateparse';
+import SettingPage from './SettingPage';
 
 
 Blockly.setLocale(locale);
@@ -90,6 +95,8 @@ function PlayGround(props){
     ]))
     // 人物状态字符串
     let [charstate,setCharstate]=useState("")
+    // 设置页面是否打开
+    let [settingopen,setSettingopen]=useState(false)
 
 
     // 点击一个积木
@@ -228,7 +235,7 @@ function PlayGround(props){
         }
         if(srctotal===0){
             message.destroy()
-            message.error("请先选择Data文件夹")
+            message.error("请选择Data文件夹")
             setSourcepageopen(true)
         }else{
             setSourcepageopen(true)
@@ -466,54 +473,78 @@ function PlayGround(props){
 
     return (
     <>
-            <span id="toolsbox">
-            <span style={darktheme?{color:'gray'}:{color:'black'}}>当前版本:{version}</span><Button onClick={()=>{setShowtool(!showtool)}}>{showtool?"隐藏工具栏":"显示工具栏"}</Button>
-            <span style={showtool?{}:{display:"none"}}>
-                <div>
-                    <Button className="loadprojectButton"><input type="file" name="file" accept='*' className="projectfile" onChange={loadProject}></input>导入blockly项目</Button>
-                    <Button onClick={saveProject}>导出blockly项目</Button>
-                </div>
-                <div>
-                    {/* <Button className="loadprojectButton"><input type="file" multiple="" webkitdirectory="" name="file" accept='*' className="projectfile" onChange={loadData}></input>选择Data文件夹</Button> */}
-                    <Button onClick={openSourcePage}>打开资源浏览页</Button>
-                </div>
-                <div>
-                    {window.isinWebpageMode?<></>:<><Button className="loadprojectButton" style={{width:"120px"}}><input type="file" name="file" accept='text/plain' className="projectfile" onChange={selectFilepath}></input>{window.wfilepath?"重设":"设定"}自动导出</Button></>}
-                    
-                    <Button onClick={downloadCode}>导出脚本</Button>
-                </div>
-                <div>
-                    <Button onClick={getChattxt}>导出语音文本</Button>
-                    <Button onClick={getChatscript}>导出含语音脚本</Button>
-                    
-                </div>
-                <div>
-                    <Button onClick={changeTheme}>{darktheme?"转普通模式":"转暗黑模式"}</Button>
-                    {/* <Button onClick={()=>setAutoturn(!autoturn)}>{autoturn?'关闭自动转脚本':'开启自动转脚本'}</Button> */}
-                    <Button onClick={()=>setShowres(!showres)}>{showres?"转人物状态":"转文本脚本"}</Button>
-                </div>
+        <span id="toolsbox">
+            <Row justify={"end"}>
+                <Col>
+                    <Button className="settingbut" onClick={openSourcePage}><BlockOutlined /></Button>
+                </Col>
+                <Col>
+                    <Button className="settingbut" onClick={()=>{setSettingopen(true)}}><SettingFilled /></Button>
+                </Col>
+            </Row>
         </span>
-        </span>
+        {/* 积木区 */}
         <span ref={blocklyDiv} id="blocklyDiv" onKeyUp={e=>console.log(e.keyCode===83 && e.ctrlKey)}/>
         <div style={{ display: 'none' }} ref={toolbox}>
             {props.children}
         </div>
         {/* 生成的代码 显示框 */}
-        {showres?<textarea onChange={(e)=>setResultcode(e.target.value)} style={showtool?{}:{display:"none"}} spellCheck={false} id="rescodebox" value={resultcode}></textarea>:<textarea value={charstate} spellCheck={false} id="rescodebox"></textarea>}
+        {showres?(
+        <textarea 
+            value={resultcode}
+            spellCheck={false}
+            style={showtool?{}:{display:"none"}} 
+            id="rescodebox" 
+        />
+        ):(
+        <textarea 
+            value={charstate} 
+            spellCheck={false} 
+            style={showtool?{}:{display:"none"}} 
+            id="rescodebox"
+        />)
+        }
         {/* 资源页 */}
         <div id="sourcemodal">
-        <Modal width={"80%"} style={{top:'25px'}} title="资源浏览" open={sourcepageopen}
-         onOk={()=>{
-        setSourcepageopen(false)
-        Howler.stop()
-        }} 
-        onCancel={()=>{
+            <Modal width={"80%"} style={{top:'25px'}} title="资源浏览" open={sourcepageopen}
+            onOk={()=>{
             setSourcepageopen(false)
             Howler.stop()
-        }}>
-            <SourceGround loadData={loadData} sourcemap={sourcemap}/>
-        </Modal>
-        
+            }}
+            onCancel={()=>{
+                setSourcepageopen(false)
+                Howler.stop()
+            }}>
+                <SourceGround loadData={loadData} sourcemap={sourcemap}/>
+            </Modal>
+        </div>
+        {/* 设置页面 */}
+        <div style={{position:'absolute',bottom:10,right:2,color:'gray'}}>{version}</div>
+        <div>
+            <Modal width={"80%"} style={{top:'25px'}} title="设置" open={settingopen}
+            onOk={()=>{
+            setSettingopen(false)
+            }}
+            onCancel={()=>{
+                setSettingopen(false)
+            }}>
+                <SettingPage 
+                    version={version}
+                    loadProject={loadProject}
+                    saveProject={saveProject}
+                    openSourcePage={openSourcePage}
+                    selectFilepath={selectFilepath}
+                    downloadCode={downloadCode}
+                    getChattxt={getChattxt}
+                    getChatscript={getChatscript}
+                    changeTheme={changeTheme}
+                    darktheme={darktheme}
+                    showres={showres}
+                    setShowres={setShowres}
+                    showtool={showtool}
+                    setShowtool={setShowtool}
+                />
+            </Modal>
         </div>
 
     </>);
