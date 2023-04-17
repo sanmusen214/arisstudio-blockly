@@ -5,6 +5,8 @@ import { QuestionCircleOutlined } from "@ant-design/icons"
 import { findneededFile } from 'renderer/utils/DataTool.jsx'
 import {Howl,Howler} from 'howler'
 import { getBase64 } from 'renderer/utils/imagetool'
+import copy from "copy-to-clipboard"
+
 
 
 const {Search}=Input
@@ -49,7 +51,11 @@ export default function SETab(props) {
             dataIndex:"filename",
             width:"40%",
             render:(_,{filename})=>{
-                return filename
+                return <div onClick={()=>{
+                    message.destroy()
+                    message.success("复制成功")
+                    copy(filename)
+                }}>{filename}</div>
             }
         },
         {

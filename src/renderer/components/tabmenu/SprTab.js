@@ -1,9 +1,11 @@
 import React,{useEffect, useRef, useState} from 'react'
-import {Col,Pagination,Row,Switch } from 'antd'
+import {Col,Pagination,Row,Switch, message } from 'antd'
 import { getBase64,getText } from 'renderer/utils/imagetool'
 import {spine,hullpos,animationlist} from "../../utils/spine-player"
 import "../../utils/spine-player.css"
 import "./SprTab.css"
+import copy from "copy-to-clipboard"
+
 
 var myTout
 
@@ -88,10 +90,10 @@ export default function SprTab(props) {
           // 第一次渲染得到面部位置和animation列表
           let xlist=hullpos.map((each)=>{return each[0]})
           let ylist=hullpos.map((each)=>{return each[1]})
-          console.log(hullpos)
+          // console.log(hullpos)
           // console.log(Math.min(...xlist),Math.max(...xlist))
           // console.log(Math.min(...ylist),Math.max(...ylist))
-          console.log(animationlist)
+          // console.log(animationlist)
 
           const viewpad=50
           const baviewport={
@@ -127,7 +129,7 @@ export default function SprTab(props) {
                   animation:each.name,
                   viewport: {...baviewport},// 定位到脸
                   premultipliedAlpha: false,
-                  showControls: true,
+                  showControls: false,
                   backgroundColor: "#cccccc", // set the walk animation to play once
                 })
               }
@@ -143,7 +145,12 @@ export default function SprTab(props) {
     <>
     <div>
     <Row justify={'center'}>
-      <div style={{textAlign:'center',marginRight:'15px'}}>{nowname}</div>
+      <div style={{textAlign:'center',marginRight:'15px'}}
+      onClick={()=>{
+        message.destroy()
+        message.success("复制成功")
+        copy(nowname)
+      }}>{nowname}</div>
       面部差分：<Switch checked={chafen} onClick={(ck)=>{
         setChafen((ck)=>{
           renderspr(nowname,"basprbox",nowind)
@@ -154,21 +161,29 @@ export default function SprTab(props) {
     <Row justify={'center'}>
       <Pagination total={chafenlistlen} current={page} pageSize={9} onChange={(newpage)=>{
         renderspr(nowname,"basprbox",nowind,newpage)
-        
         }}/>
     </Row>
     <Row>
-
+      
+      {/* 左侧列表 */}
       <Col span={6} style={props.style}>
-        {sprnamelist.map((name,ind)=>{return <div className="stuname" style={{backgroundColor:ind===nowind?'lightblue':""}} onClick={()=>{
+        {sprnamelist.map((name,ind)=>{return <div className="stuname" style={{backgroundColor:ind===nowind?'lightblue':""}} 
+        onClick={()=>{
           renderspr(name,"basprbox",ind,-1)
         }}>{name}</div>})}
       </Col>
+      {/* 右侧预览 */}
       <Col span={18} style={{position:'relative'}}>
           <span id="basprbox" style={{position:'absolute',display:'inline-block',width:'100%',height:'100%'}}></span>
           {[0,0,0,0,0,0,0,0,0].map((each,ind)=>{
-            return (<div style={{display:chafen?'inline-block':'none',width:'200px',height:"220px"}}>
-              <span id={"namechafen"+ind} style={{display:chafen?'inline-block':'none',width:'200px',height:'10px'}}></span>
+            return (<div 
+              style={{display:chafen?'inline-block':'none',width:'200px',height:"220px"}}
+            onClick={(e)=>{
+              message.destroy()
+              message.success("复制成功")
+              copy(e.target.parentNode.parentNode.parentNode.innerText)
+              }}>
+              <span id={"namechafen"+ind} style={{display:chafen?'inline-block':'none',width:'200px',height:'20px',zIndex:999}}></span>
               <span id={"basprboxchafen"+ind} style={{display:chafen?'inline-block':'none',width:'200px',height:'200px'}}></span>
             </div>)
           })}

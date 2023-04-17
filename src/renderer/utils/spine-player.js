@@ -2842,8 +2842,8 @@ var spine;
       }
     };
     AssetManager.prototype.downloadBinary = function (url, success, error) {
-      console.log("download binary: ",url)
-      console.log(this.rawDataUris)
+      // console.log("download binary: ",url)
+      // console.log(this.rawDataUris)
       if (this.rawDataUris[url]){
         url = this.rawDataUris[url]
         success(convertDataURIToBinary(url));
