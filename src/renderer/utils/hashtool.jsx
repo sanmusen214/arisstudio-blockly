@@ -23,4 +23,4 @@ export function gethash(input){
     return retValue;
 }
 
-console.log(gethash("阿露"))
+// console.log(gethash("阿露"))

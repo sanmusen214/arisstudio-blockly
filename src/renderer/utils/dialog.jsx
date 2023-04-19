@@ -16,7 +16,7 @@ import Blockly from 'blockly/core';
 
  /** Override Blockly.dialog.setAlert() with custom implementation. */
  Blockly.dialog.setAlert(function(message, callback) {
-   console.log('Alert: ' + message);
+  //  console.log('Alert: ' + message);
    CustomDialog.show('Alert', message, {
      onCancel: callback
    });
@@ -24,7 +24,7 @@ import Blockly from 'blockly/core';
  
  /** Override Blockly.dialog.setConfirm() with custom implementation. */
  Blockly.dialog.setConfirm(function(message, callback) {
-   console.log('Confirm: ' + message);
+  //  console.log('Confirm: ' + message);
    CustomDialog.show('Confirm', message, {
      showOkay: true,
      onOkay: function() {
@@ -39,7 +39,7 @@ import Blockly from 'blockly/core';
  
  /** Override Blockly.dialog.setPrompt() with custom implementation. */
  Blockly.dialog.setPrompt(function(message, defaultValue, callback) {
-   console.log('Prompt: ' + message);
+  //  console.log('Prompt: ' + message);
    CustomDialog.show('Prompt', message, {
      showInput: true,
      showOkay: true,

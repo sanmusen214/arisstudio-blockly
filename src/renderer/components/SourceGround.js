@@ -86,7 +86,7 @@ function SourceGround(props) {
     }))
 
     const searchword=word.toLowerCase()
-    console.log(searchword)
+    // console.log(searchword)
     let postlist=[[],[],[],[],[]]// 搜索结果
     const prelist=[props.sourcemap.get('bgm'),props.sourcemap.get('bcg'),props.sourcemap.get('cover'),props.sourcemap.get('sound'),props.sourcemap.get('spr')]
     if(word.length!==0){

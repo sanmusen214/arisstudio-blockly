@@ -51,7 +51,7 @@ export default function SprTab(props) {
       const atlasname=`${eachname}.atlas`//这是个字符串
       const pngname=`${eachname}.png`
 
-      console.log("3 names:",skelname,atlasname,pngname)
+      // console.log("3 names:",skelname,atlasname,pngname)
       // 文件内容
       const rawobj={}
       rawobj[skelname]=reslist[0]
@@ -86,7 +86,7 @@ export default function SprTab(props) {
       if(chafenRef.current){
 
         myTout=setTimeout(()=>{
-          console.log("定时器Sprtab")
+          // console.log("定时器Sprtab")
           // 第一次渲染得到面部位置和animation列表
           let xlist=hullpos.map((each)=>{return each[0]})
           let ylist=hullpos.map((each)=>{return each[1]})
@@ -103,7 +103,7 @@ export default function SprTab(props) {
             height: Math.max(...ylist)-Math.min(...ylist)+2*viewpad,
           }
 
-          console.log("视口",baviewport)
+          // console.log("视口",baviewport)
           
           
           // 

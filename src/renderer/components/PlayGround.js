@@ -103,7 +103,7 @@ function PlayGround(props){
     const onClickBlock=(event)=>{
         window.lastClick=""
         if(event.type==="click"&&event.blockId){
-            console.log(event)
+            // console.log(event)
             window.lastClick=event.blockId
         }
 
@@ -127,6 +127,9 @@ function PlayGround(props){
     useEffect(() => {
         const { initialXml, children, ...rest } = props;
         if(darktheme){
+            if(window.darkMode){
+                window.darkMode.toggle(true)
+            }
             primaryWorkspace.current = Blockly.inject(
                 blocklyDiv.current,
                 {
@@ -183,7 +186,7 @@ function PlayGround(props){
      * 加载Data文件夹
      */
     const loadData=(eve)=>{
-        console.log(eve)
+        // console.log(eve)
         new Promise((resolve,reject)=>{
             try {
                 const mybgmlist=[] // Data/Bgm/
@@ -247,7 +250,7 @@ function PlayGround(props){
      * 生成脚本代码，并放入屏幕右侧文本框
      *  */ 
     const generateCode = () => {
-        console.log("生成脚本")
+        // console.log("生成脚本")
         // 将现在的playground内容存入localStorage
         setProjectobj(Blockly.serialization.workspaces.save(primaryWorkspace.current))
         // 生成代码前时间戳归0
@@ -267,7 +270,7 @@ function PlayGround(props){
             window.eval(playcode)
             setResultcode(window.txtcode)
             const identires=identifytxt(window.txtcode)
-            console.log(identires)
+            // console.log(identires)
             if(identires.success){
                 let showstring=""
                 for(let eachcharname in identires.res){

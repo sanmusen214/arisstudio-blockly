@@ -23,12 +23,12 @@ export const findneededFile=(list,fname)=>{
     try {
         for(let fitem of list){
             if(fitem.name===fname){
-                console.log(fitem)
+                // console.log(fitem)
                 return fitem
             }
         }
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         return null
     }
 
