@@ -14,7 +14,7 @@ const jsondesc = {
         "min": 0,
         "value": 1,
         "max": 1000,
-        "precision": 0.1,
+        "precision": 0.01,
       },
     ],
     "inputsInline": true,

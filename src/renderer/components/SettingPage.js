@@ -45,7 +45,7 @@ export default function SettingPage({
             <Button onClick={saveProject}><SaveOutlined />导出blockly项目</Button>
         </Row>
         <br/>
-        <Row>导入/导出脚本</Row>
+        <Row>导出脚本</Row>
         <Row>
             {window.wfilepath?<>当前自动导出: {window.wfilepath}</>:<></>}
         </Row>

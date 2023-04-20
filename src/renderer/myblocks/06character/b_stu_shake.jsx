@@ -43,7 +43,7 @@ const jsondesc = {
         "min": 0,
         "value": 5,
         "max": 10000000,
-        "precision": 0.1,
+        "precision": 0.01,
       },
     ],
     "inputsInline": true,

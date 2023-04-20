@@ -98,6 +98,12 @@ javascriptGenerator[blockname] = function (block) {
 stagelist.push(\`\${${stuname}} emo ${emo}\`);
 `
     }
+    // 表情
+    if(face!=="''"){
+        finalcode+=`
+stagelist.push(\`\${${stuname}} state \${${face}}\`);
+    `
+    }
     // 说话时动作
     if(action==="down"){
         finalcode+=`
@@ -121,7 +127,7 @@ stagelist.push(\`\${${stuname}} back\`);
 `
     }else if(action==="nod"){
         finalcode+=`
-stagelist.push(\`\${${stuname}} shakeY 3 -8 1\`);
+stagelist.push(\`\${${stuname}} shakeY 3 -6 1\`);
 `
     }else if(action==="jump"){
         finalcode+=`
@@ -129,9 +135,9 @@ stagelist.push(\`\${${stuname}} shakeY 7 4 1\`);
 `
     }else if(action==="jump2"){
         finalcode+=`
-stagelist.push(\`\${${stuname}} shakeY 4 5 1\`);
+stagelist.push(\`\${${stuname}} shakeY 4 4 1\`);
 stagelist.push(\`wait 0.3\`);
-stagelist.push(\`\${${stuname}} shakeY 4 5 1\`);
+stagelist.push(\`\${${stuname}} shakeY 4 4 1\`);
 `
       }else if(action==="sshake"){
         finalcode+=`
@@ -140,12 +146,6 @@ stagelist.push(\`\${${stuname}} shakeX 15 1 6\`);
     }else if(action==="bshake"){
         finalcode+=`
 stagelist.push(\`\${${stuname}} shakeX 20 2 6\`);
-`
-    }
-    // 表情
-    if(face!=="''"){
-        finalcode+=`
-stagelist.push(\`\${${stuname}} state \${${face}}\`);
 `
     }
 

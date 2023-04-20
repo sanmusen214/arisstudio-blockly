@@ -82,7 +82,7 @@ stagelist.push(\`\${${value_val1}} ${dropdown_drop1} ${number_val1} ${number_val
 `
     }else if(dropdown_drop1==="nod"){
       return `
-stagelist.push(\`\${${value_val1}} shakeY 3 -8 1\`);
+stagelist.push(\`\${${value_val1}} shakeY 3 -6 1\`);
 `
     }else if(dropdown_drop1==="jump"){
       return `
@@ -90,9 +90,9 @@ stagelist.push(\`\${${value_val1}} shakeY 7 4 1\`);
 `
     }else if(dropdown_drop1==="jump2"){
       return `
-stagelist.push(\`\${${value_val1}} shakeY 4 5 1\`);
+stagelist.push(\`\${${value_val1}} shakeY 4 4 1\`);
 stagelist.push(\`wait 0.3\`);
-stagelist.push(\`\${${value_val1}} shakeY 4 5 1\`);
+stagelist.push(\`\${${value_val1}} shakeY 4 4 1\`);
       `
     }else if(dropdown_drop1==="sshake"){
       return `

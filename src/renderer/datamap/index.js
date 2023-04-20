@@ -5,13 +5,24 @@ import soundsjson from "./rawjson/sound.json"
 
 
 
-// 学生姓名
+// 封装人物名字和素材对应表
 export const students_datamap=[]
 for(let stu of studentsjson.students){
-    // 中文名，素材名
-    students_datamap.push([
-        stu.zhName.replace(/ /g,"").toLowerCase(),
-        stu.sprName.replace(/ /g,"")])
+    if(stu.sprName.startsWith("CH")||stu.sprName.startsWith("NP")){
+        // 中文名，素材名
+        // CH和NP开头的文件名不转小写
+        students_datamap.push([
+            stu.zhName.replace(/ /g,"").toLowerCase(),
+            stu.sprName.replace(/ /g,"")
+        ])
+    }else{
+        // 其他文件名全转小写
+        students_datamap.push([
+            stu.zhName.replace(/ /g,"").toLowerCase(),
+            stu.sprName.replace(/ /g,"").toLowerCase()
+        ])
+    }
+
 }
 
 // 音效

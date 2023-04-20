@@ -7,7 +7,7 @@ import { students_datamap } from '../../datamap';
 // 带有映射的学生名
 const jsondesc = {
     "type": "b_student",
-    "message0": "人物昵称 %1 素材文件 %2 %3",
+    "message0": "人物昵称 %1 人物对象 %2 %3",
     "args0": [
       {
         "type": "input_value",
@@ -32,7 +32,7 @@ const jsondesc = {
     "previousStatement": null,
     "nextStatement": null,
     "colour": 260,
-    "tooltip": "",
+    "tooltip": "可能部分人物加载后是紫色，请检查素材和脚本里的文件名的大小写，必要时使用素材文件名加载",
     "helpUrl": ""
   }
 
