@@ -9,7 +9,7 @@ export function saveToLocalStorage(keyname,data){
 /**
  * 带后缀名称
  */
-export function saveTxt(name,txt){
+export function saveTxt(name,txt,recall=()=>{}){
     // 要保存的字符串
     const stringData = txt
     // dada 表示要转换的字符串数据，type 表示要转换的数据格式
@@ -30,6 +30,7 @@ export function saveTxt(name,txt){
     // 释放一个之前已经存在的、通过调用 URL.createObjectURL() 创建的 URL 对象。
     // 当你结束使用某个 URL 对象之后，应该通过调用这个方法来让浏览器知道不用在内存中继续保留对这个文件的引用了。
     URL.revokeObjectURL(objectURL)
+    recall()
 }
 
 /**

@@ -180,7 +180,10 @@ function PlayGround(props){
     }
     // 导出项目
     const saveProject=()=>{
-        saveTxt(`ArisStudio_blockly可视化_${version}.bablockly`,JSON.stringify(Blockly.serialization.workspaces.save(primaryWorkspace.current)))
+        saveTxt(`ArisStudio_blockly可视化_${version}.bablockly`,JSON.stringify(Blockly.serialization.workspaces.save(primaryWorkspace.current)),()=>{
+            message.destroy()
+            message.success("项目保存",3)
+        })
     }
     /**
      * 加载Data文件夹
@@ -332,7 +335,11 @@ function PlayGround(props){
 
     // web打开文件管理器 让用户下载脚本
     const downloadCode=()=>{
-        saveTxt(`demob.txt`,resultcode)
+        saveTxt(`demob.txt`,resultcode,()=>{
+            message.destroy()
+            message.success("脚本保存",3)
+        })
+
     }
 
     /**
