@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import Blockly from 'blockly/core';
-
+import { message,Input,Button,Typography } from 'antd';
 /**
  * An example implementation of how one might replace Blockly's browser
  * dialogs. This is just an example, and applications are not encouraged to use
@@ -13,13 +13,14 @@ import Blockly from 'blockly/core';
  * @namespace
  */
  const CustomDialog = {};
-
+const {Text}=Typography
  /** Override Blockly.dialog.setAlert() with custom implementation. */
  Blockly.dialog.setAlert(function(message, callback) {
   //  console.log('Alert: ' + message);
    CustomDialog.show('Alert', message, {
      onCancel: callback
    });
+
  });
  
  /** Override Blockly.dialog.setConfirm() with custom implementation. */
@@ -87,11 +88,11 @@ import Blockly from 'blockly/core';
  
      dialogDiv = document.createElement('div');
      dialogDiv.id = 'customDialog';
-     dialogDiv.style.cssText =
-         'background-color: #fff;' +
-         'width: 400px;' +
-         'margin: 20px auto 0;' +
-         'padding: 10px;';
+    //  dialogDiv.style.cssText =
+    //      'background-color: #fff;' +
+    //      'width: 400px;' +
+    //      'margin: 20px auto 0;' +
+    //      'padding: 10px;';
      backdropDiv.appendChild(dialogDiv);
  
      dialogDiv.onclick = function(event) {
@@ -104,16 +105,26 @@ import Blockly from 'blockly/core';
    backdropDiv.style.display = 'block';
    dialogDiv.style.display = 'block';
  
+  //  dialogDiv=(
+  //   <div id='customDialog'>
+  //     <Text className='customDialogTitle'>{title}</Text>
+  //     <Text className='customDialogMessage'>{message}</Text>
+  //     {options.showInput?(<Input id="customDialogInput"></Input>):(<></>)}
+  //     <div className='customDialogButtons'>
+  //     {options.showCancel?(<Button id="customDialogInput">Cancel</Button>):(<></>)}
+  //     {options.showOkay?(<Button id="customDialogOkay">OK</Button>):(<></>)}
+  //     </div>
+  //   </div>
+  //   )
    dialogDiv.innerHTML =
        '<header class="customDialogTitle"></header>' +
-       '<p class="customDialogMessage"></p>' +
+       '<span class="customDialogMessage"></span>' +
        (options.showInput ? '<div><input id="customDialogInput"></div>' : '') +
        '<div class="customDialogButtons">' +
        (options.showCancel ? '<button id="customDialogCancel">Cancel</button>': '') +
        (options.showOkay ? '<button id="customDialogOkay">OK</button>': '') +
        '</div>';
-   dialogDiv.getElementsByClassName('customDialogTitle')[0]
-       .appendChild(document.createTextNode(title));
+  //  dialogDiv.getElementsByClassName('customDialogTitle')[0].appendChild(document.createTextNode(title));
    dialogDiv.getElementsByClassName('customDialogMessage')[0]
        .appendChild(document.createTextNode(message));
  
@@ -150,12 +161,10 @@ import Blockly from 'blockly/core';
    }
  
    if (options.showOkay) {
-     document.getElementById('customDialogOkay')
-         .addEventListener('click', onOkay);
+     document.getElementById('customDialogOkay').addEventListener('click', onOkay);
    }
    if (options.showCancel) {
-     document.getElementById('customDialogCancel')
-         .addEventListener('click', onCancel);
+     document.getElementById('customDialogCancel').addEventListener('click', onCancel);
    }
  
    backdropDiv.onclick = onCancel;

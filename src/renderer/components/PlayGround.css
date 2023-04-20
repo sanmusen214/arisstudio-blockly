@@ -70,3 +70,27 @@
     font-size: 27px;
     border-color: gray;
 }
+
+/* 自定义blockly弹窗里的button样式 */
+#customDialog{
+    margin:0 auto;
+    padding:10px;
+    width:400px;
+    background-color: rgba(0, 0, 0, 0);
+}
+#customDialog .customDialogMessage{
+    color:gray;
+}
+#customDialog #customDialogInput{
+    width:100%;
+    height:25px;
+}
+#customDialog .customDialogButtons{
+    display: flex;
+    justify-content: space-between;
+}
+#customDialog .customDialogButtons button{
+    width:100px;
+    height:30px;
+    background-color: rgb(62, 128, 170);
+}
