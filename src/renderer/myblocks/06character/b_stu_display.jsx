@@ -29,7 +29,7 @@ const jsondesc = {
     "previousStatement": null,
     "nextStatement": null,
     "colour": 120,
-    "tooltip": "",
+    "tooltip": "人物默认亮度为0，请优先使用逐渐出现",
     "helpUrl": ""
   }
 

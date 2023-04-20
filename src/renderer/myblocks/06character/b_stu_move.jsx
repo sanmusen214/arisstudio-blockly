@@ -41,7 +41,7 @@ const jsondesc = {
         "type": "field_number",
         "name": "num2",
         "min": -1000,
-        "value": 0,
+        "value": 10,
         "max": 1000,
         "precision": 0.1,
       },
@@ -92,7 +92,7 @@ stagelist.push(\`\${${value_val1}} shakeY 7 4 1\`);
       return `
 stagelist.push(\`\${${value_val1}} shakeY 4 4 1\`);
 stagelist.push(\`wait 0.3\`);
-stagelist.push(\`\${${value_val1}} shakeY 4 4 1\`);
+stagelist.push(\`\${${value_val1}} shakeY 4 3 1\`);
       `
     }else if(dropdown_drop1==="sshake"){
       return `

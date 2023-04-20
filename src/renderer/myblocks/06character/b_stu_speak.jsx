@@ -137,7 +137,7 @@ stagelist.push(\`\${${stuname}} shakeY 7 4 1\`);
         finalcode+=`
 stagelist.push(\`\${${stuname}} shakeY 4 4 1\`);
 stagelist.push(\`wait 0.3\`);
-stagelist.push(\`\${${stuname}} shakeY 4 4 1\`);
+stagelist.push(\`\${${stuname}} shakeY 4 3 1\`);
 `
       }else if(action==="sshake"){
         finalcode+=`
