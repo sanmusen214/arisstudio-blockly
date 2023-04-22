@@ -1,3 +1,4 @@
+import { message } from 'antd';
 import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
 
@@ -63,6 +64,10 @@ Blockly.Blocks[blockname] = {
 // 为自定义块添加js语言生成器
 javascriptGenerator[blockname] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC); //学生昵称
+    if(value_val1.includes(" ")){
+      message.destroy()
+      message.error("导入时的素材昵称不应含有空格")
+    }
     const value_val2 = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC); // idle
     const value_val3 = javascriptGenerator.valueToCode(block, 'val3', javascriptGenerator.ORDER_ATOMIC); // customName
     let value_val4 = javascriptGenerator.valueToCode(block, 'val4', javascriptGenerator.ORDER_ATOMIC);// 图片名列表

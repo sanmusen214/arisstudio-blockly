@@ -2,6 +2,7 @@ import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
 import { students_datamap } from '../../datamap';
 import {getValinEnv} from '../../utils/codetool'
+import { message } from 'antd';
 
 // 定义JSON格式自定义模块
 
@@ -47,6 +48,10 @@ Blockly.Blocks['b_def_student'] = {
 // 为自定义块添加js语言生成器
 javascriptGenerator['b_def_student'] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
+    if(value_val1.includes(" ")){
+      message.destroy()
+      message.error("导入时的素材昵称不应含有空格")
+    }
     const value_val2 = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC);
     if(value_val1.length==0||value_val2.length==0){
       // 如果该字符串参数空内没有任何变量，忽略掉本代码块
