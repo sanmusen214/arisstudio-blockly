@@ -9,7 +9,7 @@ import { message } from 'antd';
 // 带有映射的学生名
 const jsondesc = {
     "type": "b_def_student",
-    "message0": "人物昵称 %1 素材文件 %2 %3",
+    "message0": "人物昵称 %1 人物素材 %2 %3",
     "args0": [
       {
         "type": "input_value",
@@ -34,7 +34,7 @@ const jsondesc = {
     "previousStatement": null,
     "nextStatement": null,
     "colour": 260,
-    "tooltip": "人物素材不需要文件名后缀",
+    "tooltip": "Spr文件夹下，人物素材不需要文件名后缀",
     "helpUrl": ""
   }
 
