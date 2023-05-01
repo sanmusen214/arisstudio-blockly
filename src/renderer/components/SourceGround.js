@@ -7,6 +7,7 @@ import CoverTab from './tabmenu/CoverTab'
 import SoundTab from './tabmenu/SoundTab'
 import SETab from './tabmenu/SETab'
 import SprTab from './tabmenu/SprTab'
+import HelpTab from './tabmenu/HelpTab'
 import {Howler} from 'howler'
 
 const {Search} = Input
@@ -49,6 +50,11 @@ const buildItems=(itemlistmap)=>{
       key: 'spr',
       label: `人物`,
       children: <SprTab style={itemstyle} sprlist={itemlistmap.spr}/>,
+    },
+    {
+      key: 'help',
+      label: `帮助`,
+      children: <HelpTab style={itemstyle} />,
     },
   ]
 }
