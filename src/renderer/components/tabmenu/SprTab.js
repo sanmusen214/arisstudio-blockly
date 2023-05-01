@@ -215,10 +215,15 @@ export default function SprTab(props) {
       
       {/* 左侧列表 */}
       <Col span={6} style={props.style}>
-        {Object.keys(charsettings).map((name,ind)=>{return <div className="stuname" style={{backgroundColor:ind+5000===nowind?'lightblue':""}} //ind+5000与后面错开
-        onClick={()=>{
-          renderspr(name,"basprbox",ind+5000,-1)
-        }}>{name}</div>})}
+        {Object.keys(charsettings).map((name,ind)=>{
+          if(sprnamelist.includes(name)){
+            return <div className="stuname" style={{backgroundColor:ind+5000===nowind?'lightblue':""}} //ind+5000与后面错开
+            onClick={()=>{
+              renderspr(name,"basprbox",ind+5000,-1)
+            }}>{name}</div>
+          }
+          return <></>
+          })}
         <Divider />
         {sprnamelist.map((name,ind)=>{return <div className="stuname" style={{backgroundColor:ind===nowind?'lightblue':""}} 
         onClick={()=>{
