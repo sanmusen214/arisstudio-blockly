@@ -1,7 +1,8 @@
 import React,{useEffect, useRef, useState} from 'react'
-import {Col,Pagination,Row,Switch, message } from 'antd'
+import {Col,Divider,Pagination,Row,Switch, message } from 'antd'
 import { getBase64,getText } from 'renderer/utils/imagetool'
 import {spine,hullpos,animationlist} from "../../utils/spine-player"
+import { useLocalStorage } from 'renderer/hooks/useLocal'
 import "../../utils/spine-player.css"
 import "./SprTab.css"
 import copy from "copy-to-clipboard"
@@ -25,6 +26,8 @@ export default function SprTab(props) {
   // 差分的分页
   const [page,setPage]=useState(1)
   const [chafenlistlen,setChafenlistlen]=useState(1)
+  // 部分人物的各自设置：置顶与否attop,
+  const [charsettings,setCharsettings]=useLocalStorage("charsettings",{})
 
   const sprmap=new Map() //所有文件名（有后缀）对照file
   const sprnameset=new Set() //所有文件名（无后缀）
@@ -34,13 +37,27 @@ export default function SprTab(props) {
   })
   const [nowname,setNowname]=useState("暂无选择")
   const [nowind,setNowind]=useState(-1)
-  const [chafen,setChafen]=useState(false)
+  const [chafen,setChafen]=useState(false)//差分与否
+  // const [fixpos,setFixpos]=useState(false)//固定视角与否
   const chafenRef=useRef(chafen)
   chafenRef.current=chafen
 
   // 这一页的spr名
   const sprnamelist=[...sprnameset.values()]
   // console.log(sprnamelist)
+
+  // 置顶按钮的值
+  const [buttonontopcheck,setButtontopcheck]=useState(false)
+
+  // 差分视口是否智能
+  const [smartwin,setSmartwin]=useState(true)
+  // 获取current当下对象值
+  const smartRef=useRef(smartwin)
+  smartRef.current=smartwin
+
+  useEffect(()=>{
+    setButtontopcheck(charsettings[nowname]?true:false)
+  },[nowname])
 
   const renderspr=(eachname,elementid,nameind,page=-1)=>{
 
@@ -96,12 +113,25 @@ export default function SprTab(props) {
           // console.log(animationlist)
 
           const viewpad=50
-          const baviewport={
+          let baviewport;
+          if(smartRef.current){
+            baviewport={
             x:Math.min(...xlist)-viewpad,
             y:Math.min(...ylist)-viewpad,
             width: Math.max(...xlist)-Math.min(...xlist)+2*viewpad,
             height: Math.max(...ylist)-Math.min(...ylist)+2*viewpad,
           }
+          }else{
+            // 每个人物都固定视角
+          baviewport={
+            x:-110,
+            y:846,
+            width: 314,
+            height: 314,
+          }
+          }
+          
+          
 
           // console.log("视口",baviewport)
           
@@ -151,12 +181,30 @@ export default function SprTab(props) {
         message.success("复制成功")
         copy(nowname)
       }}>{nowname}</div>
+
+      
+      置顶：<Switch checked={buttonontopcheck} onClick={(ck)=>{
+        setButtontopcheck(ck)
+        const newcharsettings={...charsettings}
+        newcharsettings[nowname]=ck
+        if(!ck){//如果改为false，直接把键给删了
+          delete newcharsettings[nowname]
+        }
+        setCharsettings(newcharsettings)
+      }}></Switch>
+
       面部差分：<Switch checked={chafen} onClick={(ck)=>{
         setChafen((ck)=>{
           renderspr(nowname,"basprbox",nowind)
           return !ck
         })
         }}></Switch>
+
+      <span style={chafen?{}:{visibility:'hidden'}}>{smartwin?"差分识别脸部":"差分固定位置"}<Switch checked={smartwin} onClick={(ck)=>{
+        setSmartwin(ck)
+        renderspr(nowname,"basprbox",nowind)
+      }}></Switch></span>
+      
     </Row>
     <Row justify={'center'}>
       <Pagination total={chafenlistlen} current={page} pageSize={9} onChange={(newpage)=>{
@@ -167,6 +215,11 @@ export default function SprTab(props) {
       
       {/* 左侧列表 */}
       <Col span={6} style={props.style}>
+        {Object.keys(charsettings).map((name,ind)=>{return <div className="stuname" style={{backgroundColor:ind+5000===nowind?'lightblue':""}} //ind+5000与后面错开
+        onClick={()=>{
+          renderspr(name,"basprbox",ind+5000,-1)
+        }}>{name}</div>})}
+        <Divider />
         {sprnamelist.map((name,ind)=>{return <div className="stuname" style={{backgroundColor:ind===nowind?'lightblue':""}} 
         onClick={()=>{
           renderspr(name,"basprbox",ind,-1)
