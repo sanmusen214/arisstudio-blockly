@@ -39,10 +39,10 @@ export default function SettingPage({
             <a href='https://github.com/sanmusen214/arisstudio-blockly/releases' target='_blank'><Button>查看更新</Button></a>
         </Row>
         <br/>
-        <Row>导入/导出blockly项目</Row>
+        <Row>导入/保存blockly项目</Row>
         <Row>
             <Button className="loadprojectButton"><input type="file" name="file" accept='*' className="projectfile" onChange={loadProject}></input><DownloadOutlined />导入blockly项目</Button>
-            <Button onClick={saveProject}><SaveOutlined />导出blockly项目</Button>
+            <Button onClick={saveProject}><SaveOutlined />保存blockly项目</Button>
         </Row>
         <br/>
         <Row>导出脚本</Row>

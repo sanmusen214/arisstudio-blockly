@@ -9,7 +9,7 @@
  * `./src/main.js` using webpack. This gives us some performance wins.
  */
 import path from 'path';
-import { app, BrowserWindow, shell, ipcMain,nativeTheme } from 'electron';
+import { app, BrowserWindow, shell, ipcMain,nativeTheme, dialog } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
@@ -103,6 +103,23 @@ const createWindow = async () => {
       mainWindow.show();
     }
   });
+
+  mainWindow.on("close",e=>{
+    const choice = dialog.showMessageBoxSync(mainWindow, {
+      type: "info",
+      buttons: ["取消", "确认退出"],
+      title: "提示",
+      message: "确定要关闭吗",
+      defaultId: 0,
+      cancelId: 0
+    });
+    const cancel = choice === 0;
+    if (cancel) {
+      e.preventDefault();
+      // mainWindow.minimize();
+    }
+  });
+
 
   mainWindow.on('closed', () => {
     mainWindow = null;
