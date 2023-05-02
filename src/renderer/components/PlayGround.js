@@ -481,6 +481,13 @@ function PlayGround(props){
         message.success("切换界面样式",3)
     }
 
+    // 清空当前积木区
+    const confirmclear=()=>{
+        Blockly.serialization.workspaces.load({}, primaryWorkspace.current);
+        message.destroy()
+        message.warning("积木区清空")
+    }
+
     return (
     <>
         <span id="toolsbox">
@@ -494,7 +501,7 @@ function PlayGround(props){
             </Row>
         </span>
         {/* 积木区 */}
-        <span ref={blocklyDiv} id="blocklyDiv" onKeyUp={e=>console.log(e.keyCode===83 && e.ctrlKey)}/>
+        <span ref={blocklyDiv} id="blocklyDiv" onKeyUp={e=>console.log(e.keyCode===83 && e.ctrlKey)} onClick={(e)=>{console.log(e)}}/>
         <div style={{ display: 'none' }} ref={toolbox}>
             {props.children}
         </div>
@@ -553,6 +560,7 @@ function PlayGround(props){
                     setShowres={setShowres}
                     showtool={showtool}
                     setShowtool={setShowtool}
+                    confirmclear={confirmclear}
                 />
             </Modal>
         </div>

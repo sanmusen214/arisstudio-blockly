@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Row } from 'antd'
+import { Button, Row, Col, Popconfirm } from 'antd'
 import {
     DownloadOutlined,
     SaveOutlined,
@@ -29,7 +29,8 @@ export default function SettingPage({
     showres,
     setShowres,
     showtool,
-    setShowtool
+    setShowtool,
+    confirmclear
 }) {
   return (
     <div>
@@ -40,9 +41,23 @@ export default function SettingPage({
         </Row>
         <br/>
         <Row>导入/保存blockly项目</Row>
-        <Row>
-            <Button className="loadprojectButton"><input type="file" name="file" accept='*' className="projectfile" onChange={loadProject}></input><DownloadOutlined />导入blockly项目</Button>
-            <Button onClick={saveProject}><SaveOutlined />保存blockly项目</Button>
+        <Row justify={"space-between"}>
+            <Col>
+                <Button className="loadprojectButton"><input type="file" name="file" accept='*' className="projectfile" onChange={loadProject}></input><DownloadOutlined />导入blockly项目</Button>
+                <Button onClick={saveProject}><SaveOutlined />保存blockly项目</Button>
+            </Col>
+            <Col>
+                <Popconfirm
+                    title="清空积木区"
+                    description="这会清空当前积木区内容，记得保存！"
+                    onConfirm={confirmclear}
+                    onCancel={()=>{}}
+                    okText="清空！"
+                    cancelText="取消"
+                >
+                    <Button danger>清空积木区</Button>
+                </Popconfirm>
+            </Col>
         </Row>
         <br/>
         <Row>导出脚本</Row>
