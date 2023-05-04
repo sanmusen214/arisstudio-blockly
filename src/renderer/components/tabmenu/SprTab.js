@@ -6,6 +6,7 @@ import { useLocalStorage } from 'renderer/hooks/useLocal'
 import "../../utils/spine-player.css"
 import "./SprTab.css"
 import copy from "copy-to-clipboard"
+import { getcnnameof } from 'renderer/datamap'
 
 
 var myTout
@@ -220,7 +221,7 @@ export default function SprTab(props) {
             return <div className="stuname" style={{backgroundColor:ind+5000===nowind?'lightblue':""}} //ind+5000与后面错开
             onClick={()=>{
               renderspr(name,"basprbox",ind+5000,-1)
-            }}>{name}</div>
+            }}>{name+getcnnameof(name)}</div>
           }
           return <></>
           })}
@@ -228,7 +229,7 @@ export default function SprTab(props) {
         {sprnamelist.map((name,ind)=>{return <div className="stuname" style={{backgroundColor:ind===nowind?'lightblue':""}} 
         onClick={()=>{
           renderspr(name,"basprbox",ind,-1)
-        }}>{name}</div>})}
+        }}>{name+getcnnameof(name)}</div>})}
       </Col>
       {/* 右侧预览 */}
       <Col span={18} style={{position:'relative'}}>

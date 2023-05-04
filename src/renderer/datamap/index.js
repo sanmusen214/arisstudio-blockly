@@ -25,5 +25,21 @@ for(let stu of studentsjson.students){
 
 }
 
+// 封装人物名字和素材的键值对对应表，文件名改小写
+const student_datadict={}
+for(let stu of studentsjson.students){
+    student_datadict[stu.sprName.toLowerCase()]=stu.zhName
+}
+/**
+ * 给定spr文件名，不含后缀。返回中文名
+ */
+export function getcnnameof(filename){
+    const lowfilename=filename.toLowerCase()
+    if(student_datadict[lowfilename]){
+        return student_datadict[lowfilename]
+    }
+    return ""
+}
+
 // 音效
 export const sounds_datamap=soundsjson.sounds
