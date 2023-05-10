@@ -2,6 +2,7 @@ import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
 import { students_datamap } from '../../datamap';
 import { message } from 'antd';
+import myLoader from 'renderer/models/loadcmd';
 
 // 定义JSON格式自定义模块
 
@@ -25,7 +26,7 @@ const jsondesc = {
         "name": "drop2",
         "options": [
             ["普通状态","spr"],
-            ["通讯状态","sprC"]
+            ["通讯状态","sprc"]
         ]
       }
     ],
@@ -59,7 +60,7 @@ javascriptGenerator['b_student'] = function (block) {
     const dropdown_drop2 = block.getFieldValue('drop2');
     return `
 if(importArea){
-  stagelist.push(\`load ${dropdown_drop2} \${${value_val1}} ${dropdown_drop1}\`);
+  stagelist.push(\`${myLoader.loadspr(dropdown_drop2,value_val1,dropdown_drop1)}\`);
 }
 `
 

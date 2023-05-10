@@ -1,6 +1,6 @@
 import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
-
+import myImager from 'renderer/models/imgcmd';
 // 定义JSON格式自定义模块
 let blockname="b_bgpic_set"
 // 带有映射的学生名
@@ -39,7 +39,7 @@ javascriptGenerator[blockname] = function (block) {
 
 
     return `
-stagelist.push(\`bg set \${${value_val1}}\`);
+stagelist.push(\`${myImager.show(value_val1)}\`);
 `
 }
 

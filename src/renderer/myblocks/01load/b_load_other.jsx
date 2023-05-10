@@ -2,6 +2,7 @@ import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
 import { students_datamap } from '../../datamap';
 import {message} from "antd"
+import myLoader from 'renderer/models/loadcmd';
 // 定义JSON格式自定义模块
 
 // 带有映射的学生名
@@ -14,9 +15,10 @@ const jsondesc = {
         "name": "drop1",
         "options": [
             ["背景","bg"],
-            ["覆盖图片","cover"],
+            ["覆盖图片","fg"],
+            ["中层图片","mg"],
             ["背景音乐","bgm"],
-            ["音效","se"],
+            ["音效","sfx"],
         ]
       },
       {
@@ -62,7 +64,7 @@ javascriptGenerator['b_load_other'] = function (block) {
 
     return `
 if(importArea){
-    stagelist.push(\`load ${dropdown_drop1} \${${value_val1}} \${${value_val2}}\`);
+    stagelist.push(\`${myLoader.load(dropdown_drop1,value_val1,value_val2)}\`);
 }
 `
 
