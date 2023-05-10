@@ -4,7 +4,7 @@ import PlayGround, { Block, Value, Field, Shadow, Category } from '../../PlayGro
 function SpecialMenu() {
   return (
     <Category name="特殊">
-      <Block type="b_autotime" />
+      {/* <Block type="b_autotime" />
       <Block type="b_changetxt">
         <Value name="val1">
         <Shadow type="text"></Shadow>
@@ -26,7 +26,7 @@ function SpecialMenu() {
             </Value>
       </Block>
       <Block type="b_waitclick" />
-      <Block type="b_waittime" />
+      <Block type="b_waittime" /> */}
     </Category>
   )
 }

@@ -4,7 +4,7 @@ import PlayGround, { Block, Value, Field, Shadow, Category } from '../../PlayGro
 function TextMenu() {
   return (
     <Category name="文字">
-      <Block type="b_banner_both">
+      {/* <Block type="b_banner_both">
       <Value name="val1"><Shadow type="text"></Shadow></Value>
       <Value name="val2"><Shadow type="text"></Shadow></Value>
       </Block>
@@ -40,7 +40,7 @@ function TextMenu() {
       <Block type="b_text_interval"></Block>
       <Block type="b_text_setfont">
       <Value name="val1"><Shadow type="text"></Shadow></Value>
-      </Block>
+      </Block> */}
     </Category>
   )
 }

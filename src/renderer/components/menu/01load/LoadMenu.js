@@ -10,7 +10,7 @@ function LoadMenu() {
           <Shadow type="text"></Shadow>
           </Value>
         </Block>
-        <Block type="b_def_student">
+        {/* <Block type="b_def_student">
             <Value name="val1">
             <Shadow type="text"></Shadow>
             </Value>
@@ -42,7 +42,7 @@ function LoadMenu() {
             <Value name="val3">
             <Shadow type="text"></Shadow>
             </Value>
-        </Block>
+        </Block> */}
         <Block type="b_load_other">
             <Value name="val1">
             <Shadow type="text"></Shadow>
