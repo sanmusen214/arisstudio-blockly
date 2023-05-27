@@ -1,5 +1,7 @@
 import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
+import mySpecialer from 'renderer/models/specialcmd';
+import { wrapStr } from 'renderer/utils/DataTool';
 
 // 定义JSON格式自定义模块
 let blockname="b_jump"
@@ -38,6 +40,6 @@ javascriptGenerator[blockname] = function (block) {
     }
 
 
-    return `stagelist.push(\`jump \${${value_val1}}\`);`
+    return `stagelist.push(\`${mySpecialer.jump(wrapStr(value_val1))}\`);`
 }
 

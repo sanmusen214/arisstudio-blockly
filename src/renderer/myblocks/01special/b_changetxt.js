@@ -1,6 +1,7 @@
 import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
-
+import mySpecialer from 'renderer/models/specialcmd';
+import { wrapStr } from 'renderer/utils/DataTool';
 // 定义JSON格式自定义模块
 let blockname="b_changetxt"
 // 带有映射的学生名
@@ -37,6 +38,6 @@ javascriptGenerator[blockname] = function (block) {
       return ``
     }
 
-    return `stagelist.push(\`ChangeTxt \${${value_val1}}\`);`
+    return `stagelist.push(\`${mySpecialer.switch(wrapStr(value_val1))}\`);`
 }
 

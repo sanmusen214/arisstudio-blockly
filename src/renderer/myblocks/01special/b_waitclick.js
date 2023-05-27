@@ -1,6 +1,6 @@
 import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
-
+import mySpecialer from 'renderer/models/specialcmd';
 // 定义JSON格式自定义模块
 let blockname="b_waitclick"
 // 带有映射的学生名
@@ -26,6 +26,6 @@ Blockly.Blocks[blockname] = {
 // 为自定义块添加js语言生成器
 javascriptGenerator[blockname] = function (block) {
 
-    return `stagelist.push(\`==等待点击\`);`
+    return `stagelist.push(\`${mySpecialer.breakpoint()}\`);`
 }
 

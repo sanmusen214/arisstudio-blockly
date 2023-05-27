@@ -1,6 +1,6 @@
 import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
-
+import mySpecialer from 'renderer/models/specialcmd';
 // 定义JSON格式自定义模块
 let blockname="b_waittime"
 // 带有映射的学生名
@@ -37,6 +37,6 @@ javascriptGenerator[blockname] = function (block) {
     const number_num1 = block.getFieldValue('num1');
 
 
-    return `stagelist.push(\`wait ${number_num1}\`);`
+    return `stagelist.push(\`${mySpecialer.wait(number_num1)}\`);`
 }
 

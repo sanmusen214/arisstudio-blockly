@@ -1,5 +1,7 @@
 import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
+import mySpecialer from 'renderer/models/specialcmd';
+import { wrapStr } from 'renderer/utils/DataTool';
 
 // 定义JSON格式自定义模块
 let blockname="b_target"
@@ -37,6 +39,6 @@ javascriptGenerator[blockname] = function (block) {
       return ``
     }
 
-    return `stagelist.push(\`target \${${value_val1}}\`);`
+    return `stagelist.push(\`${mySpecialer.target(wrapStr(value_val1))}\`);`
 }
 
