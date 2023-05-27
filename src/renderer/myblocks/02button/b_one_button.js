@@ -52,8 +52,8 @@ javascriptGenerator[blockname] = function (block) {
     }
     const statements_sta1=javascriptGenerator.statementToCode(block,'sta1');
     const dropdown_drop1 = block.getFieldValue('drop1');
-    const wordS=dropdown_drop1!=="0"?'S':'';
-    const selnum=wordS?' '+dropdown_drop1:'';
+    const wordS=dropdown_drop1!=="0"?'':'';
+    const selnum=wordS?''+dropdown_drop1:'';
 
     const timestamp=generateTime();
 
@@ -63,7 +63,7 @@ function buttonfunc${timestamp}(){
 const funcincnum=incnum;
 incnum+=1;
 
-stagelist.push(\`button${wordS}${selnum} '\${${value_val1}}' '\${'${timestamp+"caseA"}'+funcincnum}'\`);
+stagelist.push(\`select${wordS}${selnum} \${${value_val1}} \${'${timestamp+"caseA"}'+funcincnum}\`);
 stagelist.push(\`target \${'${timestamp+"caseA"}'+funcincnum}\`)
 ${statements_sta1.trim()}
 }

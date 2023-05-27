@@ -76,8 +76,8 @@ javascriptGenerator[blockname] = function (block) {
     const statements_sta3=javascriptGenerator.statementToCode(block,'sta3');
 
     const dropdown_drop1 = block.getFieldValue('drop1');
-    const wordS=dropdown_drop1!=="0"?'S':'';
-    const selnum=wordS?' '+dropdown_drop1:'';
+    const wordS=dropdown_drop1!=="0"?'':'';
+    const selnum=wordS?''+dropdown_drop1:'';
 
 
 
@@ -88,7 +88,7 @@ function buttonfunc${timestamp}(){
 const funcincnum=incnum;
 incnum+=1;
 
-stagelist.push(\`button${wordS}${selnum} '\${${value_val1}}' '\${'${timestamp+"caseA"}'+funcincnum}' '\${${value_val2}}' '\${'${timestamp+"caseB"}'+funcincnum}' '\${${value_val3}}' '${timestamp+"caseC"}'\`);
+stagelist.push(\`select${wordS}${selnum} \${${value_val1}} \${'${timestamp+"caseA"}'+funcincnum} \${${value_val2}} \${'${timestamp+"caseB"}'+funcincnum} \${${value_val3}} \${'${timestamp+"caseC"}'+funcincnum}\`);
 
 stagelist.push(\`target \${'${timestamp+"caseA"}'+funcincnum}\`)
 ${statements_sta1.trim()}
@@ -98,7 +98,7 @@ stagelist.push(\`target \${'${timestamp+"caseB"}'+funcincnum}\`)
 ${statements_sta2.trim()}
 stagelist.push(\`jump \${'${timestamp+"IfFinal"}'+funcincnum}\`)
 
-stagelist.push(\`target ${timestamp+"caseC"}\`)
+stagelist.push(\`target \${'${timestamp+"caseC"}'+funcincnum}\`)
 ${statements_sta3.trim()}
 stagelist.push(\`jump \${'${timestamp+"IfFinal"}'+funcincnum}\`)
 
