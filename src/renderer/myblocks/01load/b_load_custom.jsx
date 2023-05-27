@@ -1,13 +1,14 @@
 import { message } from 'antd';
 import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
-
+import myLoader from 'renderer/models/loadcmd';
+import { wrapStr } from 'renderer/utils/DataTool';
 // 定义JSON格式自定义模块
 let blockname="b_load_custom"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "人物昵称 %1 缩放比例 %2 空闲状态 %3 自定义名称 %4 图片名(含后缀) %5 %6",
+    "message0": "人物昵称 %1 缩放比例 %2 空闲状态 %3 spr名称 %4 png图片名(含后缀) %5 %6",
     "args0": [
       {
         "type": "input_value",
@@ -41,8 +42,8 @@ const jsondesc = {
         "type": "field_dropdown",
         "name": "drop1",
         "options": [
-            ["普通状态","custom"],
-            ["通讯状态","customC"]
+            ["普通状态","spr"],
+            ["通讯状态","sprc"]
         ]
       },
     ],
@@ -50,7 +51,7 @@ const jsondesc = {
     "previousStatement": null,
     "nextStatement": null,
     "colour": 260,
-    "tooltip": "其他素材需要写明文件名后缀",
+    "tooltip": "其他素材需要写明文件名后缀，用逗号分隔",
     "helpUrl": ""
   }
 
@@ -66,7 +67,7 @@ javascriptGenerator[blockname] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC); //学生昵称
     if(value_val1.includes(" ")){
       message.destroy()
-      message.error("导入时的素材昵称不应含有空格")
+      message.error("导入时的人物昵称不应含有空格")
     }
     const value_val2 = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC); // idle
     const value_val3 = javascriptGenerator.valueToCode(block, 'val3', javascriptGenerator.ORDER_ATOMIC); // customName
@@ -82,12 +83,12 @@ javascriptGenerator[blockname] = function (block) {
     }
 
     // 生成逗号图片名
-    value_val4=value_val4.split(" ").join(",")
+    // value_val4=value_val4.split(" ").join(",")
 
 
     return `
 if(importArea){
-    stagelist.push(\`load ${dropdown_drop1} \${${value_val1}} ${number_num1} \${${value_val2}} \${${value_val3}} [\${${value_val4}}]\`);
+    stagelist.push(\`${myLoader.loaddefspr(dropdown_drop1,wrapStr(value_val1),number_num1,wrapStr(value_val2),wrapStr(value_val3),wrapStr(value_val4))}\`)
 }
 `
 

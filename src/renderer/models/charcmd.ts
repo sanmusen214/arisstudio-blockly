@@ -105,5 +105,5 @@ class myChar{
 
 }
 
-const mychar=new myChar();
-export default mychar;
+const myChar=new myChar();
+export default myChar;

@@ -34,3 +34,10 @@ export const findneededFile=(list,fname)=>{
 
     return null
 }
+
+/**
+ * 从blockly字符串块传来的字符串套一个\`${}\`
+ */
+export const wrapStr=(str)=>{
+    return `\${${str}}`
+}

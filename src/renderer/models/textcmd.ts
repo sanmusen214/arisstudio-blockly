@@ -106,5 +106,5 @@ class Mytext{
         return `banner3 ${textside} ${textside2} ${textmain}`
     }
 }
-const mytext=new Mytext();
-export default mytext;
+const myTexter=new Mytext();
+export default myTexter;

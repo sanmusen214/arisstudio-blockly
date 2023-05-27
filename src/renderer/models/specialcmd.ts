@@ -53,5 +53,5 @@ class Myspecial{
         return `switch ${filename}`
     }
 }
-const myspecial=new Myspecial();
-export default myspecial;
+const mySpecialer=new Myspecial();
+export default mySpecialer;

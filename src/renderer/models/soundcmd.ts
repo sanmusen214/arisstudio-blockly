@@ -32,5 +32,5 @@ class Mysound{
     }
 
 }
-const mysound=new Mysound();
-export default mysound;
+const mySounder=new Mysound();
+export default mySounder;

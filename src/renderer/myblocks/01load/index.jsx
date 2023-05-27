@@ -4,7 +4,7 @@
 
 import "./b_load"
 import "./b_student"
-// import "./b_def_student"
+import "./b_def_student"
 import "./b_load_other"
-// import "./b_load_char"
-// import "./b_load_custom"
+import "./b_load_char"
+import "./b_load_custom"

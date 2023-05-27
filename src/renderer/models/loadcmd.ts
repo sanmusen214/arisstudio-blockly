@@ -10,7 +10,7 @@ class myLoad{
     }
 
     /**
-     * 加载自定义角色
+     * 加载自定义spr角色
      * @param type spr:默认,sprc:通讯
      * @param nameId 人物昵称
      * @param scale 缩放

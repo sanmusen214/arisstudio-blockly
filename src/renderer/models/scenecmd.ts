@@ -26,5 +26,5 @@ class Myscene{
      */
 }
 
-const myscene=new Myscene();
-export default myscene;
+const myScener=new Myscene();
+export default myScener;

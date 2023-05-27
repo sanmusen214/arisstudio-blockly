@@ -3,6 +3,7 @@ import { javascriptGenerator } from 'blockly/javascript';
 import { students_datamap } from '../../datamap';
 import {message} from "antd"
 import myLoader from 'renderer/models/loadcmd';
+import { wrapStr } from 'renderer/utils/DataTool';
 // 定义JSON格式自定义模块
 
 // 带有映射的学生名
@@ -14,9 +15,9 @@ const jsondesc = {
         "type": "field_dropdown",
         "name": "drop1",
         "options": [
-            ["背景","bg"],
-            ["覆盖图片","fg"],
+            ["背景图片","bg"],
             ["中层图片","mg"],
+            ["覆盖图片","fg"],
             ["背景音乐","bgm"],
             ["音效","sfx"],
         ]
@@ -54,7 +55,7 @@ javascriptGenerator['b_load_other'] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
     if(value_val1.includes(" ")){
       message.destroy()
-      message.error("导入时的素材昵称不应含有空格")
+      message.error("导入时的人物昵称不应含有空格")
     }
     const value_val2 = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC);
     if(value_val1.length==0||value_val2.length==0){
@@ -64,7 +65,7 @@ javascriptGenerator['b_load_other'] = function (block) {
 
     return `
 if(importArea){
-    stagelist.push(\`${myLoader.load(dropdown_drop1,value_val1,value_val2)}\`);
+    stagelist.push(\`${myLoader.load(dropdown_drop1,wrapStr(value_val1),wrapStr(value_val2))}\`);
 }
 `
 

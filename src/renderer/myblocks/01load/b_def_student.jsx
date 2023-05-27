@@ -3,6 +3,8 @@ import { javascriptGenerator } from 'blockly/javascript';
 import { students_datamap } from '../../datamap';
 import {getValinEnv} from '../../utils/codetool'
 import { message } from 'antd';
+import myLoader from 'renderer/models/loadcmd';
+import { wrapStr } from 'renderer/utils/DataTool';
 
 // 定义JSON格式自定义模块
 
@@ -26,7 +28,7 @@ const jsondesc = {
         "name": "drop1",
         "options": [
             ["普通状态","spr"],
-            ["通讯状态","sprC"]
+            ["通讯状态","sprc"]
         ]
       }
     ],
@@ -34,7 +36,7 @@ const jsondesc = {
     "previousStatement": null,
     "nextStatement": null,
     "colour": 260,
-    "tooltip": "Spr文件夹下，人物素材不需要文件名后缀",
+    "tooltip": "spr文件夹下，人物素材不需要文件名后缀",
     "helpUrl": ""
   }
 
@@ -50,7 +52,7 @@ javascriptGenerator['b_def_student'] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
     if(value_val1.includes(" ")){
       message.destroy()
-      message.error("导入时的素材昵称不应含有空格")
+      message.error("导入时的人物昵称不应含有空格")
     }
     const value_val2 = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC);
     if(value_val1.length==0||value_val2.length==0){
@@ -61,7 +63,7 @@ javascriptGenerator['b_def_student'] = function (block) {
 
     return `
 if(importArea){
-  stagelist.push(\`load ${dropdown_drop1} \${${value_val1}} \${${value_val2}}\`);
+  stagelist.push(\`${myLoader.loadspr(dropdown_drop1,wrapStr(value_val1),wrapStr(value_val2))}\`);
 }
 `
     

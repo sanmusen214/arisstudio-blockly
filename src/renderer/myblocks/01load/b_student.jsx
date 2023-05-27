@@ -3,7 +3,7 @@ import { javascriptGenerator } from 'blockly/javascript';
 import { students_datamap } from '../../datamap';
 import { message } from 'antd';
 import myLoader from 'renderer/models/loadcmd';
-
+import { wrapStr } from 'renderer/utils/DataTool';
 // 定义JSON格式自定义模块
 
 // 带有映射的学生名
@@ -50,7 +50,7 @@ javascriptGenerator['b_student'] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
     if(value_val1.includes(" ")){
       message.destroy()
-      message.error("导入时的素材昵称不应含有空格")
+      message.error("导入时的人物昵称不应含有空格")
     }
     if(value_val1.length==0){
       // 如果该字符串参数空内没有任何变量，忽略掉本代码块
@@ -60,7 +60,7 @@ javascriptGenerator['b_student'] = function (block) {
     const dropdown_drop2 = block.getFieldValue('drop2');
     return `
 if(importArea){
-  stagelist.push(\`${myLoader.loadspr(dropdown_drop2,value_val1,dropdown_drop1)}\`);
+  stagelist.push(\`${myLoader.loadspr(dropdown_drop2,wrapStr(value_val1),dropdown_drop1)}\`);
 }
 `
 
