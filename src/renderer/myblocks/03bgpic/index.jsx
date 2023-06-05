@@ -1,7 +1,0 @@
-// import "./b_bgpic_change"
-// import "./b_bgpic_changesmoth"
-// import "./b_bgpic_display"
-import "./b_bgpic_set"
-// import "./b_bgpic_shake"
-// import "./b_ftpic_display"
-// import "./b_ftpic_set"

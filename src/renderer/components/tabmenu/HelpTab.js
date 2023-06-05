@@ -10,7 +10,7 @@ export default function HelpTab(props) {
         <Divider />
 
         <h2>素材导入后 AS控制台 "key does not exist in the dictionary"</h2>
-        素材昵称不应当有空格，最好是英文，顺便检查导入时和使用时是不是字打的不一样<br/>
+        素材昵称不应当有空格，最好是英文，顺便检查导入时和使用时是不是名字打的不一样<br/>
         加载人物素材不需要打文件名后缀，其他导入都需要文件名后缀<br/><br/>
         错误示例： <code>加载人物昵称"<code  style={{color:'red'}}>日 富 美</code>"人物对象 日富美 普通状态</code><br />
         正确示例： <code>加载人物昵称"<code style={{color:'green'}}>rifumei</code>"人物对象 日富美 普通状态</code><br />
@@ -33,7 +33,7 @@ export default function HelpTab(props) {
         <Divider />
 
         <h2>可视化预览素材失败或爱丽丝工坊加载素材失败</h2>
-        根据<a href="https://github.com/Tualin14/ArisStudio/wiki">说明</a>将文件放进正确的位置。注意character文件夹是放自定义人物的地方，spr文件夹是放游戏里spr人物素材的地方
+        根据<a href="https://as.t14.me/docs/as-commands/load-commands">说明</a>将文件放进正确的位置。注意spr文件夹是放游戏里spr人物素材的地方
         
 
 

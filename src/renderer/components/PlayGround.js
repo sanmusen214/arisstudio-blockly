@@ -25,7 +25,6 @@ import {Howler} from 'howler'
 // 全局变量
 import { GlobalContext } from 'renderer/config/globalContext';
 // 设置脚本解析
-import { identifytxt } from 'renderer/utils/stateparse';
 import SettingPage from './SettingPage';
 
 
@@ -81,8 +80,6 @@ function PlayGround(props){
     let [showtool,setShowtool]=useLocalStorage("showtool",true)
     // 生成的代码框，esultcode当前脚本
     let [resultcode,setResultcode]=useState("")
-    // true：显示文字脚本，false：显示人物状态
-    let [showres,setShowres]=useLocalStorage("showres",true)
     // 是否显示资源页
     let [sourcepageopen,setSourcepageopen]=useState(false)
     // Data资源
@@ -93,8 +90,6 @@ function PlayGround(props){
         ["sound",[]],
         ["spr",[]],
     ]))
-    // 人物状态字符串
-    let [charstate,setCharstate]=useState("")
     // 设置页面是否打开
     let [settingopen,setSettingopen]=useState(false)
 
@@ -198,11 +193,12 @@ function PlayGround(props){
                 const mysoundlist=[] // Data/SoundEffect/
                 const mysprlist=[] // Data/Spr/
                 const mytypemap={
-                    "Data/Bgm/":mybgmlist,
-                    "Data/Image/Background/":mybcglist,
-                    "Data/Image/Cover/":mycoverlist,
-                    "Data/SoundEffect/":mysoundlist,
-                    "Data/Spr/":mysprlist
+                    "data/audio/bgm/":mybgmlist,
+                    "data/image/background/":mybcglist,
+                    "data/image/midground/":mycoverlist,
+                    "data/image/foreground/":mycoverlist,
+                    "data/audio/sfx/":mysoundlist,
+                    "data/character/spr":mysprlist
                 }
                 for (let file of eve.target.files){
                     for(let type in mytypemap){
@@ -272,34 +268,7 @@ function PlayGround(props){
         try {
             window.eval(playcode)
             setResultcode(window.txtcode)
-            const identires=identifytxt(window.txtcode)
             // console.log(identires)
-            if(identires.success){
-                let showstring=""
-                for(let eachcharname in identires.res){
-                    const eachchar=identires.res[eachcharname]
-                    if(eachchar.show){
-                        showstring+=eachchar.nickname+"（显示）\n"
-                        showstring+="  x轴："+eachchar.x+"  y轴："+eachchar.y+"\n"
-                        showstring+="  亮度："+eachchar.light+"  图层："+eachchar.level+"\n"
-                        showstring+="  心情："+(eachchar.emo?eachchar.emo:"无")+"  脸部："+(eachchar.facestate?eachchar.facestate:"默认Idle_01")+"\n"
-                        showstring+="  距离："+(eachchar.close?"靠近":"正常")+"  姿态："+(eachchar.down?"倒下":"站立")+"\n"
-                    }
-                }
-                for(let eachcharname in identires.res){
-                    const eachchar=identires.res[eachcharname]
-                    if(!eachchar.show){
-                        showstring+=eachchar.nickname+"（隐藏）\n"
-                        showstring+="  x轴："+eachchar.x+"  y轴："+eachchar.y+"\n"
-                        showstring+="  亮度："+eachchar.light+"  图层："+eachchar.level+"\n"
-                        showstring+="  心情："+(eachchar.emo?eachchar.emo:"无")+"  脸部："+(eachchar.facestate?eachchar.facestate:"默认Idle_01")+"\n"
-                        showstring+="  距离："+(eachchar.close?"靠近":"正常")+"  姿态："+(eachchar.down?"倒下":"站立")+"\n"
-                    }
-                }
-                setCharstate(showstring)
-            }else{
-                setCharstate(identires.res)
-            }
         } catch (error) {
             setResultcode(`生成脚本时出错啦，你可以反馈该问题：${error.message}`)
         }
@@ -506,21 +475,12 @@ function PlayGround(props){
             {props.children}
         </div>
         {/* 生成的代码 显示框 */}
-        {showres?(
         <textarea 
             value={resultcode}
             spellCheck={false}
             style={showtool?{}:{display:"none"}} 
             id="rescodebox" 
         />
-        ):(
-        <textarea 
-            value={charstate} 
-            spellCheck={false} 
-            style={showtool?{}:{display:"none"}} 
-            id="rescodebox"
-        />)
-        }
         {/* 资源页 */}
         <div id="sourcemodal">
             <Modal width={"80%"} style={{top:'25px'}} title="资源浏览" open={sourcepageopen}
@@ -556,8 +516,6 @@ function PlayGround(props){
                     getChatscript={getChatscript}
                     changeTheme={changeTheme}
                     darktheme={darktheme}
-                    showres={showres}
-                    setShowres={setShowres}
                     showtool={showtool}
                     setShowtool={setShowtool}
                     confirmclear={confirmclear}

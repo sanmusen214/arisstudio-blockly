@@ -125,10 +125,10 @@ export default function SprTab(props) {
           }else{
             // 每个人物都固定视角
           baviewport={
-            x:-110,
-            y:846,
-            width: 314,
-            height: 314,
+            x:-140,
+            y:786,
+            width: 364,
+            height: 364,
           }
           }
           

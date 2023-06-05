@@ -2,7 +2,7 @@ import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import icon from '../../assets/icon.svg';
 import './App.css';
 import PlayGround from './components/PlayGround';
-import Toolbox from './components/Toolbox';
+import Toolbox from './myblocks/Toolbox';
 import { GlobalContext } from './config/globalContext';
 // 引入的同时让所有自定义模块注入
 import './myblocks'

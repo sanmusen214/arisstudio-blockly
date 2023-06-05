@@ -32,6 +32,13 @@ class myImage{
     }
 
     /**
+     * @param action show渐入/hide渐出/appear直接出现/disappear直接消失
+     */
+    display=(nameId, action)=>{
+        return `${nameId} ${action}`
+    }
+
+    /**
      * 透明度变化
      * @param nameId 素材昵称
      * @param alpha 0~1 透明度
@@ -57,7 +64,7 @@ class myImage{
      * @param x 坐标
      * @param y 坐标
      */
-    postition=(nameId, x:number, y:number)=>{
+    position=(nameId, x:number, y:number)=>{
         return `${nameId} ${x} ${y}`
     }
 
@@ -79,7 +86,7 @@ class myImage{
      * @param y 值
      * @param time 时间
      */
-    movepostition=(nameId, x:number, y:number, time:number=0.5)=>{
+    moveposition=(nameId, x:number, y:number, time:number=0.5)=>{
         return `${nameId} pm ${x} ${y} ${time}`
     }
 

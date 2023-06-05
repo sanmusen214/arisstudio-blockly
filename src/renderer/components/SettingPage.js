@@ -26,8 +26,6 @@ export default function SettingPage({
     getChatscript,
     changeTheme,
     darktheme,
-    showres,
-    setShowres,
     showtool,
     setShowtool,
     confirmclear
@@ -69,12 +67,12 @@ export default function SettingPage({
             
             <Button onClick={downloadCode}><ContainerOutlined/>导出脚本</Button>
         </Row>
-        <br/>
+        {/* <br/>
         <Row>AI语音</Row>
         <Row>
             <Button onClick={getChattxt}><SolutionOutlined/>导出语音文本</Button>
             <Button onClick={getChatscript}><NotificationOutlined/>导出含语音脚本</Button>
-        </Row>
+        </Row> */}
         <br/>
         <Row>显示模式</Row>
         <Row>
@@ -82,13 +80,9 @@ export default function SettingPage({
         </Row>
         <br/>
         <Row>
-        右侧当前显示：{showres?"脚本":"状态"}
-        </Row>
-        <Row>
             <Button onClick={()=>{
                 setShowtool((tool)=>{return !tool})
             }}><CalendarOutlined />{showtool?"隐藏右侧框":"显示右侧框"}</Button>
-            <Button onClick={()=>setShowres(!showres)}>{showres?<><UserOutlined /> 转显示人物状态</>:<><ProfileOutlined /> 转显示文本脚本</>}</Button>
         </Row>
     </div>
   )

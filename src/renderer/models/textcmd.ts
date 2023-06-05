@@ -24,14 +24,14 @@ class Mytext{
      * 设置文本内容
      * 本命令自带断点，即文本显示完毕后，会暂停并等待点击事件。
      */
-    text=(text:string,name:string,group:string)=>{
+    text=(name:string,group:string,text:string)=>{
         return `t ${name} ${group} ${text}`
     }
 
     /**
      * 设置文本内容并不带断点
      */
-    textcontinue=(text:string,name:string,group:string)=>{
+    textcontinue=(name:string,group:string,text:string)=>{
         return `tc ${name} ${group} ${text}`
     }
 
@@ -88,8 +88,8 @@ class Mytext{
     /**
      * 一行横幅
      */
-    banner=(text:string)=>{
-        return `banner ${text}`
+    banner=(textmain:string)=>{
+        return `banner ${textmain}`
     }
 
     /**
