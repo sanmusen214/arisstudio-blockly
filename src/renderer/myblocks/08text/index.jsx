@@ -1,0 +1,7 @@
+import "./b_text_autotime"
+import "./b_text_hide"
+import "./b_text_txt"
+import "./b_text_highlight"
+import "./b_text_side"
+import "./b_text_label"
+import "./b_text_banner"

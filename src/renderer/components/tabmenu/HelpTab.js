@@ -23,7 +23,7 @@ export default function HelpTab(props) {
         <Divider />
 
         <h2>有些积木不知道怎么用</h2>
-        积木拽出来，鼠标悬停在上面会有提示，或者<a href="https://space.bilibili.com/7331920?spm_id_from=333.1007.0.0" target="_blank">看可视化视频教程</a>或<a href="https://github.com/Tualin14/ArisStudio/wiki" target="_blank">爱丽丝工坊文档</a>或群里问人：647177204
+        积木拽出来，鼠标悬停在上面会有提示，或者<a href="https://space.bilibili.com/7331920?spm_id_from=333.1007.0.0" target="_blank">看可视化视频教程</a>或<a href="https://as.t14.me/docs/as-commands/load-commands" target="_blank">爱丽丝工坊文档</a>或群里问人：647177204
 
         <Divider />
         

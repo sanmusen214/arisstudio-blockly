@@ -14,7 +14,6 @@ export default function Menu02() {
       <Block type="b_pic_move">
         <Value name="val1"><Shadow type="text" /></Value>
       </Block>
-      hao
       <Block type="b_pic_movexy">
         <Value name="val1"><Shadow type="text" /></Value>
       </Block>

@@ -22,88 +22,79 @@ class Mytext{
 
     /**
      * 设置文本内容
-     * 本命令自带断点，即文本显示完毕后，会暂停并等待点击事件。
+     * @param iscontinue 是否连续，true时不带断点，false时带断点
      */
-    text=(name:string,group:string,text:string)=>{
-        return `t ${name} ${group} ${text}`
-    }
-
-    /**
-     * 设置文本内容并不带断点
-     */
-    textcontinue=(name:string,group:string,text:string)=>{
-        return `tc ${name} ${group} ${text}`
+    text=(name:string,group:string,text:string,iscontinue:boolean)=>{
+        if(iscontinue){
+            return `tc '${name}' '${group}' '${text}'`
+        }else{
+            return `t '${name}' '${group}' '${text}'`
+        }
+        
     }
 
     /**
      * 设置文本内容并高亮指定人物
-     * 本命令自带断点，即文本显示完毕后，会暂停并等待点击事件。
+     * @param iscontinue 是否连续，true时不带断点，false时带断点
      */
-    texthighlight=(nameId:string,name:string,group:string,text:string)=>{
-        return `th ${nameId} ${name} ${group} ${text}}`
+    texthighlight=(nameId:string,name:string,group:string,text:string,iscontinue:boolean)=>{
+        if(iscontinue){
+            return `thc ${nameId} '${name}' '${group}' '${text}'`
+        }else{
+            return `th ${nameId} '${name}' '${group}' '${text}'`
+        }
+        
     }
 
     /**
-     * 设置文本内容并高亮指定人物，不带断点
+     * 文本框 设置文本内容
+     * @param position middle:画面中间 bottom:底部
+     * @param iscontinue 是否连续，true时不带断点，false时带断点
+     * 
      */
-    texthighlightcontinue=(nameId:string,name:string,group:string,text:string)=>{
-        return `thc ${nameId} ${name} ${group} ${text}}`
-    }
-
-    /**
-     * 中部文本框 设置文本内容 自带断点
-     */
-    textmiddle=(text:string)=>{
-        return `mt ${text}`
-    }
-
-    /**
-     * 中部文本框 设置文本内容并不带断点
-     */
-    textmiddlecontinue=(text:string)=>{
-        return `mtc ${text}`
-    }
-
-    /**
-     * 底部文本框 设置文本内容 自带断点
-     */
-    bottometext=(text:string)=>{
-        return `bt ${text}`
-    }
-
-    /**
-     * 底部文本框 设置文本内容并不带断点
-     */
-    bottomtextcontinue=(text:string)=>{
-        return `btc ${text}`
+     sidetext=(text:string,position:string,iscontinue:boolean)=>{
+        if(position==="middle"){
+            if(iscontinue){
+                return `mtc '${text}'`
+            }else{
+                return `mt '${text}'`
+            }
+        }else{
+            if(iscontinue){
+                return `btc '${text}'`
+            }else{
+                return `bt '${text}'`
+            }
+        }
+        
     }
 
     /**
      * 小标题
      */
     label=(text:string)=>{
-        return `label ${text}`
+        return `label '${text}'`
     }
 
     /**
      * 一行横幅
      */
     banner=(textmain:string)=>{
-        return `banner ${textmain}`
+        return `banner '${textmain}'`
     }
 
     /**
      * 两行横幅
      */
     banner2=(textmain:string,textside:string)=>{
-        return `banner2 ${textside} ${textmain}`
+        return `banner '${textside}' '${textmain}'`
     }
 
     /**
      * 三行横幅
      */
     banner3=(textmain:string,textside:string,textside2:string)=>{
-        return `banner3 ${textside} ${textside2} ${textmain}`
+        return `banner '${textside}' '${textside2}' '${textmain}'`
     }
 }
 const myTexter=new Mytext();

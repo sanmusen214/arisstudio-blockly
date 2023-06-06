@@ -1,6 +1,6 @@
 class myChar{
     /**
-     * 带有渐变高亮的 显示/隐藏
+     * 带有渐变高亮的 显示show/隐藏hide
      */
     show=(nameId:string,type:string)=>{
         return `${nameId} ${type}`
@@ -8,10 +8,17 @@ class myChar{
 
 
     /**
-     * 直接出现/消失
+     * 直接出现appear/消失disappear
      */
     appear=(nameId:string,type:string)=>{
         return `${nameId} ${type}`
+    }
+
+    /**
+     * @param action show渐入/hide渐出/appear直接出现/disappear直接消失
+     */
+    display=(nameId:string, action:string)=>{
+        return `${nameId} ${action}`
     }
 
     /**
@@ -37,6 +44,13 @@ class myChar{
      */
     skin=(nameId:string,skin:string)=>{
         return `${nameId} skin ${skin}`
+    }
+
+    /**
+     * 表情
+     */
+    emo=(nameId:string,emo:string)=>{
+        return `${nameId} emo ${emo}`
     }
 
     /**
@@ -99,8 +113,28 @@ class myChar{
      * 靠近/返回
      * @param type "close"/"back"
      */
-    movein=(nameId:string,type:string){
+    movein=(nameId:string,type:string)=>{
         return `${nameId} ${type}`
+    }
+
+    nod=(nameId:string)=>{
+        return this.shake(nameId,"ys",-3,1,6)
+    }
+
+    jump=(nameId:string)=>{
+        return this.shake(nameId,"ys",3,1,6)
+    }
+
+    jump2=(nameId:string)=>{
+        return this.shake(nameId,"ys",3,1,6)
+    }
+
+    sshake=(nameId:string)=>{
+        return this.shake(nameId,"xs",3,1,6)
+    }
+
+    bshake=(nameId:string)=>{
+        return this.shake(nameId,"xs",3,1,6)
     }
 
 }

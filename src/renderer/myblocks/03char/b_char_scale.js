@@ -1,13 +1,14 @@
 import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
-import mySounder from 'renderer/models/soundcmd';
+import myCharer from 'renderer/models/charcmd';
 import { wrapStr } from 'renderer/utils/DataTool';
+
 // 定义JSON格式自定义模块
-let blockname="b_sound_loop"
+let blockname="b_char_scale"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "声音昵称 %1 设置为 %2",
+    "message0": "人物昵称 %1 缩放至 %2, 耗时 %3 秒",
     "args0": [
       {
         "type": "input_value",
@@ -15,19 +16,27 @@ const jsondesc = {
         "check": "String"
       },
       {
-        "type": "field_dropdown",
-        "name": "drop1",
-        "options": [
-            ["循环播放","loop"],
-            ["播放一次","once"]
-        ]
+        "type": "field_number",
+        "name": "num1",
+        "min": 0,
+        "value": 0.5,
+        "max": 1,
+        "precision": 0.1,
+      },
+      {
+        "type": "field_number",
+        "name": "num2",
+        "min": 0,
+        "value": 0,
+        "max": 1000,
+        "precision": 0.1,
       },
     ],
     "inputsInline": true,
     "previousStatement": null,
     "nextStatement": null,
     "colour": 230,
-    "tooltip": "音效默认播放一次，背景音乐默认循环播放",
+    "tooltip": "",
     "helpUrl": ""
   }
 
@@ -41,9 +50,11 @@ Blockly.Blocks[blockname] = {
 // 为自定义块添加js语言生成器
 javascriptGenerator[blockname] = function (block) {
     const nickname = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
-    const type = block.getFieldValue('drop1');
+    const scale = block.getFieldValue('num1');
+    const spendtime = block.getFieldValue('num2');
 
 
-    return `stagelist.push(\`${mySounder.loop(wrapStr(nickname),type)}\`);`
+
+    return `stagelist.push(\`${myCharer.scale(wrapStr(nickname),scale,spendtime)}\`);`
 }
 

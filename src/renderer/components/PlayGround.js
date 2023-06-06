@@ -26,7 +26,8 @@ import {Howler} from 'howler'
 import { GlobalContext } from 'renderer/config/globalContext';
 // 设置脚本解析
 import SettingPage from './SettingPage';
-
+// 积木背包
+import {Backpack} from '@blockly/workspace-backpack';
 
 Blockly.setLocale(locale);
 
@@ -76,6 +77,9 @@ function PlayGround(props){
     let [autoturn,setAutoturn]=useState(true)
     // 上次项目文件序列化
     let [projectobj,setProjectobj]=useLocalStorage("saveproject",defaultproject)
+    // backpack序列化
+    let backpack
+    let [backpackobj,setBackpackobj]=useLocalStorage("backpack",{})
     // 是否显示右侧工具框
     let [showtool,setShowtool]=useLocalStorage("showtool",true)
     // 生成的代码框，esultcode当前脚本
@@ -114,6 +118,13 @@ function PlayGround(props){
                     
                 }
             }
+            if(backpack){
+                try {
+                    backpack.setContents(backpackobj)
+                } catch (error) {
+                    
+                }
+            }
         },500)
 
     },[])
@@ -142,7 +153,14 @@ function PlayGround(props){
                 },
             );
         }
-
+        backpack = new Backpack(primaryWorkspace.current);
+        Blockly.Msg['EMPTY_BACKPACK'] = '清空背包';
+        Blockly.Msg['REMOVE_FROM_BACKPACK'] = '从背包移除';
+        Blockly.Msg['COPY_TO_BACKPACK'] = '添加至背包';
+        Blockly.Msg['COPY_ALL_TO_BACKPACK'] = '全部添加至背包';
+        Blockly.Msg['PASTE_ALL_FROM_BACKPACK'] = '从背包粘贴全部';
+        backpack.init()
+        
 
         if (initialXml) {
             Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), primaryWorkspace.current);
@@ -209,15 +227,11 @@ function PlayGround(props){
                 }
                 const mynewsourcemap=new Map()
                 mynewsourcemap.set("bgm",mybgmlist)
-                message.success("背景音乐素材"+mybgmlist.length+"个",3)
                 mynewsourcemap.set("bcg",mybcglist)
-                message.success("背景图片素材"+mybcglist.length+"个",3)
                 mynewsourcemap.set("cover",mycoverlist)
-                message.success("覆盖图素材"+mycoverlist.length+"个",3)
                 mynewsourcemap.set("sound",mysoundlist)
-                message.success("音效素材"+mysoundlist.length+"个",3)
                 mynewsourcemap.set("spr",mysprlist)
-                message.success("人物素材"+mysprlist.length+"个",3)
+                message.success("素材共"+(mybgmlist.length+mybcglist.length+mycoverlist.length+mysoundlist.length+mysprlist.length)+"个",3)
 
                 // setSourcepageopen(true)
                 resolve(mynewsourcemap)
@@ -252,6 +266,11 @@ function PlayGround(props){
         // console.log("生成脚本")
         // 将现在的playground内容存入localStorage
         setProjectobj(Blockly.serialization.workspaces.save(primaryWorkspace.current))
+        // 将现在的backpack内容存入LocalStorage
+        if(backpack){
+            setBackpackobj(backpack.getContents())
+        }
+        
         // 生成代码前时间戳归0
         // 每次playground更新，设置window里numinbigfunc值为0，这样让utils/timestamp每次更新后都是从0开始计数，遇到一个if就自己加1，也不会不限加
         // 但是if块的上下变了，if生成的id还是会变，无伤大雅嗷

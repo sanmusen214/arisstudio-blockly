@@ -1,13 +1,14 @@
 import * as Blockly from 'blockly/core';
 import { javascriptGenerator } from 'blockly/javascript';
-import mySounder from 'renderer/models/soundcmd';
+import myCharer from 'renderer/models/charcmd';
 import { wrapStr } from 'renderer/utils/DataTool';
+
 // 定义JSON格式自定义模块
-let blockname="b_sound_volume"
+let blockname="b_char_move"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "声音昵称 %1 音量变至 %2, 耗时 %3秒",
+    "message0": "人物昵称 %1 移动至 %2 的 %3, 耗时 %4 秒",
     "args0": [
       {
         "type": "input_value",
@@ -15,18 +16,27 @@ const jsondesc = {
         "check": "String"
       },
       {
+        "type": "field_dropdown",
+        "name": "drop1",
+        "options": [
+            ["x轴","xm"],
+            ["y轴","ym"],
+            ["z轴","zm"],
+        ]
+      },
+      {
         "type": "field_number",
         "name": "num1",
-        "min": 0,
+        "min": -1000,
         "value": 0,
-        "max": 1,
+        "max": 1000,
         "precision": 0.1,
       },
       {
         "type": "field_number",
         "name": "num2",
         "min": 0,
-        "value": 1,
+        "value": 0,
         "max": 1000,
         "precision": 0.1,
       },
@@ -49,11 +59,15 @@ Blockly.Blocks[blockname] = {
 // 为自定义块添加js语言生成器
 javascriptGenerator[blockname] = function (block) {
     const nickname = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
-    const vol = block.getFieldValue('num1');
+    const axis = block.getFieldValue('drop1');
+    const distance = block.getFieldValue('num1');
     const spendtime = block.getFieldValue('num2');
 
+    if(axis==="zm"){
+        // z轴移动没有时间参数
+        return `stagelist.push(\`${myCharer.pos(wrapStr(nickname),"z",distance)}\`);`
+    }
 
-
-    return `stagelist.push(\`${mySounder.fade(wrapStr(nickname),vol,spendtime)}\`);`
+    return `stagelist.push(\`${myCharer.move(wrapStr(nickname),axis,distance,spendtime)}\`);`
 }
 
