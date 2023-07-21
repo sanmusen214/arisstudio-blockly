@@ -21,11 +21,11 @@ const jsondesc = {
         "options": [
             ["靠近","close"],
             ["远离","back"],
-            ["点头","nod"],
-            ["小跳","jump"],
-            ["跳两下","jump2"],
-            ["小颤抖","sshake"],
-            ["大颤抖","bshake"]
+            // ["点头","nod"],
+            // ["小跳","jump"],
+            // ["跳两下","jump2"],
+            // ["小颤抖","sshake"],
+            // ["大颤抖","bshake"]
         ]
       },
     ],
