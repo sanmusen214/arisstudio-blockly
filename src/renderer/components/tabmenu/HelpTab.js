@@ -18,7 +18,13 @@ export default function HelpTab(props) {
         <Divider />
 
         <h2>拖动积木区域会卡</h2>
-        积木多了会卡，卡的根本原因未知。建议使用鼠标滚轮来控制上下，按住Shift和滚鼠标滚轮来控制左右，减少屏幕渲染次数。
+        积木多了会卡，卡的根本原因未知（别的此类软件其实也卡但是得要到三四千个才卡，我也不知道为啥这个到一千就卡的不行）。
+        <br />
+        建议使用鼠标滚轮来控制上下，按住Shift和滚鼠标滚轮来控制左右，减少屏幕渲染次数。
+        <br />
+        或者将故事拆分，每次黑屏转场为分割点，分成多个脚本制作
+        <br />
+        或者学习脚本命令
 
         <Divider />
 
@@ -33,7 +39,9 @@ export default function HelpTab(props) {
         <Divider />
 
         <h2>可视化预览素材失败或爱丽丝工坊加载素材失败</h2>
-        根据<a href="https://github.com/Tualin14/ArisStudio/wiki">说明</a>将文件放进正确的位置。注意character文件夹是放自定义人物的地方，spr文件夹是放游戏里spr人物素材的地方
+        根据<a href="https://github.com/Tualin14/ArisStudio/wiki">说明</a>将文件放进正确的位置。注意character文件夹是放自定义人物的地方，spr文件夹是放游戏里spr人物素材的地方。
+        <br />
+        此外请注意自己的spr人物文件是否有<span style={{color:'red'}}>.assets</span>后缀，如果有请删除后缀，否则无法加载。
         
 
 

@@ -204,7 +204,11 @@ function PlayGround(props){
                     "Data/SoundEffect/":mysoundlist,
                     "Data/Spr/":mysprlist
                 }
+                let hasAssets=false
                 for (let file of eve.target.files){
+                    if(file.name.endsWith(".assets")){
+                        hasAssets=true;
+                    }
                     for(let type in mytypemap){
                         if(file.webkitRelativePath.indexOf(type)===0){
                             mytypemap[type].push(file)
@@ -222,7 +226,9 @@ function PlayGround(props){
                 message.success("音效素材"+mysoundlist.length+"个",3)
                 mynewsourcemap.set("spr",mysprlist)
                 message.success("人物素材"+mysprlist.length+"个",3)
-
+                if(hasAssets){
+                    message.error("素材中存在assets后缀的文件！请删除这些后缀！",8)
+                }
                 // setSourcepageopen(true)
                 resolve(mynewsourcemap)
                 
