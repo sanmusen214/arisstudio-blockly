@@ -112,12 +112,18 @@ function PlayGround(props){
     useEffect(()=>{
         // 等一秒挂载了ref后，再从localStorage读取上次的项目内容
         setTimeout(()=>{
+            // 读取上次的项目内容
             if(projectobj){
                 try {
                     Blockly.serialization.workspaces.load(projectobj, primaryWorkspace.current);
                 } catch (error) {
                     
                 }
+            }
+            // 读取之前存在localStorage里的设置的自动导出位置
+            const wfilepath=localStorage.getItem("wfilepath")
+            if(wfilepath!==null && wfilepath.length>0){
+                window.wfilepath=wfilepath
             }
         },500)
 
@@ -313,7 +319,16 @@ function PlayGround(props){
     // 从已有文件保存一个文件位置
     const selectFilepath=(e)=>{
         if(e.target&&e.target.files){
-            window.wfilepath=e.target.files[0].path // 为了实际保存
+            const thisfilepath=e.target.files[0].path
+            // 判断thisfilepath是否包含0Txt字符串
+            if(thisfilepath.indexOf("0Txt")===-1){
+                message.error("请选择0Txt文件夹下的文件",3)
+                return
+            }
+
+            window.wfilepath=thisfilepath // 为了实际保存
+            // 存进localStorage
+            localStorage.setItem("wfilepath",window.wfilepath)
             message.success("开启实时导出到:"+window.wfilepath,6)
             antiSaveFile({type:"manualdoit"})
         }else{

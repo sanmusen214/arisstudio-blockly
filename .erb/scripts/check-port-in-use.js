@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import detectPort from 'detect-port';
 
-const port = process.env.PORT || '1212';
+const port = '21453';
 
 detectPort(port, (err, availablePort) => {
   if (port !== String(availablePort)) {

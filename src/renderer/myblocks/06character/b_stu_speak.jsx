@@ -127,15 +127,15 @@ stagelist.push(\`\${${stuname}} back\`);
 `
     }else if(action==="nod"){
         finalcode+=`
-stagelist.push(\`\${${stuname}} shakeY 3 -6 1\`);
+stagelist.push(\`\${${stuname}} shakeY 2.5 -2.5 1\`);
 `
     }else if(action==="jump"){
         finalcode+=`
-stagelist.push(\`\${${stuname}} shakeY 7 4 1\`);
+stagelist.push(\`\${${stuname}} shakeY 5 1.5 1\`);
 `
     }else if(action==="jump2"){
         finalcode+=`
-stagelist.push(\`\${${stuname}} shakeY 4 4 1\`);
+stagelist.push(\`\${${stuname}} shakeY 4 3 1\`);
 stagelist.push(\`wait 0.3\`);
 stagelist.push(\`\${${stuname}} shakeY 4 3 1\`);
 `

@@ -72,3 +72,7 @@ ifcase块的最后target 42IfFinal5
 在参数形式能对应上参数下标的情况下，如果参数数量变少，会自动删去项目文件中未知的参数。如果参数空变多，则会留空。
 
 如果数字的允许区间变更，数字会自动修改到最靠近的合法值，不会error。
+
+## npm start failed
+
+Remove the process.env.PORT in `.erb/scripts/check-port-in-use.js` and set the port manually both in this file and command env
