@@ -24,6 +24,7 @@ const clearSprspace=()=>{
 }
 
 export default function SprTab(props) {
+  console.log("SprTab")
   // 差分的分页
   const [page,setPage]=useState(1)
   const [chafenlistlen,setChafenlistlen]=useState(1)
@@ -58,6 +59,9 @@ export default function SprTab(props) {
 
   useEffect(()=>{
     setButtontopcheck(charsettings[nowname]?true:false)
+    return ()=>{
+      clearTimeout(myTout)
+    }
   },[nowname])
 
   const renderspr=(eachname,elementid,nameind,page=-1)=>{
@@ -152,8 +156,7 @@ export default function SprTab(props) {
             animationlist.forEach((each,ind)=>{
               if(ind>=9*(mypage-1) && ind<9*mypage){
                 document.querySelector("#namechafen"+ind%9).innerHTML=each.name
-                new spine.SpinePlayer(elementid+"chafen"+ind%9,{
-                  paused:true,
+                const spineA=new spine.SpinePlayer(elementid+"chafen"+ind%9,{
                   skelUrl:skelname,
                   atlasUrl:atlasname,
                   rawDataURIs:rawobj,
@@ -163,6 +166,9 @@ export default function SprTab(props) {
                   showControls: false,
                   backgroundColor: "#cccccc", // set the walk animation to play once
                 })
+                setTimeout(()=>{
+                  spineA.stopRendering()
+                },5000)
               }
               
             })
