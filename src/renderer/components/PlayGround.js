@@ -216,7 +216,8 @@ function PlayGround(props){
                         hasAssets=true;
                     }
                     for(let type in mytypemap){
-                        if(file.webkitRelativePath.indexOf(type)===0){
+                        // 文件路径转换为小写再做路径匹配
+                        if(file.webkitRelativePath.toLowerCase().indexOf(type.toLowerCase())===0){
                             mytypemap[type].push(file)
                         }
                     }
