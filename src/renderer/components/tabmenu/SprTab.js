@@ -44,7 +44,7 @@ export default function SprTab(props) {
   const chafenRef=useRef(chafen)
   chafenRef.current=chafen
 
-  // 这一页的spr名
+  // 显示的的spr名
   const sprnamelist=[...sprnameset.values()]
   // console.log(sprnamelist)
 
@@ -59,9 +59,6 @@ export default function SprTab(props) {
 
   useEffect(()=>{
     setButtontopcheck(charsettings[nowname]?true:false)
-    return ()=>{
-      clearTimeout(myTout)
-    }
   },[nowname])
 
   const renderspr=(eachname,elementid,nameind,page=-1)=>{
@@ -129,10 +126,10 @@ export default function SprTab(props) {
           }else{
             // 每个人物都固定视角
           baviewport={
-            x:-110,
-            y:846,
-            width: 314,
-            height: 314,
+            x:-230,
+            y:776,
+            width: 454,
+            height: 454,
           }
           }
           
@@ -222,6 +219,7 @@ export default function SprTab(props) {
       
       {/* 左侧列表 */}
       <Col span={6} style={props.style}>
+        {/* 置顶的列表 */}
         {Object.keys(charsettings).map((name,ind)=>{
           if(sprnamelist.includes(name)){
             return <div className="stuname" style={{backgroundColor:ind+5000===nowind?'lightblue':""}} //ind+5000与后面错开
@@ -232,6 +230,7 @@ export default function SprTab(props) {
           return <></>
           })}
         <Divider />
+        {/* 所有人物的列表 */}
         {sprnamelist.map((name,ind)=>{return <div className="stuname" style={{backgroundColor:ind===nowind?'lightblue':""}} 
         onClick={()=>{
           renderspr(name,"basprbox",ind,-1)

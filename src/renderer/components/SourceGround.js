@@ -63,7 +63,7 @@ function SourceGround(props) {
 
   // console.log(props.sourcemap)
   const loadData=props.loadData
-
+  const [needload,setNeedload]=useState(true)
   const [items,setItems] = useState(buildItems({
     "bgm":props.sourcemap.get('bgm'),
     "bcg":props.sourcemap.get("bcg"),
@@ -123,7 +123,7 @@ function SourceGround(props) {
   return (
     <div id="sourceground">
       <Search placeholder="搜索关键字(不区分大小写)" allowClear onSearch={onSearch} style={{ width: 300 }} />
-      <Button className="loadprojectbutton"><input type="file" multiple="" webkitdirectory="" name="file" accept='*' className="projectfile" onChange={loadData}></input>选择Data文件夹</Button>
+      <Button className="loadprojectbutton" type={needload?'primary':'slash'}><input type="file" multiple="" webkitdirectory="" name="file" accept='*' className="projectfile" onChange={(eve)=>{setNeedload(false);loadData(eve)}}></input>选择Data文件夹</Button>
       <Tabs defaultActiveKey='bgm' animated={false} 
       destroyInactiveTabPane={false}
       items={items} onChange={()=>{Howler.stop()}}/>
