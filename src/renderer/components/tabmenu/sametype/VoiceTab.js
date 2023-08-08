@@ -59,7 +59,7 @@ export default function VoiceTab(props) {
     // 在props.style后追加会覆盖掉props.style
     <div style={props.style}>
       <Pagination simple current={page} onChange={(page)=>{setPage(page)}} pageSize={pagesize} total={Math.max(props.inputlist.length,1)} style={{textAlign:'center'}}/>
-      <Button onClick={musicplay}>播放</Button><Button onClick={musicpause}>暂停</Button><Button onClick={musicback}>后退10s</Button><Button onClick={musicfront}>快进10s</Button>
+      <Button onClick={musicplay}>播放</Button><Button onClick={musicpause}>暂停</Button><Button onClick={musicback}>后退10s</Button><Button onClick={musicfront}>快进10s</Button> 如果你佩戴耳机，请适当减小系统音量
 
       <div>
         <div style={{textAlign:'center'}}>

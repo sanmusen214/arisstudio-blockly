@@ -1,0 +1,2268 @@
+{
+    "data": [
+        {
+            "sprname": "hihumi_spr",
+            "name": "日富美",
+            "nameJP": "ヒフミ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "hihumi_robber_spr",
+            "name": "日富美",
+            "nameJP": "ヒフミ",
+            "nickname": "紙袋をかぶった女子高生"
+        },
+        {
+            "sprname": "yoshimi_spr",
+            "name": "喜美",
+            "nameJP": "ヨシミ",
+            "nickname": "放学后甜点部"
+        },
+        {
+            "sprname": "hasumi_spr",
+            "name": "莲见",
+            "nameJP": "ハスミ",
+            "nickname": "正义实现委员会"
+        },
+        {
+            "sprname": "shimiko_spr",
+            "name": "志美子",
+            "nameJP": "シミコ",
+            "nickname": "图书委员会"
+        },
+        {
+            "sprname": "serina_spr",
+            "name": "芹娜",
+            "nameJP": "セリナ",
+            "nickname": "救护骑士团"
+        },
+        {
+            "sprname": "hanae_spr",
+            "name": "花绘",
+            "nameJP": "ハナエ",
+            "nickname": "救护骑士团"
+        },
+        {
+            "sprname": "suzumi_spr",
+            "name": "铃美",
+            "nameJP": "スズミ",
+            "nickname": "圣三一义警团"
+        },
+        {
+            "sprname": "hina_spr",
+            "name": "日奈",
+            "nameJP": "ヒナ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "ako_spr",
+            "name": "亚子",
+            "nameJP": "アコ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "iori_spr",
+            "name": "伊织",
+            "nameJP": "イオリ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "chinatsu_spr",
+            "name": "千夏",
+            "nameJP": "チナツ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "akari_spr",
+            "name": "明里",
+            "nameJP": "アカリ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "haruna_spr",
+            "name": "晴奈",
+            "nameJP": "ハルナ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "zunko_spr",
+            "name": "纯子",
+            "nameJP": "ジュンコ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "izumi_spr",
+            "name": "泉",
+            "nameJP": "イズミ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "aru_spr",
+            "name": "阿露",
+            "nameJP": "アル",
+            "nickname": "便利屋68"
+        },
+        {
+            "sprname": "mutsuki_spr",
+            "name": "睦月",
+            "nameJP": "ムツキ",
+            "nickname": "便利屋68"
+        },
+        {
+            "sprname": "kayoko_spr",
+            "name": "佳代子",
+            "nameJP": "カヨコ",
+            "nickname": "便利屋68"
+        },
+        {
+            "sprname": "haruka_spr",
+            "name": "遥香",
+            "nameJP": "ハルカ",
+            "nickname": "便利屋68"
+        },
+        {
+            "sprname": "shiroko_spr",
+            "name": "白子",
+            "nameJP": "シロコ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "shiroko_robber_spr",
+            "name": "白子",
+            "nameJP": "シロコ",
+            "nickname": "蒙面的女高中生"
+        },
+        {
+            "sprname": "serika_spr",
+            "name": "芹香",
+            "nameJP": "セリカ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "serika_robber_spr",
+            "name": "芹香",
+            "nameJP": "セリカ",
+            "nickname": "蒙面的女高中生"
+        },
+        {
+            "sprname": "serika_shibaseki_spr",
+            "name": "芹香",
+            "nameJP": "セリカ",
+            "nickname": "临时工"
+        },
+        {
+            "sprname": "hoshino_spr",
+            "name": "星野",
+            "nameJP": "ホシノ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "hoshino_robber_spr",
+            "name": "星野",
+            "nameJP": "ホシノ",
+            "nickname": "蒙面的女高中生"
+        },
+        {
+            "sprname": "nonomi_spr",
+            "name": "野宫",
+            "nameJP": "ノノミ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "nonomi_robber_spr",
+            "name": "野宫",
+            "nameJP": "ノノミ",
+            "nickname": "蒙面的女高中生"
+        },
+        {
+            "sprname": "ayane_spr",
+            "name": "绫音",
+            "nameJP": "アヤネ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "ayane_robber_spr",
+            "name": "绫音",
+            "nameJP": "アヤネ",
+            "nickname": "蒙面的女高中生"
+        },
+        {
+            "sprname": "kotori_spr",
+            "name": "小鸟",
+            "nameJP": "コトリ",
+            "nickname": "工程部"
+        },
+        {
+            "sprname": "eimi_spr",
+            "name": "艾米",
+            "nameJP": "エイミ",
+            "nickname": "特异现象搜查部"
+        },
+        {
+            "sprname": "kotama_spr",
+            "name": "小玉",
+            "nameJP": "コタマ",
+            "nickname": "真理部"
+        },
+        {
+            "sprname": "hare_spr",
+            "name": "晴",
+            "nameJP": "ハレ",
+            "nickname": "真理部"
+        },
+        {
+            "sprname": "asuna_spr",
+            "name": "明日奈",
+            "nameJP": "アスナ",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "akane_spr",
+            "name": "朱音",
+            "nameJP": "アカネ",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "karin_spr",
+            "name": "花凛",
+            "nameJP": "カリン",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "neru_spr",
+            "name": "尼禄",
+            "nameJP": "ネル",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "chise_spr",
+            "name": "千世",
+            "nameJP": "チセ",
+            "nickname": "阴阳部"
+        },
+        {
+            "sprname": "pina_spr",
+            "name": "菲娜",
+            "nameJP": "フィーナ",
+            "nickname": "祭典运营委员会"
+        },
+        {
+            "sprname": "Tsubaki_spr",
+            "name": "椿",
+            "nameJP": "ツバキ",
+            "nickname": "修行部"
+        },
+        {
+            "sprname": "tsurugi_spr",
+            "name": "鹤城",
+            "nameJP": "ツルギ",
+            "nickname": "正义实现委员会"
+        },
+        {
+            "sprname": "airi_spr",
+            "name": "爱莉",
+            "nameJP": "アイリ",
+            "nickname": "放学后甜点部"
+        },
+        {
+            "sprname": "kazusa_spr",
+            "name": "和纱",
+            "nameJP": "カズサ",
+            "nickname": "放学后甜点部"
+        },
+        {
+            "sprname": "kaede_spr",
+            "name": "枫",
+            "nameJP": "カエデ",
+            "nickname": "修行部"
+        },
+        {
+            "sprname": "nagisa_spr",
+            "name": "渚",
+            "nameJP": "ナギサ",
+            "nickname": "茶会"
+        },
+        {
+            "sprname": "izuna_spr",
+            "name": "泉奈",
+            "nameJP": "イズナ",
+            "nickname": "忍术研究部"
+        },
+        {
+            "sprname": "shizuko_spr",
+            "name": "静子",
+            "nameJP": "シズコ",
+            "nickname": "祭典运营委员会"
+        },
+        {
+            "sprname": "mai_spr",
+            "name": "マイ",
+            "nameJP": "マイ",
+            "nickname": "クロノス報道部"
+        },
+        {
+            "sprname": "fuuka_spr",
+            "name": "枫香",
+            "nameJP": "フウカ",
+            "nickname": "供餐部"
+        },
+        {
+            "sprname": "maki_spr",
+            "name": "真纪",
+            "nameJP": "マキ",
+            "nickname": "真理部"
+        },
+        {
+            "sprname": "mashiro_spr",
+            "name": "真白",
+            "nameJP": "マシロ",
+            "nickname": "正义实现委员会"
+        },
+        {
+            "sprname": "hibiki_spr",
+            "name": "响",
+            "nameJP": "ヒビキ",
+            "nickname": "工程部"
+        },
+        {
+            "sprname": "saya_spr",
+            "name": "沙耶",
+            "nameJP": "サヤ",
+            "nickname": "炼丹术研究会"
+        },
+        {
+            "sprname": "shun_spr",
+            "name": "瞬",
+            "nameJP": "シュン",
+            "nickname": "梅花园"
+        },
+        {
+            "sprname": "yuuka_spr",
+            "name": "优香",
+            "nameJP": "ユウカ",
+            "nickname": "研讨会"
+        },
+        {
+            "sprname": "mimori_spr",
+            "name": "三森",
+            "nameJP": "ミモリ",
+            "nickname": "修行部"
+        },
+        {
+            "sprname": "momoi_spr",
+            "name": "桃井",
+            "nameJP": "モモイ",
+            "nickname": "游戏开发部"
+        },
+        {
+            "sprname": "juri_spr",
+            "name": "茱莉",
+            "nameJP": "ジュリ",
+            "nickname": "供餐部"
+        },
+        {
+            "sprname": "sumire_spr",
+            "name": "堇",
+            "nameJP": "スミレ",
+            "nickname": "训练部"
+        },
+        {
+            "sprname": "utaha_spr",
+            "name": "咏叶",
+            "nameJP": "ウタハ",
+            "nickname": "工程部"
+        },
+        {
+            "sprname": "wakamo_spr",
+            "name": "若藻",
+            "nameJP": "ワカモ",
+            "nickname": ""
+        },
+        {
+            "sprname": "wakamo_mask_spr",
+            "name": "若藻",
+            "nameJP": "ワカモ",
+            "nickname": ""
+        },
+        {
+            "sprname": "yuzu_spr",
+            "name": "柚子",
+            "nameJP": "ユズ",
+            "nickname": "游戏开发部"
+        },
+        {
+            "sprname": "aris_spr",
+            "name": "爱丽丝",
+            "nameJP": "アリス",
+            "nickname": "游戏开发部"
+        },
+        {
+            "sprname": "aris_noweapon_spr",
+            "name": "爱丽丝",
+            "nameJP": "アリス",
+            "nickname": "游戏开发部"
+        },
+        {
+            "sprname": "midori_spr",
+            "name": "绿",
+            "nameJP": "ミドリ",
+            "nickname": "游戏开发部"
+        },
+        {
+            "sprname": "CH0214_spr",
+            "name": "实里",
+            "nameJP": "ミノリ",
+            "nickname": "工务部"
+        },
+        {
+            "sprname": "marina_spr",
+            "name": "玛利娜",
+            "nameJP": "マリナ",
+            "nickname": "红冬事务局"
+        },
+        {
+            "sprname": "shigure_spr",
+            "name": "时雨",
+            "nameJP": "シグレ",
+            "nickname": "227号特别班"
+        },
+        {
+            "sprname": "nodoka_spr",
+            "name": "和香",
+            "nameJP": "ノドカ",
+            "nickname": "227号特别班"
+        },
+        {
+            "sprname": "momiji_spr",
+            "name": "红叶",
+            "nameJP": "モミジ",
+            "nickname": "知识解放战线"
+        },
+        {
+            "sprname": "cherino_spr",
+            "name": "切里诺",
+            "nameJP": "チェリノ",
+            "nickname": "红冬事务局"
+        },
+        {
+            "sprname": "tomoe_spr",
+            "name": "巴",
+            "nameJP": "トモエ",
+            "nickname": "红冬事务局"
+        },
+        {
+            "sprname": "CH0069_spr",
+            "name": "未花",
+            "nameJP": "ミカ",
+            "nickname": "茶会"
+        },
+        {
+            "sprname": "hanako_spr",
+            "name": "花子",
+            "nameJP": "ハナコ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "koharu_spr",
+            "name": "小春",
+            "nameJP": "コハル",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "azusa_spr",
+            "name": "梓",
+            "nameJP": "アズサ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "CH0070_spr",
+            "name": "圣娅",
+            "nameJP": "セイア",
+            "nickname": "茶会"
+        },
+        {
+            "sprname": "CH0079_spr",
+            "name": "真琴",
+            "nameJP": "マコト",
+            "nickname": "万魔殿"
+        },
+        {
+            "sprname": "CH0156_spr",
+            "name": "伊吕波",
+            "nameJP": "イロハ",
+            "nickname": "万魔殿"
+        },
+        {
+            "sprname": "CH0058_spr",
+            "name": "日富美",
+            "nameJP": "ヒフミ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "CH0060_spr",
+            "name": "鹤城",
+            "nameJP": "ツルギ",
+            "nickname": "正义实现委员会"
+        },
+        {
+            "sprname": "izumi_swimsuit_spr",
+            "name": "泉",
+            "nameJP": "イズミ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "azusa_swimsuit_spr",
+            "name": "梓",
+            "nameJP": "アズサ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "mashiro_swimsuit_spr",
+            "name": "真白",
+            "nameJP": "マシロ",
+            "nickname": "正义实现委员会"
+        },
+        {
+            "sprname": "ibuki_spr",
+            "name": "伊吹",
+            "nameJP": "イブキ",
+            "nickname": "万魔殿"
+        },
+        {
+            "sprname": "CH0063_spr",
+            "name": "日奈",
+            "nameJP": "ヒナ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "CH0064_spr",
+            "name": "伊织",
+            "nameJP": "イオリ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "CH0088_spr",
+            "name": "惠",
+            "nameJP": "メグ",
+            "nickname": "温泉开发部"
+        },
+        {
+            "sprname": "shiroko_ridingsuit_spr",
+            "name": "白子",
+            "nameJP": "シロコ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "CH0066_spr",
+            "name": "瞬",
+            "nameJP": "シュン",
+            "nickname": "梅花园"
+        },
+        {
+            "sprname": "CH0137_spr",
+            "name": "心奈",
+            "nameJP": "ココナ",
+            "nickname": "梅花园"
+        },
+        {
+            "sprname": "saya_casual_spr",
+            "name": "沙耶",
+            "nameJP": "サヤ",
+            "nickname": "炼丹术研究会"
+        },
+        {
+            "sprname": "kirino_spr",
+            "name": "桐乃",
+            "nameJP": "キリノ",
+            "nickname": "生活安全局"
+        },
+        {
+            "sprname": "CH0141_spr",
+            "name": "吹雪",
+            "nameJP": "フブキ",
+            "nickname": "生活安全局"
+        },
+        {
+            "sprname": "CH0135_spr",
+            "name": "瑠美",
+            "nameJP": "ルミ",
+            "nickname": "玄武商会"
+        },
+        {
+            "sprname": "CH0098_spr",
+            "name": "明日奈",
+            "nameJP": "アスナ",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "CH0099_spr",
+            "name": "朱音",
+            "nameJP": "アカネ",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "CH0100_spr",
+            "name": "花凛",
+            "nameJP": "カリン",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "CH0101_spr",
+            "name": "尼禄",
+            "nameJP": "ネル",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "CH0155_spr",
+            "name": "夏",
+            "nameJP": "ナツ",
+            "nickname": "放学后甜点部"
+        },
+        {
+            "sprname": "mari_spr",
+            "name": "玛丽",
+            "nameJP": "マリー",
+            "nickname": "修女会"
+        },
+        {
+            "sprname": "sena_spr",
+            "name": "濑名",
+            "nameJP": "セナ",
+            "nickname": "急救医学部"
+        },
+        {
+            "sprname": "CH0159_spr",
+            "name": "日鞠",
+            "nameJP": "ヒマリ",
+            "nickname": "特异现象搜查部"
+        },
+        {
+            "sprname": "hinata_spr",
+            "name": "日向",
+            "nameJP": "ヒナタ",
+            "nickname": "修女会"
+        },
+        {
+            "sprname": "CH9999_spr",
+            "name": "初音未来",
+            "nameJP": "初音ミク",
+            "nickname": ""
+        },
+        {
+            "sprname": "sakurako_spr",
+            "name": "樱子",
+            "nameJP": "サクラコ",
+            "nickname": "修女会"
+        },
+        {
+            "sprname": "misaki_spr",
+            "name": "美咲",
+            "nameJP": "ミサキ",
+            "nickname": "？？？"
+        },
+        {
+            "sprname": "hiyori_spr",
+            "name": "日和",
+            "nameJP": "ヒヨリ",
+            "nickname": "？？？"
+        },
+        {
+            "sprname": "CH0165_spr",
+            "name": "和香",
+            "nameJP": "ノドカ",
+            "nickname": "227号特别班"
+        },
+        {
+            "sprname": "CH0123_spr",
+            "name": "时雨",
+            "nameJP": "シグレ",
+            "nickname": "227号特别班"
+        },
+        {
+            "sprname": "CH0163_spr",
+            "name": "千夏",
+            "nameJP": "チナツ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "CH0164_spr",
+            "name": "切里诺",
+            "nameJP": "チェリノ",
+            "nickname": "红冬事务局"
+        },
+        {
+            "sprname": "CH0124_spr",
+            "name": "梅露",
+            "nameJP": "メル",
+            "nickname": "知識解放戦線"
+        },
+        {
+            "sprname": "CH0125_spr",
+            "name": "梅露",
+            "nameJP": "メル",
+            "nickname": "知識解放戦線"
+        },
+        {
+            "sprname": "shinon_spr",
+            "name": "电视台记者",
+            "nameJP": "シノン",
+            "nickname": "クロノス報道部"
+        },
+        {
+            "sprname": "CH0152_spr",
+            "name": "美弥",
+            "nameJP": "ミネ",
+            "nickname": "救护骑士团"
+        },
+        {
+            "sprname": "atsuko_spr",
+            "name": "亚津子",
+            "nameJP": "アツコ",
+            "nickname": "阿里乌斯小队"
+        },
+        {
+            "sprname": "saori_spr",
+            "name": "纱织",
+            "nameJP": "サオリ",
+            "nickname": "阿里乌斯小队"
+        },
+        {
+            "sprname": "aru_newyear_spr",
+            "name": "阿露",
+            "nameJP": "アル",
+            "nickname": "便利屋68"
+        },
+        {
+            "sprname": "mutsuki_newyear_spr",
+            "name": "睦月",
+            "nameJP": "ムツキ",
+            "nickname": "便利屋68"
+        },
+        {
+            "sprname": "serika_newyear_spr",
+            "name": "芹香",
+            "nameJP": "セリカ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "CH0086_spr",
+            "name": "佳代子",
+            "nameJP": "カヨコ",
+            "nickname": "便利屋68"
+        },
+        {
+            "sprname": "CH0087_spr",
+            "name": "遥香",
+            "nameJP": "ハルカ",
+            "nickname": "便利屋68"
+        },
+        {
+            "sprname": "CH0160_spr",
+            "name": "千寻",
+            "nameJP": "チヒロ",
+            "nickname": "真理部"
+        },
+        {
+            "sprname": "CH0169_spr",
+            "name": "忧",
+            "nameJP": "ウイ",
+            "nickname": "图书委员会"
+        },
+        {
+            "sprname": "CH0144_spr",
+            "name": "咲",
+            "nameJP": "サキ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "CH0145_spr",
+            "name": "美游",
+            "nameJP": "ミユ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "miyako_spr",
+            "name": "宫子",
+            "nameJP": "ミヤコ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "moe_spr",
+            "name": "萌绘",
+            "nameJP": "モエ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "CH0170_spr",
+            "name": "康娜",
+            "nameJP": "カンナ",
+            "nickname": "公安局"
+        },
+        {
+            "sprname": "CH0171_spr",
+            "name": "雪乃",
+            "nameJP": "ユキノ",
+            "nickname": ""
+        },
+        {
+            "sprname": "CH0172_spr",
+            "name": "妮可",
+            "nameJP": "ニコ",
+            "nickname": ""
+        },
+        {
+            "sprname": "CH0173_spr",
+            "name": "胡桃",
+            "nameJP": "クルミ",
+            "nickname": "FOX小隊"
+        },
+        {
+            "sprname": "CH0174_spr",
+            "name": "音葵",
+            "nameJP": "オトギ",
+            "nickname": "FOX小隊"
+        },
+        {
+            "sprname": "CH0113_spr",
+            "name": "满",
+            "nameJP": "ミチル",
+            "nickname": "忍术研究部"
+        },
+        {
+            "sprname": "CH0114_spr",
+            "name": "月咏",
+            "nameJP": "ツクヨ",
+            "nickname": "忍术研究部"
+        },
+        {
+            "sprname": "CH0109_spr",
+            "name": "妮娅",
+            "nameJP": "ニヤ",
+            "nickname": "阴阳部"
+        },
+        {
+            "sprname": "CH0107_spr",
+            "name": "果穗",
+            "nameJP": "カホ",
+            "nickname": "阴阳部"
+        },
+        {
+            "sprname": "CH0175_spr",
+            "name": "若藻",
+            "nameJP": "ワカモ",
+            "nickname": ""
+        },
+        {
+            "sprname": "CH0092_spr",
+            "name": "野宫",
+            "nameJP": "ノノミ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "CH0176_spr",
+            "name": "绫音",
+            "nameJP": "アヤネ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "hoshino_swimsuit_spr",
+            "name": "星野",
+            "nameJP": "ホシノ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "CH0188_spr",
+            "name": "白子",
+            "nameJP": "シロコ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "CH0189_spr",
+            "name": "芹香",
+            "nameJP": "セリカ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "CH0166_spr",
+            "name": "ラブ",
+            "nameJP": "ラブ",
+            "nickname": "ヘルメット団"
+        },
+        {
+            "sprname": "CH0180_spr",
+            "name": "静子",
+            "nameJP": "シズコ",
+            "nickname": "祭典运营委员会"
+        },
+        {
+            "sprname": "CH0178_spr",
+            "name": "千世",
+            "nameJP": "チセ",
+            "nickname": "阴阳部"
+        },
+        {
+            "sprname": "CH0179_spr",
+            "name": "泉奈",
+            "nameJP": "イズナ",
+            "nickname": "忍术研究部"
+        },
+        {
+            "sprname": "CH0183_spr",
+            "name": "三森",
+            "nameJP": "ミモリ",
+            "nickname": "修行部"
+        },
+        {
+            "sprname": "CH0110_spr",
+            "name": "海香",
+            "nameJP": "ウミカ",
+            "nickname": "祭典运营委员会"
+        },
+        {
+            "sprname": "CH0089_spr",
+            "name": "霞",
+            "nameJP": "カスミ",
+            "nickname": "温泉开发部"
+        },
+        {
+            "sprname": "CH0071_spr",
+            "name": "一花",
+            "nameJP": "イチカ",
+            "nickname": "正义实现委员会"
+        },
+        {
+            "sprname": "CH0167_spr",
+            "name": "玲纱",
+            "nameJP": "レイサ",
+            "nickname": "圣三一义警团"
+        },
+        {
+            "sprname": "CH0095_spr",
+            "name": "诺雅",
+            "nameJP": "ノア",
+            "nickname": "研讨会"
+        },
+        {
+            "sprname": "CH0182_spr",
+            "name": "咏叶",
+            "nameJP": "ウタハ",
+            "nickname": "工程部"
+        },
+        {
+            "sprname": "CH0181_spr",
+            "name": "响",
+            "nameJP": "ヒビキ",
+            "nickname": "工程部"
+        },
+        {
+            "sprname": "CH0185_spr",
+            "name": "小鸟",
+            "nameJP": "コトリ",
+            "nickname": "工程部"
+        },
+        {
+            "sprname": "CH0193_spr",
+            "name": "晴奈",
+            "nameJP": "ハルナ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "CH0184_spr",
+            "name": "优香",
+            "nameJP": "ユウカ",
+            "nickname": "研讨会"
+        },
+        {
+            "sprname": "CH0190_spr",
+            "name": "莲见",
+            "nameJP": "ハスミ",
+            "nickname": "正义实现委员会"
+        },
+        {
+            "sprname": "CH0186_spr",
+            "name": "玛丽",
+            "nameJP": "マリー",
+            "nickname": "修女会"
+        },
+        {
+            "sprname": "CH0158_spr",
+            "name": "理绪",
+            "nameJP": "リオ",
+            "nickname": "研讨会"
+        },
+        {
+            "sprname": "CH0187_spr",
+            "name": "时",
+            "nameJP": "トキ",
+            "nickname": "???"
+        },
+        {
+            "sprname": "erika_spr",
+            "name": "绘梨香",
+            "nameJP": "エリカ",
+            "nickname": "帰宅部"
+        },
+        {
+            "sprname": "kirara_spr",
+            "name": "绮良",
+            "nameJP": "キララ",
+            "nickname": "帰宅部"
+        },
+        {
+            "sprname": "CH0194_spr",
+            "name": "芹娜",
+            "nameJP": "セリナ",
+            "nickname": "救护骑士团"
+        },
+        {
+            "sprname": "CH0195_spr",
+            "name": "花绘",
+            "nameJP": "ハナエ",
+            "nickname": "救护骑士团"
+        },
+        {
+            "sprname": "CH0191_spr",
+            "name": "晴奈",
+            "nameJP": "ハルナ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "CH0192_spr",
+            "name": "纯子",
+            "nameJP": "ジュンコ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "CH0177_spr",
+            "name": "枫香",
+            "nameJP": "フウカ",
+            "nickname": "供餐部"
+        },
+        {
+            "sprname": "CH0196_spr",
+            "name": "明里",
+            "nameJP": "アカリ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "CH0197_spr",
+            "name": "泉",
+            "nameJP": "イズミ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "CH0199_spr",
+            "name": "白子",
+            "nameJP": "シロコ",
+            "nickname": ""
+        },
+        {
+            "sprname": "CH0080_spr",
+            "name": "皐月",
+            "nameJP": "サツキ",
+            "nickname": "万魔殿"
+        },
+        {
+            "sprname": "CH0198_spr",
+            "name": "小雪",
+            "nameJP": "コユキ",
+            "nickname": "研讨会"
+        },
+        {
+            "sprname": "CH0222_spr",
+            "name": "看似冷漠的少女",
+            "nameJP": "ナグサ",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0001_spr",
+            "name": "梓",
+            "nameJP": "アズサ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "NP0002_spr",
+            "name": "梓",
+            "nameJP": "アズサ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "NP0003_spr",
+            "name": "花子",
+            "nameJP": "ハナコ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "NP0004_spr",
+            "name": "花子",
+            "nameJP": "ハナコ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "NP0005_spr",
+            "name": "日富美",
+            "nameJP": "ヒフミ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "NP0006_spr",
+            "name": "日富美",
+            "nameJP": "ヒフミ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "NP0007_spr",
+            "name": "小春",
+            "nameJP": "コハル",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "NP0008_spr",
+            "name": "小春",
+            "nameJP": "コハル",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "NP0009_spr",
+            "name": "日奈",
+            "nameJP": "ヒナ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "NP0010_spr",
+            "name": "未花",
+            "nameJP": "ミカ",
+            "nickname": "茶会"
+        },
+        {
+            "sprname": "NP0011_spr",
+            "name": "印花釉法",
+            "nameJP": "デカルコマニー",
+            "nickname": "数秘术"
+        },
+        {
+            "sprname": "NP0012_spr",
+            "name": "纱织",
+            "nameJP": "サオリ",
+            "nickname": "阿里乌斯小队"
+        },
+        {
+            "sprname": "NP0013_spr",
+            "name": "步梦",
+            "nameJP": "アユム",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "NP0014_spr",
+            "name": "若藻",
+            "nameJP": "ワカモ",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0015_spr",
+            "name": "花耶",
+            "nameJP": "カヤ",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "NP0017_spr",
+            "name": "日奈",
+            "nameJP": "ヒナ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "NP0018_spr",
+            "name": "铁桶（咲）",
+            "nameJP": "ドラム缶（サキ）",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "NP0019_spr",
+            "name": "亚子",
+            "nameJP": "アコ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "NP0020_spr",
+            "name": "梓",
+            "nameJP": "アズサ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "NP0021_spr",
+            "name": "亚津子",
+            "nameJP": "アツコ",
+            "nickname": "阿里乌斯小队"
+        },
+        {
+            "sprname": "NP0063_spr",
+            "name": "星野",
+            "nameJP": "ホシノ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0064_spr",
+            "name": "白子",
+            "nameJP": "シロコ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0065_spr",
+            "name": "芹香",
+            "nameJP": "セリカ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0066_spr",
+            "name": "绫音",
+            "nameJP": "アヤネ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0067_spr",
+            "name": "野宫",
+            "nameJP": "ノノミ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0038_spr",
+            "name": "葛叶",
+            "nameJP": "クズノハ",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0041_spr",
+            "name": "未花",
+            "nameJP": "ミカ",
+            "nickname": "茶会"
+        },
+        {
+            "sprname": "NP0100_spr",
+            "name": "未花",
+            "nameJP": "ミカ",
+            "nickname": "茶会"
+        },
+        {
+            "sprname": "NP0101_spr",
+            "name": "未花",
+            "nameJP": "ミカ",
+            "nickname": "茶会"
+        },
+        {
+            "sprname": "NP0102_spr",
+            "name": "未花",
+            "nameJP": "ミカ",
+            "nickname": "茶会"
+        },
+        {
+            "sprname": "NP0074_spr",
+            "name": "尤斯缇娜信徒",
+            "nameJP": "バルバラ",
+            "nickname": "ユスティナ聖徒会"
+        },
+        {
+            "sprname": "NP0077_spr",
+            "name": "亚津子",
+            "nameJP": "アツコ",
+            "nickname": "阿里乌斯小队"
+        },
+        {
+            "sprname": "NP0048_spr",
+            "name": "绫音",
+            "nameJP": "アヤネ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0043_spr",
+            "name": "诺雅",
+            "nameJP": "ノア",
+            "nickname": "研讨会"
+        },
+        {
+            "sprname": "NP0044_spr",
+            "name": "野宫",
+            "nameJP": "ノノミ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0045_spr",
+            "name": "星野",
+            "nameJP": "ホシノ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0046_spr",
+            "name": "白子",
+            "nameJP": "シロコ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0047_spr",
+            "name": "芹香",
+            "nameJP": "セリカ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0061_spr",
+            "name": "堇",
+            "nameJP": "スミレ",
+            "nickname": "训练部"
+        },
+        {
+            "sprname": "NP0049_spr",
+            "name": "纯子",
+            "nameJP": "ジュンコ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "NP0050_spr",
+            "name": "真纪",
+            "nameJP": "マキ",
+            "nickname": "真理部"
+        },
+        {
+            "sprname": "NP0051_spr",
+            "name": "泉",
+            "nameJP": "イズミ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "NP0052_spr",
+            "name": "泉奈",
+            "nameJP": "イズナ",
+            "nickname": "忍术研究部"
+        },
+        {
+            "sprname": "NP0053_spr",
+            "name": "静子",
+            "nameJP": "シズコ",
+            "nickname": "祭典运营委员会"
+        },
+        {
+            "sprname": "NP0054_spr",
+            "name": "枫",
+            "nameJP": "カエデ",
+            "nickname": "修行部"
+        },
+        {
+            "sprname": "NP0055_spr",
+            "name": "千世",
+            "nameJP": "チセ",
+            "nickname": "阴阳部"
+        },
+        {
+            "sprname": "NP0056_spr",
+            "name": "月咏",
+            "nameJP": "ツクヨ",
+            "nickname": "忍术研究部"
+        },
+        {
+            "sprname": "NP0057_spr",
+            "name": "夏",
+            "nameJP": "ナツ",
+            "nickname": "放学后甜点部"
+        },
+        {
+            "sprname": "NP0058_spr",
+            "name": "鹤城",
+            "nameJP": "ツルギ",
+            "nickname": "正义实现委员会"
+        },
+        {
+            "sprname": "NP0059_spr",
+            "name": "亚子",
+            "nameJP": "アコ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "NP0062_spr",
+            "name": "真白",
+            "nameJP": "マシロ",
+            "nickname": "正义实现委员会"
+        },
+        {
+            "sprname": "NP0068_spr",
+            "name": "明里",
+            "nameJP": "アカリ",
+            "nickname": "美食研究会"
+        },
+        {
+            "sprname": "NP0069_spr",
+            "name": "小鸟",
+            "nameJP": "コトリ",
+            "nickname": "工程部"
+        },
+        {
+            "sprname": "NP0070_spr",
+            "name": "宫子",
+            "nameJP": "ミヤコ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "NP0071_spr",
+            "name": "美游",
+            "nameJP": "ミユ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "NP0072_spr",
+            "name": "咲",
+            "nameJP": "サキ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "NP0073_spr",
+            "name": "萌绘",
+            "nameJP": "モエ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "NP0075_spr",
+            "name": "芹娜",
+            "nameJP": "セリナ",
+            "nickname": "救护骑士团"
+        },
+        {
+            "sprname": "NP0076_spr",
+            "name": "花绘",
+            "nameJP": "ハナエ",
+            "nickname": "救护骑士团"
+        },
+        {
+            "sprname": "NP0081_spr",
+            "name": "明日奈",
+            "nameJP": "アスナ",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "NP0082_spr",
+            "name": "花凛",
+            "nameJP": "カリン",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "NP0078_spr",
+            "name": "时",
+            "nameJP": "トキ",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "NP0079_spr",
+            "name": "时",
+            "nameJP": "トキ",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "NP0080_spr",
+            "name": "时",
+            "nameJP": "トキ",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "NP0088_spr",
+            "name": "尼禄",
+            "nameJP": "ネル",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "NP0089_spr",
+            "name": "尼禄",
+            "nameJP": "ネル",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "NP0032_spr",
+            "name": "葵",
+            "nameJP": "アオイ",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "NP0083_spr",
+            "name": "渚",
+            "nameJP": "ナギサ",
+            "nickname": "茶会"
+        },
+        {
+            "sprname": "NP0096_spr",
+            "name": "董事",
+            "nameJP": "プレジデント",
+            "nickname": "カイザーコーポレーション"
+        },
+        {
+            "sprname": "NP0105_spr",
+            "name": "康娜",
+            "nameJP": "カンナ",
+            "nickname": "公安局"
+        },
+        {
+            "sprname": "NP0104_spr",
+            "name": "将军",
+            "nameJP": "ジェネラル",
+            "nickname": "カイザーPMC"
+        },
+        {
+            "sprname": "NP0115_spr",
+            "name": "戈尔孔达",
+            "nameJP": "デカルコマニー",
+            "nickname": "数秘术"
+        },
+        {
+            "sprname": "NP0090_spr",
+            "name": "樱子",
+            "nameJP": "サクラコ",
+            "nickname": "修女会"
+        },
+        {
+            "sprname": "NP0097_spr",
+            "name": "凛",
+            "nameJP": "リン",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "NP0098_spr",
+            "name": "桃香",
+            "nameJP": "モモカ",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "NP0099_spr",
+            "name": "步美",
+            "nameJP": "アユム",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "NP0108_spr",
+            "name": "绫音",
+            "nameJP": "アヤネ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0109_spr",
+            "name": "优香",
+            "nameJP": "ユウカ",
+            "nickname": "研讨会"
+        },
+        {
+            "sprname": "NP0110_spr",
+            "name": "花子",
+            "nameJP": "ハナコ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "NP0111_spr",
+            "name": "亚子",
+            "nameJP": "アコ",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "NP0112_spr",
+            "name": "日鞠",
+            "nameJP": "ヒマリ",
+            "nickname": "特异现象搜查部"
+        },
+        {
+            "sprname": "NP0118_spr",
+            "name": "佳代子",
+            "nameJP": "カヨコ",
+            "nickname": "便利屋68"
+        },
+        {
+            "sprname": "NP0114_spr",
+            "name": "巨匠",
+            "nameJP": "マエストロ",
+            "nickname": "数秘术"
+        },
+        {
+            "sprname": "NP0122_spr",
+            "name": "AMAS",
+            "nameJP": "リオ",
+            "nickname": "研讨会"
+        },
+        {
+            "sprname": "NP0040_spr",
+            "name": "連邦生徒会長",
+            "nameJP": "連邦生徒会長",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "NP0035_spr",
+            "name": "普拉娜",
+            "nameJP": "A.R.O.N.A",
+            "nickname": "シッテムの箱"
+        },
+        {
+            "sprname": "NP0095_spr",
+            "name": "普雷纳帕特斯",
+            "nameJP": "？？？",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0042_spr",
+            "name": "无名祭司",
+            "nameJP": "？？？",
+            "nickname": ""
+        },
+        {
+            "sprname": "arona_spr",
+            "name": "阿罗娜",
+            "nameJP": "アロナ",
+            "nickname": ""
+        },
+        {
+            "sprname": "momoka_spr",
+            "name": "桃香",
+            "nameJP": "モモカ",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "rin_spr",
+            "name": "凛",
+            "nameJP": "リン",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "blacksuit_spr",
+            "name": "黑服",
+            "nameJP": "黒服",
+            "nickname": "数秘术"
+        },
+        {
+            "sprname": "pmcdirector_spr",
+            "name": "pmc理事",
+            "nameJP": "カイザーPMC理事",
+            "nickname": "カイザーPMC"
+        },
+        {
+            "sprname": "shibasekimaster_spr",
+            "name": "柴大将",
+            "nameJP": "柴大将",
+            "nickname": "柴関ラーメン"
+        },
+        {
+            "sprname": "sora_spr",
+            "name": "空",
+            "nameJP": "ソラ",
+            "nickname": "エンジェル24"
+        },
+        {
+            "sprname": "utahaturret_spr",
+            "name": "雷酱",
+            "nameJP": "雷ちゃん",
+            "nickname": ""
+        },
+        {
+            "sprname": "Maestro_spr",
+            "name": "巨匠",
+            "nameJP": "マエストロ",
+            "nickname": "数秘术"
+        },
+        {
+            "sprname": "kaitenranger_red_spr",
+            "name": "红寿司人",
+            "nameJP": "カイテンレッド",
+            "nickname": "カイテンジャー"
+        },
+        {
+            "sprname": "kaitenranger_yellow_spr",
+            "name": "黄寿司人",
+            "nameJP": "カイテンイエロー",
+            "nickname": "カイテンジャー"
+        },
+        {
+            "sprname": "kaitenranger_green_spr",
+            "name": "绿寿司人",
+            "nameJP": "カイテングリーン",
+            "nickname": "カイテンジャー"
+        },
+        {
+            "sprname": "kaitenranger_pink_spr",
+            "name": "粉寿司人",
+            "nameJP": "カイテンピンク",
+            "nickname": "カイテンジャー"
+        },
+        {
+            "sprname": "kaitenranger_black_spr",
+            "name": "黑寿司人",
+            "nameJP": "カイテンブラック",
+            "nickname": "カイテンジャー"
+        },
+        {
+            "sprname": "CH0162_spr",
+            "name": "小雪",
+            "nameJP": "白兎",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0029_spr",
+            "name": "贝阿朵莉切",
+            "nameJP": "ベアトリーチェ",
+            "nickname": "数秘术"
+        },
+        {
+            "sprname": "citizen_borot1_spr",
+            "name": "市民A",
+            "nameJP": "市民A",
+            "nickname": "一般人"
+        },
+        {
+            "sprname": "citizen_animal1_spr",
+            "name": "市民B",
+            "nameJP": "市民B",
+            "nickname": "一般人"
+        },
+        {
+            "sprname": "helmetdan_red1_spr",
+            "name": "红钢盔团",
+            "nameJP": "ヘルメット団",
+            "nickname": "カタカタヘルメット団"
+        },
+        {
+            "sprname": "helmetdan_black1_spr",
+            "name": "黑钢盔团",
+            "nameJP": "ヘルメット団B",
+            "nickname": "カタカタヘルメット団"
+        },
+        {
+            "sprname": "Yukata_StreetGhostes_RL_spr",
+            "name": "百鬼夜行的问题儿童",
+            "nameJP": "百鬼夜行の問題児A",
+            "nickname": ""
+        },
+        {
+            "sprname": "yoheki_normal1_spr",
+            "name": "佣兵学生",
+            "nameJP": "傭兵バイトA",
+            "nickname": "アルバイト"
+        },
+        {
+            "sprname": "sukeban_SMG_spr",
+            "name": "混混1",
+            "nameJP": "チンピラ１",
+            "nickname": "街头混混"
+        },
+        {
+            "sprname": "sukeban_HMG_spr",
+            "name": "混混2",
+            "nameJP": "チンピラ２",
+            "nickname": "街头混混"
+        },
+        {
+            "sprname": "sukeban_SR_spr",
+            "name": "混混3",
+            "nameJP": "チンピラ３",
+            "nickname": "街头混混"
+        },
+        {
+            "sprname": "robot2_division_spr",
+            "name": "机器人A",
+            "nameJP": "ロボットA",
+            "nickname": ""
+        },
+        {
+            "sprname": "Citizen_animal5_spr",
+            "name": "通行人A",
+            "nameJP": "通行人A",
+            "nickname": ""
+        },
+        {
+            "sprname": "Citizen_animal6_spr",
+            "name": "通行人C",
+            "nameJP": "通行人C",
+            "nickname": ""
+        },
+        {
+            "sprname": "fuuki_normal1_spr",
+            "name": "風紀委員",
+            "nameJP": "風紀委員",
+            "nickname": "风纪委员会"
+        },
+        {
+            "sprname": "Justice_normal1_spr",
+            "name": "正义实现委员会部员",
+            "nameJP": "正義実現委員会部員",
+            "nickname": "正义实现委员会"
+        },
+        {
+            "sprname": "market_animal2_spr",
+            "name": "店主",
+            "nameJP": "店主",
+            "nickname": ""
+        },
+        {
+            "sprname": "citizen_borot2_spr",
+            "name": "胖胖机器人店长",
+            "nameJP": "メイドカフェの店長",
+            "nickname": ""
+        },
+        {
+            "sprname": "engineer_animal3_spr",
+            "name": "废品回收业者",
+            "nameJP": "廃品回収業者",
+            "nickname": ""
+        },
+        {
+            "sprname": "Soldier_OnsenDev_RL_spr",
+            "name": "温泉部部员A",
+            "nameJP": "温泉部の部員A",
+            "nickname": "温泉开发部"
+        },
+        {
+            "sprname": "Citizen_animal5_eyepatch_spr",
+            "name": "市民-猫",
+            "nameJP": "ニャテ・マサムニェ",
+            "nickname": ""
+        },
+        {
+            "sprname": "Automata_PMC1_spr",
+            "name": "PMC士兵",
+            "nameJP": "PMC兵士",
+            "nickname": "カイザーPMC"
+        },
+        {
+            "sprname": "royalguard_redwinter1_spr",
+            "name": "红冬亲卫队员",
+            "nameJP": "親衛隊",
+            "nickname": "红冬事务局"
+        },
+        {
+            "sprname": "yoheki_redwinter1_spr",
+            "name": "佣兵学生",
+            "nameJP": "傭兵バイト",
+            "nickname": ""
+        },
+        {
+            "sprname": "peroro_spr",
+            "name": "佩洛洛",
+            "nameJP": "着ぐるみ（ユズ）",
+            "nickname": "遊園地のアルバイト"
+        },
+        {
+            "sprname": "schoolGirl02_SukebanSwim_MG_spr",
+            "name": "混混A",
+            "nameJP": "チンピラA",
+            "nickname": ""
+        },
+        {
+            "sprname": "schoolGirl01_SukebanSwim_SMG_spr",
+            "name": "混混B",
+            "nameJP": "チンピラB",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0027_spr",
+            "name": "万魔殿的风纪委员",
+            "nameJP": "万魔殿のメンバー",
+            "nickname": "万魔殿"
+        },
+        {
+            "sprname": "Cook_GenbuStore_SG_spr",
+            "name": "玄武商会店主",
+            "nameJP": "店主",
+            "nickname": "玄武商会"
+        },
+        {
+            "sprname": "BunnyGirl_SR_spr",
+            "name": "兔女郎保镖A",
+            "nameJP": "バニーガール・ガードA",
+            "nickname": ""
+        },
+        {
+            "sprname": "Arius_GL1_spr",
+            "name": "阿里乌斯的学生",
+            "nameJP": "アリウスの生徒",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0025_spr",
+            "name": "修女会",
+            "nameJP": "シスターフッド",
+            "nickname": "修女会"
+        },
+        {
+            "sprname": "NP0022_spr",
+            "name": "茶会行政官",
+            "nameJP": "ティーパーティーの行政官",
+            "nickname": "茶会"
+        },
+        {
+            "sprname": "Yustina_SR1_spr",
+            "name": "尤斯缇娜信徒A",
+            "nameJP": "ユスティナ信徒A",
+            "nickname": "尤斯缇娜圣徒会"
+        },
+        {
+            "sprname": "NP0028_spr",
+            "name": "茶会检察官",
+            "nameJP": "ティーパーティーの監察官",
+            "nickname": "茶会"
+        },
+        {
+            "sprname": "Automata_Kurokamegumi1_spr",
+            "name": "黑龟组士兵",
+            "nameJP": "黒亀組の組員A",
+            "nickname": "黒亀組"
+        },
+        {
+            "sprname": "Citizen_animal7_spr",
+            "name": "市民-狗",
+            "nameJP": "会場のお客さんC",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0024_spr",
+            "name": "圣三一的学生",
+            "nameJP": "トリニティの生徒",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0026_spr",
+            "name": "圣三一的学生",
+            "nameJP": "ゲヘナの生徒",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0023_spr",
+            "name": "急救医学部部员",
+            "nameJP": "救急医学部の部員",
+            "nickname": "急救医学部"
+        },
+        {
+            "sprname": "Police_Valkyrie_SG_spr",
+            "name": "瓦尔基里的学生",
+            "nameJP": "ヴァルキューレの生徒A",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0031_spr",
+            "name": "笛卡尔",
+            "nameJP": "デカルト",
+            "nickname": "所確幸"
+        },
+        {
+            "sprname": "Yukata_StreetGhostes_MG_spr",
+            "name": "魑魅一座的领导人",
+            "nameJP": "魑魅一座のリーダー",
+            "nickname": "魑魅一座・気まぐれ流"
+        },
+        {
+            "sprname": "NP0034_spr",
+            "name": "凯撒理事",
+            "nameJP": "カイザー理事（？）",
+            "nickname": "カイザーコーポレーション"
+        },
+        {
+            "sprname": "NP0036_spr",
+            "name": "新素材开发部部员",
+            "nameJP": "新素材開発部員",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0084_spr",
+            "name": "奇怪的千禧年学生",
+            "nameJP": "怪しいミレニアム生徒A",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0060_spr",
+            "name": "正义实现委员会成员",
+            "nameJP": "正義実現委員会部員",
+            "nickname": "正义实现委员会"
+        },
+        {
+            "sprname": "NP0085_spr",
+            "name": "AMAS A",
+            "nameJP": "AMAS A",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0091_spr",
+            "name": "无名的守护者",
+            "nameJP": "無名の守護者",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0087_spr",
+            "name": "女将",
+            "nameJP": "女将",
+            "nickname": "麻雀亭"
+        },
+        {
+            "sprname": "NP0107_spr",
+            "name": "联邦学生会的行政官",
+            "nameJP": "連邦生徒会の行政官",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "NP0106_spr",
+            "name": "联邦学生会的行政人员B",
+            "nameJP": "連邦生徒会の行政員B",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "NP0116_spr",
+            "name": "凯撒特种部队队员A",
+            "nameJP": "カイザーの特殊部隊員A",
+            "nickname": "凯撒PMC"
+        },
+        {
+            "sprname": "Automata_Decagrammaton1_spr",
+            "name": "十字神明自动机器人",
+            "nameJP": "デカグラマトンオートマタ",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0113_spr",
+            "name": "黑服",
+            "nameJP": "黒服",
+            "nickname": "数秘术"
+        },
+        {
+            "sprname": "NP0103_spr",
+            "name": "可疑的钢盔团",
+            "nameJP": "怪しいヘルメット団",
+            "nickname": ""
+        },
+        {
+            "sprname": "CH0139_spr",
+            "name": "妃咲",
+            "nameJP": "キサキ",
+            "nickname": "玄龙门"
+        },
+        {
+            "sprname": "NP0121_spr",
+            "name": "玄龙门的学生A",
+            "nameJP": "玄龍門の生徒A",
+            "nickname": "玄龙门"
+        },
+        {
+            "sprname": "CH0138_spr",
+            "name": "弥奈",
+            "nameJP": "ミナ",
+            "nickname": "玄龙门"
+        },
+        {
+            "sprname": "NP0124_spr",
+            "name": "白子",
+            "nameJP": "シロコ",
+            "nickname": "对策委员会"
+        },
+        {
+            "sprname": "NP0123_spr",
+            "name": "时",
+            "nameJP": "トキ",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "NP0125_spr",
+            "name": "白子",
+            "nameJP": "シロコ",
+            "nickname": ""
+        },
+        {
+            "sprname": "CH0200_spr",
+            "name": "爱丽丝",
+            "nameJP": "アリス",
+            "nickname": "游戏开发部"
+        },
+        {
+            "sprname": "CH0211_spr",
+            "name": "时",
+            "nameJP": "トキ",
+            "nickname": "C&C"
+        },
+        {
+            "sprname": "CH0203_spr",
+            "name": "柚子",
+            "nameJP": "ユズ",
+            "nickname": "游戏开发部"
+        },
+        {
+            "sprname": "CH0201_spr",
+            "name": "桃井",
+            "nameJP": "モモイ",
+            "nickname": "游戏开发部"
+        },
+        {
+            "sprname": "CH0202_spr",
+            "name": "绿",
+            "nameJP": "ミドリ",
+            "nickname": "游戏开发部"
+        },
+        {
+            "sprname": "CH0212_spr",
+            "name": "慈爱的怪盗",
+            "nameJP": "慈愛の怪盗",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0126_spr",
+            "name": "柚子",
+            "nameJP": "ユズ",
+            "nickname": "游戏开发部"
+        },
+        {
+            "sprname": "NP0092_spr",
+            "name": "儿童",
+            "nameJP": "子供",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0093_spr",
+            "name": "儿童",
+            "nameJP": "子供",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0094_spr",
+            "name": "儿童",
+            "nameJP": "子供",
+            "nickname": ""
+        },
+        {
+            "sprname": "reizyo_spr",
+            "name": "俪舒",
+            "nameJP": "レイジョ",
+            "nickname": "玄武商会"
+        },
+        {
+            "sprname": "CH0213_spr",
+            "name": "海",
+            "nameJP": "カイ",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0033_spr",
+            "name": "灰音",
+            "nameJP": "ハイネ",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "NP0037_spr",
+            "name": "朱桃",
+            "nameJP": "スモモ",
+            "nickname": "联邦学生会"
+        },
+        {
+            "sprname": "CH0217_spr",
+            "name": "咲",
+            "nameJP": "サキ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "CH0218_spr",
+            "name": "美游",
+            "nameJP": "ミユ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "CH0215_spr",
+            "name": "宫子",
+            "nameJP": "ミヤコ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "CH0216_spr",
+            "name": "萌惠",
+            "nameJP": "モエ",
+            "nickname": "RABBIT小队"
+        },
+        {
+            "sprname": "NP0140_spr",
+            "name": "胡桃",
+            "nameJP": "クルミ",
+            "nickname": "FOX小队"
+        },
+        {
+            "sprname": "NP0141_spr",
+            "name": "音葵",
+            "nameJP": "オトギ",
+            "nickname": "FOX小队"
+        },
+        {
+            "sprname": "NP0139_spr",
+            "name": "妮可",
+            "nameJP": "ニコ",
+            "nickname": "FOX小队"
+        },
+        {
+            "sprname": "NP0142_spr",
+            "name": "笛卡尔",
+            "nameJP": "デカルト",
+            "nickname": "凯撒安保"
+        },
+        {
+            "sprname": "NP0132_spr",
+            "name": "老渔夫",
+            "nameJP": "年老いた漁師",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0133_spr",
+            "name": "渔夫",
+            "nameJP": "漁師",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0134_spr",
+            "name": "瓦尔基里海警",
+            "nameJP": "ヴァルキューレの海警",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0136_spr",
+            "name": "垂钓者",
+            "nameJP": "釣り人",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0135_spr",
+            "name": "劳动者A",
+            "nameJP": "労働者A",
+            "nickname": ""
+        },
+        {
+            "sprname": "CH0204_spr",
+            "name": "忧",
+            "nameJP": "ウイ",
+            "nickname": "图书委员会"
+        },
+        {
+            "sprname": "CH0210_spr",
+            "name": "日向",
+            "nameJP": "ヒナタ",
+            "nickname": "修女会"
+        },
+        {
+            "sprname": "NP0151_spr",
+            "name": "花子",
+            "nameJP": "ハナコ",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "CH0205_spr",
+            "name": "小春",
+            "nameJP": "コハル",
+            "nickname": "补习部"
+        },
+        {
+            "sprname": "CH0209_spr",
+            "name": "水花子",
+            "nickname": ""
+        },
+        {
+            "sprname": "minori_spr",
+            "name": "赤冬学生",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0086_spr",
+            "name": "市民-鸟",
+            "nickname": ""
+        },
+        {
+            "sprname": "NP0137_spr",
+            "name": "尤斯缇娜信徒",
+            "nickname": ""
+        }
+    ]
+}

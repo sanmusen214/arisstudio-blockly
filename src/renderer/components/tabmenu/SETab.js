@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { sounds_datamap } from "../../datamap/index.js"
-import { Input,Table,Tag,Tooltip, message } from 'antd'
+import { Input,Table,Tag,Tooltip, message,Row } from 'antd'
 import { QuestionCircleOutlined } from "@ant-design/icons"
 import { findneededFile } from 'renderer/utils/DataTool.jsx'
 import {Howl,Howler} from 'howler'
@@ -91,12 +91,12 @@ export default function SETab(props) {
     }
     return (
         <div style={props.style}>
-        <div style={{textAlign:'center'}}>
+        <Row align={'middle'} justify={'center'}>
             <Search placeholder="搜索音效描述" allowClear onSearch={onSearch} style={{ width: 300,marginRight:"10px" }} />
-            <Tooltip title={<div>欢迎各位使用【Aris Studio】全音效一览表，此文本已整理当前版本的【Aris Studio】的全部音效【共2092条】来方便各位在使用【Aris Studio】时更快速地寻找所需要音效，由于所有注释均为本人聆听所标注的，有些差异，如果有更好的注释请告知整理者。此外该表还有一些其他不足之处，也欢迎使用者提出改进建议。 整合人：<a href='https://b23.tv/wfXw8Wq' target="_blank">传猫猫</a></div>}>
+            <Tooltip title={<div>欢迎各位使用【Aris Studio】全音效一览表，此文本已整理当前版本的【Aris Studio】的全部音效【共2092条】来方便各位在使用【Aris Studio】时更快速地寻找所需要音效，由于所有注释均为本人聆听所标注的，有些差异，如果有更好的注释请告知整理者。此外该表还有一些其他不足之处，也欢迎使用者提出改进建议。 整理：<a href='https://b23.tv/wfXw8Wq' target="_blank">传猫猫</a></div>}>
                 <QuestionCircleOutlined style={{fontSize:20,opacity:0.5,verticalAlign:'middle'}}/>
-            </Tooltip>
-        </div>
+            </Tooltip> 如果你佩戴耳机，请适当调小系统音量
+        </Row>
             
             <Table 
             columns={columns} 
