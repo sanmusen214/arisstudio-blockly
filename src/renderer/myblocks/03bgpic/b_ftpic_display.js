@@ -6,7 +6,7 @@ let blockname="b_ftpic_display"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "设置覆盖图为 %1 并显示",
+    "message0": "设置覆盖图为 素材代号%1 并显示",
     "args0": [
       {
         "type": "input_value",

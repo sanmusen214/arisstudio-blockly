@@ -8,7 +8,7 @@ import { students_datamap } from '../../datamap';
 let blockname="b_stu_speak"
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "人物昵称 %1 表情 %2 心情 %3 动作 %4",
+    "message0": "人物代号 %1 表情 %2 心情 %3 动作 %4",
     "args0": [
       {
         "type": "input_value",
@@ -80,7 +80,7 @@ Blockly.Blocks[blockname] = {
 
 // 为自定义块添加js语言生成器
 javascriptGenerator[blockname] = function (block) {
-    const stuname = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);//人物昵称
+    const stuname = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);//人物代号
     const face = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC);//表情
 
     const emo = block.getFieldValue('drop1');//心情

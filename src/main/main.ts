@@ -107,9 +107,9 @@ const createWindow = async () => {
   mainWindow.on("close",e=>{
     const choice = dialog.showMessageBoxSync(mainWindow, {
       type: "info",
-      buttons: ["取消", "确认退出"],
+      buttons: ["取消", "确认关闭"],
       title: "提示",
-      message: "确定要关闭吗",
+      message: "确定要关闭吗，建议保存项目后再关闭",
       defaultId: 0,
       cancelId: 0
     });

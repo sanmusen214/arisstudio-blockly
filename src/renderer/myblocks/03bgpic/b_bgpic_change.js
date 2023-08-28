@@ -6,7 +6,7 @@ let blockname="b_bgpic_change"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "背景图片瞬间切换为 %1",
+    "message0": "背景图片瞬间切换为 素材代号%1",
     "args0": [
       {
         "type": "input_value",

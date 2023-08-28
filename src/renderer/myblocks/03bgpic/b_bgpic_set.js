@@ -6,7 +6,7 @@ let blockname="b_bgpic_set"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "设置背景为 %1 并逐渐显示",
+    "message0": "设置背景为 素材代号%1 并逐渐显示",
     "args0": [
       {
         "type": "input_value",

@@ -6,7 +6,7 @@ let blockname="b_bgpic_changesmoth"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "当前背景缓慢退出  然后背景设置为 %1 并 %2",
+    "message0": "当前背景缓慢退出  然后背景设置为 素材代号%1 并 %2",
     "args0": [
       {
         "type": "input_value",

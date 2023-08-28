@@ -6,7 +6,7 @@ let blockname="b_stu_stopshake"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "人物昵称 %1 的 %2 停止抖动",
+    "message0": "人物代号 %1 的 %2 停止抖动",
     "args0": [
       {
         "type": "input_value",

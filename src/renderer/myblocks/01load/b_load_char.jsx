@@ -7,7 +7,7 @@ let blockname="b_load_char"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "人物昵称 %1 缩放比例 %2 文件夹 %3 图片名(含后缀) %4 %5",
+    "message0": "人物代号 %1 缩放比例 %2 文件夹 %3 图片名(含后缀) %4 %5",
     "args0": [
       {
         "type": "input_value",
@@ -58,10 +58,10 @@ Blockly.Blocks[blockname] = {
 
 // 为自定义块添加js语言生成器
 javascriptGenerator[blockname] = function (block) {
-    const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC); //学生昵称
+    const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC); //学生代号
     if(value_val1.includes(" ")){
       message.destroy()
-      message.error("导入时的素材昵称不应含有空格")
+      message.error("导入时的素材代号不应含有空格")
     }
     const value_val2 = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC); // 文件夹
     let value_val3 = javascriptGenerator.valueToCode(block, 'val3', javascriptGenerator.ORDER_ATOMIC);// 图片名列表

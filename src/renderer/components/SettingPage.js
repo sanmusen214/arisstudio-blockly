@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Row, Col, Popconfirm } from 'antd'
+import { Button, Row, Col, Popconfirm, message } from 'antd'
 import {
     DownloadOutlined,
     SaveOutlined,
@@ -43,7 +43,7 @@ export default function SettingPage({
         <Row>导入/保存blockly项目</Row>
         <Row justify={"space-between"}>
             <Col>
-                <Button className="loadprojectButton"><input type="file" name="file" accept='*' className="projectfile" onChange={loadProject}></input><DownloadOutlined />导入blockly项目</Button>
+                <Button className="loadprojectButton"><input type="file" name="file" accept='*' className="projectfile" onChange={loadProject} onClick={()=>{message.destroy();message.info("记得保存当前项目！！！")}}></input><DownloadOutlined />导入blockly项目</Button>
                 <Button onClick={saveProject}><SaveOutlined />保存blockly项目</Button>
             </Col>
             <Col>

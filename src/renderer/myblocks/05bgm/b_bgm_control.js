@@ -6,7 +6,7 @@ let blockname="b_bgm_control"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "设置 %1 为 %2 并 %3 %4 音量为 %5",
+    "message0": "设置素材代号 %1 为 %2 并 %3 %4 音量为 %5",
     "args0": [
       {
         "type": "input_value",

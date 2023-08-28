@@ -7,7 +7,7 @@ let blockname="b_stu_face"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "人物昵称 %1 面部表情 %2",
+    "message0": "人物代号 %1 面部表情 %2",
     "args0": [
       {
         "type": "input_value",

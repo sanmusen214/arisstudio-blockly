@@ -6,7 +6,7 @@ let blockname="b_stu_shake"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "人物昵称 %1 按 %2 抖动 速度 %3 振幅 %4 震动 %5 次",
+    "message0": "人物代号 %1 按 %2 抖动 速度 %3 振幅 %4 震动 %5 次",
     "args0": [
       {
         "type": "input_value",

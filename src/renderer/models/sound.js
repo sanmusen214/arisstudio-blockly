@@ -17,7 +17,7 @@ class Sound{
     /**
      * 解析块，返回用来 设置bgm 的脚本
      * @param version 版本
-     * @param nickname 素材昵称
+     * @param nickname 素材代号
      * @param sourcename 素材文件名
      */
     static setbgm_str(version,nickname,sourcename){

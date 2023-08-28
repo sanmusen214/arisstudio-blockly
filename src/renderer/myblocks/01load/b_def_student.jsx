@@ -9,7 +9,7 @@ import { message } from 'antd';
 // 带有映射的学生名
 const jsondesc = {
     "type": "b_def_student",
-    "message0": "人物昵称 %1 人物素材 %2 %3",
+    "message0": "人物代号 %1 人物spr素材名 %2 %3",
     "args0": [
       {
         "type": "input_value",
@@ -50,7 +50,7 @@ javascriptGenerator['b_def_student'] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
     if(value_val1.includes(" ")){
       message.destroy()
-      message.error("导入时的素材昵称不应含有空格")
+      message.error("导入时的素材代号不应含有空格")
     }
     const value_val2 = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC);
     if(value_val1.length==0||value_val2.length==0){

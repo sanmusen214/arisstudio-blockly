@@ -1,3 +1,3 @@
-const version="0.2.25a";
+const version="0.2.25c";
 
 export default version

@@ -98,8 +98,10 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
+    "@blockly/plugin-workspace-search": "^8.0.4",
     "@blockly/theme-dark": "^4.0.7",
     "@blockly/theme-modern": "^3.0.7",
+    "@blockly/workspace-backpack": "^5.2.0",
     "antd": "^5.2.2",
     "blockly": "^9.2.1",
     "copy-to-clipboard": "^3.3.3",

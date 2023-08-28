@@ -94,3 +94,8 @@
     height:30px;
     background-color: rgb(62, 128, 170);
 }
+
+.blockly-ws-search{
+    position:relative;
+    float:left;
+}

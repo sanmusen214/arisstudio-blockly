@@ -7,7 +7,7 @@ import {message} from "antd"
 // 带有映射的学生名
 const jsondesc = {
     "type": "b_load_other",
-    "message0": "类型 %1 素材昵称 %2 素材文件 %3",
+    "message0": "类型 %1 素材代号 %2 素材文件 %3",
     "args0": [
       {
         "type": "field_dropdown",
@@ -52,7 +52,7 @@ javascriptGenerator['b_load_other'] = function (block) {
     const value_val1 = javascriptGenerator.valueToCode(block, 'val1', javascriptGenerator.ORDER_ATOMIC);
     if(value_val1.includes(" ")){
       message.destroy()
-      message.error("导入时的素材昵称不应含有空格")
+      message.error("导入时的素材代号不应含有空格")
     }
     const value_val2 = javascriptGenerator.valueToCode(block, 'val2', javascriptGenerator.ORDER_ATOMIC);
     if(value_val1.length==0||value_val2.length==0){

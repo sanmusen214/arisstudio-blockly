@@ -2,8 +2,10 @@ lockfileVersion: 5.4
 
 specifiers:
   '@ant-design/icons': ^5.0.1
+  '@blockly/plugin-workspace-search': ^8.0.4
   '@blockly/theme-dark': ^4.0.7
   '@blockly/theme-modern': ^3.0.7
+  '@blockly/workspace-backpack': ^5.2.0
   '@electron/notarize': ^1.2.3
   '@electron/rebuild': ^3.2.10
   '@pmmmwh/react-refresh-webpack-plugin': ^0.5.10
@@ -85,8 +87,10 @@ specifiers:
 
 dependencies:
   '@ant-design/icons': registry.npmmirror.com/@ant-design/icons/5.0.1_biqbaboplfbrettd7655fr4n2y
+  '@blockly/plugin-workspace-search': registry.npmmirror.com/@blockly/plugin-workspace-search/8.0.4_blockly@9.2.1
   '@blockly/theme-dark': registry.npmmirror.com/@blockly/theme-dark/4.0.7_blockly@9.2.1
   '@blockly/theme-modern': registry.npmmirror.com/@blockly/theme-modern/3.0.7_blockly@9.2.1
+  '@blockly/workspace-backpack': registry.npmmirror.com/@blockly/workspace-backpack/5.2.0_blockly@9.2.1
   antd: registry.npmmirror.com/antd/5.2.2_biqbaboplfbrettd7655fr4n2y
   blockly: registry.npmmirror.com/blockly/9.2.1
   copy-to-clipboard: registry.npmmirror.com/copy-to-clipboard/3.3.3
@@ -1858,6 +1862,18 @@ packages:
     version: 0.2.3
     dev: true
 
+  registry.npmmirror.com/@blockly/plugin-workspace-search/8.0.4_blockly@9.2.1:
+    resolution: {integrity: sha512-uisQzN7khloSwWUWxCJ/JQCyVct4j8Al/2YPc7ZXmrLrlUh8Mwd+pHw7FI3njuijvqceVuvQE8+rV3ZIsrK0/g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@blockly/plugin-workspace-search/-/plugin-workspace-search-8.0.4.tgz}
+    id: registry.npmmirror.com/@blockly/plugin-workspace-search/8.0.4
+    name: '@blockly/plugin-workspace-search'
+    version: 8.0.4
+    engines: {node: '>=8.17.0'}
+    peerDependencies:
+      blockly: ^10.0.0
+    dependencies:
+      blockly: registry.npmmirror.com/blockly/9.2.1
+    dev: false
+
   registry.npmmirror.com/@blockly/theme-dark/4.0.7_blockly@9.2.1:
     resolution: {integrity: sha512-NegmW6DxvDISxonJ8gtp/CGxYZmtNYyjR2t7V5GzwnZhU1QV1aZVJk49f3CbFftQm3W93wHZ9HQn80oTbOCbiQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@blockly/theme-dark/-/theme-dark-4.0.7.tgz}
     id: registry.npmmirror.com/@blockly/theme-dark/4.0.7
@@ -1878,6 +1894,18 @@ packages:
     engines: {node: '>=8.17.0'}
     peerDependencies:
       blockly: ^9.0.0
+    dependencies:
+      blockly: registry.npmmirror.com/blockly/9.2.1
+    dev: false
+
+  registry.npmmirror.com/@blockly/workspace-backpack/5.2.0_blockly@9.2.1:
+    resolution: {integrity: sha512-HF8Cz9dcPnHo4vwejagjDp3rLnVlJ3UgFVCcd23ZgCRuO0p8fys0i4VGC61oSBs/xVCVQTuFxZ7ojYdOjptszQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@blockly/workspace-backpack/-/workspace-backpack-5.2.0.tgz}
+    id: registry.npmmirror.com/@blockly/workspace-backpack/5.2.0
+    name: '@blockly/workspace-backpack'
+    version: 5.2.0
+    engines: {node: '>=8.17.0'}
+    peerDependencies:
+      blockly: ^10.0.0
     dependencies:
       blockly: registry.npmmirror.com/blockly/9.2.1
     dev: false

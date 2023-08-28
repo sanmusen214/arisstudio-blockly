@@ -27,7 +27,9 @@ import { GlobalContext } from 'renderer/config/globalContext';
 // 设置脚本解析
 import { identifytxt } from 'renderer/utils/stateparse';
 import SettingPage from './SettingPage';
-
+import { Backpack } from '@blockly/workspace-backpack'
+import {CrossTabCopyPaste} from '../utils/copyanywhere';
+import { WorkspaceSearch } from '@blockly/plugin-workspace-search';
 
 Blockly.setLocale(locale);
 
@@ -126,7 +128,15 @@ function PlayGround(props){
                 window.wfilepath=wfilepath
             }
         },500)
-
+        // 注入backpack翻译
+        Blockly.Msg['EMPTY_BACKPACK']="清空背包"
+        Blockly.Msg['REMOVE_FROM_BACKPACK']="从背包中移除"
+        Blockly.Msg['COPY_TO_BACKPACK']="复制进背包"
+        Blockly.Msg['COPY_ALL_TO_BACKPACK']="复制所有进背包"
+        Blockly.Msg['PASTE_ALL_FROM_BACKPACK']="从背包中粘贴所有"
+        // 跨域复制粘贴翻译
+        Blockly.Msg['CROSS_TAB_COPY'] = '复制';
+        Blockly.Msg['CROSS_TAB_PASTE'] = '粘贴';
     },[])
 
     // Playground设定变更时重绘
@@ -153,15 +163,44 @@ function PlayGround(props){
                 },
             );
         }
+        // 启用背包
+        try {
+            const backpack=new Backpack(primaryWorkspace.current)
+            backpack.init()
+        } catch (error) {
+            message.error("背包插件初始化出错")
+        }
+        
+        // IMPORTENT: 修改backpack,js 111 行外边距为 50
+        // 启用跨域复制粘贴
+        try{
+            const plugin=new CrossTabCopyPaste()
+            plugin.init({contextMenu:true,shortcut:true},()=>{
+                message.error("跨域复制粘贴插件失败")
+            })
+            // 去除原生复制粘贴
+            Blockly.ContextMenuRegistry.registry.unregister('blockDuplicate');
+        }catch{(e)=>{
+            message.error("跨域复制粘贴插件初始化失败")
+        }}
 
-
+        // 启用搜索
+        // try {
+        //     const workspaceSearch = new WorkspaceSearch(primaryWorkspace.current)
+        //     workspaceSearch.init()
+        // } catch (error) {
+        //     message.error("搜索插件初始化失败")
+        // }
+        
+        // 初始内容
         if (initialXml) {
             Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), primaryWorkspace.current);
         }
         // 实时生成
         primaryWorkspace.current.addChangeListener(antiShake(antiSaveFile,750));
         primaryWorkspace.current.addChangeListener(onClickBlock)
-
+        // 隐藏垃圾桶图标
+        document.querySelector(".blocklyTrash").style.opacity=0
     }, [primaryWorkspace, toolbox, blocklyDiv]);
     // 导入项目
     const loadProject=(e)=>{

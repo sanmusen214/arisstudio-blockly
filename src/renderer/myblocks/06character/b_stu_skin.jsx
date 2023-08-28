@@ -6,7 +6,7 @@ let blockname="b_stu_skin"
 // 带有映射的学生名
 const jsondesc = {
     "type": `${blockname}`,
-    "message0": "人物昵称 %1 皮肤切换为 %2",
+    "message0": "人物代号 %1 皮肤切换为 %2",
     "args0": [
       {
         "type": "input_value",
