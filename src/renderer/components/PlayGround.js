@@ -151,6 +151,7 @@ function PlayGround(props){
                 {
                     toolbox: toolbox.current,
                     theme:DarkTheme,
+                    trashcan:false,
                     ...rest
                 },
             );
@@ -159,6 +160,7 @@ function PlayGround(props){
                 blocklyDiv.current,
                 {
                     toolbox: toolbox.current,
+                    trashcan:false,
                     ...rest
                 },
             );
@@ -199,8 +201,6 @@ function PlayGround(props){
         // 实时生成
         primaryWorkspace.current.addChangeListener(antiShake(antiSaveFile,750));
         primaryWorkspace.current.addChangeListener(onClickBlock)
-        // 隐藏垃圾桶图标
-        document.querySelector(".blocklyTrash").style.opacity=0
     }, [primaryWorkspace, toolbox, blocklyDiv]);
     // 导入项目
     const loadProject=(e)=>{
@@ -361,7 +361,7 @@ function PlayGround(props){
         if(e.target&&e.target.files){
             const thisfilepath=e.target.files[0].path
             // 判断thisfilepath是否包含0Txt字符串
-            if(thisfilepath.indexOf("0Txt")===-1){
+            if(thisfilepath.toLowerCase().indexOf("0txt")===-1){
                 message.error("请选择0Txt文件夹下的文件",3)
                 return
             }
