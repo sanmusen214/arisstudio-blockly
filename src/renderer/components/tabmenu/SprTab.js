@@ -1,5 +1,5 @@
 import React,{useEffect, useRef, useState} from 'react'
-import {Col,Divider,Pagination,Row,Switch, message } from 'antd'
+import {Checkbox, Col,Divider,Pagination,Row,Switch, message } from 'antd'
 import { getBase64,getText } from 'renderer/utils/imagetool'
 import {spine,hullpos,animationlist} from "../../utils/spine-player"
 import { useLocalStorage } from 'renderer/hooks/useLocal'
@@ -51,8 +51,8 @@ export default function SprTab(props) {
   // 置顶按钮的值
   const [buttonontopcheck,setButtontopcheck]=useState(false)
 
-  // 差分视口是否智能
-  const [smartwin,setSmartwin]=useState(true)
+  // 差分视口是否智能/固定
+  const [smartwin,setSmartwin]=useState(false)
   // 获取current当下对象值
   const smartRef=useRef(smartwin)
   smartRef.current=smartwin
@@ -187,7 +187,8 @@ export default function SprTab(props) {
       }}>{nowname}</div>
 
       
-      置顶：<Switch checked={buttonontopcheck} onClick={(ck)=>{
+      置顶：<Checkbox checked={buttonontopcheck} onChange={(key)=>{
+        const ck=key.target.checked
         setButtontopcheck(ck)
         const newcharsettings={...charsettings}
         newcharsettings[nowname]=ck
@@ -195,7 +196,7 @@ export default function SprTab(props) {
           delete newcharsettings[nowname]
         }
         setCharsettings(newcharsettings)
-      }}></Switch>
+      }}></Checkbox>
 
       面部差分：<Switch checked={chafen} onClick={(ck)=>{
         setChafen((ck)=>{

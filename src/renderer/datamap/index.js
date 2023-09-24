@@ -15,7 +15,7 @@ for(let stu of sprjson.data){
     ])
 }
 
-// 封装人物名字和素材的键值对对应表，文件名改小写
+// 封装人物名字和素材的键值对对应表
 const student_datadict={}
 for(let stu of sprjson.data){
     student_datadict[stu.sprname]=stu.name

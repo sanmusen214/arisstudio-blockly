@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { sounds_datamap } from "../../datamap/index.js"
 import { Input,Table,Tag,Tooltip, message,Row } from 'antd'
 import { QuestionCircleOutlined } from "@ant-design/icons"
@@ -7,7 +7,7 @@ import {Howl,Howler} from 'howler'
 import { getBase64 } from 'renderer/utils/imagetool'
 import copy from "copy-to-clipboard"
 
-
+document.addEventListener("searchsource",(event)=>{console.log(event)})
 
 const {Search}=Input
 
@@ -84,7 +84,6 @@ export default function SETab(props) {
             }
         }
     ]
-
     const onSearch=(e)=>{
         const reslist=turnToRes(sounds_datamap,(sd)=>{return sd.desc.includes(e)})
         setSearchresult(reslist)

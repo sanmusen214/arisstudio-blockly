@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {Tabs, Input,Button, Upload} from 'antd'
+import {Tabs, Input,Button, Upload, Divider} from 'antd'
 
 import BcgTab from './tabmenu/BcgTab'
 import BgmTab from './tabmenu/BgmTab'
@@ -9,6 +9,7 @@ import SETab from './tabmenu/SETab'
 import SprTab from './tabmenu/SprTab'
 import HelpTab from './tabmenu/HelpTab'
 import {Howler} from 'howler'
+import { getcnnameof } from 'renderer/datamap'
 
 const {Search} = Input
 
@@ -100,7 +101,7 @@ function SourceGround(props) {
       for(let listind in prelist){
         const list=prelist[listind]
         for(let eachfile of list){
-          if(eachfile.name.toLowerCase().indexOf(searchword)!==-1){
+          if(eachfile.name.split(".")[0].toLowerCase().indexOf(searchword)!==-1||getcnnameof(eachfile.name.split(".")[0]).indexOf(searchword)!==-1){
             postlist[listind].push(eachfile)
           }
         }
@@ -123,6 +124,7 @@ function SourceGround(props) {
   return (
     <div id="sourceground">
       <Search placeholder="搜索关键字(不区分大小写)" allowClear onSearch={onSearch} style={{ width: 300 }} />
+      <Divider type='vertical' />
       <Button className="loadprojectbutton" type={needload?'primary':'slash'}><input type="file" multiple="" webkitdirectory="" name="file" accept='*' className="projectfile" onChange={(eve)=>{setNeedload(false);loadData(eve)}}></input>选择Data文件夹</Button>
       <Tabs defaultActiveKey='bgm' animated={false} 
       destroyInactiveTabPane={false}
