@@ -29,7 +29,7 @@
 
 # 教程
 
-这里是<a href="https://www.bilibili.com/video/BV1As4y1h79u/?spm_id_from=333.999.0.0">视频教程</a>
+这里是<a href="https://www.bilibili.com/video/BV1M14y1q7vt/">视频教程</a>
 
 ## Install
 
