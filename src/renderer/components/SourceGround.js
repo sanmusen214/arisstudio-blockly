@@ -10,57 +10,64 @@ import SprTab from './tabmenu/SprTab'
 import HelpTab from './tabmenu/HelpTab'
 import {Howler} from 'howler'
 import { getcnnameof } from 'renderer/datamap'
+import { useLocalStorage } from 'renderer/hooks/useLocal'
 
 const {Search} = Input
 
 
 const itemstyle={height:document.body.clientHeight*0.75+"px",overflow:'auto'}
 
-/**
- * 给定五文件类型，构建tab列表
- * bgm,bcg,cover,sound,spr
- */
-const buildItems=(itemlistmap)=>{
-  return [
-    {
-      key: 'bgm',
-      label: `背景音乐`,
-      children: <BgmTab style={itemstyle} bgmlist={itemlistmap.bgm} />,
-    },
-    {
-      key: 'bcg',
-      label: `背景图`,
-      children: <BcgTab style={itemstyle} bcglist={itemlistmap.bcg} />,
-    },
-    {
-      key: 'cover',
-      label: `覆盖图`,
-      children: <CoverTab style={itemstyle} coverlist={itemlistmap.cover}/>,
-    },
-    {
-      key: 'sound',
-      label: `音效`,
-      children: <SoundTab style={itemstyle} soundlist={itemlistmap.sound}/>,
-    },
-    {
-      key: 'sedesc',
-      label: `音效速查`,
-      children: <SETab style={itemstyle} soundlist={itemlistmap.sound} />,
-    },
-    {
-      key: 'spr',
-      label: `人物`,
-      children: <SprTab style={itemstyle} sprlist={itemlistmap.spr}/>,
-    },
-    {
-      key: 'help',
-      label: `帮助`,
-      children: <HelpTab style={itemstyle} />,
-    },
-  ]
-}
-
 function SourceGround(props) {
+
+  // 用户自己定义的spr描述, {sprname:desc, ...}, sprname不含后缀
+  const [sprdesc,setSprdesc]=useLocalStorage('sprdesc',new Map())
+
+  console.log("从LocalStorage中读取到的sprdesc",  sprdesc)
+
+
+  /**
+     * 给定五文件类型，构建tab列表
+     * bgm,bcg,cover,sound,spr
+     */
+  const buildItems=(itemlistmap)=>{
+    return [
+      {
+        key: 'bgm',
+        label: `背景音乐`,
+        children: <BgmTab style={itemstyle} bgmlist={itemlistmap.bgm} />,
+      },
+      {
+        key: 'bcg',
+        label: `背景图`,
+        children: <BcgTab style={itemstyle} bcglist={itemlistmap.bcg} />,
+      },
+      {
+        key: 'cover',
+        label: `覆盖图`,
+        children: <CoverTab style={itemstyle} coverlist={itemlistmap.cover}/>,
+      },
+      {
+        key: 'sound',
+        label: `音效`,
+        children: <SoundTab style={itemstyle} soundlist={itemlistmap.sound}/>,
+      },
+      {
+        key: 'sedesc',
+        label: `音效速查`,
+        children: <SETab style={itemstyle} soundlist={itemlistmap.sound} />,
+      },
+      {
+        key: 'spr',
+        label: `人物`,
+        children: <SprTab style={itemstyle} sprlist={itemlistmap.spr} sprdesc={sprdesc} setSprdesc={setSprdesc}/>,
+      },
+      {
+        key: 'help',
+        label: `帮助`,
+        children: <HelpTab style={itemstyle} />,
+      },
+    ]
+  }
 
   // console.log(props.sourcemap)
   const loadData=props.loadData
@@ -92,6 +99,8 @@ function SourceGround(props) {
       "spr":[],
     }))
 
+    
+
     const searchword=word.toLowerCase()
     // console.log(searchword)
     let postlist=[[],[],[],[],[]]// 搜索结果
@@ -101,7 +110,7 @@ function SourceGround(props) {
       for(let listind in prelist){
         const list=prelist[listind]
         for(let eachfile of list){
-          if(eachfile.name.split(".")[0].toLowerCase().indexOf(searchword)!==-1||getcnnameof(eachfile.name.split(".")[0]).indexOf(searchword)!==-1){
+          if(eachfile.name.split(".")[0].toLowerCase().indexOf(searchword)!==-1||getcnnameof(eachfile.name.split(".")[0]).indexOf(searchword)!==-1||(sprdesc[eachfile.name.split(".")[0]]||"").indexOf(searchword)!==-1){
             postlist[listind].push(eachfile)
           }
         }

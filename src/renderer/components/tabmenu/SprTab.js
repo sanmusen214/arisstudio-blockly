@@ -1,5 +1,5 @@
 import React,{useEffect, useRef, useState} from 'react'
-import {Checkbox, Col,Divider,Pagination,Row,Switch, message } from 'antd'
+import {Checkbox, Col,Divider,Pagination,Row,Switch, message, Input } from 'antd'
 import { getBase64,getText } from 'renderer/utils/imagetool'
 import {spine,hullpos,animationlist} from "../../utils/spine-player"
 import { useLocalStorage } from 'renderer/hooks/useLocal'
@@ -21,6 +21,17 @@ const clearSprspace=()=>{
   for(let i=0;i<9;i++){
     document.querySelector("#namechafen"+i).innerHTML=""
   }
+}
+
+// 防抖
+function antiShake(fun, delay) {
+  window.sprantiflag = null;
+  return function (e) {
+      clearTimeout(window.sprantiflag);
+      window.sprantiflag = setTimeout(() => {
+          fun.apply(this, arguments);
+      }, delay)
+  };
 }
 
 export default function SprTab(props) {
@@ -56,10 +67,21 @@ export default function SprTab(props) {
   // 获取current当下对象值
   const smartRef=useRef(smartwin)
   smartRef.current=smartwin
+  // 用户对某个spr的备注
+  const [sprdesc, setSprdesc] = useState(props.sprdesc)
+
+  useEffect(()=>{
+    props.setSprdesc(sprdesc)
+  },[sprdesc])
 
   useEffect(()=>{
     setButtontopcheck(charsettings[nowname]?true:false)
   },[nowname])
+
+  const findDescOfNownName=()=>{
+    return sprdesc[nowname]||""
+  }
+
 
   const renderspr=(eachname,elementid,nameind,page=-1)=>{
 
@@ -178,7 +200,7 @@ export default function SprTab(props) {
   return (
     <>
     <div>
-    <Row justify={'center'}>
+    <Row justify={'center'} align={'middle'}>
       <div style={{textAlign:'center',marginRight:'15px'}}
       onClick={()=>{
         message.destroy()
@@ -210,6 +232,19 @@ export default function SprTab(props) {
         renderspr(nowname,"basprbox",nowind)
       }}></Switch></span>
       
+      <span style={{width: "250px"}}>
+        {/* antd的输入框Input组件 */}
+        <Input placeholder="此人物的备注" value={findDescOfNownName(nowname)} 
+        style={{width:'100%',marginLeft:'15px'}}
+        onChange={(e)=>{
+          const newdesc={...sprdesc}
+          newdesc[nowname]=e.target.value
+          setSprdesc(newdesc)
+        }
+        }/>
+        
+      </span>
+
     </Row>
     <Row justify={'center'}>
       <Pagination total={chafenlistlen} current={page} pageSize={9} onChange={(newpage)=>{
@@ -226,7 +261,7 @@ export default function SprTab(props) {
             return <div className="stuname" style={{backgroundColor:ind+5000===nowind?'lightblue':""}} //ind+5000与后面错开
             onClick={()=>{
               renderspr(name,"basprbox",ind+5000,-1)
-            }}>{name+getcnnameof(name)}</div>
+            }}>{name+getcnnameof(name)+" "+(sprdesc[name]||"").split(" ")[0]}</div>
           }
           return <></>
           })}
@@ -235,7 +270,7 @@ export default function SprTab(props) {
         {sprnamelist.map((name,ind)=>{return <div className="stuname" style={{backgroundColor:ind===nowind?'lightblue':""}} 
         onClick={()=>{
           renderspr(name,"basprbox",ind,-1)
-        }}>{name+getcnnameof(name)}</div>})}
+        }}>{name+getcnnameof(name)+" "+(sprdesc[name]||"").split(" ")[0]}</div>})}
       </Col>
       {/* 右侧预览 */}
       <Col span={18} style={{position:'relative'}}>
