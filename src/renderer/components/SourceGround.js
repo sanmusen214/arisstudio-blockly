@@ -21,8 +21,9 @@ function SourceGround(props) {
 
   // 用户自己定义的spr描述, {sprname:desc, ...}, sprname不含后缀
   const [sprdesc,setSprdesc]=useLocalStorage('sprdesc',new Map())
+  const [bgmdesc,setBgmdesc]=useLocalStorage('bgmdesc',new Map())
 
-  console.log("从LocalStorage中读取到的sprdesc",  sprdesc)
+  // console.log("从LocalStorage中读取到的sprdesc",  sprdesc)
 
 
   /**
@@ -34,7 +35,7 @@ function SourceGround(props) {
       {
         key: 'bgm',
         label: `背景音乐`,
-        children: <BgmTab style={itemstyle} bgmlist={itemlistmap.bgm} />,
+        children: <BgmTab style={itemstyle} bgmlist={itemlistmap.bgm} bgmdesc={bgmdesc} setBgmdesc={setBgmdesc}/>,
       },
       {
         key: 'bcg',
