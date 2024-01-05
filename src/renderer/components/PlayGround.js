@@ -99,6 +99,10 @@ function PlayGround(props){
     let [charstate,setCharstate]=useState("")
     // 设置页面是否打开
     let [settingopen,setSettingopen]=useState(false)
+    // 用户自己定义的spr描述, {sprname:desc, ...}, sprname不含后缀
+    const [sprdesc,setSprdesc]=useLocalStorage('sprdesc',new Map())
+    const [bgmdesc,setBgmdesc]=useLocalStorage('bgmdesc',new Map())
+    const [sounddesc,setSounddesc]=useLocalStorage('sounddesc',new Map())
 
 
     // 点击一个积木
@@ -206,6 +210,11 @@ function PlayGround(props){
     const loadProject=(e)=>{
         if(e.target && e.target.files){
             const file=e.target.files[0];
+            if (!file) {
+                message.destroy()
+                message.info("请选择文件", 3)
+                return;
+            }
             // 检查文件名后缀
             const filenamesegs=file.name.split(".")
             if(filenamesegs[filenamesegs.length-1]==="bablockly"){
@@ -230,6 +239,92 @@ function PlayGround(props){
             message.success("项目保存",3)
         })
     }
+
+
+    const needexportnote=["local-sprdesc","local-bgmdesc","local-sounddesc"]
+    const setneedexportnote=(key,value)=>{
+        if(key.indexOf("sprdesc")!==-1){
+            setSprdesc(value)
+        }else if(key.indexOf("bgmdesc")!==-1){
+            setBgmdesc(value)
+        }else if(key.indexOf("sounddesc")!==-1){
+            setSounddesc(value)
+        }
+    }
+    // 导出备注那些LocalStorage
+    const exportNote=()=>{
+        
+        let exportobj={}
+        for(let key of needexportnote){
+            exportobj[key]=localStorage.getItem(key)
+        }
+        saveTxt(`ArisStudio_素材备注.json`,JSON.stringify(exportobj),()=>{
+            message.destroy()
+            message.success("导出备注",3)
+        })
+    }
+
+    // 导入备注那些LocalStorage
+    const importNote=(e)=>{
+        console.log("接收到导入")
+        if(e.target && e.target.files){
+            const file=e.target.files[0];
+            if (!file) {
+                message.destroy()
+                message.info("请选择文件", 3)
+                return;
+            }
+            // 检查文件名后缀
+            const filenamesegs=file.name.split(".")
+            if(filenamesegs[filenamesegs.length-1]==="json"){
+                uploadTxt(file,function(str){
+                    let importstorage=JSON.parse(str)
+                    console.log("importstorage", importstorage)
+                    // 遍历和note相关的localStorage的键名字
+                    for(let keyind in needexportnote){
+                        let key = needexportnote[keyind]
+                        // 从本地获取这个key对应的localstorage字符串
+                        const localobj=localStorage.getItem(key)
+                        let importobj=importstorage[key]
+                        console.log(key, localobj, importobj)
+                        // 某个资源的本地note对象
+                        let localobjobj={}
+                        if(localobj){
+                            localobjobj=JSON.parse(localobj)
+                        }
+                        // 某一个资源的导入的note对象
+                        let importobjobj={}
+                        if(importobj){
+                            importobjobj=JSON.parse(importobj)
+                        }
+                        console.log("localobjobj",localobjobj)
+                        console.log("importobjobj",importobjobj)
+                        // 合并，把importobjobj里出现但是localobjobj里没有的属性加入localobjobj
+                        for(let importkey in importobjobj){
+                            // 如果导入进来的这个素材的备注是空的，就不要覆盖本地的了
+                            if (importobjobj[importkey].length===0){
+                                continue
+                            }
+                            // 如果本地没有这个素材的备注，就加入
+                            if(!localobjobj[importkey] || localobjobj[importkey].length===0){
+                                localobjobj[importkey]=importobjobj[importkey]
+                            }
+                        }
+                        // 设置state
+                        setneedexportnote(key,localobjobj)
+                    } 
+                    message.destroy()
+                    message.success("导入备注成功，重启可视化以更新",15)
+                })
+            }else{
+                message.destroy()
+                message.error("导入失败，备注文件名后缀应当是json",3)
+            }
+        }
+    }
+
+
+
     /**
      * 加载Data文件夹
      */
@@ -593,7 +688,16 @@ function PlayGround(props){
                 setSourcepageopen(false)
                 Howler.stop()
             }}>
-                <SourceGround loadData={loadData} sourcemap={sourcemap}/>
+                <SourceGround 
+                loadData={loadData}
+                sourcemap={sourcemap}
+                sprdesc={sprdesc}
+                setSprdesc={setSprdesc}
+                bgmdesc={bgmdesc}
+                setBgmdesc={setBgmdesc}
+                sounddesc={sounddesc}
+                setSounddesc={setSounddesc}
+            />
             </Modal>
         </div>
         {/* 设置页面 */}
@@ -622,6 +726,8 @@ function PlayGround(props){
                     showtool={showtool}
                     setShowtool={setShowtool}
                     confirmclear={confirmclear}
+                    exportNote={exportNote}
+                    importNote={importNote}
                 />
             </Modal>
         </div>

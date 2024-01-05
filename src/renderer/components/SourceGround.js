@@ -19,11 +19,6 @@ const itemstyle={height:document.body.clientHeight*0.75+"px",overflow:'auto'}
 
 function SourceGround(props) {
 
-  // 用户自己定义的spr描述, {sprname:desc, ...}, sprname不含后缀
-  const [sprdesc,setSprdesc]=useLocalStorage('sprdesc',new Map())
-  const [bgmdesc,setBgmdesc]=useLocalStorage('bgmdesc',new Map())
-  const [sounddesc,setSounddesc]=useLocalStorage('sounddesc',new Map())
-
   // console.log("从LocalStorage中读取到的sprdesc",  sprdesc)
 
 
@@ -36,7 +31,7 @@ function SourceGround(props) {
       {
         key: 'bgm',
         label: `背景音乐`,
-        children: <BgmTab style={itemstyle} bgmlist={itemlistmap.bgm} bgmdesc={bgmdesc} setBgmdesc={setBgmdesc}/>,
+        children: <BgmTab style={itemstyle} bgmlist={itemlistmap.bgm} bgmdesc={props.bgmdesc} setBgmdesc={props.setBgmdesc}/>,
       },
       {
         key: 'bcg',
@@ -51,7 +46,7 @@ function SourceGround(props) {
       {
         key: 'sound',
         label: `音效`,
-        children: <SoundTab style={itemstyle} soundlist={itemlistmap.sound} sounddesc={sounddesc} setSounddesc={setSounddesc} />,
+        children: <SoundTab style={itemstyle} soundlist={itemlistmap.sound} sounddesc={props.sounddesc} setSounddesc={props.setSounddesc} />,
       },
       {
         key: 'sedesc',
@@ -61,7 +56,7 @@ function SourceGround(props) {
       {
         key: 'spr',
         label: `人物`,
-        children: <SprTab style={itemstyle} sprlist={itemlistmap.spr} sprdesc={sprdesc} setSprdesc={setSprdesc}/>,
+        children: <SprTab style={itemstyle} sprlist={itemlistmap.spr} sprdesc={props.sprdesc} setSprdesc={props.setSprdesc}/>,
       },
       {
         key: 'help',
@@ -116,11 +111,11 @@ function SourceGround(props) {
           ||
           getcnnameof(eachfile.name.split(".")[0]).indexOf(searchword)!==-1
           ||
-          (sprdesc[eachfile.name.split(".")[0]]||"").indexOf(searchword)!==-1
+          (props.sprdesc[eachfile.name.split(".")[0]]||"").indexOf(searchword)!==-1
           ||
-          (bgmdesc[eachfile.name]||"").indexOf(searchword)!==-1
+          (props.bgmdesc[eachfile.name]||"").indexOf(searchword)!==-1
           ||
-          (sounddesc[eachfile.name]||"").indexOf(searchword)!==-1
+          (props.sounddesc[eachfile.name]||"").indexOf(searchword)!==-1
           ){
             postlist[listind].push(eachfile)
           }

@@ -35,7 +35,7 @@ function antiShake(fun, delay) {
 }
 
 export default function SprTab(props) {
-  console.log("SprTab")
+  // console.log("SprTab", props.sprdesc)
   // 差分的分页
   const [page,setPage]=useState(1)
   const [chafenlistlen,setChafenlistlen]=useState(1)

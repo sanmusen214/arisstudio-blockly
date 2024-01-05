@@ -30,7 +30,9 @@ export default function SettingPage({
     setShowres,
     showtool,
     setShowtool,
-    confirmclear
+    confirmclear,
+    exportNote,
+    importNote
 }) {
   return (
     <div>
@@ -74,6 +76,12 @@ export default function SettingPage({
         <Row>
             <Button onClick={getChattxt}><SolutionOutlined/>导出语音文本</Button>
             <Button onClick={getChatscript}><NotificationOutlined/>导出含语音脚本</Button>
+        </Row>
+        <br/>
+        <Row>备注管理</Row>
+        <Row>
+            <Button className="loadprojectButton"><input type="file" name="file" accept='*' className="projectfile" onChange={importNote} onClick={()=>{message.destroy();message.info("导入并合并备注")}}></input><DownloadOutlined />选择备注并导入(合并)</Button>
+            <Button onClick={exportNote}>导出本地备注</Button>
         </Row>
         <br/>
         <Row>显示模式</Row>
