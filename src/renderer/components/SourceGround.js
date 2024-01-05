@@ -22,6 +22,7 @@ function SourceGround(props) {
   // 用户自己定义的spr描述, {sprname:desc, ...}, sprname不含后缀
   const [sprdesc,setSprdesc]=useLocalStorage('sprdesc',new Map())
   const [bgmdesc,setBgmdesc]=useLocalStorage('bgmdesc',new Map())
+  const [sounddesc,setSounddesc]=useLocalStorage('sounddesc',new Map())
 
   // console.log("从LocalStorage中读取到的sprdesc",  sprdesc)
 
@@ -50,7 +51,7 @@ function SourceGround(props) {
       {
         key: 'sound',
         label: `音效`,
-        children: <SoundTab style={itemstyle} soundlist={itemlistmap.sound}/>,
+        children: <SoundTab style={itemstyle} soundlist={itemlistmap.sound} sounddesc={sounddesc} setSounddesc={setSounddesc} />,
       },
       {
         key: 'sedesc',
@@ -118,6 +119,8 @@ function SourceGround(props) {
           (sprdesc[eachfile.name.split(".")[0]]||"").indexOf(searchword)!==-1
           ||
           (bgmdesc[eachfile.name]||"").indexOf(searchword)!==-1
+          ||
+          (sounddesc[eachfile.name]||"").indexOf(searchword)!==-1
           ){
             postlist[listind].push(eachfile)
           }

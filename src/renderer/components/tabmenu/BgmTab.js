@@ -8,7 +8,6 @@ import copy from "copy-to-clipboard"
 
 
 export default function BgmTab(props) {
-  const soundlist=props.bgmlist
   
  const [bgmdesc,setBgmdesc]=useState(props.bgmdesc)
  useEffect(()=>{
