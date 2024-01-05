@@ -111,7 +111,14 @@ function SourceGround(props) {
       for(let listind in prelist){
         const list=prelist[listind]
         for(let eachfile of list){
-          if(eachfile.name.split(".")[0].toLowerCase().indexOf(searchword)!==-1||getcnnameof(eachfile.name.split(".")[0]).indexOf(searchword)!==-1||(sprdesc[eachfile.name.split(".")[0]]||"").indexOf(searchword)!==-1){
+          if(eachfile.name.split(".")[0].toLowerCase().indexOf(searchword)!==-1
+          ||
+          getcnnameof(eachfile.name.split(".")[0]).indexOf(searchword)!==-1
+          ||
+          (sprdesc[eachfile.name.split(".")[0]]||"").indexOf(searchword)!==-1
+          ||
+          (bgmdesc[eachfile.name]||"").indexOf(searchword)!==-1
+          ){
             postlist[listind].push(eachfile)
           }
         }
