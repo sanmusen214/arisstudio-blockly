@@ -76,3 +76,7 @@ ifcase块的最后target 42IfFinal5
 ## npm start failed
 
 Remove the process.env.PORT in `.erb/scripts/check-port-in-use.js` and set the port manually both in this file and command env
+
+## 版本号
+
+更新版本号，一个是config文件夹里的version，一个是release/app/package.json

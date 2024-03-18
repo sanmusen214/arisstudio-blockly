@@ -63,8 +63,8 @@ try {
         return rescode;
         }
         // React里提取txtcode
-        // 后续处理替换所有'为反引号
-        txtcode=makecodetxt().replaceAll("'","\`");
+        // 后续处理，先将<'>替换成特殊字符，然后替换所有'为反引号，然后特殊字符替换回'
+        txtcode=makecodetxt().replaceAll("<'>","$quarter$").replaceAll("'","\`").replaceAll("$quarter$","'");
 } catch (error) {
     txtcode="生成脚本时出错啦！你可以反馈该问题："+error.message
 }
