@@ -9,6 +9,8 @@ const {Text}=Typography
  * inputlist, 
  * imgshape: 'square'
  * style
+ * filedesc
+ * setFiledesc
  */
 export default function ImageTab(props) {
 
@@ -19,6 +21,19 @@ export default function ImageTab(props) {
     // 图片名字
     let [namelist,setNamelist]=useState(new Array(pagesize))
     const imgshape=props.imgshape
+    // 该组件的用于render，传递给父组件用于更新localStorage
+    const [filedesc,setFiledesc]=useState(props.filedesc)
+    useEffect(()=>{
+      props.setFiledesc(filedesc)
+    },[filedesc])
+
+    const changeDesc=(name, desc)=>{
+      // console.log(name)
+      // console.log(desc)
+      const copydesc={...filedesc}
+      copydesc[name]=desc
+      setFiledesc(copydesc)
+    }
   
     useEffect(()=>{
       // 先用error代替
@@ -52,13 +67,20 @@ export default function ImageTab(props) {
           <div style={{textAlign:'center'}}>
           <Image.PreviewGroup>
             {srclist.map((each,ind)=>{
-              return <span style={{position:'relative',display:'inline-block',width:'140px',height:'100px',overflow:'hidden'}}>
+              return <span style={{position:'relative',display:'inline-block',width:'140px',height:'120px',overflow:'hidden'}}>
                 <div>{imgshape==="square"?<Image width={80} height={80} src={each}></Image>:<Image width={140} height={80} src={each}></Image>}</div>
-                <Text keyboard onClick={()=>{
-                  copy(namelist[ind])
-                  message.destroy()
-                  message.success("复制成功")
-                }}>{namelist[ind]}</Text>
+                <div style={{overflow:"hidden",height:"20px"}}>
+                  <Text keyboard onClick={()=>{
+                    copy(namelist[ind])
+                    message.destroy()
+                    message.success("复制成功")
+                  }}>{namelist[ind]}</Text>
+                </div>
+                <div style={{overflow:"hidden",height:"20px"}}>
+                  <Text keyborad editable={{onChange: (val)=>{changeDesc(namelist[ind], val)}}}>
+                    {filedesc[namelist[ind]]===undefined?"":filedesc[namelist[ind]]}
+                  </Text>
+                </div>
                 </span>
             })}
           </Image.PreviewGroup>

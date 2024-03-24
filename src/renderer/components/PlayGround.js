@@ -103,6 +103,8 @@ function PlayGround(props){
     const [sprdesc,setSprdesc]=useLocalStorage('sprdesc',new Map())
     const [bgmdesc,setBgmdesc]=useLocalStorage('bgmdesc',new Map())
     const [sounddesc,setSounddesc]=useLocalStorage('sounddesc',new Map())
+    const [bcgdesc, setBcgdesc]=useLocalStorage('bcgdesc',new Map())
+    const [coverdesc, setCoverdesc]=useLocalStorage('coverdesc',new Map())
 
 
     // 点击一个积木
@@ -240,8 +242,9 @@ function PlayGround(props){
         })
     }
 
-
-    const needexportnote=["local-sprdesc","local-bgmdesc","local-sounddesc"]
+    // 需要导出的备注的localStorage的键名
+    const needexportnote=["local-sprdesc","local-bgmdesc","local-sounddesc","local-bcgdesc","local-coverdesc"]
+    // 把导入的备注放入state
     const setneedexportnote=(key,value)=>{
         if(key.indexOf("sprdesc")!==-1){
             setSprdesc(value)
@@ -249,6 +252,10 @@ function PlayGround(props){
             setBgmdesc(value)
         }else if(key.indexOf("sounddesc")!==-1){
             setSounddesc(value)
+        }else if(key.indexOf("bcgdesc")!==-1){
+            setBcgdesc(value)
+        }else if(key.indexOf("coverdesc")!==-1){
+            setCoverdesc(value)
         }
     }
     // 导出备注那些LocalStorage
@@ -697,6 +704,10 @@ function PlayGround(props){
                 setBgmdesc={setBgmdesc}
                 sounddesc={sounddesc}
                 setSounddesc={setSounddesc}
+                bcgdesc={bcgdesc}
+                setBcgdesc={setBcgdesc}
+                coverdesc={coverdesc}
+                setCoverdesc={setCoverdesc}
             />
             </Modal>
         </div>

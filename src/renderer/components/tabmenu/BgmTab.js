@@ -9,6 +9,7 @@ import copy from "copy-to-clipboard"
 
 export default function BgmTab(props) {
   
+  // 中转一下，让这个组件的desc和父组件的bgmdesc保持一致
  const [bgmdesc,setBgmdesc]=useState(props.bgmdesc)
  useEffect(()=>{
     props.setBgmdesc(bgmdesc)

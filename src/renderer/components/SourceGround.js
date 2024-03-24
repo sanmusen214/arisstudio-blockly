@@ -27,6 +27,7 @@ function SourceGround(props) {
      * bgm,bcg,cover,sound,spr
      */
   const buildItems=(itemlistmap)=>{
+    // 由于使用的buildItems，所以这里相当于隔断了重新渲染机制，在这些组件里面刷新父组件的desc，不会导致这些子组件的重新渲染
     return [
       {
         key: 'bgm',
@@ -36,12 +37,12 @@ function SourceGround(props) {
       {
         key: 'bcg',
         label: `背景图`,
-        children: <BcgTab style={itemstyle} bcglist={itemlistmap.bcg} />,
+        children: <BcgTab style={itemstyle} bcglist={itemlistmap.bcg} bcgdesc={props.bcgdesc} setBcgdesc={props.setBcgdesc} />,
       },
       {
         key: 'cover',
         label: `覆盖图`,
-        children: <CoverTab style={itemstyle} coverlist={itemlistmap.cover}/>,
+        children: <CoverTab style={itemstyle} coverlist={itemlistmap.cover} coverdesc={props.coverdesc} setCoverdesc={props.setCoverdesc} />,
       },
       {
         key: 'sound',
@@ -111,11 +112,15 @@ function SourceGround(props) {
           ||
           getcnnameof(eachfile.name.split(".")[0]).indexOf(searchword)!==-1
           ||
-          (props.sprdesc[eachfile.name.split(".")[0]]||"").indexOf(searchword)!==-1
+          (props.sprdesc[eachfile.name.split(".")[0]]||"").indexOf(searchword)!==-1 // 人名相关文件有多个后缀，这里去除后缀查
           ||
           (props.bgmdesc[eachfile.name]||"").indexOf(searchword)!==-1
           ||
           (props.sounddesc[eachfile.name]||"").indexOf(searchword)!==-1
+          ||
+          (props.bcgdesc[eachfile.name]||"").indexOf(searchword)!==-1
+          ||
+          (props.coverdesc[eachfile.name]||"").indexOf(searchword)!==-1
           ){
             postlist[listind].push(eachfile)
           }
