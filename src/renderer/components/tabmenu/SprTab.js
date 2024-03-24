@@ -185,9 +185,6 @@ export default function SprTab(props) {
                   showControls: false,
                   backgroundColor: "#cccccc", // set the walk animation to play once
                 })
-                setTimeout(()=>{
-                  spineA.stopRendering()
-                },5000)
               }
               
             })
