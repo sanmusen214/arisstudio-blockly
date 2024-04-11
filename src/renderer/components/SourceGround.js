@@ -108,22 +108,41 @@ function SourceGround(props) {
       for(let listind in prelist){
         const list=prelist[listind]
         for(let eachfile of list){
-          if(eachfile.name.split(".")[0].toLowerCase().indexOf(searchword)!==-1
-          ||
-          getcnnameof(eachfile.name.split(".")[0]).indexOf(searchword)!==-1
-          ||
-          (props.sprdesc[eachfile.name.split(".")[0]]||"").indexOf(searchword)!==-1 // 人名相关文件有多个后缀，这里去除后缀查
-          ||
-          (props.bgmdesc[eachfile.name]||"").indexOf(searchword)!==-1
-          ||
-          (props.sounddesc[eachfile.name]||"").indexOf(searchword)!==-1
-          ||
-          (props.bcgdesc[eachfile.name]||"").indexOf(searchword)!==-1
-          ||
-          (props.coverdesc[eachfile.name]||"").indexOf(searchword)!==-1
-          ){
-            postlist[listind].push(eachfile)
+          // 如果搜索词是null，那么就搜索没有desc的那些文件
+          if(searchword === "无备注"){
+            if((props.sprdesc[eachfile.name.split(".")[0]]||"").length === 0
+            &&
+            (props.bgmdesc[eachfile.name]||"").length === 0
+            &&
+            (props.sounddesc[eachfile.name]||"").length === 0
+            &&
+            (props.bcgdesc[eachfile.name]||"").length === 0
+            &&
+            (props.coverdesc[eachfile.name]||"").length === 0
+            ){
+              postlist[listind].push(eachfile)
+            }
+          }else{
+            if(eachfile.name.split(".")[0].toLowerCase().indexOf(searchword)!==-1
+            ||
+            getcnnameof(eachfile.name.split(".")[0]).indexOf(searchword)!==-1
+            ||
+            (props.sprdesc[eachfile.name.split(".")[0]]||"").indexOf(searchword)!==-1 // 人名相关文件有多个后缀，这里去除后缀查
+            ||
+            (props.bgmdesc[eachfile.name]||"").indexOf(searchword)!==-1
+            ||
+            (props.sounddesc[eachfile.name]||"").indexOf(searchword)!==-1
+            ||
+            (props.bcgdesc[eachfile.name]||"").indexOf(searchword)!==-1
+            ||
+            (props.coverdesc[eachfile.name]||"").indexOf(searchword)!==-1
+            ){
+              postlist[listind].push(eachfile)
+            }
           }
+          
+
+          
         }
       }
     }else{

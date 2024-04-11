@@ -77,7 +77,7 @@ export default function ImageTab(props) {
                   }}>{namelist[ind]}</Text>
                 </div>
                 <div style={{overflow:"hidden",height:"20px"}}>
-                  <Text keyborad editable={{onChange: (val)=>{changeDesc(namelist[ind], val)}}}>
+                  <Text keyborad editable={{triggerType:["icon", "text"], onChange: (val)=>{changeDesc(namelist[ind], val)}}}>
                     {filedesc[namelist[ind]]===undefined?"":filedesc[namelist[ind]]}
                   </Text>
                 </div>
