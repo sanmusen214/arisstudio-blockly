@@ -271,6 +271,16 @@ function PlayGround(props){
         })
     }
 
+    // 清空备注
+    const clearNote=()=>{
+        for(let key of needexportnote){
+            localStorage.removeItem(key)
+        }
+        message.destroy()
+        message.success("备注清空，重启生效",3)
+    }
+
+
     // 导入备注那些LocalStorage
     const importNote=(e)=>{
         console.log("接收到导入")
@@ -285,11 +295,21 @@ function PlayGround(props){
             const filenamesegs=file.name.split(".")
             if(filenamesegs[filenamesegs.length-1]==="json"){
                 uploadTxt(file,function(str){
-                    let importstorage=JSON.parse(str)
+                    let importstorage
+                    try{
+                        importstorage = JSON.parse(str)
+                    }catch(error){
+                        message.destroy()
+                        message.error("导入失败，备注文件解析失败",3)
+                        message.error(error.message,15)
+                        throw error
+                        return
+                    }
                     console.log("importstorage", importstorage)
                     // 遍历和note相关的localStorage的键名字
                     for(let keyind in needexportnote){
                         let key = needexportnote[keyind]
+                        message.loading("导入中",key)
                         // 从本地获取这个key对应的localstorage字符串
                         const localobj=localStorage.getItem(key)
                         let importobj=importstorage[key]
@@ -302,7 +322,15 @@ function PlayGround(props){
                         // 某一个资源的导入的note对象
                         let importobjobj={}
                         if(importobj){
-                            importobjobj=JSON.parse(importobj)
+                            try{
+                                importobjobj=JSON.parse(importobj)
+                            }catch(error){
+                                message.destroy()
+                                message.error("导入失败，备注文件解析失败",3)
+                                message.error(error.message,15)
+                                throw error
+                                return
+                            }
                         }
                         console.log("localobjobj",localobjobj)
                         console.log("importobjobj",importobjobj)
@@ -739,6 +767,7 @@ function PlayGround(props){
                     confirmclear={confirmclear}
                     exportNote={exportNote}
                     importNote={importNote}
+                    clearNote={clearNote}
                 />
             </Modal>
         </div>

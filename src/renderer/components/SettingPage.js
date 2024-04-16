@@ -32,7 +32,8 @@ export default function SettingPage({
     setShowtool,
     confirmclear,
     exportNote,
-    importNote
+    importNote,
+    clearNote
 }) {
   return (
     <div>
@@ -79,9 +80,23 @@ export default function SettingPage({
         </Row>
         <br/>
         <Row>备注管理</Row>
-        <Row>
-            <Button className="loadprojectButton"><input type="file" name="file" accept='*' className="projectfile" onChange={importNote} onClick={()=>{message.destroy();message.info("导入并合并备注")}}></input><DownloadOutlined />选择备注并导入(合并)</Button>
-            <Button onClick={exportNote}>导出本地备注</Button>
+        <Row justify={"space-between"}>
+            <Col>
+                <Button className="loadprojectButton"><input type="file" name="file" accept='*' className="projectfile" onChange={importNote} onClick={()=>{message.destroy();message.info("导入并合并备注")}}></input><DownloadOutlined />选择备注并导入(合并)</Button>
+                <Button onClick={exportNote}>导出本地备注</Button>
+            </Col>
+            <Col>
+                <Popconfirm
+                    title="清空备注"
+                    description="这会清空当前所有备注，记得保存！"
+                    onConfirm={clearNote}
+                    onCancel={()=>{}}
+                    okText="清空！"
+                    cancelText="取消"
+                >
+                    <Button danger>清空备注</Button>
+                </Popconfirm>
+            </Col>
         </Row>
         <br/>
         <Row>显示模式</Row>
