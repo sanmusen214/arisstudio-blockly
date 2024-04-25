@@ -4,8 +4,8 @@
 - [ ] ~~Add i18n~~.
 - [ ] ~~Use local Backend server to load source automatically~~.
 
-This project will be archived since the AS is archived.
-由于AS停止开发，本项目即将归档
+This project is archived since the <a href="https://github.com/Tualin14/ArisStudio">AS</a> is archived.
+由于<a href="https://github.com/Tualin14/ArisStudio">AS</a>停止开发，本项目即将归档
 
 <img src="https://github.com/sanmusen214/arisstudio-blockly/blob/main/src/renderer/media/document/cover.png"></img>
 
